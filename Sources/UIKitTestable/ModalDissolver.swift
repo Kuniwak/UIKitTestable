@@ -5,7 +5,7 @@ import UIKit
 /**
  A type for wrapper classes of `UIViewController#dismiss(animated: Bool)`.
  */
-protocol ModalDissolverProtocol {
+public protocol ModalDissolverProtocol {
     /**
      Dismisses the view controller that was presented modally by the view controller.
      This method behave like `UIViewController#dismiss(animated: Bool)`
@@ -26,7 +26,7 @@ protocol ModalDissolverProtocol {
  A wrapper class to encapsulate a implementation of `UIViewController#disiss(animated: Bool)`.
  You can replace the class to the stub or spy for testing.
  */
-class ModalDissolver: ModalDissolverProtocol {
+public class ModalDissolver: ModalDissolverProtocol {
     private let viewController: UIViewController
 
 
@@ -34,17 +34,17 @@ class ModalDissolver: ModalDissolverProtocol {
      Return newly initialized ModalDissolver of the UIViewController.
      The specified UIViewController will be dismissed by calling the method `dismiss(animated: Bool)`.
      */
-    init(willDismiss viewController: UIViewController) {
+    public init(willDismiss viewController: UIViewController) {
         self.viewController = viewController
     }
 
 
-    func dismiss(animated: Bool) {
+    public func dismiss(animated: Bool) {
         self.viewController.dismiss(animated: animated)
     }
 
 
-    func dismiss(animated: Bool, completion: (() -> Void)?) {
+    public func dismiss(animated: Bool, completion: (() -> Void)?) {
         self.viewController.dismiss(
             animated: animated,
             completion: completion

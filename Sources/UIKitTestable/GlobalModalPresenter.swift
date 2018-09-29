@@ -2,7 +2,7 @@ import UIKit
 
 
 
-protocol GlobalModalPresenterProtocol: ModalPresenterProtocol {
+public protocol GlobalModalPresenterProtocol: ModalPresenterProtocol {
     var dissolver: ModalDissolverProtocol { get }
 }
 
@@ -12,17 +12,17 @@ protocol GlobalModalPresenterProtocol: ModalPresenterProtocol {
  A class for specialized ModalPresenters that can present a UIViewController unconditionally.
  You can present a UIViewController if you does not know what UIViewController is visible.
  */
-class GlobalModalPresenter: GlobalModalPresenterProtocol {
-    private(set) var dissolver: ModalDissolverProtocol = NullModalDissolver()
+public class GlobalModalPresenter: GlobalModalPresenterProtocol {
+    public fileprivate(set) var dissolver: ModalDissolverProtocol = NullModalDissolver()
     private let window = UIWindow()
 
 
-    func present(viewController: UIViewController, animated: Bool) {
+    public func present(viewController: UIViewController, animated: Bool) {
         self.present(viewController: viewController, animated: animated, completion: nil)
     }
 
 
-    func present(viewController: UIViewController, animated: Bool, completion: (() -> Void)?) {
+    public func present(viewController: UIViewController, animated: Bool, completion: (() -> Void)?) {
         self.dissolver.dismiss(animated: animated)
 
         // NOTE: The created window will be disposed when the root UIViewController is dismissed.
@@ -44,23 +44,23 @@ class GlobalModalPresenter: GlobalModalPresenterProtocol {
 
 
 
-    class GlobalModalDissolver: ModalDissolverProtocol {
+    public class GlobalModalDissolver: ModalDissolverProtocol {
         private let window: UIWindow
         private let rootViewController: UIViewController
 
 
-        init(window: UIWindow, rootViewController: UIViewController) {
+        public init(window: UIWindow, rootViewController: UIViewController) {
             self.window = window
             self.rootViewController = rootViewController
         }
 
 
-        func dismiss(animated: Bool) {
+        public func dismiss(animated: Bool) {
             self.dismiss(animated: animated, completion: nil)
         }
 
 
-        func dismiss(animated: Bool, completion: (() -> Void)?) {
+        public func dismiss(animated: Bool, completion: (() -> Void)?) {
             self.rootViewController.dismiss(
                 animated: animated,
                 completion: {
@@ -72,9 +72,9 @@ class GlobalModalPresenter: GlobalModalPresenterProtocol {
 
 
 
-    class NullModalDissolver: ModalDissolverProtocol {
-        func dismiss(animated: Bool) {}
-        func dismiss(animated: Bool, completion: (() -> Void)?) {
+    public class NullModalDissolver: ModalDissolverProtocol {
+        public func dismiss(animated: Bool) {}
+        public func dismiss(animated: Bool, completion: (() -> Void)?) {
             completion?()
         }
     }

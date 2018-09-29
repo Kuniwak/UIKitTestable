@@ -15,36 +15,24 @@
 		2475EB4BD433CCB102644D0E /* ModalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E3F6D76A6C1F7870DDCA /* ModalPresenter.swift */; };
 		2475EB9B8FA933FF2A2615E1 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E9F2BD9F9BB18F9BE488 /* Navigator.swift */; };
 		2475ED17185AA1BD280F6327 /* ModalDissolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E3E653C952AFF1D34C8B /* ModalDissolver.swift */; };
-		626151DD1F90938900753D55 /* UIKitTestable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 626151D31F90938900753D55 /* UIKitTestable.framework */; };
 		626151E41F90938900753D55 /* UIKitTestable.h in Headers */ = {isa = PBXBuildFile; fileRef = 626151D61F90938900753D55 /* UIKitTestable.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		626151ED1F90957400753D55 /* GlobalModalPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E82AEF914735BB5BA352 /* GlobalModalPresenterSpy.swift */; };
-		626151EE1F90957400753D55 /* GlobalModalPresenterStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E7F7D330A839348038ED /* GlobalModalPresenterStub.swift */; };
-		626151EF1F90957400753D55 /* GlobalModalPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E4D5DBD8B8531BB3CE2C /* GlobalModalPresenterTests.swift */; };
-		626151F01F90957400753D55 /* ModalDissolverSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E123BB34A40C3CE8A10C /* ModalDissolverSpy.swift */; };
-		626151F11F90957400753D55 /* ModalDissolverStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E196DE33A98F399D93C5 /* ModalDissolverStub.swift */; };
-		626151F21F90957400753D55 /* ModalPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E070292A6EF9757F366B /* ModalPresenterSpy.swift */; };
-		626151F31F90957400753D55 /* ModalPresenterStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E3D1F7769914A3F5C54C /* ModalPresenterStub.swift */; };
-		626151F41F90957400753D55 /* NavigatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E73BDD401956557C7F39 /* NavigatorSpy.swift */; };
-		626151F51F90957400753D55 /* NavigatorStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E3412BAA5DD813423243 /* NavigatorStub.swift */; };
-		626151F61F90957400753D55 /* ReverseNavigatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EF3EC1C64882FEA48C96 /* ReverseNavigatorSpy.swift */; };
-		626151F71F90957400753D55 /* ReverseNavigatorStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E9ACC1D5059D77B15ADB /* ReverseNavigatorStub.swift */; };
-		626151F81F90957400753D55 /* RootViewControllerHolderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E185844D0538CF5CD1D7 /* RootViewControllerHolderSpy.swift */; };
-		626151F91F90957400753D55 /* RootViewControllerHolderStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E131E3048C780436E831 /* RootViewControllerHolderStub.swift */; };
-		626151FA1F90957400753D55 /* SpyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EDA30BE8C40BBBD9044A /* SpyViewController.swift */; };
-		626151FB1F90957400753D55 /* TestNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EAC5206253DFCD5ADCB4 /* TestNavigator.swift */; };
-		626151FC1F90957400753D55 /* UrlOpenerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E58C45E89BA74A94D086 /* UrlOpenerSpy.swift */; };
-		626151FD1F90957400753D55 /* UrlOpenerStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E0B305033BCC8899D895 /* UrlOpenerStub.swift */; };
+		62FAA652215FC8360040F66B /* GlobalModalPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E82AEF914735BB5BA352 /* GlobalModalPresenterSpy.swift */; };
+		62FAA653215FC8360040F66B /* GlobalModalPresenterStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E7F7D330A839348038ED /* GlobalModalPresenterStub.swift */; };
+		62FAA654215FC8360040F66B /* ModalDissolverSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E123BB34A40C3CE8A10C /* ModalDissolverSpy.swift */; };
+		62FAA655215FC8360040F66B /* ModalDissolverStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E196DE33A98F399D93C5 /* ModalDissolverStub.swift */; };
+		62FAA656215FC8360040F66B /* ModalPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E070292A6EF9757F366B /* ModalPresenterSpy.swift */; };
+		62FAA657215FC8360040F66B /* ModalPresenterStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E3D1F7769914A3F5C54C /* ModalPresenterStub.swift */; };
+		62FAA658215FC8360040F66B /* NavigatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E73BDD401956557C7F39 /* NavigatorSpy.swift */; };
+		62FAA659215FC8360040F66B /* NavigatorStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E3412BAA5DD813423243 /* NavigatorStub.swift */; };
+		62FAA65A215FC8360040F66B /* ReverseNavigatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EF3EC1C64882FEA48C96 /* ReverseNavigatorSpy.swift */; };
+		62FAA65B215FC8360040F66B /* ReverseNavigatorStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E9ACC1D5059D77B15ADB /* ReverseNavigatorStub.swift */; };
+		62FAA65C215FC8360040F66B /* RootViewControllerHolderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E185844D0538CF5CD1D7 /* RootViewControllerHolderSpy.swift */; };
+		62FAA65D215FC8360040F66B /* RootViewControllerHolderStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E131E3048C780436E831 /* RootViewControllerHolderStub.swift */; };
+		62FAA65E215FC8360040F66B /* SpyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EDA30BE8C40BBBD9044A /* SpyViewController.swift */; };
+		62FAA65F215FC8360040F66B /* TestNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EAC5206253DFCD5ADCB4 /* TestNavigator.swift */; };
+		62FAA660215FC8360040F66B /* UrlOpenerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E58C45E89BA74A94D086 /* UrlOpenerSpy.swift */; };
+		62FAA661215FC8360040F66B /* UrlOpenerStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E0B305033BCC8899D895 /* UrlOpenerStub.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		626151DE1F90938900753D55 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 626151CA1F90938900753D55 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 626151D21F90938900753D55;
-			remoteInfo = UIKitTestable;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2475E070292A6EF9757F366B /* ModalPresenterSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalPresenterSpy.swift; sourceTree = "<group>"; };
@@ -58,7 +46,6 @@
 		2475E3D1F7769914A3F5C54C /* ModalPresenterStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalPresenterStub.swift; sourceTree = "<group>"; };
 		2475E3E653C952AFF1D34C8B /* ModalDissolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalDissolver.swift; sourceTree = "<group>"; };
 		2475E3F6D76A6C1F7870DDCA /* ModalPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalPresenter.swift; sourceTree = "<group>"; };
-		2475E4D5DBD8B8531BB3CE2C /* GlobalModalPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalModalPresenterTests.swift; sourceTree = "<group>"; };
 		2475E58C45E89BA74A94D086 /* UrlOpenerSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlOpenerSpy.swift; sourceTree = "<group>"; };
 		2475E73BDD401956557C7F39 /* NavigatorSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigatorSpy.swift; sourceTree = "<group>"; };
 		2475E7712744E6B920A3C57B /* UrlOpener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlOpener.swift; sourceTree = "<group>"; };
@@ -75,8 +62,6 @@
 		626151D31F90938900753D55 /* UIKitTestable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIKitTestable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		626151D61F90938900753D55 /* UIKitTestable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKitTestable.h; sourceTree = "<group>"; };
 		626151D71F90938900753D55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		626151DC1F90938900753D55 /* UIKitTestableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIKitTestableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		626151E31F90938900753D55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,14 +69,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		626151D91F90938900753D55 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				626151DD1F90938900753D55 /* UIKitTestable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +81,6 @@
 				2475EF9C7FCD4FE200BF20F5 /* GlobalModalPresenter.swift */,
 				2475E82AEF914735BB5BA352 /* GlobalModalPresenterSpy.swift */,
 				2475E7F7D330A839348038ED /* GlobalModalPresenterStub.swift */,
-				2475E4D5DBD8B8531BB3CE2C /* GlobalModalPresenterTests.swift */,
 				2475E3E653C952AFF1D34C8B /* ModalDissolver.swift */,
 				2475E123BB34A40C3CE8A10C /* ModalDissolverSpy.swift */,
 				2475E196DE33A98F399D93C5 /* ModalDissolverStub.swift */,
@@ -134,7 +110,6 @@
 			isa = PBXGroup;
 			children = (
 				626151D51F90938900753D55 /* Sources */,
-				626151E01F90938900753D55 /* Tests */,
 				626151D41F90938900753D55 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -143,7 +118,6 @@
 			isa = PBXGroup;
 			children = (
 				626151D31F90938900753D55 /* UIKitTestable.framework */,
-				626151DC1F90938900753D55 /* UIKitTestableTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,14 +130,6 @@
 				2475EF45CED2C0E78AA30473 /* UIKitTestable */,
 			);
 			path = Sources;
-			sourceTree = "<group>";
-		};
-		626151E01F90938900753D55 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				626151E31F90938900753D55 /* Info.plist */,
-			);
-			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,24 +164,6 @@
 			productReference = 626151D31F90938900753D55 /* UIKitTestable.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		626151DB1F90938900753D55 /* UIKitTestableTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 626151EA1F90938900753D55 /* Build configuration list for PBXNativeTarget "UIKitTestableTests" */;
-			buildPhases = (
-				626151D81F90938900753D55 /* Sources */,
-				626151D91F90938900753D55 /* Frameworks */,
-				626151DA1F90938900753D55 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				626151DF1F90938900753D55 /* PBXTargetDependency */,
-			);
-			name = UIKitTestableTests;
-			productName = UIKitTestableTests;
-			productReference = 626151DC1F90938900753D55 /* UIKitTestableTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -223,14 +171,10 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = kuniwak;
 				TargetAttributes = {
 					626151D21F90938900753D55 = {
-						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
-					};
-					626151DB1F90938900753D55 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
 					};
@@ -249,20 +193,12 @@
 			projectRoot = "";
 			targets = (
 				626151D21F90938900753D55 /* UIKitTestable */,
-				626151DB1F90938900753D55 /* UIKitTestableTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		626151D11F90938900753D55 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		626151DA1F90938900753D55 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -276,50 +212,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62FAA652215FC8360040F66B /* GlobalModalPresenterSpy.swift in Sources */,
+				62FAA655215FC8360040F66B /* ModalDissolverStub.swift in Sources */,
 				2475EB9B8FA933FF2A2615E1 /* Navigator.swift in Sources */,
 				2475E12F7F776C982110105A /* UrlOpener.swift in Sources */,
+				62FAA65D215FC8360040F66B /* RootViewControllerHolderStub.swift in Sources */,
+				62FAA65C215FC8360040F66B /* RootViewControllerHolderSpy.swift in Sources */,
+				62FAA65B215FC8360040F66B /* ReverseNavigatorStub.swift in Sources */,
+				62FAA660215FC8360040F66B /* UrlOpenerSpy.swift in Sources */,
+				62FAA65A215FC8360040F66B /* ReverseNavigatorSpy.swift in Sources */,
+				62FAA653215FC8360040F66B /* GlobalModalPresenterStub.swift in Sources */,
+				62FAA656215FC8360040F66B /* ModalPresenterSpy.swift in Sources */,
+				62FAA654215FC8360040F66B /* ModalDissolverSpy.swift in Sources */,
+				62FAA65F215FC8360040F66B /* TestNavigator.swift in Sources */,
+				62FAA659215FC8360040F66B /* NavigatorStub.swift in Sources */,
 				2475ED17185AA1BD280F6327 /* ModalDissolver.swift in Sources */,
 				2475EB4BD433CCB102644D0E /* ModalPresenter.swift in Sources */,
+				62FAA661215FC8360040F66B /* UrlOpenerStub.swift in Sources */,
 				2475E536F84FCE6757AEAEFB /* ReverseNavigator.swift in Sources */,
 				2475E9C46C6FCDFC29B7FA68 /* GlobalModalPresenter.swift in Sources */,
 				2475E66FCD09DC7AA897BA0D /* RootViewControllerHolder.swift in Sources */,
+				62FAA658215FC8360040F66B /* NavigatorSpy.swift in Sources */,
+				62FAA657215FC8360040F66B /* ModalPresenterStub.swift in Sources */,
+				62FAA65E215FC8360040F66B /* SpyViewController.swift in Sources */,
 				2475E3EFB4ED8CD1E31C1099 /* TransparentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		626151D81F90938900753D55 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				626151F91F90957400753D55 /* RootViewControllerHolderStub.swift in Sources */,
-				626151ED1F90957400753D55 /* GlobalModalPresenterSpy.swift in Sources */,
-				626151F11F90957400753D55 /* ModalDissolverStub.swift in Sources */,
-				626151F61F90957400753D55 /* ReverseNavigatorSpy.swift in Sources */,
-				626151FD1F90957400753D55 /* UrlOpenerStub.swift in Sources */,
-				626151FA1F90957400753D55 /* SpyViewController.swift in Sources */,
-				626151F21F90957400753D55 /* ModalPresenterSpy.swift in Sources */,
-				626151F51F90957400753D55 /* NavigatorStub.swift in Sources */,
-				626151F41F90957400753D55 /* NavigatorSpy.swift in Sources */,
-				626151FB1F90957400753D55 /* TestNavigator.swift in Sources */,
-				626151FC1F90957400753D55 /* UrlOpenerSpy.swift in Sources */,
-				626151F81F90957400753D55 /* RootViewControllerHolderSpy.swift in Sources */,
-				626151F01F90957400753D55 /* ModalDissolverSpy.swift in Sources */,
-				626151EE1F90957400753D55 /* GlobalModalPresenterStub.swift in Sources */,
-				626151F31F90957400753D55 /* ModalPresenterStub.swift in Sources */,
-				626151F71F90957400753D55 /* ReverseNavigatorStub.swift in Sources */,
-				626151EF1F90957400753D55 /* GlobalModalPresenterTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		626151DF1F90938900753D55 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 626151D21F90938900753D55 /* UIKitTestable */;
-			targetProxy = 626151DE1F90938900753D55 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		626151E51F90938900753D55 /* Debug */ = {
@@ -336,6 +256,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -343,6 +264,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -396,6 +318,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -403,6 +326,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -477,32 +401,6 @@
 			};
 			name = Release;
 		};
-		626151EB1F90938900753D55 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kuniwak.UIKitTestableTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		626151EC1F90938900753D55 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kuniwak.UIKitTestableTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -520,15 +418,6 @@
 			buildConfigurations = (
 				626151E81F90938900753D55 /* Debug */,
 				626151E91F90938900753D55 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		626151EA1F90938900753D55 /* Build configuration list for PBXNativeTarget "UIKitTestableTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				626151EB1F90938900753D55 /* Debug */,
-				626151EC1F90938900753D55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

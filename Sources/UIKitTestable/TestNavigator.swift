@@ -1,6 +1,4 @@
 import UIKit
-import XCTest
-@testable import UIKitTestable
 
 
 

@@ -1,5 +1,4 @@
 import UIKit
-@testable import UIKitTestable
 
 
 
@@ -7,9 +6,9 @@ import UIKit
  A stub class for ModalPresenters.
  This class is useful for ignoring calls of `UIViewController#present` for testing.
  */
-class ModalPresenterStub: ModalPresenterProtocol {
-    func present(viewController: UIViewController, animated: Bool) {}
-    func present(viewController: UIViewController, animated: Bool, completion: (() -> Void)?) {
+public class ModalPresenterStub: ModalPresenterProtocol {
+    public func present(viewController: UIViewController, animated: Bool) {}
+    public func present(viewController: UIViewController, animated: Bool, completion: (() -> Void)?) {
         completion?()
     }
 }

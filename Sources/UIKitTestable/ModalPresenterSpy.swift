@@ -1,5 +1,4 @@
 import UIKit
-@testable import UIKitTestable
 
 
 
@@ -7,25 +6,25 @@ import UIKit
  A spy class for ModalPresenters.
  This class is useful for capturing calls of `UIViewController#present` for testing.
  */
-class ModalPresenterSpy: ModalPresenterProtocol {
-    typealias CallArgs = (viewController: UIViewController, animated: Bool, completion: (() -> Void)?)
+public class ModalPresenterSpy: ModalPresenterProtocol {
+    public typealias CallArgs = (viewController: UIViewController, animated: Bool, completion: (() -> Void)?)
 
 
     /**
      Call arguments list for the method `present`.
      You can use the property to test how the method is called.
      */
-    fileprivate(set) var callArgs: [CallArgs] = []
+    public fileprivate(set) var callArgs: [CallArgs] = []
 
-    var stub: ModalPresenterProtocol
+    public var stub: ModalPresenterProtocol
 
 
-    init(inheriting stub: ModalPresenterProtocol) {
+    public init(inheriting stub: ModalPresenterProtocol) {
         self.stub = stub
     }
 
 
-    func present(viewController: UIViewController, animated: Bool) {
+    public func present(viewController: UIViewController, animated: Bool) {
         self.stub.present(viewController: viewController, animated: animated)
 
         let callArgs: CallArgs = (viewController: viewController, animated: animated, completion: nil)
@@ -33,7 +32,7 @@ class ModalPresenterSpy: ModalPresenterProtocol {
     }
 
 
-    func present(viewController: UIViewController, animated: Bool, completion: (() -> Void)?) {
+    public func present(viewController: UIViewController, animated: Bool, completion: (() -> Void)?) {
         self.stub.present(viewController: viewController, animated: animated, completion: completion)
 
         let callArgs: CallArgs = (viewController: viewController, animated: animated, completion: completion)

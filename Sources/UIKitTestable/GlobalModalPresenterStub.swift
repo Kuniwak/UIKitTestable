@@ -1,5 +1,4 @@
 import UIKit
-@testable import UIKitTestable
 
 
 
@@ -7,17 +6,17 @@ import UIKit
  A stub class for GlobalModalPresenter.
  This class is useful for ignoring calls of `GlobalModalPresenter#present` for testing.
  */
-class GlobalModalPresenterStub: GlobalModalPresenterProtocol {
-    var dissolver: ModalDissolverProtocol
+public class GlobalModalPresenterStub: GlobalModalPresenterProtocol {
+    public var dissolver: ModalDissolverProtocol
 
 
-    init(exposing dissolver: ModalDissolverProtocol) {
+    public init(exposing dissolver: ModalDissolverProtocol) {
         self.dissolver = dissolver
     }
 
 
-    func present(viewController: UIViewController, animated: Bool) {}
-    func present(viewController: UIViewController, animated: Bool, completion: (() -> Void)?) {
+    public func present(viewController: UIViewController, animated: Bool) {}
+    public func present(viewController: UIViewController, animated: Bool, completion: (() -> Void)?) {
         completion?()
     }
 }

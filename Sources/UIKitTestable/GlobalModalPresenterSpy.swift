@@ -1,5 +1,4 @@
 import UIKit
-@testable import UIKitTestable
 
 
 
@@ -7,31 +6,31 @@ import UIKit
  A spy class for GlobalModalPresenter.
  This class is useful for capturing calls of `GlobalModalPresenter#present` for testing.
  */
-class GlobalModalPresenterSpy: GlobalModalPresenterProtocol {
-    typealias CallArgs = (viewController: UIViewController, animated: Bool, completion: (() -> Void)?)
+public class GlobalModalPresenterSpy: GlobalModalPresenterProtocol {
+    public typealias CallArgs = (viewController: UIViewController, animated: Bool, completion: (() -> Void)?)
 
 
     /**
      Call arguments list for the method `GlobalModalPresenter#present`.
      You can use the property to test how the method is called.
      */
-    private(set) var callArgs: [CallArgs] = []
+    public fileprivate(set) var callArgs: [CallArgs] = []
 
 
-    var stub: GlobalModalPresenterProtocol
+    public var inherited: GlobalModalPresenterProtocol
 
 
-    var dissolver: ModalDissolverProtocol {
-        return self.stub.dissolver
+    public var dissolver: ModalDissolverProtocol {
+        return self.inherited.dissolver
     }
 
 
-    init(inherit stub: GlobalModalPresenterProtocol) {
-        self.stub = stub
+    public init(inherit inherited: GlobalModalPresenterProtocol) {
+        self.inherited = inherited
     }
 
 
-    func present(
+    public func present(
         viewController: UIViewController,
         animated: Bool
     ) {
@@ -43,7 +42,7 @@ class GlobalModalPresenterSpy: GlobalModalPresenterProtocol {
     }
 
 
-    func present(
+    public func present(
         viewController: UIViewController,
         animated: Bool,
         completion: (() -> Void)?
@@ -54,7 +53,7 @@ class GlobalModalPresenterSpy: GlobalModalPresenterProtocol {
             completion: completion
         ))
 
-        self.stub.present(
+        self.inherited.present(
             viewController: viewController,
             animated: animated,
             completion: completion

@@ -5,7 +5,7 @@ import UIKit
 /**
  A type for encapsulating classes of `UIViewController#present(_: UIViewController, animated: Bool)`.
  */
-protocol ModalPresenterProtocol {
+public protocol ModalPresenterProtocol {
     /**
      Presents a view controller modally.
      This method behave like `UIViewController#present(UIViewController, animated: Bool)`
@@ -25,7 +25,7 @@ protocol ModalPresenterProtocol {
 /**
  A wrapper class to encapsulate a implementation of `UIViewController#present(_: UIViewController, animated: Bool)`.
  */
-class ModalPresenter: ModalPresenterProtocol {
+public class ModalPresenter: ModalPresenterProtocol {
     private let groundViewController: UIViewController
 
 
@@ -33,17 +33,17 @@ class ModalPresenter: ModalPresenterProtocol {
      Return newly initialized ModalPresenter with the UIViewController.
      Some UIViewControllers will be present on the specified UIViewController of the function.
      */
-    init(wherePresentOn groundViewController: UIViewController) {
+    public init(wherePresentOn groundViewController: UIViewController) {
         self.groundViewController = groundViewController
     }
 
 
-    func present(viewController: UIViewController, animated: Bool) {
+    public func present(viewController: UIViewController, animated: Bool) {
         self.groundViewController.present(viewController, animated: animated)
     }
 
 
-    func present(viewController: UIViewController, animated: Bool, completion: (() -> Void)?) {
+    public func present(viewController: UIViewController, animated: Bool, completion: (() -> Void)?) {
         self.groundViewController.present(viewController, animated: animated, completion: completion)
     }
 }
