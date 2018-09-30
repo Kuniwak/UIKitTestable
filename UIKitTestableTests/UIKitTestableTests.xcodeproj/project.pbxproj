@@ -15,6 +15,7 @@
 		62DDB92F216097F70005BFEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62DDB92D216097F70005BFEA /* LaunchScreen.storyboard */; };
 		62DDB97821609A680005BFEA /* GlobalModalPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DDB97721609A680005BFEA /* GlobalModalPresenterTests.swift */; };
 		62DDB9AA2160BB390005BFEA /* UIKitTestable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62DDB9A92160BB390005BFEA /* UIKitTestable.framework */; };
+		62DDB9DC216117430005BFEA /* UIKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62DDB9DB216117430005BFEA /* UIKitTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		62DDB93B216097F70005BFEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62DDB97721609A680005BFEA /* GlobalModalPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalModalPresenterTests.swift; sourceTree = "<group>"; };
 		62DDB9A92160BB390005BFEA /* UIKitTestable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UIKitTestable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		62DDB9DB216117430005BFEA /* UIKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UIKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62DDB9DC216117430005BFEA /* UIKitTests.framework in Frameworks */,
 				62DDB9AA2160BB390005BFEA /* UIKitTestable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,6 +109,7 @@
 		62DDB944216098B70005BFEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				62DDB9DB216117430005BFEA /* UIKitTests.framework */,
 				62DDB9A92160BB390005BFEA /* UIKitTestable.framework */,
 			);
 			name = Frameworks;
