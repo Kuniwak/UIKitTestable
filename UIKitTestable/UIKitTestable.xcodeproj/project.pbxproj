@@ -98,8 +98,8 @@
 		62DDB903216097C40005BFEA = {
 			isa = PBXGroup;
 			children = (
-				62DDB90F216097C40005BFEA /* UIKitTestable */,
 				62DDB90E216097C40005BFEA /* Products */,
+				62DDB90F216097C40005BFEA /* UIKitTestable */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,6 +117,14 @@
 				62DDB94D216099E00005BFEA /* GlobalModalPresenter.swift */,
 				62DDB950216099E10005BFEA /* GlobalModalPresenterSpy.swift */,
 				62DDB954216099E10005BFEA /* GlobalModalPresenterStub.swift */,
+				62DDB911216097C40005BFEA /* Info.plist */,
+				2475E136C59B3E1259F6B0F4 /* KeyWindowReadWriter.swift */,
+				2475E055C1D1ACBEE4FE901E /* KeyWindowReader.swift */,
+				2475E27E37F904D02657D88B /* KeyWindowReaderSpy.swift */,
+				2475E9B50C2BDCD389B4D8E4 /* KeyWindowReaderStub.swift */,
+				2475E2DF0E50792495944971 /* KeyWindowWriter.swift */,
+				2475E849DFCC147F827AD8E7 /* KeyWindowWriterSpy.swift */,
+				2475E60F5999BFA16DFFAA94 /* KeyWindowWriterStub.swift */,
 				62DDB95A216099E10005BFEA /* ModalDissolver.swift */,
 				62DDB94A216099E00005BFEA /* ModalDissolverSpy.swift */,
 				62DDB95B216099E10005BFEA /* ModalDissolverStub.swift */,
@@ -135,21 +143,13 @@
 				62DDB953216099E10005BFEA /* SpyViewController.swift */,
 				62DDB94B216099E00005BFEA /* TestNavigator.swift */,
 				62DDB958216099E10005BFEA /* TransparentViewController.swift */,
+				62DDB910216097C40005BFEA /* UIKitTestable.h */,
 				62DDB956216099E10005BFEA /* URLOpener.swift */,
 				62DDB959216099E10005BFEA /* URLOpenerSpy.swift */,
 				62DDB948216099E00005BFEA /* URLOpenerStub.swift */,
-				62DDB910216097C40005BFEA /* UIKitTestable.h */,
-				62DDB911216097C40005BFEA /* Info.plist */,
-				2475E055C1D1ACBEE4FE901E /* KeyWindowReader.swift */,
-				2475E9B50C2BDCD389B4D8E4 /* KeyWindowReaderStub.swift */,
-				2475E27E37F904D02657D88B /* KeyWindowReaderSpy.swift */,
 				2475E842E602E56BBEE12FC8 /* WindowsHolder.swift */,
-				2475E68A127D2F6912CF7021 /* WindowsHolderStub.swift */,
 				2475E223AEB3DA74057CB2A5 /* WindowsHolderSpy.swift */,
-				2475E2DF0E50792495944971 /* KeyWindowWriter.swift */,
-				2475E60F5999BFA16DFFAA94 /* KeyWindowWriterStub.swift */,
-				2475E849DFCC147F827AD8E7 /* KeyWindowWriterSpy.swift */,
-				2475E136C59B3E1259F6B0F4 /* KeyWindowReadWriter.swift */,
+				2475E68A127D2F6912CF7021 /* WindowsHolderStub.swift */,
 			);
 			path = UIKitTestable;
 			sourceTree = "<group>";

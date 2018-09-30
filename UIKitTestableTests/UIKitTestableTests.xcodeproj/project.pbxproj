@@ -62,10 +62,10 @@
 		62DDB918216097F50005BFEA = {
 			isa = PBXGroup;
 			children = (
+				62DDB944216098B70005BFEA /* Frameworks */,
+				62DDB922216097F50005BFEA /* Products */,
 				62DDB923216097F50005BFEA /* UIKitTestableTests */,
 				62DDB938216097F70005BFEA /* UIKitTestableTestsTests */,
-				62DDB922216097F50005BFEA /* Products */,
-				62DDB944216098B70005BFEA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,11 +82,11 @@
 			isa = PBXGroup;
 			children = (
 				62DDB924216097F50005BFEA /* AppDelegate.swift */,
-				62DDB926216097F50005BFEA /* ViewController.swift */,
-				62DDB928216097F50005BFEA /* Main.storyboard */,
 				62DDB92B216097F70005BFEA /* Assets.xcassets */,
-				62DDB92D216097F70005BFEA /* LaunchScreen.storyboard */,
 				62DDB930216097F70005BFEA /* Info.plist */,
+				62DDB92D216097F70005BFEA /* LaunchScreen.storyboard */,
+				62DDB928216097F50005BFEA /* Main.storyboard */,
+				62DDB926216097F50005BFEA /* ViewController.swift */,
 			);
 			path = UIKitTestableTests;
 			sourceTree = "<group>";
@@ -239,6 +239,7 @@
 				62DDB929216097F50005BFEA /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		62DDB92D216097F70005BFEA /* LaunchScreen.storyboard */ = {
@@ -247,6 +248,7 @@
 				62DDB92E216097F70005BFEA /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
