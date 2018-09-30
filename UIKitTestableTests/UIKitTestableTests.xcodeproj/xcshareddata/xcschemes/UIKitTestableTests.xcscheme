@@ -4,30 +4,35 @@
    <BuildAction>
       <BuildActionEntries>
          <BuildActionEntry
-            buildForRunning = "YES">
+            buildForRunning = "YES"
+            buildForTesting = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "62DDB920216097F50005BFEA"
-               BuildableName = "UIKitTestableTests.app"
-               BlueprintName = "UIKitTestableTests"
+               BlueprintIdentifier = "62DDB934216097F70005BFEA"
+               BuildableName = "UIKitTestableTestsTests.xctest"
+               BlueprintName = "UIKitTestableTestsTests"
                ReferencedContainer = "container:UIKitTestableTests.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug">
+      <Testables>
+         <TestableReference>
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "62DDB934216097F70005BFEA"
+               BuildableName = "UIKitTestableTestsTests.xctest"
+               BlueprintName = "UIKitTestableTestsTests"
+               ReferencedContainer = "container:UIKitTestableTests.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
+   </TestAction>
    <LaunchAction
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Debug"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "62DDB920216097F50005BFEA"
-            BuildableName = "UIKitTestableTests.app"
-            BlueprintName = "UIKitTestableTests"
-            ReferencedContainer = "container:UIKitTestableTests.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
       <LocationScenarioReference
          identifier = "com.apple.dt.IDEFoundation.CurrentLocationScenarioIdentifier"
          referenceType = "1">

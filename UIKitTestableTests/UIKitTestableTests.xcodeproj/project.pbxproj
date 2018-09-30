@@ -12,8 +12,8 @@
 		62DDB92A216097F50005BFEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62DDB928216097F50005BFEA /* Main.storyboard */; };
 		62DDB92C216097F70005BFEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62DDB92B216097F70005BFEA /* Assets.xcassets */; };
 		62DDB92F216097F70005BFEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62DDB92D216097F70005BFEA /* LaunchScreen.storyboard */; };
-		62DDB93A216097F70005BFEA /* UIKitTestableTestsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DDB939216097F70005BFEA /* UIKitTestableTestsTests.swift */; };
-		62DDB946216098B70005BFEA /* UIKitTestable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62DDB945216098B70005BFEA /* UIKitTestable.framework */; };
+		62DDB97821609A680005BFEA /* GlobalModalPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DDB97721609A680005BFEA /* GlobalModalPresenterTests.swift */; };
+		62DDB9AA2160BB390005BFEA /* UIKitTestable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62DDB9A92160BB390005BFEA /* UIKitTestable.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +35,9 @@
 		62DDB92E216097F70005BFEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		62DDB930216097F70005BFEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62DDB935216097F70005BFEA /* UIKitTestableTestsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIKitTestableTestsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		62DDB939216097F70005BFEA /* UIKitTestableTestsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitTestableTestsTests.swift; sourceTree = "<group>"; };
 		62DDB93B216097F70005BFEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		62DDB945216098B70005BFEA /* UIKitTestable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UIKitTestable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		62DDB97721609A680005BFEA /* GlobalModalPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalModalPresenterTests.swift; sourceTree = "<group>"; };
+		62DDB9A92160BB390005BFEA /* UIKitTestable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UIKitTestable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62DDB946216098B70005BFEA /* UIKitTestable.framework in Frameworks */,
+				62DDB9AA2160BB390005BFEA /* UIKitTestable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +94,7 @@
 		62DDB938216097F70005BFEA /* UIKitTestableTestsTests */ = {
 			isa = PBXGroup;
 			children = (
-				62DDB939216097F70005BFEA /* UIKitTestableTestsTests.swift */,
+				62DDB97721609A680005BFEA /* GlobalModalPresenterTests.swift */,
 				62DDB93B216097F70005BFEA /* Info.plist */,
 			);
 			path = UIKitTestableTestsTests;
@@ -103,7 +103,7 @@
 		62DDB944216098B70005BFEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				62DDB945216098B70005BFEA /* UIKitTestable.framework */,
+				62DDB9A92160BB390005BFEA /* UIKitTestable.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -218,7 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62DDB93A216097F70005BFEA /* UIKitTestableTestsTests.swift in Sources */,
+				62DDB97821609A680005BFEA /* GlobalModalPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

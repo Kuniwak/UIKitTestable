@@ -7,13 +7,81 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2475E6B957DF508BE3F42002 /* KeyWindowWriterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E849DFCC147F827AD8E7 /* KeyWindowWriterSpy.swift */; };
+		2475E6D308CEB67E04C95B4C /* KeyWindowWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E2DF0E50792495944971 /* KeyWindowWriter.swift */; };
+		2475E7A8FB9D49FB3C4F05A0 /* KeyWindowReadWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E136C59B3E1259F6B0F4 /* KeyWindowReadWriter.swift */; };
+		2475E806F316F78350B45C42 /* KeyWindowWriterStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E60F5999BFA16DFFAA94 /* KeyWindowWriterStub.swift */; };
+		2475E84A4FB5268F6ABF0A0A /* KeyWindowReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E055C1D1ACBEE4FE901E /* KeyWindowReader.swift */; };
+		2475E91DD14F96582DC5B404 /* WindowsHolderStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E68A127D2F6912CF7021 /* WindowsHolderStub.swift */; };
+		2475E9F176ABCA414DD06050 /* WindowsHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E842E602E56BBEE12FC8 /* WindowsHolder.swift */; };
+		2475EAAAFDD7E03B5202CA4D /* KeyWindowReaderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E27E37F904D02657D88B /* KeyWindowReaderSpy.swift */; };
+		2475EC8A967FB8F1DB1CB122 /* WindowsHolderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E223AEB3DA74057CB2A5 /* WindowsHolderSpy.swift */; };
+		2475ED8734D301674683B79B /* KeyWindowReaderStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E9B50C2BDCD389B4D8E4 /* KeyWindowReaderStub.swift */; };
 		62DDB912216097C40005BFEA /* UIKitTestable.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DDB910216097C40005BFEA /* UIKitTestable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62DDB95F216099E10005BFEA /* NavigatorStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DDB947216099E00005BFEA /* NavigatorStub.swift */; };
+		62DDB960216099E10005BFEA /* URLOpenerStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DDB948216099E00005BFEA /* URLOpenerStub.swift */; };
+		62DDB961216099E10005BFEA /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DDB949216099E00005BFEA /* Navigator.swift */; };
+		62DDB962216099E10005BFEA /* ModalDissolverSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DDB94A216099E00005BFEA /* ModalDissolverSpy.swift */; };
+		62DDB963216099E10005BFEA /* TestNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DDB94B216099E00005BFEA /* TestNavigator.swift */; };
+		62DDB964216099E10005BFEA /* ReverseNavigatorStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DDB94C216099E00005BFEA /* ReverseNavigatorStub.swift */; };
+		62DDB965216099E10005BFEA /* GlobalModalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DDB94D216099E00005BFEA /* GlobalModalPresenter.swift */; };
+		62DDB966216099E10005BFEA /* ModalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DDB94E216099E00005BFEA /* ModalPresenter.swift */; };
+		62DDB967216099E10005BFEA /* NavigatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DDB94F216099E00005BFEA /* NavigatorSpy.swift */; };
+		62DDB968216099E10005BFEA /* GlobalModalPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DDB950216099E10005BFEA /* GlobalModalPresenterSpy.swift */; };
+		62DDB969216099E10005BFEA /* RootViewControllerHolderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DDB951216099E10005BFEA /* RootViewControllerHolderSpy.swift */; };
+		62DDB96A216099E10005BFEA /* RootViewControllerHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DDB952216099E10005BFEA /* RootViewControllerHolder.swift */; };
+		62DDB96B216099E10005BFEA /* SpyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DDB953216099E10005BFEA /* SpyViewController.swift */; };
+		62DDB96C216099E10005BFEA /* GlobalModalPresenterStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DDB954216099E10005BFEA /* GlobalModalPresenterStub.swift */; };
+		62DDB96D216099E10005BFEA /* ModalPresenterStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DDB955216099E10005BFEA /* ModalPresenterStub.swift */; };
+		62DDB96E216099E10005BFEA /* URLOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DDB956216099E10005BFEA /* URLOpener.swift */; };
+		62DDB96F216099E10005BFEA /* ReverseNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DDB957216099E10005BFEA /* ReverseNavigator.swift */; };
+		62DDB970216099E10005BFEA /* TransparentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DDB958216099E10005BFEA /* TransparentViewController.swift */; };
+		62DDB971216099E10005BFEA /* URLOpenerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DDB959216099E10005BFEA /* URLOpenerSpy.swift */; };
+		62DDB972216099E10005BFEA /* ModalDissolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DDB95A216099E10005BFEA /* ModalDissolver.swift */; };
+		62DDB973216099E10005BFEA /* ModalDissolverStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DDB95B216099E10005BFEA /* ModalDissolverStub.swift */; };
+		62DDB974216099E10005BFEA /* ReverseNavigatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DDB95C216099E10005BFEA /* ReverseNavigatorSpy.swift */; };
+		62DDB975216099E10005BFEA /* RootViewControllerHolderStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DDB95D216099E10005BFEA /* RootViewControllerHolderStub.swift */; };
+		62DDB976216099E10005BFEA /* ModalPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DDB95E216099E10005BFEA /* ModalPresenterSpy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2475E055C1D1ACBEE4FE901E /* KeyWindowReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyWindowReader.swift; sourceTree = "<group>"; };
+		2475E136C59B3E1259F6B0F4 /* KeyWindowReadWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyWindowReadWriter.swift; sourceTree = "<group>"; };
+		2475E223AEB3DA74057CB2A5 /* WindowsHolderSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowsHolderSpy.swift; sourceTree = "<group>"; };
+		2475E27E37F904D02657D88B /* KeyWindowReaderSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyWindowReaderSpy.swift; sourceTree = "<group>"; };
+		2475E2DF0E50792495944971 /* KeyWindowWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyWindowWriter.swift; sourceTree = "<group>"; };
+		2475E60F5999BFA16DFFAA94 /* KeyWindowWriterStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyWindowWriterStub.swift; sourceTree = "<group>"; };
+		2475E68A127D2F6912CF7021 /* WindowsHolderStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowsHolderStub.swift; sourceTree = "<group>"; };
+		2475E842E602E56BBEE12FC8 /* WindowsHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowsHolder.swift; sourceTree = "<group>"; };
+		2475E849DFCC147F827AD8E7 /* KeyWindowWriterSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyWindowWriterSpy.swift; sourceTree = "<group>"; };
+		2475E9B50C2BDCD389B4D8E4 /* KeyWindowReaderStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyWindowReaderStub.swift; sourceTree = "<group>"; };
 		62DDB90D216097C40005BFEA /* UIKitTestable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIKitTestable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62DDB910216097C40005BFEA /* UIKitTestable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKitTestable.h; sourceTree = "<group>"; };
 		62DDB911216097C40005BFEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62DDB947216099E00005BFEA /* NavigatorStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigatorStub.swift; sourceTree = "<group>"; };
+		62DDB948216099E00005BFEA /* URLOpenerStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLOpenerStub.swift; sourceTree = "<group>"; };
+		62DDB949216099E00005BFEA /* Navigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		62DDB94A216099E00005BFEA /* ModalDissolverSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalDissolverSpy.swift; sourceTree = "<group>"; };
+		62DDB94B216099E00005BFEA /* TestNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestNavigator.swift; sourceTree = "<group>"; };
+		62DDB94C216099E00005BFEA /* ReverseNavigatorStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverseNavigatorStub.swift; sourceTree = "<group>"; };
+		62DDB94D216099E00005BFEA /* GlobalModalPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalModalPresenter.swift; sourceTree = "<group>"; };
+		62DDB94E216099E00005BFEA /* ModalPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalPresenter.swift; sourceTree = "<group>"; };
+		62DDB94F216099E00005BFEA /* NavigatorSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigatorSpy.swift; sourceTree = "<group>"; };
+		62DDB950216099E10005BFEA /* GlobalModalPresenterSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalModalPresenterSpy.swift; sourceTree = "<group>"; };
+		62DDB951216099E10005BFEA /* RootViewControllerHolderSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewControllerHolderSpy.swift; sourceTree = "<group>"; };
+		62DDB952216099E10005BFEA /* RootViewControllerHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewControllerHolder.swift; sourceTree = "<group>"; };
+		62DDB953216099E10005BFEA /* SpyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpyViewController.swift; sourceTree = "<group>"; };
+		62DDB954216099E10005BFEA /* GlobalModalPresenterStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalModalPresenterStub.swift; sourceTree = "<group>"; };
+		62DDB955216099E10005BFEA /* ModalPresenterStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalPresenterStub.swift; sourceTree = "<group>"; };
+		62DDB956216099E10005BFEA /* URLOpener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLOpener.swift; sourceTree = "<group>"; };
+		62DDB957216099E10005BFEA /* ReverseNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverseNavigator.swift; sourceTree = "<group>"; };
+		62DDB958216099E10005BFEA /* TransparentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransparentViewController.swift; sourceTree = "<group>"; };
+		62DDB959216099E10005BFEA /* URLOpenerSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLOpenerSpy.swift; sourceTree = "<group>"; };
+		62DDB95A216099E10005BFEA /* ModalDissolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalDissolver.swift; sourceTree = "<group>"; };
+		62DDB95B216099E10005BFEA /* ModalDissolverStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalDissolverStub.swift; sourceTree = "<group>"; };
+		62DDB95C216099E10005BFEA /* ReverseNavigatorSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverseNavigatorSpy.swift; sourceTree = "<group>"; };
+		62DDB95D216099E10005BFEA /* RootViewControllerHolderStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewControllerHolderStub.swift; sourceTree = "<group>"; };
+		62DDB95E216099E10005BFEA /* ModalPresenterSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalPresenterSpy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,8 +114,42 @@
 		62DDB90F216097C40005BFEA /* UIKitTestable */ = {
 			isa = PBXGroup;
 			children = (
+				62DDB94D216099E00005BFEA /* GlobalModalPresenter.swift */,
+				62DDB950216099E10005BFEA /* GlobalModalPresenterSpy.swift */,
+				62DDB954216099E10005BFEA /* GlobalModalPresenterStub.swift */,
+				62DDB95A216099E10005BFEA /* ModalDissolver.swift */,
+				62DDB94A216099E00005BFEA /* ModalDissolverSpy.swift */,
+				62DDB95B216099E10005BFEA /* ModalDissolverStub.swift */,
+				62DDB94E216099E00005BFEA /* ModalPresenter.swift */,
+				62DDB95E216099E10005BFEA /* ModalPresenterSpy.swift */,
+				62DDB955216099E10005BFEA /* ModalPresenterStub.swift */,
+				62DDB949216099E00005BFEA /* Navigator.swift */,
+				62DDB94F216099E00005BFEA /* NavigatorSpy.swift */,
+				62DDB947216099E00005BFEA /* NavigatorStub.swift */,
+				62DDB957216099E10005BFEA /* ReverseNavigator.swift */,
+				62DDB95C216099E10005BFEA /* ReverseNavigatorSpy.swift */,
+				62DDB94C216099E00005BFEA /* ReverseNavigatorStub.swift */,
+				62DDB952216099E10005BFEA /* RootViewControllerHolder.swift */,
+				62DDB951216099E10005BFEA /* RootViewControllerHolderSpy.swift */,
+				62DDB95D216099E10005BFEA /* RootViewControllerHolderStub.swift */,
+				62DDB953216099E10005BFEA /* SpyViewController.swift */,
+				62DDB94B216099E00005BFEA /* TestNavigator.swift */,
+				62DDB958216099E10005BFEA /* TransparentViewController.swift */,
+				62DDB956216099E10005BFEA /* URLOpener.swift */,
+				62DDB959216099E10005BFEA /* URLOpenerSpy.swift */,
+				62DDB948216099E00005BFEA /* URLOpenerStub.swift */,
 				62DDB910216097C40005BFEA /* UIKitTestable.h */,
 				62DDB911216097C40005BFEA /* Info.plist */,
+				2475E055C1D1ACBEE4FE901E /* KeyWindowReader.swift */,
+				2475E9B50C2BDCD389B4D8E4 /* KeyWindowReaderStub.swift */,
+				2475E27E37F904D02657D88B /* KeyWindowReaderSpy.swift */,
+				2475E842E602E56BBEE12FC8 /* WindowsHolder.swift */,
+				2475E68A127D2F6912CF7021 /* WindowsHolderStub.swift */,
+				2475E223AEB3DA74057CB2A5 /* WindowsHolderSpy.swift */,
+				2475E2DF0E50792495944971 /* KeyWindowWriter.swift */,
+				2475E60F5999BFA16DFFAA94 /* KeyWindowWriterStub.swift */,
+				2475E849DFCC147F827AD8E7 /* KeyWindowWriterSpy.swift */,
+				2475E136C59B3E1259F6B0F4 /* KeyWindowReadWriter.swift */,
 			);
 			path = UIKitTestable;
 			sourceTree = "<group>";
@@ -95,6 +197,7 @@
 				TargetAttributes = {
 					62DDB90C216097C40005BFEA = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -130,6 +233,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62DDB96B216099E10005BFEA /* SpyViewController.swift in Sources */,
+				62DDB963216099E10005BFEA /* TestNavigator.swift in Sources */,
+				62DDB960216099E10005BFEA /* URLOpenerStub.swift in Sources */,
+				62DDB96A216099E10005BFEA /* RootViewControllerHolder.swift in Sources */,
+				62DDB96F216099E10005BFEA /* ReverseNavigator.swift in Sources */,
+				62DDB95F216099E10005BFEA /* NavigatorStub.swift in Sources */,
+				62DDB967216099E10005BFEA /* NavigatorSpy.swift in Sources */,
+				62DDB972216099E10005BFEA /* ModalDissolver.swift in Sources */,
+				62DDB96E216099E10005BFEA /* URLOpener.swift in Sources */,
+				62DDB968216099E10005BFEA /* GlobalModalPresenterSpy.swift in Sources */,
+				62DDB962216099E10005BFEA /* ModalDissolverSpy.swift in Sources */,
+				62DDB976216099E10005BFEA /* ModalPresenterSpy.swift in Sources */,
+				62DDB96D216099E10005BFEA /* ModalPresenterStub.swift in Sources */,
+				62DDB970216099E10005BFEA /* TransparentViewController.swift in Sources */,
+				62DDB975216099E10005BFEA /* RootViewControllerHolderStub.swift in Sources */,
+				62DDB974216099E10005BFEA /* ReverseNavigatorSpy.swift in Sources */,
+				62DDB973216099E10005BFEA /* ModalDissolverStub.swift in Sources */,
+				62DDB966216099E10005BFEA /* ModalPresenter.swift in Sources */,
+				62DDB964216099E10005BFEA /* ReverseNavigatorStub.swift in Sources */,
+				62DDB965216099E10005BFEA /* GlobalModalPresenter.swift in Sources */,
+				62DDB961216099E10005BFEA /* Navigator.swift in Sources */,
+				62DDB969216099E10005BFEA /* RootViewControllerHolderSpy.swift in Sources */,
+				62DDB96C216099E10005BFEA /* GlobalModalPresenterStub.swift in Sources */,
+				62DDB971216099E10005BFEA /* URLOpenerSpy.swift in Sources */,
+				2475E84A4FB5268F6ABF0A0A /* KeyWindowReader.swift in Sources */,
+				2475ED8734D301674683B79B /* KeyWindowReaderStub.swift in Sources */,
+				2475EAAAFDD7E03B5202CA4D /* KeyWindowReaderSpy.swift in Sources */,
+				2475E9F176ABCA414DD06050 /* WindowsHolder.swift in Sources */,
+				2475E91DD14F96582DC5B404 /* WindowsHolderStub.swift in Sources */,
+				2475EC8A967FB8F1DB1CB122 /* WindowsHolderSpy.swift in Sources */,
+				2475E6D308CEB67E04C95B4C /* KeyWindowWriter.swift in Sources */,
+				2475E806F316F78350B45C42 /* KeyWindowWriterStub.swift in Sources */,
+				2475E6B957DF508BE3F42002 /* KeyWindowWriterSpy.swift in Sources */,
+				2475E7A8FB9D49FB3C4F05A0 /* KeyWindowReadWriter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,8 +330,10 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SYMROOT = "${SRCROOT}/../build";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -250,8 +389,10 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -261,6 +402,7 @@
 		62DDB916216097C40005BFEA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -277,6 +419,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kuniwak.UIKitTestable;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -285,6 +428,7 @@
 		62DDB917216097C40005BFEA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;

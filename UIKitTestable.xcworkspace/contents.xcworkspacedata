@@ -2,9 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:UIKitTestableTests/UIKitTestableTests.xcodeproj">
+      location = "group:UIKitTestable/UIKitTestable.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:UIKitTestable/UIKitTestable.xcodeproj">
+      location = "group:UIKitTestableTests/UIKitTestableTests.xcodeproj">
    </FileRef>
 </Workspace>
