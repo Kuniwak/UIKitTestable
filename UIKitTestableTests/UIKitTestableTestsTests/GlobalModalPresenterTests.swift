@@ -7,32 +7,47 @@ import UIKitTests
 
 class GlobalModalPresenterTests: XCTestCase {
     func testPresent() {
-        let spyViewController = SpyViewController()
-        let modalPresenter = GlobalModalPresenter(wherePresentOn: UIWindow())
-
         // NOTE: CPS is a simple way instead of Promisified tests in this case,
         // because this test target (UIViewController#present) is designed for CPS.
         let expectation = self.expectation(description: "Awaiting a call of viewDidAppear")
 
-        // XXX: Wait a few msecs to prevent the following error.
-        // > failed: caught "NSInternalInconsistencyException", "props must have a valid clientID"
-        Timer.scheduledTimer(
-            withTimeInterval: 0.5,
-            repeats: false,
-            block: { _ in
-                modalPresenter.present(
-                    viewController: spyViewController,
-                    animated: false,
-                    completion: {
-                        XCTAssertEqual(
-                            spyViewController.callArgs,
-                            [
-                                .viewDidAppear(animated: true),
-                            ]
-                        )
-                        expectation.fulfill()
-                    }
-                )
+        let spyViewController = AwaitingViewController() { (viewController, event) in
+            guard event == .viewDidLoad else { return }
+            expectation.fulfill()
+        }
+
+        let modalPresenter = GlobalModalPresenter(wherePresentOn: UIWindow())
+        modalPresenter.present(
+            viewController: spyViewController,
+            animated: false
+        )
+
+        self.waitForExpectations(timeout: 3)
+    }
+
+
+
+    func testDismiss() {
+        // NOTE: CPS is a simple way instead of Promisified tests in this case,
+        // because this test target (UIViewController#dismiss) is designed for CPS.
+        let expectation = self.expectation(description: "Awaiting a call of viewDidDisappear")
+
+        let modalPresenter = GlobalModalPresenter(wherePresentOn: UIWindow())
+        modalPresenter.present(
+            viewController: UIViewController(),
+            animated: false,
+            completion: {
+                DispatchQueue.main.async {
+                    modalPresenter.dismiss(
+                        animated: false,
+                        completion: {
+                            DispatchQueue.main.async {
+                                _ = modalPresenter
+                                expectation.fulfill()
+                            }
+                        }
+                    )
+                }
             }
         )
 
@@ -40,43 +55,31 @@ class GlobalModalPresenterTests: XCTestCase {
     }
 
 
-
-    func testDismiss() {
-        let spyViewController = SpyViewController()
-        let modalPresenter = GlobalModalPresenter(wherePresentOn: UIWindow())
-
+    func testNoMemoryLeaks() {
         // NOTE: CPS is a simple way instead of Promisified tests in this case,
         // because this test target (UIViewController#dismiss) is designed for CPS.
         let expectation = self.expectation(description: "Awaiting a call of viewDidDisappear")
 
-        // XXX: Wait a few msecs to prevent the following error.
-        // > failed: caught "NSInternalInconsistencyException", "props must have a valid clientID"
-        Timer.scheduledTimer(
-            withTimeInterval: 0.5,
-            repeats: false,
-            block: { _ in
-                modalPresenter.present(
-                    viewController: spyViewController,
-                    animated: false,
-                    completion: {
-                        modalPresenter.dismiss(
-                            animated: false,
-                            completion: {
-                                XCTAssertEqual(
-                                    spyViewController.callArgs,
-                                    [
-                                        .viewDidAppear(animated: true),
-                                        .viewDidDisappear(animated: true),
-                                    ]
-                                )
-                                expectation.fulfill()
-                            }
-                        )
-                    }
-                )
+        let viewController = UIViewController()
+
+        let modalPresenter = GlobalModalPresenter(wherePresentOn: CountedWindow())
+        modalPresenter.present(
+            viewController: viewController,
+            animated: false,
+            completion: {
+                DispatchQueue.main.async {
+                    modalPresenter.dismiss(
+                        animated: false,
+                        completion: {
+                            XCTAssertEqual(CountedWindow.numberOfLiving, 1, "UIWindow was not released")
+                            _ = modalPresenter
+                            expectation.fulfill()
+                        }
+                    )
+                }
             }
         )
 
-        self.waitForExpectations(timeout: 1)
+        self.waitForExpectations(timeout: 3)
     }
 }

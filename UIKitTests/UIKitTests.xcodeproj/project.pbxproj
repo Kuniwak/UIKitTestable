@@ -19,6 +19,7 @@
 		2475E6E85825C28F689737C4 /* KeyWindowMakerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E9A3F827CA65E39913BB /* KeyWindowMakerSpy.swift */; };
 		2475E728FE52FDAE03A3A6E4 /* ModalDissolverStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EF75F73283D7B6F12F9F /* ModalDissolverStub.swift */; };
 		2475E73B56D621428CAB24A1 /* RootViewControllerWriterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E9B757F98C69E350DE91 /* RootViewControllerWriterSpy.swift */; };
+		2475E8372909D379E63CEEB2 /* CountedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E07F3FE6B2F1912332A3 /* CountedViewController.swift */; };
 		2475E9241540BA565D3B58A7 /* SpyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E49E4A55536320B78DEB /* SpyViewController.swift */; };
 		2475E94C650CF9E18CF01CF3 /* GlobalModalDissolverSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475ECC3A483918E171AC2BB /* GlobalModalDissolverSpy.swift */; };
 		2475E9D88C519EF4B766B7E0 /* TestNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EBC33BAFB1933AD78071 /* TestNavigator.swift */; };
@@ -27,6 +28,7 @@
 		2475EB6426EF0302ECE40B99 /* ModalPresenterStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475ECC698BB6C671EB8B927 /* ModalPresenterStub.swift */; };
 		2475EC4C2C840E62ED963AEC /* Timeout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EEFC83EED4DFD87C92FA /* Timeout.swift */; };
 		2475EC908F505B63A6BE451F /* ModalPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E4A40EF8526B7187BA31 /* ModalPresenterSpy.swift */; };
+		2475ED081E237B7178E0A666 /* CountedWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E15F76647883FA5ABF3A /* CountedWindow.swift */; };
 		2475ED1A5674C8AC18540CCC /* URLOpenerStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EDD6CD704C9838A9BD32 /* URLOpenerStub.swift */; };
 		2475EDA90FF136A45B0C4E32 /* RootViewControllerWriterStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E42A73C8DAA298E628CC /* RootViewControllerWriterStub.swift */; };
 		2475EDF17EAA9A5E00B82A55 /* ReverseNavigatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EBAD24E04A794B37EC68 /* ReverseNavigatorSpy.swift */; };
@@ -40,7 +42,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2475E07F3FE6B2F1912332A3 /* CountedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountedViewController.swift; sourceTree = "<group>"; };
 		2475E0B149194394D12993FF /* URLOpenerSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLOpenerSpy.swift; sourceTree = "<group>"; };
+		2475E15F76647883FA5ABF3A /* CountedWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountedWindow.swift; sourceTree = "<group>"; };
 		2475E42A73C8DAA298E628CC /* RootViewControllerWriterStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewControllerWriterStub.swift; sourceTree = "<group>"; };
 		2475E478891FF4BB81DA676D /* WindowsReaderStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowsReaderStub.swift; sourceTree = "<group>"; };
 		2475E49E4A55536320B78DEB /* SpyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpyViewController.swift; sourceTree = "<group>"; };
@@ -89,9 +93,9 @@
 		62DDB9C3216117210005BFEA = {
 			isa = PBXGroup;
 			children = (
-				62DDB9CF216117210005BFEA /* UIKitTests */,
-				62DDB9CE216117210005BFEA /* Products */,
 				62DDB9D82161173C0005BFEA /* Frameworks */,
+				62DDB9CE216117210005BFEA /* Products */,
+				62DDB9CF216117210005BFEA /* UIKitTests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,36 +110,38 @@
 		62DDB9CF216117210005BFEA /* UIKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				62DDB9D0216117210005BFEA /* UIKitTests.h */,
-				62DDB9D1216117210005BFEA /* Info.plist */,
-				2475EF75F73283D7B6F12F9F /* ModalDissolverStub.swift */,
-				2475E42A73C8DAA298E628CC /* RootViewControllerWriterStub.swift */,
-				2475E0B149194394D12993FF /* URLOpenerSpy.swift */,
-				2475EDEA0A6FE830E16293BD /* NavigatorStub.swift */,
-				2475EFA61DDB16FB75F83CF2 /* NavigatorSpy.swift */,
-				2475EC9C025BDE45D54E0B7A /* WindowsReaderSpy.swift */,
-				2475EEFC83EED4DFD87C92FA /* Timeout.swift */,
-				2475EDD6CD704C9838A9BD32 /* URLOpenerStub.swift */,
-				2475EBC33BAFB1933AD78071 /* TestNavigator.swift */,
-				2475EA28118F714A49B65513 /* RootViewControllerReaderSpy.swift */,
-				2475EB711BA98C606FE27B92 /* GlobalModalPresenterStub.swift */,
-				2475ED4B681884455850B40B /* RootViewControllerReadWriterStub.swift */,
-				2475E9B757F98C69E350DE91 /* RootViewControllerWriterSpy.swift */,
-				2475ECC3A483918E171AC2BB /* GlobalModalDissolverSpy.swift */,
-				2475E9A3F827CA65E39913BB /* KeyWindowMakerSpy.swift */,
-				2475E4A40EF8526B7187BA31 /* ModalPresenterSpy.swift */,
-				2475EA5BB3B07B46D20B0043 /* GlobalModalPresenterSpy.swift */,
-				2475EC002599489DB0B73AC7 /* RootViewControllerReadWriterSpy.swift */,
-				2475E478891FF4BB81DA676D /* WindowsReaderStub.swift */,
-				2475E49E4A55536320B78DEB /* SpyViewController.swift */,
-				2475ED2FD786F81443EA9814 /* KeyWindowMakerStub.swift */,
-				2475ECC698BB6C671EB8B927 /* ModalPresenterStub.swift */,
-				2475EBAD24E04A794B37EC68 /* ReverseNavigatorSpy.swift */,
-				2475EC5C7EF505AD39930923 /* GlobalModalDissolverStub.swift */,
-				2475E4F6ECDC5788FB1D1627 /* ModalDissolverSpy.swift */,
-				2475EADB008992BF0EDA06A4 /* RootViewControllerReaderStub.swift */,
-				2475EF6D00396137985FBE7E /* ReverseNavigatorStub.swift */,
 				2475E5C2BA3A2CA331C8CE02 /* AwaitingViewController.swift */,
+				2475ECC3A483918E171AC2BB /* GlobalModalDissolverSpy.swift */,
+				2475EC5C7EF505AD39930923 /* GlobalModalDissolverStub.swift */,
+				2475EA5BB3B07B46D20B0043 /* GlobalModalPresenterSpy.swift */,
+				2475EB711BA98C606FE27B92 /* GlobalModalPresenterStub.swift */,
+				62DDB9D1216117210005BFEA /* Info.plist */,
+				2475E9A3F827CA65E39913BB /* KeyWindowMakerSpy.swift */,
+				2475ED2FD786F81443EA9814 /* KeyWindowMakerStub.swift */,
+				2475E4F6ECDC5788FB1D1627 /* ModalDissolverSpy.swift */,
+				2475EF75F73283D7B6F12F9F /* ModalDissolverStub.swift */,
+				2475E4A40EF8526B7187BA31 /* ModalPresenterSpy.swift */,
+				2475ECC698BB6C671EB8B927 /* ModalPresenterStub.swift */,
+				2475EFA61DDB16FB75F83CF2 /* NavigatorSpy.swift */,
+				2475EDEA0A6FE830E16293BD /* NavigatorStub.swift */,
+				2475EBAD24E04A794B37EC68 /* ReverseNavigatorSpy.swift */,
+				2475EF6D00396137985FBE7E /* ReverseNavigatorStub.swift */,
+				2475EC002599489DB0B73AC7 /* RootViewControllerReadWriterSpy.swift */,
+				2475ED4B681884455850B40B /* RootViewControllerReadWriterStub.swift */,
+				2475EA28118F714A49B65513 /* RootViewControllerReaderSpy.swift */,
+				2475EADB008992BF0EDA06A4 /* RootViewControllerReaderStub.swift */,
+				2475E9B757F98C69E350DE91 /* RootViewControllerWriterSpy.swift */,
+				2475E42A73C8DAA298E628CC /* RootViewControllerWriterStub.swift */,
+				2475E49E4A55536320B78DEB /* SpyViewController.swift */,
+				2475EBC33BAFB1933AD78071 /* TestNavigator.swift */,
+				2475EEFC83EED4DFD87C92FA /* Timeout.swift */,
+				62DDB9D0216117210005BFEA /* UIKitTests.h */,
+				2475E0B149194394D12993FF /* URLOpenerSpy.swift */,
+				2475EDD6CD704C9838A9BD32 /* URLOpenerStub.swift */,
+				2475EC9C025BDE45D54E0B7A /* WindowsReaderSpy.swift */,
+				2475E478891FF4BB81DA676D /* WindowsReaderStub.swift */,
+				2475E15F76647883FA5ABF3A /* CountedWindow.swift */,
+				2475E07F3FE6B2F1912332A3 /* CountedViewController.swift */,
 			);
 			path = UIKitTests;
 			sourceTree = "<group>";
@@ -254,6 +260,8 @@
 				2475E2430E8426601F58A21D /* RootViewControllerReaderStub.swift in Sources */,
 				2475E54E0EB6FD4CD9BCD276 /* ReverseNavigatorStub.swift in Sources */,
 				2475E06A5320E722F4EED8A5 /* AwaitingViewController.swift in Sources */,
+				2475ED081E237B7178E0A666 /* CountedWindow.swift in Sources */,
+				2475E8372909D379E63CEEB2 /* CountedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

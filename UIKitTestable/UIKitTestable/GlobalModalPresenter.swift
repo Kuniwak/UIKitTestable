@@ -40,14 +40,22 @@ extension GlobalModalPresenter: GlobalModalPresenterProtocol {
 
 
     public func present(viewController: UIViewController, animated: Bool, completion: (() -> Void)?) {
-        let rootViewController = TransparentViewController()
-        self.rootViewControllerReadWriter.alter(to: rootViewController) {
+        parallel({ (callback1: @escaping (UIViewController) -> Void, callback2: @escaping (Any) -> Void) in
             self.keyWindowWriter.makeKeyAndVisible()
-            rootViewController.present(
-                viewController,
-                animated: animated,
-                completion: completion
-            )
+            let rootViewController = GlobalModalBackgroundViewController() { appearedViewController in
+                callback1(appearedViewController)
+            }
+            self.rootViewControllerReadWriter.alter(to: rootViewController) {
+                callback2(())
+            }
+        }) { (appearedViewController, _) in
+            DispatchQueue.main.async {
+                appearedViewController.present(
+                    viewController,
+                    animated: animated,
+                    completion: completion
+                )
+            }
         }
     }
 }
