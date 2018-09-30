@@ -2,11 +2,12 @@ import UIKit
 
 
 
-public class KeyWindowWriterStub: KeyWindowWriterProtocol {
+public class KeyWindowMakerStub: KeyWindowMakerProtocol {
     public init() {}
 
 
     public func makeKey() {}
+    public func makeKeyAndVisible() {}
     public func becomeKey() {}
     public func resignKey() {}
 }

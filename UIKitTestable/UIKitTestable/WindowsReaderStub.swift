@@ -2,7 +2,7 @@ import UIKit
 
 
 
-public class WindowsHolderStub: WindowsHolderProtocol {
+public class WindowsReaderStub: WindowsReaderProtocol {
     public var windows: [UIWindow]
 
 

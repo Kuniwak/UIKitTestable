@@ -7,14 +7,14 @@ import UIKit
  */
 public protocol ModalPresenterProtocol {
     /**
-     Presents a view controller modally.
+     Presents a view controller like a modal.
      This method behave like `UIViewController#present(UIViewController, animated: Bool)`
      */
     func present(viewController: UIViewController, animated: Bool)
 
 
     /**
-     Presents a view controller modally.
+     Presents a view controller like a modal.
      This method behave like `UIViewController#present(UIViewController, animated: Bool, completion: (() -> Void)?)`
      */
     func present(viewController: UIViewController, animated: Bool, completion: (() -> Void)?)

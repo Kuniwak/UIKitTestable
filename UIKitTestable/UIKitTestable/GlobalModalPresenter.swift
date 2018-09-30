@@ -1,10 +1,7 @@
 import UIKit
 
 
-
-public protocol GlobalModalPresenterProtocol: ModalPresenterProtocol {
-    var dissolver: ModalDissolverProtocol { get }
-}
+public protocol GlobalModalPresenterProtocol: ModalPresenterProtocol {}
 
 
 
@@ -12,73 +9,60 @@ public protocol GlobalModalPresenterProtocol: ModalPresenterProtocol {
  A class for specialized ModalPresenters that can present a UIViewController unconditionally.
  You can present a UIViewController if you does not know what UIViewController is visible.
  */
-public class GlobalModalPresenter: GlobalModalPresenterProtocol {
-    public fileprivate(set) var dissolver: ModalDissolverProtocol = NullModalDissolver()
-    private let window = UIWindow()
-    
-    
-    public init() {}
+public class GlobalModalPresenter {
+    private let rootViewControllerReadWriter: RootViewControllerReadWriterProtocol
+    private let keyWindowWriter: KeyWindowMakerProtocol
 
 
+    public convenience init(wherePresentOn window: UIWindow) {
+        self.init(
+            alteringRootViewControllerBy: RootViewControllerReadWriter(readingAndWriting: window),
+            makingKeyWindowBy: KeyWindowMaker(modifying: window)
+        )
+    }
+
+
+    public init(
+        alteringRootViewControllerBy rootViewControllerReadWriter: RootViewControllerReadWriterProtocol,
+        makingKeyWindowBy keyWindowWriter: KeyWindowMakerProtocol
+    ) {
+        self.rootViewControllerReadWriter = rootViewControllerReadWriter
+        self.keyWindowWriter = keyWindowWriter
+    }
+}
+
+
+
+extension GlobalModalPresenter: GlobalModalPresenterProtocol {
     public func present(viewController: UIViewController, animated: Bool) {
         self.present(viewController: viewController, animated: animated, completion: nil)
     }
 
 
     public func present(viewController: UIViewController, animated: Bool, completion: (() -> Void)?) {
-        self.dissolver.dismiss(animated: animated)
-
-        // NOTE: The created window will be disposed when the root UIViewController is dismissed.
         let rootViewController = TransparentViewController()
-        self.dissolver = GlobalModalDissolver(
-            window: self.window,
-            rootViewController: rootViewController
-        )
-
-        self.window.rootViewController = rootViewController
-        self.window.makeKeyAndVisible()
-
-        rootViewController.present(
-            viewController,
-            animated: animated,
-            completion: completion
-        )
-    }
-
-
-
-    public class GlobalModalDissolver: ModalDissolverProtocol {
-        private let window: UIWindow
-        private let rootViewController: UIViewController
-
-
-        public init(window: UIWindow, rootViewController: UIViewController) {
-            self.window = window
-            self.rootViewController = rootViewController
-        }
-
-
-        public func dismiss(animated: Bool) {
-            self.dismiss(animated: animated, completion: nil)
-        }
-
-
-        public func dismiss(animated: Bool, completion: (() -> Void)?) {
-            self.rootViewController.dismiss(
+        self.rootViewControllerReadWriter.alter(to: rootViewController) {
+            self.keyWindowWriter.makeKeyAndVisible()
+            rootViewController.present(
+                viewController,
                 animated: animated,
-                completion: {
-                    self.window.isHidden = true
-                    completion?()
-                })
+                completion: completion
+            )
         }
+    }
+}
+
+
+
+extension GlobalModalPresenter: GlobalModalDissolverProtocol {
+    public func dismiss(animated: Bool) {
+        self.dismiss(animated: animated, completion: nil)
     }
 
 
+    public func dismiss(animated: Bool, completion: (() -> Void)?) {
+        guard let rootViewController = self.rootViewControllerReadWriter.rootViewController else { return }
 
-    public class NullModalDissolver: ModalDissolverProtocol {
-        public func dismiss(animated: Bool) {}
-        public func dismiss(animated: Bool, completion: (() -> Void)?) {
-            completion?()
-        }
+        rootViewController.dismiss(animated: animated, completion: completion)
     }
 }

@@ -7,7 +7,7 @@ import UIKitTestable
 class GlobalModalPresenterTests: XCTestCase {
     func testPresent() {
         let spyViewController = SpyViewController()
-        let modalPresenter = GlobalModalPresenter()
+        let modalPresenter = GlobalModalPresenter(wherePresentOn: UIWindow())
 
         // NOTE: CPS is a simple way instead of Promisified tests in this case,
         // because this test target (UIViewController#present) is designed for CPS.
@@ -42,7 +42,7 @@ class GlobalModalPresenterTests: XCTestCase {
 
     func testDismiss() {
         let spyViewController = SpyViewController()
-        let modalPresenter = GlobalModalPresenter()
+        let modalPresenter = GlobalModalPresenter(wherePresentOn: UIWindow())
 
         // NOTE: CPS is a simple way instead of Promisified tests in this case,
         // because this test target (UIViewController#dismiss) is designed for CPS.
@@ -58,7 +58,7 @@ class GlobalModalPresenterTests: XCTestCase {
                     viewController: spyViewController,
                     animated: false,
                     completion: {
-                        modalPresenter.dissolver.dismiss(
+                        modalPresenter.dismiss(
                             animated: false,
                             completion: {
                                 XCTAssertEqual(

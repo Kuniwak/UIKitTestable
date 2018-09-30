@@ -2,15 +2,16 @@ import UIKit
 
 
 
-public protocol KeyWindowWriterProtocol {
+public protocol KeyWindowMakerProtocol {
     func makeKey()
+    func makeKeyAndVisible()
     func becomeKey()
     func resignKey()
 }
 
 
 
-public class KeyWindowWriter: KeyWindowWriterProtocol {
+public class KeyWindowMaker: KeyWindowMakerProtocol {
     private let window: UIWindow
 
 
@@ -24,20 +25,26 @@ public class KeyWindowWriter: KeyWindowWriterProtocol {
     }
 
 
+    public func makeKeyAndVisible() {
+        self.window.makeKeyAndVisible()
+    }
+
+
     public func becomeKey() {
-        self.becomeKey()
+        self.window.becomeKey()
     }
 
 
     public func resignKey() {
-        self.resignKey()
+        self.window.resignKey()
     }
 }
 
 
 
-public class NullKeyWindowWriter: KeyWindowWriterProtocol {
+public class NullKeyWindowWriter: KeyWindowMakerProtocol {
     public func makeKey() {}
+    public func makeKeyAndVisible() {}
     public func becomeKey() {}
     public func resignKey() {}
 }

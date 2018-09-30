@@ -3,20 +3,24 @@ import UIKit
 
 
 public class TestNavigator: NavigatorProtocol {
-    private let rootViewControllerHolder: RootViewControllerHolderProtocol
+    private let presenter: GlobalModalPresenterProtocol
+    private let keyWindowWriter: KeyWindowMakerProtocol
 
 
     public init(
-        alteringRootViewControllerBy rootViewControllerHolder: RootViewControllerHolderProtocol
+        presentingBy presenter: GlobalModalPresenterProtocol,
+        makingKeyWindowBy keyWindowWriter: KeyWindowMakerProtocol
     ) {
-        self.rootViewControllerHolder = rootViewControllerHolder
+        self.presenter = presenter
+        self.keyWindowWriter = keyWindowWriter
     }
 
 
     public func navigate(to viewController: UIViewController, animated: Bool) {
-        let navigationController = UINavigationController(
-            rootViewController: viewController
+        self.presenter.present(
+            viewController: UINavigationController(rootViewController: viewController),
+            animated: animated,
+            completion: nil
         )
-        self.rootViewControllerHolder.alter(to: navigationController)
     }
 }

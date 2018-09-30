@@ -7,22 +7,19 @@ import UIKit
  This class is useful for capturing calls of `GlobalModalPresenter#present` for testing.
  */
 public class GlobalModalPresenterSpy: GlobalModalPresenterProtocol {
-    public typealias CallArgs = (viewController: UIViewController, animated: Bool, completion: (() -> Void)?)
+    public enum CallArgs: Equatable {
+        case present(viewController: UIViewController, animated: Bool)
+    }
 
 
     /**
      Call arguments list for the method `GlobalModalPresenter#present`.
      You can use the property to test how the method is called.
      */
-    public fileprivate(set) var callArgs: [CallArgs] = []
+    public private(set) var callArgs: [CallArgs] = []
 
 
     public var delegate: GlobalModalPresenterProtocol
-
-
-    public var dissolver: ModalDissolverProtocol {
-        return self.delegate.dissolver
-    }
 
 
     public init(inherit delegate: GlobalModalPresenterProtocol) {
@@ -47,10 +44,9 @@ public class GlobalModalPresenterSpy: GlobalModalPresenterProtocol {
         animated: Bool,
         completion: (() -> Void)?
     ) {
-        self.callArgs.append((
+        self.callArgs.append(.present(
             viewController: viewController,
-            animated: animated,
-            completion: completion
+            animated: animated
         ))
 
         self.delegate.present(

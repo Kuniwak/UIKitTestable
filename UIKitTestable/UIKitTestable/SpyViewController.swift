@@ -17,7 +17,7 @@ public class SpyViewController: UIViewController {
      Call arguments list for the life-cycle event handlers.
      You can use the property to test how the method is called.
      */
-    public fileprivate(set) var callArgs: [CallArgs] = []
+    public private(set) var callArgs: [CallArgs] = []
 
 
     public override func viewDidAppear(_ animated: Bool) {

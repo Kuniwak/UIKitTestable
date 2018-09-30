@@ -7,14 +7,16 @@ import UIKit
  This class is useful for capturing calls of `UINavigationController#popToViewController` for testing.
  */
 public class ReverseNavigatorSpy: ReverseNavigatorProtocol {
-    public typealias CallArgs = Bool
+    public enum CallArgs: Equatable {
+        case back(animated: Bool)
+    }
 
 
     /**
      Call arguments list for the method `#back(animated: Bool)`.
      You can use the property to test how the method is called.
      */
-    public fileprivate(set) var callArgs: [CallArgs] = []
+    public private(set) var callArgs: [CallArgs] = []
 
 
     public var delegate: ReverseNavigatorProtocol
@@ -26,7 +28,7 @@ public class ReverseNavigatorSpy: ReverseNavigatorProtocol {
 
 
     public func back(animated: Bool) throws {
-        self.callArgs.append(animated)
+        self.callArgs.append(.back(animated: animated))
 
         try self.delegate.back(animated: animated)
     }

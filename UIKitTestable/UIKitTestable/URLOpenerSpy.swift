@@ -11,7 +11,7 @@ public class URLOpenerSpy: URLOpenerProtocol {
      Call arguments list for the method `#open(url: URL)`.
      You can use the property to test how the method is called.
      */
-    public fileprivate(set) var callArgs = [URL]()
+    public private(set) var callArgs = [URL]()
     public var delegate: URLOpenerProtocol
 
 

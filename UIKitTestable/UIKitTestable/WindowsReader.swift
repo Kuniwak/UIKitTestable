@@ -2,13 +2,13 @@ import UIKit
 
 
 
-public protocol WindowsHolderProtocol {
+public protocol WindowsReaderProtocol {
     var windows: [UIWindow] { get }
 }
 
 
 
-public class WindowsHolder: WindowsHolderProtocol {
+public class WindowsReader: WindowsReaderProtocol {
     private let application: UIApplication
 
 

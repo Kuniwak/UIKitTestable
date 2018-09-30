@@ -1,12 +1,39 @@
 import UIKit
 
 
+/**
+ A stub class for ModalDissolvers.
+ This class is useful for ignoring calls of `UIViewController#dismiss` for testing.
+
+ The completion of `dismiss(animated:Bool, completion:(() -> Void)?)` will be called when `complete()` is called..
+ */
+public class ModalDissolverStub: ModalDissolverProtocol {
+    public var completion: (() -> Void)?
+
+
+    public init() {}
+
+
+    public func dismiss(animated: Bool) {}
+    public func dismiss(animated: Bool, completion: (() -> Void)?) {
+        self.completion = completion
+    }
+
+
+    public func complete() {
+        self.completion?()
+    }
+}
+
+
 
 /**
  A stub class for ModalDissolvers.
  This class is useful for ignoring calls of `UIViewController#dismiss` for testing.
+
+ The completion of `dismiss(animated:Bool, completion:(() -> Void)?)` will be called synchronously.
  */
-public class ModalDissolverStub: ModalDissolverProtocol {
+public class ModalDissolverSyncStub: ModalDissolverProtocol {
     public init() {}
 
 
@@ -14,4 +41,42 @@ public class ModalDissolverStub: ModalDissolverProtocol {
     public func dismiss(animated: Bool, completion: (() -> Void)?) {
         completion?()
     }
+}
+
+
+
+
+/**
+ A stub class for ModalDissolvers.
+ This class is useful for ignoring calls of `UIViewController#dismiss` for testing.
+
+ The completion of `dismiss(animated:Bool, completion:(() -> Void)?)` will be called asynchronously.
+ */
+public class ModalDissolverAsyncStub: ModalDissolverProtocol {
+    public init() {}
+
+
+    public func dismiss(animated: Bool) {}
+    public func dismiss(animated: Bool, completion: (() -> Void)?) {
+        DispatchQueue.main.async {
+            completion?()
+        }
+    }
+}
+
+
+
+
+/**
+ A stub class for ModalDissolvers.
+ This class is useful for ignoring calls of `UIViewController#dismiss` for testing.
+
+ The completion of `dismiss(animated:Bool, completion:(() -> Void)?)` will be never called.
+ */
+public class ModalDissolverNeverStub: ModalDissolverProtocol {
+    public init() {}
+
+
+    public func dismiss(animated: Bool) {}
+    public func dismiss(animated: Bool, completion: (() -> Void)?) {}
 }
