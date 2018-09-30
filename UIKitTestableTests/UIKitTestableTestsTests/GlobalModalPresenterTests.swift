@@ -63,7 +63,7 @@ class GlobalModalPresenterTests: XCTestCase {
 
         var createdWindowLogs: [String] = ["↑ Older UIWindow"]
 
-        repeatAsync(
+        repeatSequentially(
             count: 100,
             repeating: { (i, done) in
                 let viewController = UIViewController()
@@ -105,8 +105,8 @@ class GlobalModalPresenterTests: XCTestCase {
 }
 
 
-private func repeatAsync(count: UInt, repeating f: @escaping(UInt, @escaping () -> Void) -> Void, _ last: @escaping () -> Void) {
-    let first = (0..<count).reduce(last) { (prev: @escaping () -> Void, i: UInt) -> () -> Void in
+private func repeatSequentially(count: UInt, repeating f: @escaping(UInt, @escaping () -> Void) -> Void, _ last: @escaping () -> Void) {
+    let first = (0..<count).reversed().reduce(last) { (prev: @escaping () -> Void, i: UInt) -> () -> Void in
         return { f(i, prev) }
     }
 
