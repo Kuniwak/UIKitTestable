@@ -1,4 +1,5 @@
 import UIKit
+import UIKitTestable
 
 
 public class GlobalModalDissolverSpy: GlobalModalDissolverProtocol {

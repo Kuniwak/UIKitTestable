@@ -8,30 +8,16 @@
       <BuildActionEntries>
          <BuildActionEntry
             buildForTesting = "YES"
-            buildForRunning = "NO"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "62DDB90C216097C40005BFEA"
                BuildableName = "UIKitTestable.framework"
                BlueprintName = "UIKitTestable"
-               ReferencedContainer = "container:../UIKitTestable/UIKitTestable.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "NO"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "62DDB9CC216117210005BFEA"
-               BuildableName = "UIKitTests.framework"
-               BlueprintName = "UIKitTests"
-               ReferencedContainer = "container:../UIKitTests/UIKitTests.xcodeproj">
+               ReferencedContainer = "container:UIKitTestable.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -42,28 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES"
-            testExecutionOrdering = "random">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "62DDB934216097F70005BFEA"
-               BuildableName = "UIKitTestableTestsTests.xctest"
-               BlueprintName = "UIKitTestableTestsTests"
-               ReferencedContainer = "container:UIKitTestableTests.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "62DDB90C216097C40005BFEA"
-            BuildableName = "UIKitTestable.framework"
-            BlueprintName = "UIKitTestable"
-            ReferencedContainer = "container:../UIKitTestable/UIKitTestable.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -77,6 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "62DDB90C216097C40005BFEA"
+            BuildableName = "UIKitTestable.framework"
+            BlueprintName = "UIKitTestable"
+            ReferencedContainer = "container:UIKitTestable.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -86,6 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "62DDB90C216097C40005BFEA"
+            BuildableName = "UIKitTestable.framework"
+            BlueprintName = "UIKitTestable"
+            ReferencedContainer = "container:UIKitTestable.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

@@ -7,11 +7,67 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2475E06A5320E722F4EED8A5 /* AwaitingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E5C2BA3A2CA331C8CE02 /* AwaitingViewController.swift */; };
+		2475E1DC991ECE95816E86C9 /* GlobalModalPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EA5BB3B07B46D20B0043 /* GlobalModalPresenterSpy.swift */; };
+		2475E2430E8426601F58A21D /* RootViewControllerReaderStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EADB008992BF0EDA06A4 /* RootViewControllerReaderStub.swift */; };
+		2475E3A0ED3838D16EBA6D42 /* NavigatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EFA61DDB16FB75F83CF2 /* NavigatorSpy.swift */; };
+		2475E54E0EB6FD4CD9BCD276 /* ReverseNavigatorStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EF6D00396137985FBE7E /* ReverseNavigatorStub.swift */; };
+		2475E5F917728050886EF2D2 /* URLOpenerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E0B149194394D12993FF /* URLOpenerSpy.swift */; };
+		2475E670141F497E89AF0E39 /* RootViewControllerReaderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EA28118F714A49B65513 /* RootViewControllerReaderSpy.swift */; };
+		2475E6884EABA963CFE70333 /* RootViewControllerReadWriterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EC002599489DB0B73AC7 /* RootViewControllerReadWriterSpy.swift */; };
+		2475E69016E4E726BE0E016A /* WindowsReaderStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E478891FF4BB81DA676D /* WindowsReaderStub.swift */; };
+		2475E6E85825C28F689737C4 /* KeyWindowMakerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E9A3F827CA65E39913BB /* KeyWindowMakerSpy.swift */; };
+		2475E728FE52FDAE03A3A6E4 /* ModalDissolverStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EF75F73283D7B6F12F9F /* ModalDissolverStub.swift */; };
+		2475E73B56D621428CAB24A1 /* RootViewControllerWriterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E9B757F98C69E350DE91 /* RootViewControllerWriterSpy.swift */; };
+		2475E9241540BA565D3B58A7 /* SpyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E49E4A55536320B78DEB /* SpyViewController.swift */; };
+		2475E94C650CF9E18CF01CF3 /* GlobalModalDissolverSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475ECC3A483918E171AC2BB /* GlobalModalDissolverSpy.swift */; };
+		2475E9D88C519EF4B766B7E0 /* TestNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EBC33BAFB1933AD78071 /* TestNavigator.swift */; };
+		2475E9F232842B8E6B79D75F /* GlobalModalDissolverStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EC5C7EF505AD39930923 /* GlobalModalDissolverStub.swift */; };
+		2475EA795AF27CC4EF0D8213 /* KeyWindowMakerStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475ED2FD786F81443EA9814 /* KeyWindowMakerStub.swift */; };
+		2475EB6426EF0302ECE40B99 /* ModalPresenterStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475ECC698BB6C671EB8B927 /* ModalPresenterStub.swift */; };
+		2475EC4C2C840E62ED963AEC /* Timeout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EEFC83EED4DFD87C92FA /* Timeout.swift */; };
+		2475EC908F505B63A6BE451F /* ModalPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E4A40EF8526B7187BA31 /* ModalPresenterSpy.swift */; };
+		2475ED1A5674C8AC18540CCC /* URLOpenerStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EDD6CD704C9838A9BD32 /* URLOpenerStub.swift */; };
+		2475EDA90FF136A45B0C4E32 /* RootViewControllerWriterStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E42A73C8DAA298E628CC /* RootViewControllerWriterStub.swift */; };
+		2475EDF17EAA9A5E00B82A55 /* ReverseNavigatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EBAD24E04A794B37EC68 /* ReverseNavigatorSpy.swift */; };
+		2475EE44CED9B215C019CEAF /* RootViewControllerReadWriterStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475ED4B681884455850B40B /* RootViewControllerReadWriterStub.swift */; };
+		2475EE79F38DFF8A3D78588E /* WindowsReaderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EC9C025BDE45D54E0B7A /* WindowsReaderSpy.swift */; };
+		2475EF421F3952AB1EAE2FDF /* GlobalModalPresenterStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EB711BA98C606FE27B92 /* GlobalModalPresenterStub.swift */; };
+		2475EFC3ECEAACB10AEAEE3A /* NavigatorStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EDEA0A6FE830E16293BD /* NavigatorStub.swift */; };
+		2475EFE4F2FB8B3BC6A6E9AC /* ModalDissolverSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E4F6ECDC5788FB1D1627 /* ModalDissolverSpy.swift */; };
 		62DDB9D2216117210005BFEA /* UIKitTests.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DDB9D0216117210005BFEA /* UIKitTests.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62DDB9DA2161173C0005BFEA /* UIKitTestable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62DDB9D92161173C0005BFEA /* UIKitTestable.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2475E0B149194394D12993FF /* URLOpenerSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLOpenerSpy.swift; sourceTree = "<group>"; };
+		2475E42A73C8DAA298E628CC /* RootViewControllerWriterStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewControllerWriterStub.swift; sourceTree = "<group>"; };
+		2475E478891FF4BB81DA676D /* WindowsReaderStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowsReaderStub.swift; sourceTree = "<group>"; };
+		2475E49E4A55536320B78DEB /* SpyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpyViewController.swift; sourceTree = "<group>"; };
+		2475E4A40EF8526B7187BA31 /* ModalPresenterSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalPresenterSpy.swift; sourceTree = "<group>"; };
+		2475E4F6ECDC5788FB1D1627 /* ModalDissolverSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalDissolverSpy.swift; sourceTree = "<group>"; };
+		2475E5C2BA3A2CA331C8CE02 /* AwaitingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwaitingViewController.swift; sourceTree = "<group>"; };
+		2475E9A3F827CA65E39913BB /* KeyWindowMakerSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyWindowMakerSpy.swift; sourceTree = "<group>"; };
+		2475E9B757F98C69E350DE91 /* RootViewControllerWriterSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewControllerWriterSpy.swift; sourceTree = "<group>"; };
+		2475EA28118F714A49B65513 /* RootViewControllerReaderSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewControllerReaderSpy.swift; sourceTree = "<group>"; };
+		2475EA5BB3B07B46D20B0043 /* GlobalModalPresenterSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalModalPresenterSpy.swift; sourceTree = "<group>"; };
+		2475EADB008992BF0EDA06A4 /* RootViewControllerReaderStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewControllerReaderStub.swift; sourceTree = "<group>"; };
+		2475EB711BA98C606FE27B92 /* GlobalModalPresenterStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalModalPresenterStub.swift; sourceTree = "<group>"; };
+		2475EBAD24E04A794B37EC68 /* ReverseNavigatorSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverseNavigatorSpy.swift; sourceTree = "<group>"; };
+		2475EBC33BAFB1933AD78071 /* TestNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestNavigator.swift; sourceTree = "<group>"; };
+		2475EC002599489DB0B73AC7 /* RootViewControllerReadWriterSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewControllerReadWriterSpy.swift; sourceTree = "<group>"; };
+		2475EC5C7EF505AD39930923 /* GlobalModalDissolverStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalModalDissolverStub.swift; sourceTree = "<group>"; };
+		2475EC9C025BDE45D54E0B7A /* WindowsReaderSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowsReaderSpy.swift; sourceTree = "<group>"; };
+		2475ECC3A483918E171AC2BB /* GlobalModalDissolverSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalModalDissolverSpy.swift; sourceTree = "<group>"; };
+		2475ECC698BB6C671EB8B927 /* ModalPresenterStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalPresenterStub.swift; sourceTree = "<group>"; };
+		2475ED2FD786F81443EA9814 /* KeyWindowMakerStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyWindowMakerStub.swift; sourceTree = "<group>"; };
+		2475ED4B681884455850B40B /* RootViewControllerReadWriterStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewControllerReadWriterStub.swift; sourceTree = "<group>"; };
+		2475EDD6CD704C9838A9BD32 /* URLOpenerStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLOpenerStub.swift; sourceTree = "<group>"; };
+		2475EDEA0A6FE830E16293BD /* NavigatorStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigatorStub.swift; sourceTree = "<group>"; };
+		2475EEFC83EED4DFD87C92FA /* Timeout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeout.swift; sourceTree = "<group>"; };
+		2475EF6D00396137985FBE7E /* ReverseNavigatorStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverseNavigatorStub.swift; sourceTree = "<group>"; };
+		2475EF75F73283D7B6F12F9F /* ModalDissolverStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalDissolverStub.swift; sourceTree = "<group>"; };
+		2475EFA61DDB16FB75F83CF2 /* NavigatorSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigatorSpy.swift; sourceTree = "<group>"; };
 		62DDB9CD216117210005BFEA /* UIKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62DDB9D0216117210005BFEA /* UIKitTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKitTests.h; sourceTree = "<group>"; };
 		62DDB9D1216117210005BFEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,6 +108,34 @@
 			children = (
 				62DDB9D0216117210005BFEA /* UIKitTests.h */,
 				62DDB9D1216117210005BFEA /* Info.plist */,
+				2475EF75F73283D7B6F12F9F /* ModalDissolverStub.swift */,
+				2475E42A73C8DAA298E628CC /* RootViewControllerWriterStub.swift */,
+				2475E0B149194394D12993FF /* URLOpenerSpy.swift */,
+				2475EDEA0A6FE830E16293BD /* NavigatorStub.swift */,
+				2475EFA61DDB16FB75F83CF2 /* NavigatorSpy.swift */,
+				2475EC9C025BDE45D54E0B7A /* WindowsReaderSpy.swift */,
+				2475EEFC83EED4DFD87C92FA /* Timeout.swift */,
+				2475EDD6CD704C9838A9BD32 /* URLOpenerStub.swift */,
+				2475EBC33BAFB1933AD78071 /* TestNavigator.swift */,
+				2475EA28118F714A49B65513 /* RootViewControllerReaderSpy.swift */,
+				2475EB711BA98C606FE27B92 /* GlobalModalPresenterStub.swift */,
+				2475ED4B681884455850B40B /* RootViewControllerReadWriterStub.swift */,
+				2475E9B757F98C69E350DE91 /* RootViewControllerWriterSpy.swift */,
+				2475ECC3A483918E171AC2BB /* GlobalModalDissolverSpy.swift */,
+				2475E9A3F827CA65E39913BB /* KeyWindowMakerSpy.swift */,
+				2475E4A40EF8526B7187BA31 /* ModalPresenterSpy.swift */,
+				2475EA5BB3B07B46D20B0043 /* GlobalModalPresenterSpy.swift */,
+				2475EC002599489DB0B73AC7 /* RootViewControllerReadWriterSpy.swift */,
+				2475E478891FF4BB81DA676D /* WindowsReaderStub.swift */,
+				2475E49E4A55536320B78DEB /* SpyViewController.swift */,
+				2475ED2FD786F81443EA9814 /* KeyWindowMakerStub.swift */,
+				2475ECC698BB6C671EB8B927 /* ModalPresenterStub.swift */,
+				2475EBAD24E04A794B37EC68 /* ReverseNavigatorSpy.swift */,
+				2475EC5C7EF505AD39930923 /* GlobalModalDissolverStub.swift */,
+				2475E4F6ECDC5788FB1D1627 /* ModalDissolverSpy.swift */,
+				2475EADB008992BF0EDA06A4 /* RootViewControllerReaderStub.swift */,
+				2475EF6D00396137985FBE7E /* ReverseNavigatorStub.swift */,
+				2475E5C2BA3A2CA331C8CE02 /* AwaitingViewController.swift */,
 			);
 			path = UIKitTests;
 			sourceTree = "<group>";
@@ -142,6 +226,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2475E728FE52FDAE03A3A6E4 /* ModalDissolverStub.swift in Sources */,
+				2475EDA90FF136A45B0C4E32 /* RootViewControllerWriterStub.swift in Sources */,
+				2475E5F917728050886EF2D2 /* URLOpenerSpy.swift in Sources */,
+				2475EFC3ECEAACB10AEAEE3A /* NavigatorStub.swift in Sources */,
+				2475E3A0ED3838D16EBA6D42 /* NavigatorSpy.swift in Sources */,
+				2475EE79F38DFF8A3D78588E /* WindowsReaderSpy.swift in Sources */,
+				2475EC4C2C840E62ED963AEC /* Timeout.swift in Sources */,
+				2475ED1A5674C8AC18540CCC /* URLOpenerStub.swift in Sources */,
+				2475E9D88C519EF4B766B7E0 /* TestNavigator.swift in Sources */,
+				2475E670141F497E89AF0E39 /* RootViewControllerReaderSpy.swift in Sources */,
+				2475EF421F3952AB1EAE2FDF /* GlobalModalPresenterStub.swift in Sources */,
+				2475EE44CED9B215C019CEAF /* RootViewControllerReadWriterStub.swift in Sources */,
+				2475E73B56D621428CAB24A1 /* RootViewControllerWriterSpy.swift in Sources */,
+				2475E94C650CF9E18CF01CF3 /* GlobalModalDissolverSpy.swift in Sources */,
+				2475E6E85825C28F689737C4 /* KeyWindowMakerSpy.swift in Sources */,
+				2475EC908F505B63A6BE451F /* ModalPresenterSpy.swift in Sources */,
+				2475E1DC991ECE95816E86C9 /* GlobalModalPresenterSpy.swift in Sources */,
+				2475E6884EABA963CFE70333 /* RootViewControllerReadWriterSpy.swift in Sources */,
+				2475E69016E4E726BE0E016A /* WindowsReaderStub.swift in Sources */,
+				2475E9241540BA565D3B58A7 /* SpyViewController.swift in Sources */,
+				2475EA795AF27CC4EF0D8213 /* KeyWindowMakerStub.swift in Sources */,
+				2475EB6426EF0302ECE40B99 /* ModalPresenterStub.swift in Sources */,
+				2475EDF17EAA9A5E00B82A55 /* ReverseNavigatorSpy.swift in Sources */,
+				2475E9F232842B8E6B79D75F /* GlobalModalDissolverStub.swift in Sources */,
+				2475EFE4F2FB8B3BC6A6E9AC /* ModalDissolverSpy.swift in Sources */,
+				2475E2430E8426601F58A21D /* RootViewControllerReaderStub.swift in Sources */,
+				2475E54E0EB6FD4CD9BCD276 /* ReverseNavigatorStub.swift in Sources */,
+				2475E06A5320E722F4EED8A5 /* AwaitingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +391,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
 				INFOPLIST_FILE = UIKitTests/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -303,6 +419,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
 				INFOPLIST_FILE = UIKitTests/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
