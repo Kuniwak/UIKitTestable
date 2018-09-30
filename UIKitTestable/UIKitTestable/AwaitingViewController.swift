@@ -53,6 +53,40 @@ public enum ViewControllerEvent: Equatable {
     case didReceiveMemoryWarning
     case viewWillTransition(size: CGSize, coordinator: UIViewControllerTransitionCoordinator)
     case `deinit`
+
+
+    public static func ==(lhs: ViewControllerEvent, rhs: ViewControllerEvent) -> Bool {
+        switch (lhs, rhs) {
+        case (.init, .init):
+            return true
+        case (.viewDidLoad, .viewDidLoad):
+            return true
+        case (.viewWillAppear(animated: let l), .viewWillAppear(animated: let r)):
+            return l == r
+        case (.viewDidAppear(animated: let l), .viewDidAppear(animated: let r)):
+            return l == r
+        case (.viewWillDisappear(animated: let l), .viewWillDisappear(animated: let r)):
+            return l == r
+        case (.viewDidDisappear(animated: let l), .viewDidDisappear(animated: let r)):
+            return l == r
+        case (.viewWillLayoutSubviews, .viewWillLayoutSubviews):
+            return true
+        case (.viewDidLayoutSubviews, .viewDidLayoutSubviews):
+            return true
+        case (.didMove(parent: let l), .didMove(parent: let r)):
+            return l == r
+        case (.willMove(parent: let l), .willMove(parent: let r)):
+            return l == r
+        case (.didReceiveMemoryWarning, .didReceiveMemoryWarning):
+            return true
+        case (.viewWillTransition(size: let ls, coordinator: let lc), .viewWillTransition(size: let rs, coordinator: let rc)):
+            return ls == rs && lc.isEqual(rc)
+        case (.deinit, .deinit):
+            return true
+        default:
+            return false
+        }
+    }
 }
 
 
@@ -122,14 +156,14 @@ public class AwaitingViewController: UIViewController {
     }
 
 
-    public override func didMove(toParentViewController parent: UIViewController?) {
-        super.didMove(toParentViewController: parent)
+    public override func didMove(toParent parent: UIViewController?) {
+        super.didMove(toParent: parent)
         self.callback(self, .didMove(parent: parent))
     }
 
 
-    public override func willMove(toParentViewController parent: UIViewController?) {
-        super.willMove(toParentViewController: parent)
+    public override func willMove(toParent parent: UIViewController?) {
+        super.willMove(toParent: parent)
         self.callback(self, .willMove(parent: parent))
     }
 
