@@ -59,17 +59,19 @@ class GlobalModalPresenterTests: XCTestCase {
         // NOTE: CPS is a simple way instead of Promisified tests in this case,
         // because this test target (UIViewController#dismiss) is designed for CPS.
         let expectation = self.expectation(description: "Awaiting a call of viewDidDisappear")
+        let numberOfCreations: UInt = 100
         let thresholdOfAcceptableAliveWindows: UInt = 5
+        let debugInfo = MemoryLeakTestDebugInfo()
 
-        var createdWindowLogs: [String] = ["↑ Older UIWindow"]
 
         repeatSequentially(
-            count: 100,
+            count: numberOfCreations,
             repeating: { (i, done) in
                 let viewController = UIViewController()
                 let window = CountedWindow()
                 let modalPresenter = GlobalModalPresenter(wherePresentOn: window)
-                createdWindowLogs.append("\(i): \(window)")
+
+                debugInfo.log(index: i, window: window)
 
                 modalPresenter.present(
                     viewController: viewController,
@@ -87,14 +89,10 @@ class GlobalModalPresenterTests: XCTestCase {
                 )
             }
         ) {
-            var livingWindowsInfo = ""
-            dump(UIApplication.shared.windows, to: &livingWindowsInfo)
-            createdWindowLogs.append("↓ Newer UIWindow")
-
             // XXX: Some UIWindows can be remained, but it is not a problem only if few remained.
             XCTAssertLessThan(
                 CountedWindow.numberOfLiving, thresholdOfAcceptableAliveWindows,
-                "A lot of UIWindow have been not released:\n\(livingWindowsInfo)\n\n\(createdWindowLogs.joined(separator: "\n"))"
+                "A lot of UIWindow have been not released:" + debugInfo.debugDescription
             )
 
             expectation.fulfill()
@@ -102,13 +100,36 @@ class GlobalModalPresenterTests: XCTestCase {
 
         self.waitForExpectations(timeout: 10)
     }
-}
 
 
-private func repeatSequentially(count: UInt, repeating f: @escaping(UInt, @escaping () -> Void) -> Void, _ last: @escaping () -> Void) {
-    let first = (0..<count).reversed().reduce(last) { (prev: @escaping () -> Void, i: UInt) -> () -> Void in
-        return { f(i, prev) }
+    private class MemoryLeakTestDebugInfo {
+        func log(index: UInt, window: UIWindow) {
+            self.createdWindowLogs.append("\(index): \(window)")
+        }
+
+
+        var debugDescription: String {
+            return [
+                "",
+                self.createdWindowInfo,
+                "",
+                self.aliveWindowInfo
+            ].joined(separator: "\n")
+        }
+
+
+        private var createdWindowLogs = [String]()
+        private var createdWindowInfo: String {
+            var result = ["↑ Older UIWindow"]
+            result.append(contentsOf: self.createdWindowLogs)
+            result.append("↓ Newer UIWindow")
+            return result.joined(separator: "\n")
+        }
+
+
+        private var aliveWindowInfo: String {
+            return dumpString(UIApplication.shared.windows)
+        }
     }
 
-    first()
 }
