@@ -12,7 +12,7 @@ public protocol ReverseNavigatorProtocol {
 
      - throws: ReverseNavigatorError will be thrown when the UIViewController is not in the navigation stack.
      */
-    func back(animated: Bool) throws
+    func pop(animated: Bool) throws
 }
 
 
@@ -45,7 +45,7 @@ public class ReverseNavigator: ReverseNavigatorProtocol {
     }
 
 
-    public func back(animated: Bool) throws {
+    public func pop(animated: Bool) throws {
         guard self.navigationController.viewControllers.contains(self.viewController) else {
             throw ReverseNavigatorError.noDestinationViewControllerInNavigationStack
         }
