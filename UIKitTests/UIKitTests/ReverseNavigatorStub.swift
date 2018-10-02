@@ -16,7 +16,7 @@ public class ReverseNavigatorStub: ReverseNavigatorProtocol {
     }
 
 
-    public func back(animated: Bool) throws {
+    public func pop(animated: Bool) throws {
         guard let error = error else { return }
 
         throw error

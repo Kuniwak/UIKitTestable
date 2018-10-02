@@ -28,9 +28,9 @@ public class ReverseNavigatorSpy: ReverseNavigatorProtocol {
     }
 
 
-    public func back(animated: Bool) throws {
+    public func pop(animated: Bool) throws {
         self.callArgs.append(.back(animated: animated))
 
-        try self.delegate.back(animated: animated)
+        try self.delegate.pop(animated: animated)
     }
 }
