@@ -6,7 +6,7 @@ public protocol RootViewControllerReadWriterProtocol: RootViewControllerReaderPr
 
 
 
-public class RootViewControllerReadWriter: RootViewControllerReadWriterProtocol {
+public class WindowRootViewControllerReadWriter: RootViewControllerReadWriterProtocol {
     private let reader: RootViewControllerReaderProtocol
     private let writer: RootViewControllerWriterProtocol
 
@@ -24,8 +24,8 @@ public class RootViewControllerReadWriter: RootViewControllerReadWriterProtocol 
 
     public convenience init(readingAndWriting window: UIWindow) {
         self.init(
-            readingBy: RootViewControllerReader(whoHaveRootViewController: window),
-            writingBy: RootViewControllerWriter(whoHaveViewController: window)
+            readingBy: WindowRootViewControllerReader(whoHaveRootViewController: window),
+            writingBy: WindowRootViewControllerWriter(whoHaveViewController: window)
         )
     }
 

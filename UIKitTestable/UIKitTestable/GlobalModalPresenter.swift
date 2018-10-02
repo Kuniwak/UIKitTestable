@@ -16,7 +16,7 @@ public class GlobalModalPresenter {
 
     public convenience init(wherePresentOn window: UIWindow) {
         self.init(
-            alteringRootViewControllerBy: RootViewControllerReadWriter(readingAndWriting: window),
+            alteringRootViewControllerBy: WindowRootViewControllerReadWriter(readingAndWriting: window),
             makingKeyWindowBy: KeyWindowMaker(modifying: window)
         )
     }

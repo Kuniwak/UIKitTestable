@@ -24,7 +24,7 @@ public protocol RootViewControllerWriterProtocol: AnyObject {
  A wrapper class to encapsulate a implementation of assigning `UIWindow.rootViewController`.
  You can replace the class to the stub or spy for testing.
  */
-public class RootViewControllerWriter: RootViewControllerWriterProtocol {
+public class WindowRootViewControllerWriter: RootViewControllerWriterProtocol {
     private let window: UIWindow
 
 
