@@ -10,7 +10,7 @@ import UIKitTestable
  The completion of `present(viewController: UIViewController, animated:Bool, completion: (() -> Void)?` will be called when
  `complete()` was called.
  */
-public class ModalPresenterStub: ModalPresenterProtocol {
+public final class ModalPresenterStub: ModalPresenterProtocol {
     private var completion: (() -> Void)?
 
 
@@ -37,7 +37,7 @@ public class ModalPresenterStub: ModalPresenterProtocol {
  The completion of `present(viewController: UIViewController, animated:Bool, completion: (() -> Void)?` will be called
  synchronously.
  */
-public class ModalPresenterSyncStub: ModalPresenterProtocol {
+public final class ModalPresenterSyncStub: ModalPresenterProtocol {
     public init() {}
 
 
@@ -56,7 +56,7 @@ public class ModalPresenterSyncStub: ModalPresenterProtocol {
  The completion of `present(viewController: UIViewController, animated:Bool, completion: (() -> Void)?` will be called
  synchronously.
  */
-public class ModalPresenterAsyncStub: ModalPresenterProtocol {
+public final class ModalPresenterAsyncStub: ModalPresenterProtocol {
     public init() {}
 
 
@@ -76,7 +76,7 @@ public class ModalPresenterAsyncStub: ModalPresenterProtocol {
 
  The completion of `present(viewController: UIViewController, animated:Bool, completion: (() -> Void)?` will be never called.
 */
-public class ModalPresenterNeverStub: ModalPresenterProtocol {
+public final class ModalPresenterNeverStub: ModalPresenterProtocol {
     public init() {}
 
 

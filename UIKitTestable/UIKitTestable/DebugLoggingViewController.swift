@@ -2,7 +2,7 @@ import UIKit
 
 
 
-internal class DebugLoggingViewController: ViewControllerLifeCycleObserver {
+internal final class DebugLoggingViewController: ViewControllerLifeCycleObserver {
     override public init() {
         super.init()
     }

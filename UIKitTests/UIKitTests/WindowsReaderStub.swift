@@ -3,7 +3,7 @@ import UIKitTestable
 
 
 
-public class WindowsReaderStub: WindowsReaderProtocol {
+public final class WindowsReaderStub: WindowsReaderProtocol {
     public var windows: [UIWindow]
 
 

@@ -2,7 +2,7 @@ import UIKit
 import UIKitTestable
 
 
-public class GlobalModalDissolverSpy: GlobalModalDissolverProtocol {
+public final class GlobalModalDissolverSpy: GlobalModalDissolverProtocol {
     public enum CallArgs: Equatable {
         case dismiss(animated: Bool)
     }

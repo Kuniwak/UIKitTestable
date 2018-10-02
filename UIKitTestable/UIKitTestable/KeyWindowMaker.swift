@@ -11,7 +11,7 @@ public protocol KeyWindowMakerProtocol {
 
 
 
-public class KeyWindowMaker: KeyWindowMakerProtocol {
+public final class KeyWindowMaker: KeyWindowMakerProtocol {
     private let window: UIWindow
 
 
@@ -42,7 +42,7 @@ public class KeyWindowMaker: KeyWindowMakerProtocol {
 
 
 
-public class NullKeyWindowWriter: KeyWindowMakerProtocol {
+public final class NullKeyWindowWriter: KeyWindowMakerProtocol {
     public func makeKey() {}
     public func makeKeyAndVisible() {}
     public func becomeKey() {}

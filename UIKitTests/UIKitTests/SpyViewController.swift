@@ -7,7 +7,7 @@ import UIKitTestable
  A spy class for UIViewController.
  This class is useful for capturing calls of life-cycle event handlers.
  */
-public class SpyViewController: UIViewController {
+public final class SpyViewController: UIViewController {
     public enum CallArgs: Equatable {
         case viewDidDisappear(animated: Bool)
         case viewDidAppear(animated: Bool)

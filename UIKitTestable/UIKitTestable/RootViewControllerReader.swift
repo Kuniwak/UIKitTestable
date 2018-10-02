@@ -8,7 +8,7 @@ public protocol RootViewControllerReaderProtocol: AnyObject {
 
 
 
-public class WindowRootViewControllerReader: RootViewControllerReaderProtocol {
+public final class WindowRootViewControllerReader: RootViewControllerReaderProtocol {
     private let window: UIWindow
 
 

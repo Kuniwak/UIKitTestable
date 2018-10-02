@@ -2,7 +2,7 @@ import UIKit
 
 
 
-public class CountedWindow: UIWindow {
+public final class CountedWindow: UIWindow {
     public private(set) static var numberOfLiving: UInt = 0
 
 

@@ -3,7 +3,7 @@ import UIKitTestable
 
 
 
-public class TestNavigator: NavigatorProtocol {
+public final class TestNavigator: NavigatorProtocol {
     private let presenter: GlobalModalPresenterProtocol
     private let keyWindowWriter: KeyWindowMakerProtocol
 

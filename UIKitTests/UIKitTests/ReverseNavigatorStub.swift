@@ -7,7 +7,7 @@ import UIKitTestable
  A spy class for ReverseNavigators.
  This class is useful for ignoring calls of `UINavigationController#popToViewController` for testing.
  */
-public class ReverseNavigatorStub: ReverseNavigatorProtocol {
+public final class ReverseNavigatorStub: ReverseNavigatorProtocol {
     public var error: ReverseNavigatorError?
 
 

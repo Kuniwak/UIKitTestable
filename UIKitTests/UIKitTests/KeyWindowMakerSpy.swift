@@ -3,7 +3,7 @@ import UIKitTestable
 
 
 
-public class KeyWindowMakerSpy: KeyWindowMakerProtocol {
+public final class KeyWindowMakerSpy: KeyWindowMakerProtocol {
     public enum CallArgs: Equatable {
         case makeKey
         case makeKeyAndVisible

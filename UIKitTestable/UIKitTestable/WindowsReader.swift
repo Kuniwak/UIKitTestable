@@ -8,7 +8,7 @@ public protocol WindowsReaderProtocol {
 
 
 
-public class WindowsReader: WindowsReaderProtocol {
+public final class WindowsReader: WindowsReaderProtocol {
     private let application: UIApplication
 
 

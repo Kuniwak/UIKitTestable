@@ -19,7 +19,7 @@ public protocol URLOpenerProtocol {
  A wrapper class to encapsulate a implementation of `UIApplication#open`.
  You can replace the class to the stub or spy for testing.
  */
-public struct ApplicationURLOpener: URLOpenerProtocol {
+public final class ApplicationURLOpener: URLOpenerProtocol {
     public func open(url: URL) {
         if #available (iOS 10.0, *) {
             // NOTE: For iOS 10.0+.

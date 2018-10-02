@@ -7,7 +7,7 @@ import UIKitTestable
  A spy class for ModalDissolver.
  This class is useful for capturing calls of `UIViewController#dismiss` for testing.
  */
-public class ModalDissolverSpy: ModalDissolverProtocol {
+public final class ModalDissolverSpy: ModalDissolverProtocol {
     public enum CallArgs: Equatable {
         case dismiss(animated: Bool)
     }

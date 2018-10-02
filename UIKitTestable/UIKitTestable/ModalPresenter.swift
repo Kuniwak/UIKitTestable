@@ -25,7 +25,7 @@ public protocol ModalPresenterProtocol {
 /**
  A wrapper class to encapsulate a implementation of `UIViewController#present(_: UIViewController, animated: Bool)`.
  */
-public class ModalPresenter: ModalPresenterProtocol {
+public final class ModalPresenter: ModalPresenterProtocol {
     private let groundViewController: UIViewController
 
 

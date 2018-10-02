@@ -3,7 +3,7 @@ import UIKitTestable
 
 
 
-public class KeyWindowMakerStub: KeyWindowMakerProtocol {
+public final class KeyWindowMakerStub: KeyWindowMakerProtocol {
     public init() {}
 
 

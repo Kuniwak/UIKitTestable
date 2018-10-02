@@ -9,7 +9,7 @@ public protocol GlobalModalPresenterProtocol: ModalPresenterProtocol {}
  A class for specialized ModalPresenters that can present a UIViewController unconditionally.
  You can present a UIViewController if you does not know what UIViewController is visible.
  */
-public class GlobalModalPresenter {
+public final class GlobalModalPresenter {
     private let rootViewControllerReadWriter: RootViewControllerReadWriterProtocol
     private let keyWindowWriter: KeyWindowMakerProtocol
 

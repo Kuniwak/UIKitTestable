@@ -30,7 +30,7 @@ public enum ReverseNavigatorError: Error {
  A wrapper class to encapsulate a implementation of `UINavigationController#popToViewController(UIViewController, animated: Bool)`.
  You can replace the class to the stub or spy for testing.
  */
-public class ReverseNavigator: ReverseNavigatorProtocol {
+public final class ReverseNavigator: ReverseNavigatorProtocol {
     private let navigationController: UINavigationController
     private let viewController: UIViewController
 

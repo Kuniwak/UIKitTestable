@@ -7,7 +7,7 @@ import UIKitTestable
  A spy class for UrlOpener.
  This class is useful for capturing calls of `UIApplication#open` for testing.
  */
-public class URLOpenerSpy: URLOpenerProtocol {
+public final class URLOpenerSpy: URLOpenerProtocol {
     /**
      Call arguments list for the method `#open(url: URL)`.
      You can use the property to test how the method is called.

@@ -7,7 +7,7 @@ import UIKitTestable
  A spy class for RootViewControllerHolders.
  This class is useful for capturing assigning `UIWindow.rootViewController` for testing.
  */
-public class RootViewControllerWriterSpy: RootViewControllerWriterProtocol {
+public final class RootViewControllerWriterSpy: RootViewControllerWriterProtocol {
     public enum CallArgs: Equatable {
         case alter(rootViewController: UIViewController)
     }

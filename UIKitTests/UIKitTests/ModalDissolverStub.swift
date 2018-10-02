@@ -8,7 +8,7 @@ import UIKitTestable
 
  The completion of `dismiss(animated:Bool, completion:(() -> Void)?)` will be called when `complete()` is called..
  */
-public class ModalDissolverStub: ModalDissolverProtocol {
+public final class ModalDissolverStub: ModalDissolverProtocol {
     public var completion: (() -> Void)?
 
 
@@ -34,7 +34,7 @@ public class ModalDissolverStub: ModalDissolverProtocol {
 
  The completion of `dismiss(animated:Bool, completion:(() -> Void)?)` will be called synchronously.
  */
-public class ModalDissolverSyncStub: ModalDissolverProtocol {
+public final class ModalDissolverSyncStub: ModalDissolverProtocol {
     public init() {}
 
 
@@ -53,7 +53,7 @@ public class ModalDissolverSyncStub: ModalDissolverProtocol {
 
  The completion of `dismiss(animated:Bool, completion:(() -> Void)?)` will be called asynchronously.
  */
-public class ModalDissolverAsyncStub: ModalDissolverProtocol {
+public final class ModalDissolverAsyncStub: ModalDissolverProtocol {
     public init() {}
 
 
@@ -74,7 +74,7 @@ public class ModalDissolverAsyncStub: ModalDissolverProtocol {
 
  The completion of `dismiss(animated:Bool, completion:(() -> Void)?)` will be never called.
  */
-public class ModalDissolverNeverStub: ModalDissolverProtocol {
+public final class ModalDissolverNeverStub: ModalDissolverProtocol {
     public init() {}
 
 

@@ -7,7 +7,7 @@ import UIKitTestable
  A spy class for ModalPresenters.
  This class is useful for capturing calls of `UIViewController#present` for testing.
  */
-public class ModalPresenterSpy: ModalPresenterProtocol {
+public final class ModalPresenterSpy: ModalPresenterProtocol {
     public enum CallArgs: Equatable {
         case present(viewController: UIViewController, animated: Bool)
     }

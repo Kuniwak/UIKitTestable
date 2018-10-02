@@ -7,7 +7,7 @@ import UIKitTestable
  A spy class for Navigator.
  This class is useful for capturing calls of `UINavigationController#pushViewController` for testing.
  */
-public class NavigatorSpy: NavigatorProtocol {
+public final class NavigatorSpy: NavigatorProtocol {
     public enum CallArgs: Equatable {
         case navigate(viewController: UIViewController, animated: Bool)
     }

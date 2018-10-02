@@ -9,7 +9,7 @@ import UIKitTestable
 
  The completion of `alter(to:UIViewController, completion:(() -> Void)?)` can be called when `complete()` is called.
  */
-public class RootViewControllerWriterStub: RootViewControllerWriterProtocol {
+public final class RootViewControllerWriterStub: RootViewControllerWriterProtocol {
     private var completion: (() -> Void)? = nil
 
 
@@ -35,7 +35,7 @@ public class RootViewControllerWriterStub: RootViewControllerWriterProtocol {
 
  The completion of `alter(to:UIViewController, completion:(() -> Void)?)` will be called synchronously.
  */
-public class RootViewControllerWriterSyncStub: RootViewControllerWriterProtocol {
+public final class RootViewControllerWriterSyncStub: RootViewControllerWriterProtocol {
     public init() {}
 
 
@@ -53,7 +53,7 @@ public class RootViewControllerWriterSyncStub: RootViewControllerWriterProtocol 
 
  The completion of `alter(to:UIViewController, completion:(() -> Void)?)` will be called asynchronously.
  */
-public class RootViewControllerWriterAsyncStub: RootViewControllerWriterProtocol {
+public final class RootViewControllerWriterAsyncStub: RootViewControllerWriterProtocol {
     public init() {}
 
 
@@ -73,7 +73,7 @@ public class RootViewControllerWriterAsyncStub: RootViewControllerWriterProtocol
 
  The completion of `alter(to:UIViewController, completion:(() -> Void)?)` will be never called.
  */
-public class RootViewControllerWriterNeverStub: RootViewControllerWriterProtocol {
+public final class RootViewControllerWriterNeverStub: RootViewControllerWriterProtocol {
     public init() {}
 
 

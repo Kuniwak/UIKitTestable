@@ -7,7 +7,7 @@ import UIKitTestable
  A spy class for GlobalModalPresenter.
  This class is useful for capturing calls of `GlobalModalPresenter#present` for testing.
  */
-public class GlobalModalPresenterSpy: GlobalModalPresenterProtocol {
+public final class GlobalModalPresenterSpy: GlobalModalPresenterProtocol {
     public enum CallArgs: Equatable {
         case present(viewController: UIViewController, animated: Bool)
     }

@@ -3,7 +3,7 @@ import UIKitTestable
 
 
 
-public class WindowsReaderSpy: WindowsReaderProtocol {
+public final class WindowsReaderSpy: WindowsReaderProtocol {
     public enum CallArgs: Equatable {
         case windows
     }

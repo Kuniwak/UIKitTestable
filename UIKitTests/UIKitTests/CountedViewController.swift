@@ -2,7 +2,7 @@ import UIKit
 
 
 
-public class CountedViewController: UIViewController {
+public final class CountedViewController: UIViewController {
     public private(set) static var numberOfLiving: UInt = 0
 
 

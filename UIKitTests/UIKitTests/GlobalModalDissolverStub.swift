@@ -3,7 +3,7 @@ import UIKitTestable
 
 
 
-public class GlobalModalDissolverStub: GlobalModalDissolverProtocol {
+public final class GlobalModalDissolverStub: GlobalModalDissolverProtocol {
     private var completion: (() -> Void)?
 
 
@@ -23,7 +23,7 @@ public class GlobalModalDissolverStub: GlobalModalDissolverProtocol {
 
 
 
-public class GlobalModalDissolverSyncStub: GlobalModalDissolverProtocol {
+public final class GlobalModalDissolverSyncStub: GlobalModalDissolverProtocol {
     public init() {}
 
 
@@ -35,7 +35,7 @@ public class GlobalModalDissolverSyncStub: GlobalModalDissolverProtocol {
 
 
 
-public class GlobalModalDissolverAsyncStub: GlobalModalDissolverProtocol {
+public final class GlobalModalDissolverAsyncStub: GlobalModalDissolverProtocol {
     public init() {}
 
 
@@ -49,7 +49,7 @@ public class GlobalModalDissolverAsyncStub: GlobalModalDissolverProtocol {
 
 
 
-public class GlobalModalDissolverNeverStub: GlobalModalDissolverProtocol {
+public final class GlobalModalDissolverNeverStub: GlobalModalDissolverProtocol {
     public init() {}
 
 

@@ -3,7 +3,7 @@ import UIKitTestable
 
 
 
-public class RootViewControllerReadWriterSpy: RootViewControllerReadWriterProtocol {
+public final class RootViewControllerReadWriterSpy: RootViewControllerReadWriterProtocol {
     public enum CallArgs: Equatable {
         case rootViewController
         case alter(rootViewController: UIViewController)

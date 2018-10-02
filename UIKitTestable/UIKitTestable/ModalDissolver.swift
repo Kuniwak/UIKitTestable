@@ -26,7 +26,7 @@ public protocol ModalDissolverProtocol {
  A wrapper class to encapsulate a implementation of `UIViewController#disiss(animated: Bool)`.
  You can replace the class to the stub or spy for testing.
  */
-public class ModalDissolver: ModalDissolverProtocol {
+public final class ModalDissolver: ModalDissolverProtocol {
     private let viewController: UIViewController
 
 

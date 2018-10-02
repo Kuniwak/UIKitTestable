@@ -40,7 +40,7 @@ public func awaitViewDidLoad(
 
 
 
-public class AwaitingViewController: ViewControllerLifeCycleObserver {
+public final class AwaitingViewController: ViewControllerLifeCycleObserver {
     private let callback: (UIViewController, ViewControllerLifeCycleEvent) -> Void
 
 

@@ -6,7 +6,7 @@ public protocol RootViewControllerReadWriterProtocol: RootViewControllerReaderPr
 
 
 
-public class WindowRootViewControllerReadWriter: RootViewControllerReadWriterProtocol {
+public final class WindowRootViewControllerReadWriter: RootViewControllerReadWriterProtocol {
     private let reader: RootViewControllerReaderProtocol
     private let writer: RootViewControllerWriterProtocol
 
