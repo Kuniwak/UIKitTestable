@@ -7,7 +7,7 @@ import UIKit
  */
 public protocol ReverseNavigatorProtocol {
     /**
-     Pushes a view controller onto the receiver’s stack and updates the display.
+     Pops view controllers until the specified view controller is at the top of the navigation stack.
      This method behave like `UINavigationController#popToViewController(UIVIewController, animated: Bool)`
 
      - throws: ReverseNavigatorError will be thrown when the UIViewController is not in the navigation stack.
