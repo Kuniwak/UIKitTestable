@@ -2,18 +2,18 @@ import UIKit
 
 
 
-public class DebugLoggingViewController: ViewControllerLifeCycleObserver {
+internal class DebugLoggingViewController: ViewControllerLifeCycleObserver {
     override public init() {
         super.init()
     }
 
 
-    public required init?(coder aDecoder: NSCoder) {
+    internal required init?(coder aDecoder: NSCoder) {
         return nil
     }
 
 
-    public override func handle(lifeCycleEvent: ViewControllerLifeCycleEvent) {
+    internal override func handle(lifeCycleEvent: ViewControllerLifeCycleEvent) {
         print("\(self): \(lifeCycleEvent)")
     }
 }
