@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		2475E4EC4D2418715E506DF0 /* RootViewControllerReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E219A6CEBA833C3D1863 /* RootViewControllerReader.swift */; };
 		2475E6D308CEB67E04C95B4C /* KeyWindowMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E2DF0E50792495944971 /* KeyWindowMaker.swift */; };
-		2475E7F46194DE057F45B757 /* UnownedPresentingViewControllerReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E1CF84F3C5B07E6FA583 /* UnownedPresentingViewControllerReader.swift */; };
 		2475E8104D10593931BCB5EE /* GlobalModalDissolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E247C2AFA28345289301 /* GlobalModalDissolver.swift */; };
 		2475E9F176ABCA414DD06050 /* WindowsReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E842E602E56BBEE12FC8 /* WindowsReader.swift */; };
 		2475EA8DE32E7D4FCA290202 /* DebugLoggingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E66FF3918EE30D57997F /* DebugLoggingViewController.swift */; };
-		2475EC7B8084F7CCCC64E68E /* WeakPresentingViewControllerReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EF0DAC42991111D7C7B6 /* WeakPresentingViewControllerReader.swift */; };
+		2475EB73DBFE98FD9AC6280A /* WeakOrUnowned.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E6BB81FC05322811E112 /* WeakOrUnowned.swift */; };
+		2475EC7B8084F7CCCC64E68E /* PresentingViewControllerReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EF0DAC42991111D7C7B6 /* PresentingViewControllerReader.swift */; };
 		2475ED058502010441C66C42 /* ViewControllerLifeCycleObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E73EAA3D894389E4D5E3 /* ViewControllerLifeCycleObserver.swift */; };
 		2475EDBEFBE37B5F72CF70D5 /* RootViewControllerReadWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E30AAF0867628B913B5C /* RootViewControllerReadWriter.swift */; };
 		62DDB912216097C40005BFEA /* UIKitTestable.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DDB910216097C40005BFEA /* UIKitTestable.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -28,15 +28,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2475E1CF84F3C5B07E6FA583 /* UnownedPresentingViewControllerReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnownedPresentingViewControllerReader.swift; sourceTree = "<group>"; };
 		2475E219A6CEBA833C3D1863 /* RootViewControllerReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewControllerReader.swift; sourceTree = "<group>"; };
 		2475E247C2AFA28345289301 /* GlobalModalDissolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalModalDissolver.swift; sourceTree = "<group>"; };
 		2475E2DF0E50792495944971 /* KeyWindowMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyWindowMaker.swift; sourceTree = "<group>"; };
 		2475E30AAF0867628B913B5C /* RootViewControllerReadWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewControllerReadWriter.swift; sourceTree = "<group>"; };
 		2475E66FF3918EE30D57997F /* DebugLoggingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugLoggingViewController.swift; sourceTree = "<group>"; };
+		2475E6BB81FC05322811E112 /* WeakOrUnowned.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakOrUnowned.swift; sourceTree = "<group>"; };
 		2475E73EAA3D894389E4D5E3 /* ViewControllerLifeCycleObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerLifeCycleObserver.swift; sourceTree = "<group>"; };
 		2475E842E602E56BBEE12FC8 /* WindowsReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowsReader.swift; sourceTree = "<group>"; };
-		2475EF0DAC42991111D7C7B6 /* WeakPresentingViewControllerReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakPresentingViewControllerReader.swift; sourceTree = "<group>"; };
+		2475EF0DAC42991111D7C7B6 /* PresentingViewControllerReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentingViewControllerReader.swift; sourceTree = "<group>"; };
 		62DDB90D216097C40005BFEA /* UIKitTestable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIKitTestable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62DDB910216097C40005BFEA /* UIKitTestable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKitTestable.h; sourceTree = "<group>"; };
 		62DDB911216097C40005BFEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -97,8 +97,8 @@
 				2475E842E602E56BBEE12FC8 /* WindowsReader.swift */,
 				2475E66FF3918EE30D57997F /* DebugLoggingViewController.swift */,
 				2475E73EAA3D894389E4D5E3 /* ViewControllerLifeCycleObserver.swift */,
-				2475E1CF84F3C5B07E6FA583 /* UnownedPresentingViewControllerReader.swift */,
-				2475EF0DAC42991111D7C7B6 /* WeakPresentingViewControllerReader.swift */,
+				2475EF0DAC42991111D7C7B6 /* PresentingViewControllerReader.swift */,
+				2475E6BB81FC05322811E112 /* WeakOrUnowned.swift */,
 			);
 			path = UIKitTestable;
 			sourceTree = "<group>";
@@ -197,8 +197,8 @@
 				2475E8104D10593931BCB5EE /* GlobalModalDissolver.swift in Sources */,
 				2475EA8DE32E7D4FCA290202 /* DebugLoggingViewController.swift in Sources */,
 				2475ED058502010441C66C42 /* ViewControllerLifeCycleObserver.swift in Sources */,
-				2475E7F46194DE057F45B757 /* UnownedPresentingViewControllerReader.swift in Sources */,
-				2475EC7B8084F7CCCC64E68E /* WeakPresentingViewControllerReader.swift in Sources */,
+				2475EC7B8084F7CCCC64E68E /* PresentingViewControllerReader.swift in Sources */,
+				2475EB73DBFE98FD9AC6280A /* WeakOrUnowned.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
