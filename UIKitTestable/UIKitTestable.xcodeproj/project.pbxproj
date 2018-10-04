@@ -12,6 +12,7 @@
 		2475E8104D10593931BCB5EE /* GlobalModalDissolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E247C2AFA28345289301 /* GlobalModalDissolver.swift */; };
 		2475E9F176ABCA414DD06050 /* WindowsReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E842E602E56BBEE12FC8 /* WindowsReader.swift */; };
 		2475EA8DE32E7D4FCA290202 /* DebugLoggingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E66FF3918EE30D57997F /* DebugLoggingViewController.swift */; };
+		2475EB7073239148746D8F92 /* WeakOrNotReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EA35FF4EC9342AF4EF4C /* WeakOrNotReference.swift */; };
 		2475EB73DBFE98FD9AC6280A /* WeakOrUnowned.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E6BB81FC05322811E112 /* WeakOrUnowned.swift */; };
 		2475EC7B8084F7CCCC64E68E /* PresentingViewControllerReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EF0DAC42991111D7C7B6 /* PresentingViewControllerReader.swift */; };
 		2475ED058502010441C66C42 /* ViewControllerLifeCycleObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E73EAA3D894389E4D5E3 /* ViewControllerLifeCycleObserver.swift */; };
@@ -36,6 +37,7 @@
 		2475E6BB81FC05322811E112 /* WeakOrUnowned.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakOrUnowned.swift; sourceTree = "<group>"; };
 		2475E73EAA3D894389E4D5E3 /* ViewControllerLifeCycleObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerLifeCycleObserver.swift; sourceTree = "<group>"; };
 		2475E842E602E56BBEE12FC8 /* WindowsReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowsReader.swift; sourceTree = "<group>"; };
+		2475EA35FF4EC9342AF4EF4C /* WeakOrNotReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakOrNotReference.swift; sourceTree = "<group>"; };
 		2475EF0DAC42991111D7C7B6 /* PresentingViewControllerReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentingViewControllerReader.swift; sourceTree = "<group>"; };
 		62DDB90D216097C40005BFEA /* UIKitTestable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIKitTestable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62DDB910216097C40005BFEA /* UIKitTestable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKitTestable.h; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				2475E73EAA3D894389E4D5E3 /* ViewControllerLifeCycleObserver.swift */,
 				2475EF0DAC42991111D7C7B6 /* PresentingViewControllerReader.swift */,
 				2475E6BB81FC05322811E112 /* WeakOrUnowned.swift */,
+				2475EA35FF4EC9342AF4EF4C /* WeakOrNotReference.swift */,
 			);
 			path = UIKitTestable;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				2475ED058502010441C66C42 /* ViewControllerLifeCycleObserver.swift in Sources */,
 				2475EC7B8084F7CCCC64E68E /* PresentingViewControllerReader.swift in Sources */,
 				2475EB73DBFE98FD9AC6280A /* WeakOrUnowned.swift in Sources */,
+				2475EB7073239148746D8F92 /* WeakOrNotReference.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -26,11 +26,16 @@ public enum WeakOrUnowned<T: AnyObject> {
 
 
 public class Weak<T: AnyObject> {
-    public weak var value: T?
+    public private(set) weak var value: T?
 
 
     public init(_ value: T) {
         self.value = value
+    }
+
+
+    public var isReleased: Bool {
+        return self.value == nil
     }
 }
 

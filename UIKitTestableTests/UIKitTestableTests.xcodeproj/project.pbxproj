@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2475E285C42C86639C71D8F3 /* AsyncTestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EDC985BEAEDD4A885DD2 /* AsyncTestHelper.swift */; };
+		2475EEF8629C663252C7D7C7 /* MemoryLeakDetectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E0FDF823C8EA161D282F /* MemoryLeakDetectorTests.swift */; };
 		2475EFE22BC1D591F2D9BDE1 /* DebugHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E6A47218C7CDFCAE0705 /* DebugHelper.swift */; };
 		62DDB925216097F50005BFEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DDB924216097F50005BFEA /* AppDelegate.swift */; };
 		62DDB927216097F50005BFEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DDB926216097F50005BFEA /* ViewController.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2475E0FDF823C8EA161D282F /* MemoryLeakDetectorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryLeakDetectorTests.swift; sourceTree = "<group>"; };
 		2475E6A47218C7CDFCAE0705 /* DebugHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugHelper.swift; sourceTree = "<group>"; };
 		2475EDC985BEAEDD4A885DD2 /* AsyncTestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncTestHelper.swift; sourceTree = "<group>"; };
 		62DDB921216097F50005BFEA /* UIKitTestableTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitTestableTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +107,7 @@
 				62DDB93B216097F70005BFEA /* Info.plist */,
 				2475EDC985BEAEDD4A885DD2 /* AsyncTestHelper.swift */,
 				2475E6A47218C7CDFCAE0705 /* DebugHelper.swift */,
+				2475E0FDF823C8EA161D282F /* MemoryLeakDetectorTests.swift */,
 			);
 			path = UIKitTestableTestsTests;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				62DDB97821609A680005BFEA /* GlobalModalPresenterTests.swift in Sources */,
 				2475E285C42C86639C71D8F3 /* AsyncTestHelper.swift in Sources */,
 				2475EFE22BC1D591F2D9BDE1 /* DebugHelper.swift in Sources */,
+				2475EEF8629C663252C7D7C7 /* MemoryLeakDetectorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
