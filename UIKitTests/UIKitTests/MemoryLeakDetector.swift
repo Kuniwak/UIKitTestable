@@ -33,7 +33,6 @@ public struct MemoryLeakReport: Hashable {
     public static func getCircularPaths<Seq: Sequence>(
         from references: Seq
     ) -> Set<Reference.Path> where Seq.Element == Reference {
-        // TODO: Visualize
         let circularPaths = references
             .filter { reference in !reference.isReleased }
             .flatMap { reference -> [Reference.RawPath] in
@@ -490,20 +489,13 @@ extension Reference.ID: Hashable {
 
 extension MemoryLeakReport: PrettyPrintable {
     public var descriptionLines: [IndentedLine] {
-        let leakedObjectsPart = intersperse(
-            self.leakedObjects.map { indent($0.descriptionLines) },
-            [.content("")]
-        ).flatMap { $0 }
-
-        let circularPathsPart = self.circularPaths
-            .enumerated()
-            .map { (pair) -> String in
-                let (index, circularPath) = pair
-                return "\(index): \(circularPath.description)"
-            }
-            .map { IndentedLine.indent(.content($0)) }
+        let leakedObjectsPart = sections(self.leakedObjects.map { $0.descriptionLines })
+        let circularPathsPart = sections(self.circularPaths.map { [.content($0.description)] })
 
         return sections([
+            (name: "Summary", body: lines([
+                "Found \(self.leakedObjects.count) leak objects",
+            ])),
             (name: "Leaked objects", body: leakedObjectsPart),
             (name: "Circular reference paths", body: circularPathsPart),
         ])
@@ -515,7 +507,7 @@ extension MemoryLeakReport: PrettyPrintable {
 extension MemoryLeakReport.LeakedObject: PrettyPrintable {
     public var descriptionLines: [IndentedLine] {
         return descriptionList([
-            (label: "Leaked Object", description: self.objectDescription),
+            (label: "Description", description: self.objectDescription),
             (label: "Type", description: self.typeDescription),
             (label: "Location", description: self.location?.description ?? "(N/A)"),
         ])

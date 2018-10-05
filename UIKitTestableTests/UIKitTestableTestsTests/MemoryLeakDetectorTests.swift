@@ -5,6 +5,18 @@ import UIKitTests
 
 
 class MemoryLeakDetectorTests: XCTestCase {
+    func testReport() {
+        let report = detectLeaks { () -> Node in
+            let indirectNode = Node(linkedNodes: [])
+            let node = Node(linkedNodes: [indirectNode])
+            indirectNode.linkedNodes = [node]
+            return node
+        }
+
+        print(report.description)
+    }
+
+
     func testMemoryLeak() {
     	typealias TestCase = (
             build: () -> Any,

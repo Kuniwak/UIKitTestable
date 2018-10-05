@@ -67,15 +67,25 @@ public func section<Lines: Sequence>(
 
 
 public func sections<Sections: Sequence, Lines: Sequence>(
-    _ sections: Sections
+    _ sectionsInfo: Sections
 ) -> [IndentedLine] where Sections.Element == (name: String, body: Lines), Lines.Element == IndentedLine {
-    let sectionLines = sections.map { sectionInfo in
+    let sectionLines = sectionsInfo.map { sectionInfo in
         return section(name: sectionInfo.name, body: sectionInfo.body)
     }
 
     let verticalSpace = [IndentedLine.content("")]
 
     return intersperse(sectionLines, verticalSpace).flatMap { $0 }
+}
+
+
+
+public func sections<Sections: Sequence, Lines: Sequence>(
+    _ sectionsInfo: Sections
+) -> [IndentedLine] where Sections.Element == Lines, Lines.Element == IndentedLine {
+    return sections(sectionsInfo
+        .enumerated()
+        .map { (name: "\($0.0)", body: $0.1) })
 }
 
 
