@@ -2,34 +2,103 @@ import UIKitTestable
 
 
 
-public func detectLeaks<T>(by build: () -> T) -> Set<Reference.Path> {
-    let releasedWeakMap = autoreleasepool { () -> [Reference.ID: Reference] in
-        return createWeakMap(from: build())
+public struct MemoryLeakReport: Hashable {
+    public let leakedObjects: Set<LeakedObject>
+    public let circularPaths: Set<Reference.Path>
+
+
+    public init(
+        leakedObjects: Set<LeakedObject>,
+        circularPaths: Set<Reference.Path>
+    ) {
+        self.leakedObjects = leakedObjects
+        self.circularPaths = circularPaths
     }
 
-    let leaked = releasedWeakMap.values
-        .filter { (reference) in !reference.isReleased }
-        .flatMap { (reference) -> [Reference.Path] in reference.paths }
-        .filter { path in path.isCircularAtEnd }
 
-    return Set(leaked)
+    public static func from<Seq: Sequence>(
+        references: Seq
+    ) -> MemoryLeakReport where Seq.Element == Reference {
+        let leakedObjects = Set(references.compactMap { MemoryLeakReport.LeakedObject.from(reference: $0) })
+        let circularPaths = self.getCircularPaths(from: references)
+
+        return MemoryLeakReport(
+            leakedObjects: leakedObjects,
+            circularPaths: circularPaths
+        )
+    }
+
+
+
+    public static func getCircularPaths<Seq: Sequence>(
+        from references: Seq
+    ) -> Set<Reference.Path> where Seq.Element == Reference {
+        // TODO: Visualize
+        let circularPaths = references
+            .filter { reference in !reference.isReleased }
+            .flatMap { reference -> [Reference.RawPath] in
+                return reference.rawPaths
+            }
+            .filter { rawPath in rawPath.isCircularAtEnd }
+            .map { rawPath in Reference.Path.from(rawPath: rawPath) }
+
+        return Set(circularPaths)
+    }
+
+
+
+    public struct LeakedObject: Hashable {
+        public let objectDescription: String
+        public let typeDescription: String
+        public let location: Reference.Path?
+
+
+        public init(
+            objectDescription: String,
+            typeDescription: String,
+            location: Reference.Path?
+        ) {
+            self.objectDescription = objectDescription
+            self.typeDescription = typeDescription
+            self.location = location
+        }
+
+
+        public static func from(reference: Reference) -> LeakedObject? {
+            guard !reference.isReleased else {
+                return nil
+            }
+
+            return LeakedObject(
+                objectDescription: reference.objectDescription,
+                typeDescription: reference.typeDescription,
+                location: reference.rawPaths
+                    .map { Reference.Path.from(rawPath: $0) }
+                    .min { $0.count < $1.count }
+            )
+        }
+    }
 }
 
 
 
-public func detectLeaks<T>(by build: (@escaping (T) -> Void) -> Void, _ callback: @escaping (Set<Reference.Path>) -> Void) {
+public func detectLeaks<T>(by build: () -> T) -> MemoryLeakReport {
+    let releasedWeakMap = autoreleasepool { () -> [Reference.ID: Reference] in
+        return createWeakMap(from: build())
+    }
+
+    return .from(references: releasedWeakMap.values)
+}
+
+
+
+public func detectLeaks<T>(by build: (@escaping (T) -> Void) -> Void, _ callback: @escaping (MemoryLeakReport) -> Void) {
     build { target in
         let releasedWeakMap = autoreleasepool { () -> [Reference.ID: Reference] in
             return createWeakMap(from: target)
         }
 
-        let leaked = releasedWeakMap
-            .values
-            .filter { reference in !reference.isReleased }
-            .flatMap { (reference) -> [Reference.Path] in reference.paths }
-            .filter { path in path.isCircularAtEnd }
-
-        callback(Set(leaked))
+        callback(.from(references: releasedWeakMap.values))
     }
 }
 
@@ -40,14 +109,14 @@ internal func createWeakMap<T>(from target: T) -> [Reference.ID: Reference] {
 
     traverseObjectWithPath(
         target,
-        onEnter: { (label, value, path) in
+        onEnter: { (_, value, path) in
             let childReferenceID = Reference.ID.from(value)
 
             if let visitedReference = result[childReferenceID] {
-                visitedReference.append(path: .from(path))
+                visitedReference.append(rawPath: .from(path))
             }
             else {
-                result[childReferenceID] = Reference.from(value, paths: [.from(path)])
+                result[childReferenceID] = Reference.from(value, rawPaths: [.from(path)])
             }
         },
         onLeave: nil
@@ -60,19 +129,19 @@ internal func createWeakMap<T>(from target: T) -> [Reference.ID: Reference] {
 
 internal func traverseObjectWithPath(
     _ target: Any,
-    onEnter: ((String?, Any, [(label: String?, value: Any)]) -> Void)?,
-    onLeave: ((String?, Any, [(label: String?, value: Any)]) -> Void)?
+    onEnter: ((Reference.PathComponent, Any, [(component: Reference.PathComponent, value: Any)]) -> Void)?,
+    onLeave: ((Reference.PathComponent, Any, [(component: Reference.PathComponent, value: Any)]) -> Void)?
 ) {
-    var currentPath: [(label: String?, value: Any)] = []
+    var currentPath: [(component: Reference.PathComponent, value: Any)] = []
 
     traverseObject(
         target,
-        onEnter: { (label, value) in
-            currentPath.append((label: label, value: value))
-            onEnter?(label, value, currentPath)
+        onEnter: { (component, value) in
+            currentPath.append((component: component, value: value))
+            onEnter?(component, value, currentPath)
         },
-        onLeave: { (label, value) in
-            onLeave?(label, value, currentPath)
+        onLeave: { (component, value) in
+            onLeave?(component, value, currentPath)
             currentPath.removeLast()
         }
     )
@@ -82,13 +151,13 @@ internal func traverseObjectWithPath(
 
 internal func traverseObject(
     _ target: Any,
-    onEnter: ((String?, Any) -> Void)?,
-    onLeave: ((String?, Any) -> Void)?
+    onEnter: ((Reference.PathComponent, Any) -> Void)?,
+    onLeave: ((Reference.PathComponent, Any) -> Void)?
 ) {
     var footprint = Set<Reference.ID>()
 
     traverseObjectRecursive(
-        label: nil,
+        component: .noLabel,
         target,
         footprint: &footprint,
         onEnter: onEnter,
@@ -99,13 +168,13 @@ internal func traverseObject(
 
 
 private func traverseObjectRecursive(
-    label: String?,
+    component: Reference.PathComponent,
     _ target: Any,
     footprint: inout Set<Reference.ID>,
-    onEnter: ((String?, Any) -> Void)?,
-    onLeave: ((String?,  Any) -> Void)?
+    onEnter: ((Reference.PathComponent, Any) -> Void)?,
+    onLeave: ((Reference.PathComponent, Any) -> Void)?
 ) {
-    onEnter?(label, target)
+    onEnter?(component, target)
 
     // NOTE: Avoid infinite recursions caused by circular references.
     let id = Reference.ID.from(target)
@@ -118,7 +187,11 @@ private func traverseObjectRecursive(
 
             traverseObjectRecursive(
                 // NOTE: Use the index as the label instead of nil only if the target is a collection.
-                label: mirror.displayStyle == .collection ? "\(index)" : label,
+                component: .from(
+                    isCollection: mirror.displayStyle == .collection,
+                    index: index,
+                    label: label
+                ),
                 value,
                 footprint: &footprint,
                 onEnter: onEnter,
@@ -127,7 +200,7 @@ private func traverseObjectRecursive(
         }
     }
 
-    onLeave?(label, target)
+    onLeave?(component, target)
 }
 
 
@@ -136,17 +209,23 @@ public class Reference {
     private let value: WeakOrNotReference
 
     public let id: ID
-    public let typeName: String
-    public let description: String
-    public var paths: [Path]
+    public let typeDescription: String
+    public let objectDescription: String
+    public var rawPaths: [RawPath]
 
 
-    internal init(value: WeakOrNotReference, id: ID, typeName: String, description: String, paths: [Path]) {
+    internal init(
+        value: WeakOrNotReference,
+        id: ID,
+        typeName: String,
+        description: String,
+        rawPaths: [RawPath]
+    ) {
         self.value = value
         self.id = id
-        self.typeName = typeName
-        self.description = description
-        self.paths = paths
+        self.typeDescription = typeName
+        self.objectDescription = description
+        self.rawPaths = rawPaths
     }
 
 
@@ -159,39 +238,172 @@ public class Reference {
     }
 
 
-    public func append(path: Path) {
-        self.paths.append(path)
+    public func append(rawPath: RawPath) {
+        self.rawPaths.append(rawPath)
     }
 
 
-    public static func from<T>(_ target: T, paths: [Path]) -> Reference {
+    public static func from<T>(_ target: T, rawPaths: [RawPath]) -> Reference {
         return Reference(
             value: .from(target),
             id: .from(target),
             typeName: "\(type(of: target))",
             description: "\(target)",
-            paths: paths
+            rawPaths: rawPaths
         )
     }
 
 
 
     public struct Path: Hashable {
-        public let componentsWithRoot: [Component]
+        public let components: [PathComponent]
 
 
-        public var components: [Component] {
-            return Array(self.componentsWithRoot.dropFirst())
+        public var count: Int {
+            return self.components.count
         }
 
 
-        public var labels: [String?] {
-            return self.components.map { $0.label }
+        public var description: String {
+            guard self.count > 0 else {
+                return "(root)"
+            }
+
+            return self.components.map { component in
+                switch component {
+                case .label(let label):
+                    return ".\(label)"
+                case .index(let index):
+                    return "[\(index)]"
+                case .noLabel:
+                    return "[unknown accessor]"
+                }
+            }.joined(separator: "")
+        }
+
+
+        public init(components: [PathComponent]) {
+            self.components = components
+        }
+
+
+        public static let root = Path(components: [])
+
+
+        public static func from(rawPath: RawPath) -> Path {
+            // Remove the root component to make clear.
+            let rawComponents = rawPath.rawComponents.dropFirst()
+
+            // XXX: Mirror.Child for values stored on lazy var become the following unreadable value:
+            //      (label: propertyName + ".storage", value: Optional.some(value))
+            let lazyVarMask = addSuffix(to: slideMap(rawComponents) { (rawComponent, nextRawComponent) -> Bool in
+                return rawComponent.component.hasLazyVarSuffix && nextRawComponent.component.isOptionalLabel
+            }, suffix: false)
+
+            let componentHints = scan(lazyVarMask, PathComponentHint.normal) { (previous, isLazyVar) -> PathComponentHint in
+                guard previous != .lazyVar else {
+                    return .optionalAfterLazyVar
+                }
+
+                return isLazyVar ? .lazyVar : .normal
+            }
+
+            return Path(components: zip(rawComponents, componentHints)
+                .flatMap { (pair) -> [PathComponent] in
+                    let (rawComponent, componentHint) = pair
+                    switch componentHint {
+                    case .normal:
+                        return [rawComponent.component]
+                    case .lazyVar:
+                        return [rawComponent.component.withoutLazyVarSuffix]
+                    case .optionalAfterLazyVar:
+                        return []
+                    }
+                })
+        }
+    }
+
+
+
+    public enum PathComponent: Hashable {
+        case label(String)
+        case index(Int)
+        case noLabel
+
+
+        public var hasLazyVarSuffix: Bool {
+            switch self {
+            case .noLabel, .index:
+                return false
+            case .label(let label):
+                return label.hasSuffix(".storage")
+            }
+        }
+
+
+        public var isOptionalLabel: Bool {
+            switch self {
+            case .noLabel, .index:
+                return false
+            case .label(let label):
+                return label == "some"
+            }
+        }
+
+
+        public var withoutLazyVarSuffix: PathComponent {
+            switch self {
+            case .noLabel, .index:
+                return self
+            case .label(let label):
+                let suffix = ".storage"
+                guard label.hasSuffix(suffix) else {
+                    return self
+                }
+
+                return .label(String(label.dropLast(suffix.count)))
+            }
+        }
+
+
+        public static func from(
+            isCollection: Bool,
+            index: Int,
+            label: String?
+        ) -> PathComponent {
+            if isCollection {
+                return .index(index)
+            }
+
+            guard let label = label else {
+                return .noLabel
+            }
+
+            return .label(label)
+        }
+    }
+
+
+
+    internal enum PathComponentHint: Equatable {
+        case normal
+        case lazyVar
+        case optionalAfterLazyVar
+    }
+
+
+
+    public struct RawPath: Hashable {
+        public let rawComponents: [RawPathComponent]
+
+
+        public var count: Int {
+            return self.rawComponents.count
         }
 
 
         public var isCircularAtEnd: Bool {
-            let ids = self.componentsWithRoot.map { $0.id }
+            let ids = self.rawComponents.map { $0.id }
 
             guard let lastID = ids.last else {
                 return false
@@ -202,18 +414,16 @@ public class Reference {
         }
 
 
-        public static func from<T, Seq>(
-            _ path: Seq
-        ) -> Path where Seq: Sequence, Seq.Element == (label: String?, value: T) {
-            return Path(componentsWithRoot: path.map { Component(label: $0.label, id: .from($0.value)) })
+        public static func from<T>( _ path: [(component: Reference.PathComponent, value: T)]) -> RawPath {
+            return RawPath(rawComponents: path.map { RawPathComponent(component: $0.component, id: .from($0.value)) })
         }
+    }
 
 
 
-        public struct Component: Hashable {
-            public let label: String?
-            public let id: ID
-        }
+    public struct RawPathComponent: Hashable {
+        public let component: PathComponent
+        public let id: ID
     }
 
 
@@ -273,5 +483,41 @@ extension Reference.ID: Hashable {
         default:
             return false
         }
+    }
+}
+
+
+
+extension MemoryLeakReport: PrettyPrintable {
+    public var descriptionLines: [IndentedLine] {
+        let leakedObjectsPart = intersperse(
+            self.leakedObjects.map { indent($0.descriptionLines) },
+            [.content("")]
+        ).flatMap { $0 }
+
+        let circularPathsPart = self.circularPaths
+            .enumerated()
+            .map { (pair) -> String in
+                let (index, circularPath) = pair
+                return "\(index): \(circularPath.description)"
+            }
+            .map { IndentedLine.indent(.content($0)) }
+
+        return sections([
+            (name: "Leaked objects", body: leakedObjectsPart),
+            (name: "Circular reference paths", body: circularPathsPart),
+        ])
+    }
+}
+
+
+
+extension MemoryLeakReport.LeakedObject: PrettyPrintable {
+    public var descriptionLines: [IndentedLine] {
+        return descriptionList([
+            (label: "Leaked Object", description: self.objectDescription),
+            (label: "Type", description: self.typeDescription),
+            (label: "Location", description: self.location?.description ?? "(N/A)"),
+        ])
     }
 }
