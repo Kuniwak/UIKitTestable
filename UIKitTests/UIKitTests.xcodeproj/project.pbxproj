@@ -120,7 +120,10 @@
 		62DDB9CF216117210005BFEA /* UIKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				2475E31017B8FC8D6ADD7373 /* Arrays.swift */,
 				2475E5C2BA3A2CA331C8CE02 /* AwaitingViewController.swift */,
+				2475E07F3FE6B2F1912332A3 /* CountedViewController.swift */,
+				2475E15F76647883FA5ABF3A /* CountedWindow.swift */,
 				2475ECC3A483918E171AC2BB /* GlobalModalDissolverSpy.swift */,
 				2475EC5C7EF505AD39930923 /* GlobalModalDissolverStub.swift */,
 				2475EA5BB3B07B46D20B0043 /* GlobalModalPresenterSpy.swift */,
@@ -128,12 +131,16 @@
 				62DDB9D1216117210005BFEA /* Info.plist */,
 				2475E9A3F827CA65E39913BB /* KeyWindowMakerSpy.swift */,
 				2475ED2FD786F81443EA9814 /* KeyWindowMakerStub.swift */,
+				2475ECB09DA18A08FB508A50 /* MemoryLeakDetector.swift */,
 				2475E4F6ECDC5788FB1D1627 /* ModalDissolverSpy.swift */,
 				2475EF75F73283D7B6F12F9F /* ModalDissolverStub.swift */,
 				2475E4A40EF8526B7187BA31 /* ModalPresenterSpy.swift */,
 				2475ECC698BB6C671EB8B927 /* ModalPresenterStub.swift */,
 				2475EFA61DDB16FB75F83CF2 /* NavigatorSpy.swift */,
 				2475EDEA0A6FE830E16293BD /* NavigatorStub.swift */,
+				2475E9797B8DAF779D025496 /* PresentingViewControllerReaderSpy.swift */,
+				2475E2944D734DA932C087B7 /* PresentingViewControllerReaderStub.swift */,
+				2475E138E3354B4407B336D5 /* PrettyPrint.swift */,
 				2475EBAD24E04A794B37EC68 /* ReverseNavigatorSpy.swift */,
 				2475EF6D00396137985FBE7E /* ReverseNavigatorStub.swift */,
 				2475EC002599489DB0B73AC7 /* RootViewControllerReadWriterSpy.swift */,
@@ -150,13 +157,6 @@
 				2475EDD6CD704C9838A9BD32 /* URLOpenerStub.swift */,
 				2475EC9C025BDE45D54E0B7A /* WindowsReaderSpy.swift */,
 				2475E478891FF4BB81DA676D /* WindowsReaderStub.swift */,
-				2475E15F76647883FA5ABF3A /* CountedWindow.swift */,
-				2475E07F3FE6B2F1912332A3 /* CountedViewController.swift */,
-				2475E2944D734DA932C087B7 /* PresentingViewControllerReaderStub.swift */,
-				2475E9797B8DAF779D025496 /* PresentingViewControllerReaderSpy.swift */,
-				2475ECB09DA18A08FB508A50 /* MemoryLeakDetector.swift */,
-				2475E31017B8FC8D6ADD7373 /* Arrays.swift */,
-				2475E138E3354B4407B336D5 /* PrettyPrint.swift */,
 			);
 			path = UIKitTests;
 			sourceTree = "<group>";

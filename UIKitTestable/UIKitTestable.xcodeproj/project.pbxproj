@@ -82,6 +82,8 @@
 		62DDB90F216097C40005BFEA /* UIKitTestable */ = {
 			isa = PBXGroup;
 			children = (
+				2475E66FF3918EE30D57997F /* DebugLoggingViewController.swift */,
+				62DDB958216099E10005BFEA /* GlobalModalBackgroundViewController.swift */,
 				2475E247C2AFA28345289301 /* GlobalModalDissolver.swift */,
 				62DDB94D216099E00005BFEA /* GlobalModalPresenter.swift */,
 				62DDB911216097C40005BFEA /* Info.plist */,
@@ -89,19 +91,17 @@
 				62DDB95A216099E10005BFEA /* ModalDissolver.swift */,
 				62DDB94E216099E00005BFEA /* ModalPresenter.swift */,
 				62DDB949216099E00005BFEA /* Navigator.swift */,
+				2475EF0DAC42991111D7C7B6 /* PresentingViewControllerReader.swift */,
 				62DDB957216099E10005BFEA /* ReverseNavigator.swift */,
 				2475E30AAF0867628B913B5C /* RootViewControllerReadWriter.swift */,
 				2475E219A6CEBA833C3D1863 /* RootViewControllerReader.swift */,
 				62DDB952216099E10005BFEA /* RootViewControllerWriter.swift */,
-				62DDB958216099E10005BFEA /* GlobalModalBackgroundViewController.swift */,
 				62DDB910216097C40005BFEA /* UIKitTestable.h */,
 				62DDB956216099E10005BFEA /* URLOpener.swift */,
-				2475E842E602E56BBEE12FC8 /* WindowsReader.swift */,
-				2475E66FF3918EE30D57997F /* DebugLoggingViewController.swift */,
 				2475E73EAA3D894389E4D5E3 /* ViewControllerLifeCycleObserver.swift */,
-				2475EF0DAC42991111D7C7B6 /* PresentingViewControllerReader.swift */,
-				2475E6BB81FC05322811E112 /* WeakOrUnowned.swift */,
 				2475EA35FF4EC9342AF4EF4C /* WeakOrNotReference.swift */,
+				2475E6BB81FC05322811E112 /* WeakOrUnowned.swift */,
+				2475E842E602E56BBEE12FC8 /* WindowsReader.swift */,
 			);
 			path = UIKitTestable;
 			sourceTree = "<group>";

@@ -103,10 +103,10 @@
 		62DDB938216097F70005BFEA /* UIKitTestableTestsTests */ = {
 			isa = PBXGroup;
 			children = (
-				62DDB97721609A680005BFEA /* GlobalModalPresenterTests.swift */,
-				62DDB93B216097F70005BFEA /* Info.plist */,
 				2475EDC985BEAEDD4A885DD2 /* AsyncTestHelper.swift */,
 				2475E6A47218C7CDFCAE0705 /* DebugHelper.swift */,
+				62DDB97721609A680005BFEA /* GlobalModalPresenterTests.swift */,
+				62DDB93B216097F70005BFEA /* Info.plist */,
 				2475E0FDF823C8EA161D282F /* MemoryLeakDetectorTests.swift */,
 			);
 			path = UIKitTestableTestsTests;
