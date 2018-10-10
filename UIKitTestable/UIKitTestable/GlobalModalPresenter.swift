@@ -14,7 +14,7 @@ public final class GlobalModalPresenter {
     private let keyWindowWriter: KeyWindowMakerProtocol
 
 
-    public convenience init(wherePresentOn window: UIWindow) {
+    public convenience init(wherePresentOn window: WeakOrUnowned<UIWindow>) {
         self.init(
             alteringRootViewControllerBy: WindowRootViewControllerReadWriter(readingAndWriting: window),
             makingKeyWindowBy: KeyWindowMaker(modifying: window)

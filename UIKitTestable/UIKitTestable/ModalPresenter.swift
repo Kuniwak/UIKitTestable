@@ -26,24 +26,24 @@ public protocol ModalPresenterProtocol {
  A wrapper class to encapsulate a implementation of `UIViewController#present(_: UIViewController, animated: Bool)`.
  */
 public final class ModalPresenter: ModalPresenterProtocol {
-    private let groundViewController: UIViewController
+    private let groundViewController: WeakOrUnowned<UIViewController>
 
 
     /**
      Return newly initialized ModalPresenter with the UIViewController.
      Some UIViewControllers will be present on the specified UIViewController of the function.
      */
-    public init(wherePresentOn groundViewController: UIViewController) {
+    public init(wherePresentOn groundViewController: WeakOrUnowned<UIViewController>) {
         self.groundViewController = groundViewController
     }
 
 
     public func present(viewController: UIViewController, animated: Bool) {
-        self.groundViewController.present(viewController, animated: animated)
+        self.groundViewController.value?.present(viewController, animated: animated)
     }
 
 
     public func present(viewController: UIViewController, animated: Bool, completion: (() -> Void)?) {
-        self.groundViewController.present(viewController, animated: animated, completion: completion)
+        self.groundViewController.value?.present(viewController, animated: animated, completion: completion)
     }
 }

@@ -25,14 +25,14 @@ public protocol RootViewControllerWriterProtocol: AnyObject {
  You can replace the class to the stub or spy for testing.
  */
 public final class WindowRootViewControllerWriter: RootViewControllerWriterProtocol {
-    private let window: UIWindow
+    private let window: WeakOrUnowned<UIWindow>
 
 
     /**
      Return newly initialized RootViewControllerHolder for the specified UIWindow.
      You can replace the root UIViewController of the window by calling `#alter`
      */
-    public init(whoHaveViewController window: UIWindow) {
+    public init(whoHaveViewController window: WeakOrUnowned<UIWindow>) {
         self.window = window
     }
 
@@ -43,14 +43,14 @@ public final class WindowRootViewControllerWriter: RootViewControllerWriterProto
 
 
     public func alter(to rootViewController: UIViewController, completion: (() -> Void)?) {
-        guard let oldViewController = self.window.rootViewController else {
-            self.window.rootViewController = rootViewController
+        guard let oldViewController = self.window.value?.rootViewController else {
+            self.window.value?.rootViewController = rootViewController
             completion?()
             return
         }
 
         oldViewController.dismiss(animated: false, completion: {
-            self.window.rootViewController = rootViewController
+            self.window.value?.rootViewController = rootViewController
             completion?()
         })
     }

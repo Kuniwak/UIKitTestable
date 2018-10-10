@@ -9,7 +9,7 @@ public protocol PresentingViewControllerReaderProtocol {
 
 
 public final class PresentingViewControllerReader: PresentingViewControllerReaderProtocol {
-    private var viewController: WeakOrUnowned<UIViewController>
+    private let viewController: WeakOrUnowned<UIViewController>
 
 
     public init(presentedBy viewController: WeakOrUnowned<UIViewController>) {

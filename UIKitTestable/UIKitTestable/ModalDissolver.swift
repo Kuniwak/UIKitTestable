@@ -27,27 +27,24 @@ public protocol ModalDissolverProtocol {
  You can replace the class to the stub or spy for testing.
  */
 public final class ModalDissolver: ModalDissolverProtocol {
-    private let viewController: UIViewController
+    private let viewController: WeakOrUnowned<UIViewController>
 
 
     /**
      Return newly initialized ModalDissolver of the UIViewController.
      The specified UIViewController will be dismissed by calling the method `dismiss(animated: Bool)`.
      */
-    public init(willDismiss viewController: UIViewController) {
+    public init(willDismiss viewController: WeakOrUnowned<UIViewController>) {
         self.viewController = viewController
     }
 
 
     public func dismiss(animated: Bool) {
-        self.viewController.dismiss(animated: animated)
+        self.viewController.value?.dismiss(animated: animated)
     }
 
 
     public func dismiss(animated: Bool, completion: (() -> Void)?) {
-        self.viewController.dismiss(
-            animated: animated,
-            completion: completion
-        )
+        self.viewController.value?.dismiss(animated: animated, completion: completion)
     }
 }

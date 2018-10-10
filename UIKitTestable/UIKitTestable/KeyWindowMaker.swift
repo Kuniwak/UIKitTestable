@@ -12,31 +12,31 @@ public protocol KeyWindowMakerProtocol {
 
 
 public final class KeyWindowMaker: KeyWindowMakerProtocol {
-    private let window: UIWindow
+    private let window: WeakOrUnowned<UIWindow>
 
 
-    public init(modifying window: UIWindow) {
+    public init(modifying window: WeakOrUnowned<UIWindow>) {
         self.window = window
     }
 
 
     public func makeKey() {
-        self.window.makeKey()
+        self.window.value?.makeKey()
     }
 
 
     public func makeKeyAndVisible() {
-        self.window.makeKeyAndVisible()
+        self.window.value?.makeKeyAndVisible()
     }
 
 
     public func becomeKey() {
-        self.window.becomeKey()
+        self.window.value?.becomeKey()
     }
 
 
     public func resignKey() {
-        self.window.resignKey()
+        self.window.value?.resignKey()
     }
 }
 

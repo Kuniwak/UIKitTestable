@@ -9,7 +9,7 @@ public protocol WindowsReaderProtocol {
 
 
 public final class WindowsReader: WindowsReaderProtocol {
-    private let application: UIApplication
+    private unowned var application: UIApplication
 
 
     public var windows: [UIWindow] {

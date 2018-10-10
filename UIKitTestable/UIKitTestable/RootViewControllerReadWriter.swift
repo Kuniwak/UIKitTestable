@@ -22,7 +22,7 @@ public final class WindowRootViewControllerReadWriter: RootViewControllerReadWri
     }
 
 
-    public convenience init(readingAndWriting window: UIWindow) {
+    public convenience init(readingAndWriting window: WeakOrUnowned<UIWindow>) {
         self.init(
             readingBy: WindowRootViewControllerReader(whoHaveRootViewController: window),
             writingBy: WindowRootViewControllerWriter(whoHaveViewController: window)

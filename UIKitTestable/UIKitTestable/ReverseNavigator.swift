@@ -31,27 +31,33 @@ public enum ReverseNavigatorError: Error {
  You can replace the class to the stub or spy for testing.
  */
 public final class ReverseNavigator: ReverseNavigatorProtocol {
-    private let navigationController: UINavigationController
-    private let viewController: UIViewController
+    private let navigationController: WeakOrUnowned<UINavigationController>
+    private let destinationViewController: WeakOrUnowned<UIViewController>
 
 
     /**
      Return newly initialized Navigator for the specified UINavigationController.
      You can pop to the UIViewController by calling the method `#back`.
      */
-    public init(willPopTo viewController: UIViewController, on navigationController: UINavigationController) {
-        self.viewController = viewController
+    public init(
+        willPopTo destinationViewController: WeakOrUnowned<UIViewController>,
+        on navigationController: WeakOrUnowned<UINavigationController>
+    ) {
+        self.destinationViewController = destinationViewController
         self.navigationController = navigationController
     }
 
 
     public func pop(animated: Bool) throws {
-        guard self.navigationController.viewControllers.contains(self.viewController) else {
+        guard let navigationController = self.navigationController.value,
+            let destinationViewController = self.destinationViewController.value else { return }
+
+        guard navigationController.viewControllers.contains(destinationViewController) else {
             throw ReverseNavigatorError.noDestinationViewControllerInNavigationStack
         }
 
-        self.navigationController.popToViewController(
-            self.viewController,
+        navigationController.popToViewController(
+            destinationViewController,
             animated: animated
         )
     }

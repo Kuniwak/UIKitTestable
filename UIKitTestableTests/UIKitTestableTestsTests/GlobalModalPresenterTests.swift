@@ -16,11 +16,14 @@ class GlobalModalPresenterTests: XCTestCase {
             expectation.fulfill()
         }
 
-        let modalPresenter = GlobalModalPresenter(wherePresentOn: UIWindow())
+        let window = UIWindow()
+        let modalPresenter = GlobalModalPresenter(wherePresentOn: .weak(window))
         modalPresenter.present(
             viewController: spyViewController,
             animated: false
         )
+
+        _ = window
 
         self.waitForExpectations(timeout: 3)
     }
@@ -32,7 +35,8 @@ class GlobalModalPresenterTests: XCTestCase {
         // because this test target (UIViewController#dismiss) is designed for CPS.
         let expectation = self.expectation(description: "Awaiting a call of viewDidDisappear")
 
-        let modalPresenter = GlobalModalPresenter(wherePresentOn: UIWindow())
+        let window = UIWindow()
+        let modalPresenter = GlobalModalPresenter(wherePresentOn: .weak(window))
         modalPresenter.present(
             viewController: UIViewController(),
             animated: false,
@@ -43,6 +47,7 @@ class GlobalModalPresenterTests: XCTestCase {
                         completion: {
                             DispatchQueue.main.async {
                                 _ = modalPresenter
+                                _ = window
                                 expectation.fulfill()
                             }
                         }
@@ -69,7 +74,7 @@ class GlobalModalPresenterTests: XCTestCase {
             repeating: { (i, done) in
                 let viewController = UIViewController()
                 let window = CountedWindow()
-                let modalPresenter = GlobalModalPresenter(wherePresentOn: window)
+                let modalPresenter = GlobalModalPresenter(wherePresentOn: .weak(window))
 
                 debugInfo.log(index: i, window: window)
 
@@ -81,6 +86,7 @@ class GlobalModalPresenterTests: XCTestCase {
                             animated: false,
                             completion: {
                                 DispatchQueue.main.async {
+                                    _ = window
                                     done()
                                 }
                             }
@@ -131,5 +137,4 @@ class GlobalModalPresenterTests: XCTestCase {
             return dumpString(UIApplication.shared.windows)
         }
     }
-
 }

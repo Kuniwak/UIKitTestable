@@ -12,7 +12,8 @@ public func awaitViewControllerEvent(
 ) {
     let expectation = testCase.expectation(description: "Awaiting \(expectedEvent)")
 
-    let presenter = GlobalModalPresenter(wherePresentOn: UIWindow())
+    let window = UIWindow()
+    let presenter = GlobalModalPresenter(wherePresentOn: .weak(window))
     let viewController = AwaitingViewController() { (viewController, actualEvent) in
         guard actualEvent == expectedEvent else { return }
 
