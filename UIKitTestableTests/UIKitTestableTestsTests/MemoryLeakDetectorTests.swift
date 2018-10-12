@@ -5,18 +5,6 @@ import UIKitTests
 
 
 class MemoryLeakDetectorTests: XCTestCase {
-    func testReport() {
-        let report = detectLeaks { () -> Node in
-            let indirectNode = Node(linkedNodes: [])
-            let node = Node(linkedNodes: [indirectNode])
-            indirectNode.linkedNodes = [node]
-            return node
-        }
-
-        print(report.description)
-    }
-
-
     func testMemoryLeak() {
     	typealias TestCase = (
             build: () -> Any,
@@ -29,8 +17,7 @@ class MemoryLeakDetectorTests: XCTestCase {
                     return Node(linkedNodes: [])
                 },
                 expected: MemoryLeakReport(
-                    leakedObjects: [],
-                    circularPaths: []
+                    leakedObjects: []
                 )
     	    ),
             #line: ( // Single direct circular
@@ -41,17 +28,20 @@ class MemoryLeakDetectorTests: XCTestCase {
                 },
                 expected: MemoryLeakReport(
                     leakedObjects: [
-                        MemoryLeakReport.LeakedObject(
+                        LeakedObject(
                             objectDescription: "Node",
-                            typeDescription: "Any",
-                            location: Reference.Path.root
+                            typeName: TypeName(text: "Node"),
+                            location: Reference.Path.root,
+                            circularPaths: [
+                                Reference.CircularPath(
+                                    end: .root(TypeName(text: "Node")),
+                                    components: ArrayLongerThan1<Reference.PathComponent>([
+                                        .label("linkedNodes"),
+                                        .index(0),
+                                    ])!
+                                ),
+                            ]
                         ),
-                    ],
-                    circularPaths: [
-                        Reference.Path(components: [
-                            .label("linkedNodes"),
-                            .index(0),
-                        ]),
                     ]
                 )
             ),
@@ -64,27 +54,31 @@ class MemoryLeakDetectorTests: XCTestCase {
                 },
                 expected: MemoryLeakReport(
                     leakedObjects: [
-                        MemoryLeakReport.LeakedObject(
+                        LeakedObject(
                             objectDescription: "Node",
-                            typeDescription: "Any",
-                            location: Reference.Path.root
+                            typeName: TypeName(text: "Node"),
+                            location: Reference.Path.root,
+                            circularPaths: [
+                                Reference.CircularPath(
+                                    end: .root(TypeName(text: "Node")),
+                                    components: ArrayLongerThan1([
+                                        .label("linkedNodes"),
+                                        .index(0),
+                                        .label("linkedNodes"),
+                                        .index(0),
+                                    ])!
+                                )
+                            ]
                         ),
-                        MemoryLeakReport.LeakedObject(
+                        LeakedObject(
                             objectDescription: "Node",
-                            typeDescription: "Any",
+                            typeName: TypeName(text: "Node"),
                             location: Reference.Path(components: [
                                 .label("linkedNodes"),
                                 .index(0),
-                            ])
+                            ]),
+                            circularPaths: []
                         ),
-                    ],
-                    circularPaths: [
-                        Reference.Path(components: [
-                            .label("linkedNodes"),
-                            .index(0),
-                            .label("linkedNodes"),
-                            .index(0),
-                        ]),
                     ]
                 )
             ),
@@ -97,33 +91,39 @@ class MemoryLeakDetectorTests: XCTestCase {
                 },
                 expected: MemoryLeakReport(
                     leakedObjects: [
-                        MemoryLeakReport.LeakedObject(
+                        LeakedObject(
                             objectDescription: "Node",
-                            typeDescription: "Any",
-                            location: Reference.Path.root
+                            typeName: TypeName(text: "Node"),
+                            location: Reference.Path.root,
+                            circularPaths: [
+                                Reference.CircularPath(
+                                    end: .root(TypeName(text: "Node")),
+                                    components: ArrayLongerThan1([
+                                        .label("linkedNodes"),
+                                        .index(0),
+                                        .label("linkedNodes"),
+                                        .index(0),
+                                    ])!
+                                ),
+                            ]
                         ),
-                        MemoryLeakReport.LeakedObject(
+                        LeakedObject(
                             objectDescription: "Node",
-                            typeDescription: "Any",
+                            typeName: TypeName(text: "Node"),
                             location: Reference.Path(components: [
                                 .label("linkedNodes"),
                                 .index(0),
-                            ])
+                            ]),
+                            circularPaths: [
+                                Reference.CircularPath(
+                                    end: .intermediate(TypeName(text: "Node")),
+                                    components: ArrayLongerThan1([
+                                        .label("linkedNodes"),
+                                        .index(1),
+                                    ])!
+                                ),
+                            ]
                         ),
-                    ],
-                    circularPaths: [
-                        Reference.Path(components: [
-                            .label("linkedNodes"),
-                            .index(0),
-                            .label("linkedNodes"),
-                            .index(0),
-                        ]),
-                        Reference.Path(components: [
-                            .label("linkedNodes"),
-                            .index(0),
-                            .label("linkedNodes"),
-                            .index(1),
-                        ]),
                     ]
                 )
             ),
@@ -135,24 +135,28 @@ class MemoryLeakDetectorTests: XCTestCase {
                 },
                 expected: MemoryLeakReport(
                     leakedObjects: [
-                        MemoryLeakReport.LeakedObject(
+                        LeakedObject(
                             objectDescription: "LazyCircularNode",
-                            typeDescription: "Any",
-                            location: Reference.Path.root
+                            typeName: TypeName(text: "LazyCircularNode"),
+                            location: Reference.Path.root,
+                            circularPaths: [
+                                Reference.CircularPath(
+                                    end: .root(TypeName(text: "LazyCircularNode")),
+                                    components: ArrayLongerThan1([
+                                        .label("indirect"),
+                                        .label("value"),
+                                    ])!
+                                ),
+                            ]
                         ),
-                        MemoryLeakReport.LeakedObject(
+                        LeakedObject(
                             objectDescription: "Indirect",
-                            typeDescription: "Any",
+                            typeName: TypeName(text: "Indirect"),
                             location: Reference.Path(components: [
                                 .label("indirect"),
-                            ])
+                            ]),
+                            circularPaths: []
                         ),
-                    ],
-                    circularPaths: [
-                        Reference.Path(components: [
-                            .label("indirect"),
-                            .label("value"),
-                        ]),
                     ]
                 )
             ),
@@ -216,23 +220,15 @@ class MemoryLeakDetectorTests: XCTestCase {
 
 
     private func differenceMemoryLeakReport(between a: MemoryLeakReport, and b: MemoryLeakReport) -> String {
-        let missingLeakedObjects = a.leakedObjects.subtracting(b.leakedObjects)
-            .map { $0.description }
+        let missingLeakedObjects = sections(a.leakedObjects.subtracting(b.leakedObjects)
+            .map { $0.descriptionLines })
 
-        let missingCircularPaths = a.circularPaths.subtracting(b.circularPaths)
-            .map { $0.description }
+        let extraLeakedObjects = sections(b.leakedObjects.subtracting(a.leakedObjects)
+            .map { $0.descriptionLines })
 
-        let extraLeakedObjects = b.leakedObjects.subtracting(a.leakedObjects)
-            .map { $0.description }
-
-        let extraCircularPaths = b.circularPaths.subtracting(a.circularPaths)
-            .map { $0.description }
-
-        return format(sections([
-            (name: "Missing leaked objects", body: lines(missingLeakedObjects)),
-            (name: "Extra leaked objects", body: lines(extraLeakedObjects)),
-            (name: "Missing circular paths", body: lines(missingCircularPaths)),
-            (name: "Extra circular paths", body: lines(extraCircularPaths)),
-        ]))
+        return format(verticalPadding(sections([
+            (name: "Missing leaked objects", body: missingLeakedObjects),
+            (name: "Extra leaked objects", body: extraLeakedObjects),
+        ])))
     }
 }

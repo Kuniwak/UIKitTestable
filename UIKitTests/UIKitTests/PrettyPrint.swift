@@ -1,11 +1,11 @@
-public protocol PrettyPrintable: CustomStringConvertible {
+public protocol PrettyPrintable {
     var descriptionLines: [IndentedLine] { get }
 }
 
 
 
 extension PrettyPrintable {
-    public var description: String {
+    var prettyDescription: String {
         return format(self.descriptionLines)
     }
 }
@@ -57,16 +57,36 @@ public func lines<Lines: Sequence>(
 
 
 
-public func section<Lines: Sequence>(
-    name: String,
-    body: Lines
+public func verticalPadding<Lines: Sequence>(
+    _ lines: Lines
 ) -> [IndentedLine] where Lines.Element == IndentedLine {
-    return [.content("\(name):")] + indent(body)
+    var result = [IndentedLine.content("")]
+    result.append(contentsOf: lines)
+    result.append(.content(""))
+    return result
 }
 
 
 
-public func sections<Sections: Sequence, Lines: Sequence>(
+public func section<Lines: Collection>(
+    name: String,
+    body: Lines
+) -> [IndentedLine] where Lines.Element == IndentedLine {
+    let bodyMustNotBeEmpty: [IndentedLine]
+
+    if body.isEmpty {
+        bodyMustNotBeEmpty = lines(["(empty)"])
+    }
+    else {
+        bodyMustNotBeEmpty = Array(body)
+    }
+
+    return [.content("\(name):")] + indent(bodyMustNotBeEmpty)
+}
+
+
+
+public func sections<Sections: Sequence, Lines: Collection>(
     _ sectionsInfo: Sections
 ) -> [IndentedLine] where Sections.Element == (name: String, body: Lines), Lines.Element == IndentedLine {
     let sectionLines = sectionsInfo.map { sectionInfo in
@@ -80,7 +100,7 @@ public func sections<Sections: Sequence, Lines: Sequence>(
 
 
 
-public func sections<Sections: Sequence, Lines: Sequence>(
+public func sections<Sections: Sequence, Lines: Collection>(
     _ sectionsInfo: Sections
 ) -> [IndentedLine] where Sections.Element == Lines, Lines.Element == IndentedLine {
     return sections(sectionsInfo

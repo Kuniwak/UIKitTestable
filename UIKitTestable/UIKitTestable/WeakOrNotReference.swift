@@ -1,24 +1,24 @@
-public enum WeakOrNotReference {
+public enum WeakOrNotReferenceType {
     case weak(Weak<AnyObject>)
-    case notReference
+    case notReferenceType
 
 
     public var weak: Weak<AnyObject>? {
         switch self {
         case .weak(let container):
             return container
-        case .notReference:
+        case .notReferenceType:
             return nil
         }
     }
 
 
-    public static func from<T>(_ target: T) -> WeakOrNotReference {
+    public init<T>(_ target: T) {
         switch Mirror(reflecting: target).displayStyle {
         case .some(.class):
-            return .weak(Weak(target as AnyObject))
+            self = .weak(Weak(target as AnyObject))
         default:
-            return .notReference
+            self = .notReferenceType
         }
     }
 }

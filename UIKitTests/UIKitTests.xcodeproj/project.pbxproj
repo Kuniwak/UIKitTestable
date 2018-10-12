@@ -13,6 +13,7 @@
 		2475E1DC991ECE95816E86C9 /* GlobalModalPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EA5BB3B07B46D20B0043 /* GlobalModalPresenterSpy.swift */; };
 		2475E2430E8426601F58A21D /* RootViewControllerReaderStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EADB008992BF0EDA06A4 /* RootViewControllerReaderStub.swift */; };
 		2475E3A0ED3838D16EBA6D42 /* NavigatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EFA61DDB16FB75F83CF2 /* NavigatorSpy.swift */; };
+		2475E54CACF32E70DD1C8CBE /* PrefixedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EF807DF84DEF4EED1C78 /* PrefixedArray.swift */; };
 		2475E54E0EB6FD4CD9BCD276 /* ReverseNavigatorStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EF6D00396137985FBE7E /* ReverseNavigatorStub.swift */; };
 		2475E5F917728050886EF2D2 /* URLOpenerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E0B149194394D12993FF /* URLOpenerSpy.swift */; };
 		2475E607E6C4B12BDE0580D5 /* PresentingViewControllerReaderStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E2944D734DA932C087B7 /* PresentingViewControllerReaderStub.swift */; };
@@ -25,6 +26,7 @@
 		2475E73B56D621428CAB24A1 /* RootViewControllerWriterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E9B757F98C69E350DE91 /* RootViewControllerWriterSpy.swift */; };
 		2475E8372909D379E63CEEB2 /* CountedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E07F3FE6B2F1912332A3 /* CountedViewController.swift */; };
 		2475E9241540BA565D3B58A7 /* SpyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E49E4A55536320B78DEB /* SpyViewController.swift */; };
+		2475E949E26853831EE28BFC /* Reference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EDFD67A3B1D7C1FF7532 /* Reference.swift */; };
 		2475E94C650CF9E18CF01CF3 /* GlobalModalDissolverSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475ECC3A483918E171AC2BB /* GlobalModalDissolverSpy.swift */; };
 		2475E9C027BB247FF48D72AA /* MemoryLeakDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475ECB09DA18A08FB508A50 /* MemoryLeakDetector.swift */; };
 		2475E9D88C519EF4B766B7E0 /* TestNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EBC33BAFB1933AD78071 /* TestNavigator.swift */; };
@@ -38,8 +40,10 @@
 		2475EDA90FF136A45B0C4E32 /* RootViewControllerWriterStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E42A73C8DAA298E628CC /* RootViewControllerWriterStub.swift */; };
 		2475EDF17EAA9A5E00B82A55 /* ReverseNavigatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EBAD24E04A794B37EC68 /* ReverseNavigatorSpy.swift */; };
 		2475EE44CED9B215C019CEAF /* RootViewControllerReadWriterStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475ED4B681884455850B40B /* RootViewControllerReadWriterStub.swift */; };
+		2475EE6A99C2608D343B3DBC /* ObjectTraverser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EFF28E4C0392287984EE /* ObjectTraverser.swift */; };
 		2475EE79F38DFF8A3D78588E /* WindowsReaderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EC9C025BDE45D54E0B7A /* WindowsReaderSpy.swift */; };
 		2475EF421F3952AB1EAE2FDF /* GlobalModalPresenterStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EB711BA98C606FE27B92 /* GlobalModalPresenterStub.swift */; };
+		2475EF69D5D3E18FAEE88006 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EFCC6DC67301F7009EAA /* Types.swift */; };
 		2475EFC3ECEAACB10AEAEE3A /* NavigatorStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EDEA0A6FE830E16293BD /* NavigatorStub.swift */; };
 		2475EFE4F2FB8B3BC6A6E9AC /* ModalDissolverSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E4F6ECDC5788FB1D1627 /* ModalDissolverSpy.swift */; };
 		62DDB9D2216117210005BFEA /* UIKitTests.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DDB9D0216117210005BFEA /* UIKitTests.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -78,10 +82,14 @@
 		2475ED4B681884455850B40B /* RootViewControllerReadWriterStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewControllerReadWriterStub.swift; sourceTree = "<group>"; };
 		2475EDD6CD704C9838A9BD32 /* URLOpenerStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLOpenerStub.swift; sourceTree = "<group>"; };
 		2475EDEA0A6FE830E16293BD /* NavigatorStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigatorStub.swift; sourceTree = "<group>"; };
+		2475EDFD67A3B1D7C1FF7532 /* Reference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reference.swift; sourceTree = "<group>"; };
 		2475EEFC83EED4DFD87C92FA /* Timeout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeout.swift; sourceTree = "<group>"; };
 		2475EF6D00396137985FBE7E /* ReverseNavigatorStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverseNavigatorStub.swift; sourceTree = "<group>"; };
 		2475EF75F73283D7B6F12F9F /* ModalDissolverStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalDissolverStub.swift; sourceTree = "<group>"; };
+		2475EF807DF84DEF4EED1C78 /* PrefixedArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrefixedArray.swift; sourceTree = "<group>"; };
 		2475EFA61DDB16FB75F83CF2 /* NavigatorSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigatorSpy.swift; sourceTree = "<group>"; };
+		2475EFCC6DC67301F7009EAA /* Types.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		2475EFF28E4C0392287984EE /* ObjectTraverser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectTraverser.swift; sourceTree = "<group>"; };
 		62DDB9CD216117210005BFEA /* UIKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62DDB9D0216117210005BFEA /* UIKitTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKitTests.h; sourceTree = "<group>"; };
 		62DDB9D1216117210005BFEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -157,6 +165,10 @@
 				2475EDD6CD704C9838A9BD32 /* URLOpenerStub.swift */,
 				2475EC9C025BDE45D54E0B7A /* WindowsReaderSpy.swift */,
 				2475E478891FF4BB81DA676D /* WindowsReaderStub.swift */,
+				2475EDFD67A3B1D7C1FF7532 /* Reference.swift */,
+				2475EFCC6DC67301F7009EAA /* Types.swift */,
+				2475EF807DF84DEF4EED1C78 /* PrefixedArray.swift */,
+				2475EFF28E4C0392287984EE /* ObjectTraverser.swift */,
 			);
 			path = UIKitTests;
 			sourceTree = "<group>";
@@ -282,6 +294,10 @@
 				2475E9C027BB247FF48D72AA /* MemoryLeakDetector.swift in Sources */,
 				2475E053C4B8B1F6C645FC58 /* Arrays.swift in Sources */,
 				2475E130FEDB1BA4F7145119 /* PrettyPrint.swift in Sources */,
+				2475E949E26853831EE28BFC /* Reference.swift in Sources */,
+				2475EF69D5D3E18FAEE88006 /* Types.swift in Sources */,
+				2475E54CACF32E70DD1C8CBE /* PrefixedArray.swift in Sources */,
+				2475EE6A99C2608D343B3DBC /* ObjectTraverser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

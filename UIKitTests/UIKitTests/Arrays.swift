@@ -1,39 +1,22 @@
-internal func addPrefix<T>(to array: [T], prefix: T) -> [T] {
-    var result = [prefix]
-    result.append(contentsOf: array)
-    return result
-}
-
-
-
-internal func addSuffix<T>(to array: [T], suffix: T) -> [T] {
-    var result = array
-    result.append(suffix)
-    return result
-}
-
-
-
-internal func slideMap<T, R, SeqT: Sequence>(
-    _ xs: SeqT,
-    _ f: (T, T) -> R
-) -> [R] where SeqT.Element == T {
-    return zip(xs, xs.dropFirst())
-        .map { f($0.0, $0.1) }
-}
-
-
-internal func scan<T, R, SeqT: Sequence>(
-    _ xs: SeqT,
-    _ initial: R,
+internal func scan<T, R, S: Sequence>(
+    _ xs: S,
+    initial: R,
     _ f: (R, T) -> R
-) -> [R] where SeqT.Element == T {
+) -> [R] where S.Element == T {
     var intermediate = initial
 
     return xs.map { x in
         intermediate = f(intermediate, x)
         return intermediate
     }
+}
+
+
+
+internal func slide<T, S: Sequence>(
+    _ xs: S
+) -> [(T, T)] where S.Element == T {
+    return Array(zip(xs, xs.dropLast()))
 }
 
 
