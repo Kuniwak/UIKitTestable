@@ -124,6 +124,34 @@ extension PrefixedArray where RestElements == ArrayLongerThan0<Element> {
     }
 
 
+    public func flatMap<TransformedElement>(
+        _ f: (Element) -> ArrayLongerThan1<TransformedElement>
+    ) -> ArrayLongerThan1<TransformedElement> {
+        let firstTransformed = f(self.first)
+        var restTransformed = firstTransformed.rest
+        restTransformed.append(contentsOf: self.rest.flatMap(f))
+
+        return ArrayLongerThan1<TransformedElement>(
+            prefix: firstTransformed.first,
+            restTransformed
+        )
+    }
+
+
+    public func flatMap<TransformedElement>(
+        _ f: (Element) -> ArrayLongerThan2<TransformedElement>
+    ) -> ArrayLongerThan2<TransformedElement> {
+        let firstTransformed = f(self.first)
+        var restTransformed = firstTransformed.rest
+        restTransformed.append(contentsOf: self.rest.flatMap(f))
+
+        return ArrayLongerThan2<TransformedElement>(
+            prefix: firstTransformed.first,
+            restTransformed
+        )
+    }
+
+
     public func filter(_ f: (Element) -> Bool) -> ArrayLongerThan0<Element> {
         return self.relaxed().filter(f)
     }
@@ -148,6 +176,33 @@ extension PrefixedArray where RestElements == ArrayLongerThan0<Element> {
             prefix: self.prefix,
             newRest
         )
+    }
+
+
+    public mutating func append<S: Sequence>(
+        contentsOf newElements: S
+    ) where S.Element == Element {
+        var newRest = self.rest
+        newRest.append(contentsOf: newElements)
+
+        self = ArrayLongerThan1(
+            prefix: self.prefix,
+            newRest
+        )
+    }
+
+
+    public mutating func append(
+        contentsOf newElements: ArrayLongerThan1<Element>
+    ) {
+        self.append(contentsOf: newElements.relaxed())
+    }
+
+
+    public mutating func append(
+        contentsOf newElements: ArrayLongerThan2<Element>
+    ) {
+        self.append(contentsOf: newElements.relaxed())
     }
 
 
@@ -238,6 +293,44 @@ extension PrefixedArray where RestElements == ArrayLongerThan1<Element> {
     }
 
 
+    public func flatMap<TransformedElement>(
+        _ f: (Element) -> ArrayLongerThan1<TransformedElement>
+    ) -> ArrayLongerThan2<TransformedElement> {
+        let firstTransformed = f(self.first)
+
+        guard var restTransformed = ArrayLongerThan1(firstTransformed.rest) else {
+            var secondTransformed = f(self.rest.first)
+            secondTransformed.append(contentsOf: self.rest.rest.flatMap(f))
+
+            return ArrayLongerThan2(
+                prefix: firstTransformed.first,
+                secondTransformed
+            )
+        }
+
+        restTransformed.append(contentsOf: self.rest.flatMap(f))
+
+        return ArrayLongerThan2(
+            prefix: firstTransformed.first,
+            restTransformed
+        )
+    }
+
+
+    public func flatMap<TransformedElement>(
+        _ f: (Element) -> ArrayLongerThan2<TransformedElement>
+    ) -> ArrayLongerThan2<TransformedElement> {
+        let firstTransformed = f(self.first)
+        var restTransformed = firstTransformed.rest
+        restTransformed.append(contentsOf: self.rest.flatMap(f))
+
+        return ArrayLongerThan2<TransformedElement>(
+            prefix: firstTransformed.first,
+            restTransformed
+        )
+    }
+
+
     public func filter(_ f: (Element) -> Bool) -> ArrayLongerThan0<Element> {
         return self.relaxed().filter(f)
     }
@@ -265,6 +358,33 @@ extension PrefixedArray where RestElements == ArrayLongerThan1<Element> {
     }
 
 
+    public mutating func append<S: Sequence>(
+        contentsOf newElements: S
+    ) where S.Element == Element {
+        var newRest = self.rest
+        newRest.append(contentsOf: newElements)
+
+        self = ArrayLongerThan2(
+            prefix: self.prefix,
+            newRest
+        )
+    }
+
+
+    public mutating func append(
+        contentsOf newElements: ArrayLongerThan1<Element>
+    ) {
+        self.append(contentsOf: newElements.relaxed())
+    }
+
+
+    public mutating func append(
+        contentsOf newElements: ArrayLongerThan2<Element>
+    ) {
+        self.append(contentsOf: newElements.relaxed())
+    }
+
+
     public func relaxed() -> ArrayLongerThan1<Element> {
         return .init(prefix: self.prefix, self.rest.relaxed())
     }
@@ -275,6 +395,19 @@ extension PrefixedArray where RestElements == ArrayLongerThan1<Element> {
 extension PrefixedArray where Element == String, RestElements == ArrayLongerThan1<String> {
     public func joined(separator: String) -> String {
         return self.relaxed().joined(separator: separator)
+    }
+}
+
+
+
+extension Array {
+    public func flatMap<Transformed>(_ f: (Element) -> ArrayLongerThan1<Transformed>) -> [Transformed] {
+        return self.flatMap { f($0).relaxed() }
+    }
+
+
+    public func flatMap<Transformed>(_ f: (Element) -> ArrayLongerThan2<Transformed>) -> [Transformed] {
+        return self.flatMap { f($0).relaxed() }
     }
 }
 
