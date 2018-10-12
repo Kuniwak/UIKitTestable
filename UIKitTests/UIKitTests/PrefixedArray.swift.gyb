@@ -1,0 +1,802 @@
+%{
+number_of_generated = 3
+}%
+
+
+public struct PrefixedArray<Element, RestElements> {
+    public let prefix: Element
+    public let rest: RestElements
+
+
+    public var first: Element {
+        return self.prefix
+    }
+
+
+    public var firstAndRest: (Element, RestElements) {
+        return (self.first, self.rest)
+    }
+
+
+    public init(prefix: Element, _ rest: RestElements) {
+        self.prefix = prefix
+        self.rest = rest
+    }
+
+
+    public func dropFirst() -> RestElements {
+        return self.rest
+    }
+}
+
+
+
+extension PrefixedArray: Equatable where Element: Equatable, RestElements: Equatable {
+    public static func ==(lhs: PrefixedArray<Element, RestElements>, rhs: PrefixedArray<Element, RestElements>) -> Bool {
+        return lhs.prefix == rhs.prefix
+            && lhs.rest == rhs.rest
+    }
+}
+
+
+
+extension PrefixedArray: Hashable where Element: Hashable, RestElements: Hashable {
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(self.prefix)
+        hasher.combine(self.rest)
+    }
+}
+
+
+
+% for i in range(1, number_of_generated):
+extension PrefixedArray where RestElements == ArrayLongerThan${i - 1}<Element> {
+    public func sequence() -> ArrayLongerThan${i}Sequence<Element> {
+        return ArrayLongerThan${i}Sequence<Element>(
+            prefix: self.prefix,
+            rest: self.rest.sequence()
+        )
+    }
+}
+% end
+
+
+
+public typealias ArrayLongerThan0Sequence<Element> = ArrayLongerThan0<Element>
+% for i in range(1, number_of_generated):
+public typealias ArrayLongerThan${i}Sequence<Element> = PrefixedArraySequence<Element, ArrayLongerThan${i - 1}Sequence<Element>>
+% end
+
+
+
+public struct PrefixedArraySequence<E, RestElements: Sequence>: Sequence where RestElements.Element == E {
+    public typealias Element = E
+
+
+    public let prefix: Element
+    public let rest: RestElements
+
+
+    public init(prefix: Element, rest: RestElements) {
+        self.prefix = prefix
+        self.rest = rest
+    }
+
+
+    public func makeIterator() -> PrefixedArrayIterator<RestElements> {
+        return PrefixedArrayIterator<RestElements>(iterate: self)
+    }
+}
+
+
+
+public class PrefixedArrayIterator<RestElements: Sequence>: IteratorProtocol {
+    public typealias Element = RestElements.Element
+
+
+    private var nextIterator: AnyIterator<Element>? = nil
+    private let array: PrefixedArraySequence<Element, RestElements>
+
+
+    public init(iterate array: PrefixedArraySequence<Element, RestElements>) {
+        self.array = array
+    }
+
+
+    public func next() -> Element? {
+        guard let nextIterator = self.nextIterator else {
+            self.nextIterator = AnyIterator<RestElements.Element>(self.array.rest.makeIterator())
+            return self.array.prefix
+        }
+
+        let result = nextIterator.next()
+        self.nextIterator = nextIterator
+        return result
+    }
+}
+
+
+
+public struct PrefixedArrayEnd<Element> {
+    private let array: AnyBidirectionalCollection<Element>
+
+
+    public var startIndex: Int {
+        return 0
+    }
+
+
+    public var endIndex: Int {
+        return self.count - 1
+    }
+
+
+    public var count: Int {
+        return self.array.count
+    }
+
+
+    public var first: Element? {
+        return self.array.first
+    }
+
+
+    public var last: Element? {
+        return self.array.last
+    }
+
+
+    public var firstAndRest: (Element, PrefixedArrayEnd<Element>)? {
+        guard let first = self.first, let rest = self.dropFirst() else {
+            return nil
+        }
+
+        return (first, rest)
+    }
+
+
+    public init<S: BidirectionalCollection>(
+        _ array: S
+    ) where S.Element == Element {
+        self.array = AnyBidirectionalCollection<Element>(array)
+    }
+
+
+    public init<S: BidirectionalCollection>(
+        prefix: Element,
+        _ array: S
+    ) where S.Element == Element {
+        var newArray = Array(array)
+        newArray.insert(prefix, at: 0)
+        self.init(newArray)
+    }
+
+
+    public init<S: BidirectionalCollection>(
+        suffix: Element,
+        _ array: S
+    ) where S.Element == Element {
+        guard let first = array.first else {
+            self.init(prefix: suffix, [])
+            return
+        }
+
+        var newArray = Array(array.dropFirst())
+        newArray.append(suffix)
+
+        self.init(prefix: first, newArray)
+    }
+
+
+    public init(_ array: ArrayLongerThan0<Element>) {
+        self = array
+    }
+
+
+    % for j in range(1, number_of_generated):
+    public init(_ array: ArrayLongerThan${j}<Element>) {
+        self.init(array.relaxed())
+    }
+    % end
+
+
+    public init(
+        suffix: Element,
+        _ array: ArrayLongerThan0<Element>
+    ) {
+        self.init(suffix: suffix, array.relaxed())
+    }
+
+
+    public subscript(index: Int) -> Element {
+        let index = self.array.index(self.array.startIndex, offsetBy: index)
+        return self.array[index]
+    }
+
+
+    public subscript(range: Range<Int>) -> ArrayLongerThan0<Element> {
+        let upperBound = self.array.index(self.array.startIndex, offsetBy: range.upperBound)
+        let lowerBound = self.array.index(self.array.startIndex, offsetBy: range.lowerBound)
+
+        return ArrayLongerThan0<Element>(self.array[lowerBound..<upperBound])
+    }
+
+
+    public mutating func insert(_ newElement: Element, at i: Int) {
+        var newArray = Array(self.array)
+        newArray.insert(newElement, at: i)
+        self = PrefixedArrayEnd<Element>(newArray)
+    }
+
+
+    public mutating func insert<C: Collection>(contentsOf newElements: C, at i: Int) where C.Element == Element {
+        var newArray = Array(self.array)
+        newArray.insert(contentsOf: newElements, at: i)
+        self = PrefixedArrayEnd<Element>(newArray)
+    }
+
+
+    % for i in range(0, number_of_generated):
+    public mutating func insert(contentsOf newElements: ArrayLongerThan${i}<Element>, at i: Int) {
+        self.insert(contentsOf: newElements.relaxed(), at: i)
+    }
+    % end
+
+
+    public mutating func append(_ newElement: Element) {
+        var newArray = Array(self.array)
+        newArray.append(newElement)
+        self = PrefixedArrayEnd<Element>(newArray)
+    }
+
+
+    public mutating func append<S: Sequence>(
+        contentsOf newElements: S
+    ) where S.Element == Element {
+        var newArray = Array(self.array)
+        newArray.append(contentsOf: newElements)
+        self = PrefixedArrayEnd<Element>(newArray)
+    }
+
+
+    % for i in range(0, number_of_generated):
+    public mutating func append(contentsOf newElements: ArrayLongerThan${i}<Element>) {
+        self.append(contentsOf: newElements.relaxed())
+    }
+    % end
+
+
+    public func dropFirst() -> PrefixedArrayEnd<Element>? {
+        guard !self.array.isEmpty else {
+            return nil
+        }
+
+        return PrefixedArrayEnd(self.array.dropFirst())
+    }
+
+
+    public func dropLast() -> AnyBidirectionalCollection<Element>? {
+        guard !self.array.isEmpty else {
+            return nil
+        }
+
+        return self.array.dropLast()
+    }
+
+
+    public func map<T>(_ f: (Element) throws -> T) rethrows -> PrefixedArrayEnd<T> {
+        return PrefixedArrayEnd<T>(try self.array.map(f))
+    }
+
+
+    public func compactMap<T>(_ f: (Element) throws -> T?) rethrows -> PrefixedArrayEnd<T> {
+        return PrefixedArrayEnd<T>(try self.array.compactMap(f))
+    }
+
+
+    public func flatMap<T, S: Sequence>(_ f: (Element) throws -> S) rethrows -> PrefixedArrayEnd<T> where S.Element == T {
+        return PrefixedArrayEnd<T>(try self.array.flatMap(f))
+    }
+
+
+    public func enumerated() -> PrefixedArrayEnd<(Int, Element)> {
+        return PrefixedArrayEnd<(Int, Element)>(Array(self.array.enumerated()))
+    }
+
+
+    % for i in range(0, number_of_generated):
+    public func flatMap<T>(_ f: (Element) throws -> ArrayLongerThan${i}<T>) rethrows -> PrefixedArrayEnd<T> {
+        return try self.flatMap { try f($0).relaxed() }
+    }
+    % end
+
+
+    public func filter(_ f: (Element) throws -> Bool) rethrows -> PrefixedArrayEnd<Element> {
+        return PrefixedArrayEnd<Element>(try self.array.filter(f))
+    }
+
+
+    public func relaxed() -> AnyBidirectionalCollection<Element> {
+        return self.array
+    }
+
+
+    public func sequence() -> ArrayLongerThan0Sequence<Element> {
+        return self
+    }
+}
+
+
+
+extension PrefixedArrayEnd: Equatable where Element: Equatable {
+    public static func ==(lhs: PrefixedArrayEnd<Element>, rhs: PrefixedArrayEnd<Element>) -> Bool {
+        guard lhs.count == rhs.count else { return false }
+        return zip(lhs.array, rhs.array).allSatisfy { $0.0 == $0.1 }
+    }
+}
+
+
+
+extension PrefixedArrayEnd: Hashable where Element: Hashable {
+    public func hash(into hasher: inout Hasher) {
+        self.array.forEach { hasher.combine($0) }
+    }
+}
+
+
+
+extension PrefixedArrayEnd: Sequence {
+    public typealias Iterator = PrefixedArrayEndIterator<Element>
+
+
+    public func makeIterator() -> PrefixedArrayEndIterator<Element> {
+        return Iterator(self)
+    }
+}
+
+
+
+public struct PrefixedArrayEndIterator<Element>: IteratorProtocol {
+    private let array: PrefixedArrayEnd<Element>
+    private var position: Int
+
+
+    public init(_ array: PrefixedArrayEnd<Element>) {
+        self.init(array, at: array.startIndex)
+    }
+
+
+    public init(_ array: PrefixedArrayEnd<Element>, at position: Int) {
+        self.array = array
+        self.position = position
+    }
+
+
+    public mutating func next() -> Element? {
+        guard self.position <= self.array.endIndex else {
+            return nil
+        }
+
+        let result = self.array[self.position]
+        self.position += 1
+        return result
+    }
+}
+
+
+
+public typealias ArrayLongerThan0<Element> = PrefixedArrayEnd<Element>
+% for i in range(1, number_of_generated):
+public typealias ArrayLongerThan${i}<Element> = PrefixedArray<Element, ArrayLongerThan${i - 1}<Element>>
+% end
+
+
+
+% for i in range(1, number_of_generated):
+extension PrefixedArray where RestElements == ArrayLongerThan${i - 1}<Element> {
+    // ArrayLongerThan${i}
+    public var count: Int {
+        return self.rest.count + 1
+    }
+
+
+    // ArrayLongerThan${i}
+    public var last: Element {
+        % if i > 1:
+        return self.rest.last
+        % else:
+        guard let last = self.rest.last else {
+            return self.first
+        }
+        return last
+        % end
+    }
+
+
+    // ArrayLongerThan${i}
+    public init?<C: BidirectionalCollection>(_ array: C) where C.Element == Element {
+        guard let first = array.first else {
+            return nil
+        }
+
+        % if i == 1:
+        let restEnoughLength = PrefixedArrayEnd<Element>(array.dropFirst())
+        % else:
+        guard let restEnoughLength = ArrayLongerThan${i - 1}<Element>(array.dropFirst()) else { return nil }
+        % end
+
+        self.init(prefix: first, restEnoughLength)
+    }
+
+
+    // ArrayLongerThan${i}
+    public init?(_ array: ArrayLongerThan0<Element>) {
+        guard let (first, rest) = array.firstAndRest else {
+            return nil
+        }
+
+        % if i == 1:
+        let restEnoughLength = ArrayLongerThan0<Element>(rest)
+        % else:
+        guard let restEnoughLength = ArrayLongerThan${i - 1}<Element>(rest) else {
+            return nil
+        }
+        % end
+
+        self.init(prefix: first, restEnoughLength)
+    }
+
+
+    % for j in range(1, number_of_generated):
+    % if j < i:
+    // ArrayLongerThan${i}
+    public init?(_ array: ArrayLongerThan${j}<Element>) {
+        % if i == 1:
+        let restEnoughLength = ArrayLongerThan0(array.rest)
+        % else:
+        guard let restEnoughLength = ArrayLongerThan${i - 1}<Element>(array.rest) else {
+            return nil
+        }
+        % end
+
+        self.init(prefix: array.first, restEnoughLength)
+    }
+    % elif j == i:
+    // ArrayLongerThan${i}
+    public init(_ array: ArrayLongerThan${j}<Element>) {
+        self = array
+    }
+    % else:
+    // ArrayLongerThan${i}
+    public init(_ array: ArrayLongerThan${j}<Element>) {
+        self.init(prefix: array.first, array.rest.relaxed())
+    }
+    % end
+    % end
+
+
+    % for j in range(i, number_of_generated):
+    // ArrayLongerThan${i}
+    public init(prefix: Element, _ array: ArrayLongerThan${j}<Element>) {
+        self.init(prefix: prefix, array.relaxed())
+    }
+
+
+    // ArrayLongerThan${i}
+    public init(suffix: Element, _ array: ArrayLongerThan${j}<Element>) {
+        self.init(suffix: suffix, array.relaxed())
+    }
+    % end
+
+
+    % if i == 1:
+    // ArrayLongerThan${i}
+    public init(suffix: Element, _ array: ArrayLongerThan0<Element>) {
+        guard let (first, rest) = array.firstAndRest else {
+            self.init(prefix: suffix, PrefixedArrayEnd<Element>([]))
+            return
+        }
+
+        self.init(
+            prefix: first,
+            ArrayLongerThan${i - 1}<Element>(suffix: suffix, rest)
+        )
+    }
+    % else:
+    public init(suffix: Element, _ array: ArrayLongerThan${i - 1}<Element>) {
+        self.init(
+            prefix: array.first,
+            ArrayLongerThan${i - 1}<Element>(suffix: suffix, array.rest)
+        )
+    }
+    % end
+
+
+    % if i == 1:
+    // ArrayLongerThan${i}
+    public init<C: BidirectionalCollection>(prefix: Element, _ array: C) where C.Element == Element {
+        self.init(prefix: prefix, PrefixedArrayEnd<Element>(array))
+    }
+    % else:
+    // ArrayLongerThan${i}
+    public init?<C: BidirectionalCollection>(prefix: Element, _ array: C) where C.Element == Element {
+        guard let rest = ArrayLongerThan${i - 1}<Element>(array) else {
+            return nil
+        }
+
+        self.init(prefix: prefix, rest)
+    }
+    % end
+
+
+    % if i == 1:
+    // ArrayLongerThan${i}
+    public init<C: BidirectionalCollection>(suffix: Element, _ array: C) where C.Element == Element {
+        guard let first = array.first else {
+            self.init(prefix: suffix, PrefixedArrayEnd<Element>([]))
+            return
+        }
+
+        var newRest = Array(array.dropFirst())
+        newRest.append(suffix)
+
+        self.init(prefix: first, PrefixedArrayEnd<Element>(newRest))
+    }
+    % else:
+    // ArrayLongerThan${i}
+    public init?<C: BidirectionalCollection>(suffix: Element, _ array: C) where C.Element == Element {
+        guard let head = ArrayLongerThan${i - 1}<Element>(array) else {
+            return nil
+        }
+
+        self.init(suffix: suffix, head)
+    }
+    % end
+
+
+    // ArrayLongerThan${i}
+    public subscript(index: Int) -> Element {
+        guard index != 0 else {
+            return self.first
+        }
+        return self.rest[index - 1]
+    }
+
+
+    // ArrayLongerThan${i}
+    public subscript(range: Range<Int>) -> ArrayLongerThan0<Element> {
+        return self.relaxed()[range]
+    }
+
+
+    // ArrayLongerThan${i}
+    public mutating func insert(_ newElement: Element, at i: Int) {
+        guard i > 0 else {
+            self = ArrayLongerThan${i}<Element>(
+                prefix: newElement,
+                self.relaxed()
+            )
+            return
+        }
+
+        var newRest = self.rest
+        newRest.insert(newElement, at: i - 1)
+
+        self = ArrayLongerThan${i}<Element>(
+            prefix: self.prefix,
+            newRest
+        )
+    }
+
+
+    % for j in range(0, number_of_generated):
+    // ArrayLongerThan${i}
+    public mutating func insert(contentsOf newElements: ArrayLongerThan${j}<Element>, at i: Int) {
+        // TODO: Check the standard behavior to handle negative values.
+        guard i > 0 else {
+            % if j == 0:
+            guard let (first, rest) = newElements.firstAndRest else { return }
+            % else:
+            let (first, rest) = newElements.firstAndRest
+            %end
+
+            self = ArrayLongerThan${i}<Element>(
+                prefix: first,
+                rest + ArrayLongerThan${max(i - j, 0)}(self) // NOTE: Avoid to use exceeded length types.
+            )
+            return
+        }
+
+        var newRest = self.rest
+        newRest.insert(contentsOf: newElements, at: i - 1)
+
+        self = ArrayLongerThan${i}<Element>(
+            prefix: self.prefix,
+            newRest
+        )
+    }
+    % end
+
+
+    // ArrayLongerThan${i}
+    public mutating func append(_ newElement: Element) {
+        var newRest = self.rest
+        newRest.append(newElement)
+        self = ArrayLongerThan${i}<Element>(
+            prefix: self.prefix,
+            newRest
+        )
+    }
+
+
+    % for j in range(0, number_of_generated):
+    // ArrayLongerThan${i}
+    public mutating func append(contentsOf newElements: ArrayLongerThan${j}<Element>) {
+        var newRest = self.rest
+        newRest.append(contentsOf: newElements)
+        self = ArrayLongerThan${i}<Element>(
+            prefix: self.prefix,
+            newRest
+        )
+    }
+    % end
+
+
+    % if i == 1:
+    // ArrayLongerThan${i}
+    public func dropLast() -> PrefixedArrayEnd<Element> {
+        guard let rest = self.rest.dropLast() else {
+            return PrefixedArrayEnd([])
+        }
+
+        return PrefixedArrayEnd(
+            prefix: self.first,
+            rest
+        )
+    }
+    % else:
+    // ArrayLongerThan${i}
+    public func dropLast() -> ArrayLongerThan${i - 1}<Element> {
+        return ArrayLongerThan${i - 1}<Element>(
+            prefix: self.first,
+            rest.dropLast()
+        )
+    }
+    % end
+
+
+    // ArrayLongerThan${i}
+    public func map<T>(_ f: (Element) throws -> T) rethrows -> ArrayLongerThan${i}<T> {
+        return ArrayLongerThan${i}<T>(
+            prefix: try f(self.first),
+            try self.rest.map(f)
+        )
+    }
+
+
+    // ArrayLongerThan${i}
+    public func compactMap<T>(_ f: (Element) throws -> T?) rethrows -> PrefixedArrayEnd<T> {
+        return try self.relaxed().compactMap(f)
+    }
+
+
+    // ArrayLongerThan${i}
+    public func filter(_ f: (Element) throws -> Bool) rethrows -> PrefixedArrayEnd<Element> {
+        return try self.relaxed().filter(f)
+    }
+
+
+    // ArrayLongerThan${i}
+    public func flatMap<T, S: Sequence>(_ f: (Element) throws -> S) rethrows -> PrefixedArrayEnd<T> where S.Element == T {
+        return try self.relaxed().flatMap(f)
+    }
+
+
+    // ArrayLongerThan${i}
+    public func enumerated() -> ArrayLongerThan${i}<(Int, Element)> {
+        return ArrayLongerThan${i}<(Int, Element)>(
+            prefix: (0, self.first),
+            self.rest.enumerated().map { ($0.0 + 1, $0.1) }
+        )
+    }
+
+
+    // ArrayLongerThan${i}
+    public func relaxed() -> ArrayLongerThan${i - 1}<Element> {
+        return ArrayLongerThan${i - 1}<Element>(
+            prefix: self.prefix,
+            self.rest.relaxed()
+        )
+    }
+}
+% end
+
+
+% for l in range(0, number_of_generated):
+public func +<Element>(lhs: ArrayLongerThan${l}<Element>, rhs: PrefixedArrayEnd<Element>) -> ArrayLongerThan${l}<Element> {
+    var result = lhs
+    result.append(contentsOf: rhs)
+    return result
+}
+% for r in range(1, number_of_generated):
+% if l + r in range(0, number_of_generated):
+public func +<Element>(lhs: ArrayLongerThan${l}<Element>, rhs: ArrayLongerThan${r}<Element>) -> ArrayLongerThan${l + r}<Element> {
+    return ArrayLongerThan${l + r}(suffix: rhs.last, lhs + rhs.dropLast())
+}
+% end
+% end
+% end
+
+
+
+extension PrefixedArrayEnd where Element: Sequence {
+    public func joined() -> PrefixedArrayEnd<Element.Element> {
+        return PrefixedArrayEnd<Element.Element>(Array(self.array.joined()))
+    }
+}
+
+
+
+% for i in range(1, number_of_generated):
+extension PrefixedArray where Element: Sequence, RestElements == ArrayLongerThan${i - 1}<Element> {
+    public func joined() -> PrefixedArrayEnd<Element.Element> {
+        return self.relaxed().joined()
+    }
+}
+% end
+
+
+
+extension PrefixedArrayEnd where Element == String {
+    public func joined(separator: String) -> String {
+        return self.array.joined(separator: separator)
+    }
+}
+
+
+
+% for i in range(1, number_of_generated):
+extension PrefixedArray where Element == String, RestElements == ArrayLongerThan${i - 1}<String> {
+    public func joined(separator: String) -> String {
+        return self.relaxed().joined(separator: separator)
+    }
+}
+% end
+
+
+func zip<A, B>(_ a: ArrayLongerThan0<A>, _ b: ArrayLongerThan0<B>) -> ArrayLongerThan0<(A, B)> {
+    return ArrayLongerThan0<(A, B)>(Array(zip(a.relaxed(), b.relaxed())))
+}
+
+
+% for i in range(1, number_of_generated):
+func zip<A, B>(_ a: ArrayLongerThan${i}<A>, _ b: ArrayLongerThan${i}<B>) -> ArrayLongerThan${i}<(A, B)> {
+    return ArrayLongerThan${i}<(A, B)>(
+        prefix: (a.first, b.first),
+        zip(a.rest, b.rest)
+    )
+}
+% end
+
+
+
+func zip<A: Sequence, B: Sequence, C: Sequence>(_ a: A, _ b: B, _ c: C) -> [(A.Element, B.Element, C.Element)] {
+    return zip(zip(a, b), c).map { ($0.0.0, $0.0.1, $0.1) }
+}
+
+
+
+func zip<A, B, C>(_ a: ArrayLongerThan0<A>, _ b: ArrayLongerThan0<B>, _ c: ArrayLongerThan0<C>) -> ArrayLongerThan0<(A, B, C)> {
+    return ArrayLongerThan0<(A, B, C)>(Array(zip(a.relaxed(), b.relaxed(), c.relaxed())))
+}
+
+
+
+% for i in range(1, number_of_generated):
+func zip<A, B, C>(_ a: ArrayLongerThan${i}<A>, _ b: ArrayLongerThan${i}<B>, _ c: ArrayLongerThan${i}<C>) -> ArrayLongerThan${i}<(A, B, C)> {
+    return ArrayLongerThan${i}<(A, B, C)>(
+        prefix: (a.first, b.first, c.first),
+        zip(a.rest, b.rest, c.rest)
+    )
+}
+% end

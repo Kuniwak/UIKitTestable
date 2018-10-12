@@ -142,7 +142,7 @@ public class Reference {
                 return []
             }
 
-            return self.normalize(hints: noEmptyHints).relaxed()
+            return Array(self.normalize(hints: noEmptyHints).sequence())
         }
 
 
