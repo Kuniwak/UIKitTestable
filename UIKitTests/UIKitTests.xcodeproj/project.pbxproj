@@ -24,7 +24,6 @@
 		2475E6E85825C28F689737C4 /* KeyWindowMakerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E9A3F827CA65E39913BB /* KeyWindowMakerSpy.swift */; };
 		2475E728FE52FDAE03A3A6E4 /* ModalDissolverStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EF75F73283D7B6F12F9F /* ModalDissolverStub.swift */; };
 		2475E73B56D621428CAB24A1 /* RootViewControllerWriterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E9B757F98C69E350DE91 /* RootViewControllerWriterSpy.swift */; };
-		2475E821159FB0BC266286C0 /* PrefixedArray.swift.gyb in Resources */ = {isa = PBXBuildFile; fileRef = 2475E1C6D9E79BBD3A63D94E /* PrefixedArray.swift.gyb */; };
 		2475E8372909D379E63CEEB2 /* CountedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E07F3FE6B2F1912332A3 /* CountedViewController.swift */; };
 		2475E9241540BA565D3B58A7 /* SpyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E49E4A55536320B78DEB /* SpyViewController.swift */; };
 		2475E949E26853831EE28BFC /* Reference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EDFD67A3B1D7C1FF7532 /* Reference.swift */; };
@@ -252,7 +251,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2475E821159FB0BC266286C0 /* PrefixedArray.swift.gyb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
