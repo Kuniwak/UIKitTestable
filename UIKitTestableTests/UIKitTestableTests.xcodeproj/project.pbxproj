@@ -116,10 +116,10 @@
 				62DDB97721609A680005BFEA /* GlobalModalPresenterTests.swift */,
 				62DDB93B216097F70005BFEA /* Info.plist */,
 				2475E0FDF823C8EA161D282F /* MemoryLeakDetectorTests.swift */,
-				2475E6F1955CF91E4A59EEA7 /* ReferenceTests.swift */,
+				2475E26C00852BEDC784ABDA /* ObjectTraverserTests.swift */,
 				2475E125E4503C0102E34AD5 /* PrefixedArrayTests.swift */,
 				2475EFEBD18E7873B8D1FA61 /* ReferencePathNormalizationTests.swift */,
-				2475E26C00852BEDC784ABDA /* ObjectTraverserTests.swift */,
+				2475E6F1955CF91E4A59EEA7 /* ReferenceTests.swift */,
 			);
 			path = UIKitTestableTestsTests;
 			sourceTree = "<group>";
