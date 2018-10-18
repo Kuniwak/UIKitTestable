@@ -8,11 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2475E285C42C86639C71D8F3 /* AsyncTestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EDC985BEAEDD4A885DD2 /* AsyncTestHelper.swift */; };
-		2475E331BB46892D33E4AECF /* PrefixedArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E125E4503C0102E34AD5 /* PrefixedArrayTests.swift */; };
-		2475E397EBE8E11CD3AD2960 /* ReferenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E6F1955CF91E4A59EEA7 /* ReferenceTests.swift */; };
-		2475E660800ABDAFE1E9DD64 /* ReferencePathNormalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EFEBD18E7873B8D1FA61 /* ReferencePathNormalizationTests.swift */; };
-		2475E8A334DEADEA57F25E68 /* ObjectTraverserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E26C00852BEDC784ABDA /* ObjectTraverserTests.swift */; };
-		2475EEF8629C663252C7D7C7 /* MemoryLeakDetectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E0FDF823C8EA161D282F /* MemoryLeakDetectorTests.swift */; };
 		2475EFE22BC1D591F2D9BDE1 /* DebugHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E6A47218C7CDFCAE0705 /* DebugHelper.swift */; };
 		62DDB925216097F50005BFEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DDB924216097F50005BFEA /* AppDelegate.swift */; };
 		62DDB927216097F50005BFEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DDB926216097F50005BFEA /* ViewController.swift */; };
@@ -35,13 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2475E0FDF823C8EA161D282F /* MemoryLeakDetectorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryLeakDetectorTests.swift; sourceTree = "<group>"; };
-		2475E125E4503C0102E34AD5 /* PrefixedArrayTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrefixedArrayTests.swift; sourceTree = "<group>"; };
-		2475E26C00852BEDC784ABDA /* ObjectTraverserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectTraverserTests.swift; sourceTree = "<group>"; };
 		2475E6A47218C7CDFCAE0705 /* DebugHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugHelper.swift; sourceTree = "<group>"; };
-		2475E6F1955CF91E4A59EEA7 /* ReferenceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferenceTests.swift; sourceTree = "<group>"; };
 		2475EDC985BEAEDD4A885DD2 /* AsyncTestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncTestHelper.swift; sourceTree = "<group>"; };
-		2475EFEBD18E7873B8D1FA61 /* ReferencePathNormalizationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferencePathNormalizationTests.swift; sourceTree = "<group>"; };
 		62DDB921216097F50005BFEA /* UIKitTestableTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitTestableTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62DDB924216097F50005BFEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62DDB926216097F50005BFEA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,11 +105,6 @@
 				2475E6A47218C7CDFCAE0705 /* DebugHelper.swift */,
 				62DDB97721609A680005BFEA /* GlobalModalPresenterTests.swift */,
 				62DDB93B216097F70005BFEA /* Info.plist */,
-				2475E0FDF823C8EA161D282F /* MemoryLeakDetectorTests.swift */,
-				2475E26C00852BEDC784ABDA /* ObjectTraverserTests.swift */,
-				2475E125E4503C0102E34AD5 /* PrefixedArrayTests.swift */,
-				2475EFEBD18E7873B8D1FA61 /* ReferencePathNormalizationTests.swift */,
-				2475E6F1955CF91E4A59EEA7 /* ReferenceTests.swift */,
 			);
 			path = UIKitTestableTestsTests;
 			sourceTree = "<group>";
@@ -246,11 +231,6 @@
 				62DDB97821609A680005BFEA /* GlobalModalPresenterTests.swift in Sources */,
 				2475E285C42C86639C71D8F3 /* AsyncTestHelper.swift in Sources */,
 				2475EFE22BC1D591F2D9BDE1 /* DebugHelper.swift in Sources */,
-				2475EEF8629C663252C7D7C7 /* MemoryLeakDetectorTests.swift in Sources */,
-				2475E397EBE8E11CD3AD2960 /* ReferenceTests.swift in Sources */,
-				2475E331BB46892D33E4AECF /* PrefixedArrayTests.swift in Sources */,
-				2475E660800ABDAFE1E9DD64 /* ReferencePathNormalizationTests.swift in Sources */,
-				2475E8A334DEADEA57F25E68 /* ObjectTraverserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

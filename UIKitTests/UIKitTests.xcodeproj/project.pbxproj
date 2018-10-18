@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2475E053C4B8B1F6C645FC58 /* Arrays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E31017B8FC8D6ADD7373 /* Arrays.swift */; };
 		2475E06A5320E722F4EED8A5 /* AwaitingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E5C2BA3A2CA331C8CE02 /* AwaitingViewController.swift */; };
 		2475E130FEDB1BA4F7145119 /* PrettyPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E138E3354B4407B336D5 /* PrettyPrint.swift */; };
-		2475E17B79E43FE341720DB0 /* PrefixedArray.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EB14A6C1955363EB35E1 /* PrefixedArray.generated.swift */; };
 		2475E1DC991ECE95816E86C9 /* GlobalModalPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EA5BB3B07B46D20B0043 /* GlobalModalPresenterSpy.swift */; };
 		2475E2430E8426601F58A21D /* RootViewControllerReaderStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EADB008992BF0EDA06A4 /* RootViewControllerReaderStub.swift */; };
 		2475E3A0ED3838D16EBA6D42 /* NavigatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EFA61DDB16FB75F83CF2 /* NavigatorSpy.swift */; };
@@ -26,9 +24,7 @@
 		2475E73B56D621428CAB24A1 /* RootViewControllerWriterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E9B757F98C69E350DE91 /* RootViewControllerWriterSpy.swift */; };
 		2475E8372909D379E63CEEB2 /* CountedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E07F3FE6B2F1912332A3 /* CountedViewController.swift */; };
 		2475E9241540BA565D3B58A7 /* SpyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E49E4A55536320B78DEB /* SpyViewController.swift */; };
-		2475E949E26853831EE28BFC /* Reference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EDFD67A3B1D7C1FF7532 /* Reference.swift */; };
 		2475E94C650CF9E18CF01CF3 /* GlobalModalDissolverSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475ECC3A483918E171AC2BB /* GlobalModalDissolverSpy.swift */; };
-		2475E9C027BB247FF48D72AA /* MemoryLeakDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475ECB09DA18A08FB508A50 /* MemoryLeakDetector.swift */; };
 		2475E9D88C519EF4B766B7E0 /* TestNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EBC33BAFB1933AD78071 /* TestNavigator.swift */; };
 		2475E9F232842B8E6B79D75F /* GlobalModalDissolverStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EC5C7EF505AD39930923 /* GlobalModalDissolverStub.swift */; };
 		2475EA795AF27CC4EF0D8213 /* KeyWindowMakerStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475ED2FD786F81443EA9814 /* KeyWindowMakerStub.swift */; };
@@ -40,10 +36,9 @@
 		2475EDA90FF136A45B0C4E32 /* RootViewControllerWriterStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E42A73C8DAA298E628CC /* RootViewControllerWriterStub.swift */; };
 		2475EDF17EAA9A5E00B82A55 /* ReverseNavigatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EBAD24E04A794B37EC68 /* ReverseNavigatorSpy.swift */; };
 		2475EE44CED9B215C019CEAF /* RootViewControllerReadWriterStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475ED4B681884455850B40B /* RootViewControllerReadWriterStub.swift */; };
-		2475EE6A99C2608D343B3DBC /* ObjectTraverser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EFF28E4C0392287984EE /* ObjectTraverser.swift */; };
 		2475EE79F38DFF8A3D78588E /* WindowsReaderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EC9C025BDE45D54E0B7A /* WindowsReaderSpy.swift */; };
+		2475EEC5C062F0EC1F4F79B8 /* Arrays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EF0E9522646A0EDD924A /* Arrays.swift */; };
 		2475EF421F3952AB1EAE2FDF /* GlobalModalPresenterStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EB711BA98C606FE27B92 /* GlobalModalPresenterStub.swift */; };
-		2475EF69D5D3E18FAEE88006 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EFCC6DC67301F7009EAA /* Types.swift */; };
 		2475EFC3ECEAACB10AEAEE3A /* NavigatorStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EDEA0A6FE830E16293BD /* NavigatorStub.swift */; };
 		2475EFE4F2FB8B3BC6A6E9AC /* ModalDissolverSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E4F6ECDC5788FB1D1627 /* ModalDissolverSpy.swift */; };
 		62DDB9D2216117210005BFEA /* UIKitTests.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DDB9D0216117210005BFEA /* UIKitTests.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -55,9 +50,7 @@
 		2475E0B149194394D12993FF /* URLOpenerSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLOpenerSpy.swift; sourceTree = "<group>"; };
 		2475E138E3354B4407B336D5 /* PrettyPrint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrettyPrint.swift; sourceTree = "<group>"; };
 		2475E15F76647883FA5ABF3A /* CountedWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountedWindow.swift; sourceTree = "<group>"; };
-		2475E1C6D9E79BBD3A63D94E /* PrefixedArray.swift.gyb */ = {isa = PBXFileReference; lastKnownFileType = file.gyb; path = PrefixedArray.swift.gyb; sourceTree = "<group>"; };
 		2475E2944D734DA932C087B7 /* PresentingViewControllerReaderStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentingViewControllerReaderStub.swift; sourceTree = "<group>"; };
-		2475E31017B8FC8D6ADD7373 /* Arrays.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arrays.swift; sourceTree = "<group>"; };
 		2475E42A73C8DAA298E628CC /* RootViewControllerWriterStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewControllerWriterStub.swift; sourceTree = "<group>"; };
 		2475E478891FF4BB81DA676D /* WindowsReaderStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowsReaderStub.swift; sourceTree = "<group>"; };
 		2475E49E4A55536320B78DEB /* SpyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpyViewController.swift; sourceTree = "<group>"; };
@@ -70,27 +63,23 @@
 		2475EA28118F714A49B65513 /* RootViewControllerReaderSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewControllerReaderSpy.swift; sourceTree = "<group>"; };
 		2475EA5BB3B07B46D20B0043 /* GlobalModalPresenterSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalModalPresenterSpy.swift; sourceTree = "<group>"; };
 		2475EADB008992BF0EDA06A4 /* RootViewControllerReaderStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewControllerReaderStub.swift; sourceTree = "<group>"; };
-		2475EB14A6C1955363EB35E1 /* PrefixedArray.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrefixedArray.generated.swift; sourceTree = "<group>"; };
 		2475EB711BA98C606FE27B92 /* GlobalModalPresenterStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalModalPresenterStub.swift; sourceTree = "<group>"; };
 		2475EBAD24E04A794B37EC68 /* ReverseNavigatorSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverseNavigatorSpy.swift; sourceTree = "<group>"; };
 		2475EBC33BAFB1933AD78071 /* TestNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestNavigator.swift; sourceTree = "<group>"; };
 		2475EC002599489DB0B73AC7 /* RootViewControllerReadWriterSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewControllerReadWriterSpy.swift; sourceTree = "<group>"; };
 		2475EC5C7EF505AD39930923 /* GlobalModalDissolverStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalModalDissolverStub.swift; sourceTree = "<group>"; };
 		2475EC9C025BDE45D54E0B7A /* WindowsReaderSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowsReaderSpy.swift; sourceTree = "<group>"; };
-		2475ECB09DA18A08FB508A50 /* MemoryLeakDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryLeakDetector.swift; sourceTree = "<group>"; };
 		2475ECC3A483918E171AC2BB /* GlobalModalDissolverSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalModalDissolverSpy.swift; sourceTree = "<group>"; };
 		2475ECC698BB6C671EB8B927 /* ModalPresenterStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalPresenterStub.swift; sourceTree = "<group>"; };
 		2475ED2FD786F81443EA9814 /* KeyWindowMakerStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyWindowMakerStub.swift; sourceTree = "<group>"; };
 		2475ED4B681884455850B40B /* RootViewControllerReadWriterStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewControllerReadWriterStub.swift; sourceTree = "<group>"; };
 		2475EDD6CD704C9838A9BD32 /* URLOpenerStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLOpenerStub.swift; sourceTree = "<group>"; };
 		2475EDEA0A6FE830E16293BD /* NavigatorStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigatorStub.swift; sourceTree = "<group>"; };
-		2475EDFD67A3B1D7C1FF7532 /* Reference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reference.swift; sourceTree = "<group>"; };
 		2475EEFC83EED4DFD87C92FA /* Timeout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeout.swift; sourceTree = "<group>"; };
+		2475EF0E9522646A0EDD924A /* Arrays.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arrays.swift; sourceTree = "<group>"; };
 		2475EF6D00396137985FBE7E /* ReverseNavigatorStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverseNavigatorStub.swift; sourceTree = "<group>"; };
 		2475EF75F73283D7B6F12F9F /* ModalDissolverStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalDissolverStub.swift; sourceTree = "<group>"; };
 		2475EFA61DDB16FB75F83CF2 /* NavigatorSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigatorSpy.swift; sourceTree = "<group>"; };
-		2475EFCC6DC67301F7009EAA /* Types.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
-		2475EFF28E4C0392287984EE /* ObjectTraverser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectTraverser.swift; sourceTree = "<group>"; };
 		62DDB9CD216117210005BFEA /* UIKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62DDB9D0216117210005BFEA /* UIKitTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKitTests.h; sourceTree = "<group>"; };
 		62DDB9D1216117210005BFEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -129,7 +118,6 @@
 		62DDB9CF216117210005BFEA /* UIKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				2475E31017B8FC8D6ADD7373 /* Arrays.swift */,
 				2475E5C2BA3A2CA331C8CE02 /* AwaitingViewController.swift */,
 				2475E07F3FE6B2F1912332A3 /* CountedViewController.swift */,
 				2475E15F76647883FA5ABF3A /* CountedWindow.swift */,
@@ -140,20 +128,15 @@
 				62DDB9D1216117210005BFEA /* Info.plist */,
 				2475E9A3F827CA65E39913BB /* KeyWindowMakerSpy.swift */,
 				2475ED2FD786F81443EA9814 /* KeyWindowMakerStub.swift */,
-				2475ECB09DA18A08FB508A50 /* MemoryLeakDetector.swift */,
 				2475E4F6ECDC5788FB1D1627 /* ModalDissolverSpy.swift */,
 				2475EF75F73283D7B6F12F9F /* ModalDissolverStub.swift */,
 				2475E4A40EF8526B7187BA31 /* ModalPresenterSpy.swift */,
 				2475ECC698BB6C671EB8B927 /* ModalPresenterStub.swift */,
 				2475EFA61DDB16FB75F83CF2 /* NavigatorSpy.swift */,
 				2475EDEA0A6FE830E16293BD /* NavigatorStub.swift */,
-				2475EFF28E4C0392287984EE /* ObjectTraverser.swift */,
-				2475EB14A6C1955363EB35E1 /* PrefixedArray.generated.swift */,
-				2475E1C6D9E79BBD3A63D94E /* PrefixedArray.swift.gyb */,
 				2475E9797B8DAF779D025496 /* PresentingViewControllerReaderSpy.swift */,
 				2475E2944D734DA932C087B7 /* PresentingViewControllerReaderStub.swift */,
 				2475E138E3354B4407B336D5 /* PrettyPrint.swift */,
-				2475EDFD67A3B1D7C1FF7532 /* Reference.swift */,
 				2475EBAD24E04A794B37EC68 /* ReverseNavigatorSpy.swift */,
 				2475EF6D00396137985FBE7E /* ReverseNavigatorStub.swift */,
 				2475EC002599489DB0B73AC7 /* RootViewControllerReadWriterSpy.swift */,
@@ -165,12 +148,12 @@
 				2475E49E4A55536320B78DEB /* SpyViewController.swift */,
 				2475EBC33BAFB1933AD78071 /* TestNavigator.swift */,
 				2475EEFC83EED4DFD87C92FA /* Timeout.swift */,
-				2475EFCC6DC67301F7009EAA /* Types.swift */,
 				62DDB9D0216117210005BFEA /* UIKitTests.h */,
 				2475E0B149194394D12993FF /* URLOpenerSpy.swift */,
 				2475EDD6CD704C9838A9BD32 /* URLOpenerStub.swift */,
 				2475EC9C025BDE45D54E0B7A /* WindowsReaderSpy.swift */,
 				2475E478891FF4BB81DA676D /* WindowsReaderStub.swift */,
+				2475EF0E9522646A0EDD924A /* Arrays.swift */,
 			);
 			path = UIKitTests;
 			sourceTree = "<group>";
@@ -293,13 +276,8 @@
 				2475E8372909D379E63CEEB2 /* CountedViewController.swift in Sources */,
 				2475E607E6C4B12BDE0580D5 /* PresentingViewControllerReaderStub.swift in Sources */,
 				2475E6692F4B3F54F39C3C01 /* PresentingViewControllerReaderSpy.swift in Sources */,
-				2475E9C027BB247FF48D72AA /* MemoryLeakDetector.swift in Sources */,
-				2475E053C4B8B1F6C645FC58 /* Arrays.swift in Sources */,
 				2475E130FEDB1BA4F7145119 /* PrettyPrint.swift in Sources */,
-				2475E949E26853831EE28BFC /* Reference.swift in Sources */,
-				2475EF69D5D3E18FAEE88006 /* Types.swift in Sources */,
-				2475EE6A99C2608D343B3DBC /* ObjectTraverser.swift in Sources */,
-				2475E17B79E43FE341720DB0 /* PrefixedArray.generated.swift in Sources */,
+				2475EEC5C062F0EC1F4F79B8 /* Arrays.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
