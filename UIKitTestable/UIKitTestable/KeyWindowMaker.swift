@@ -21,30 +21,57 @@ public final class KeyWindowMaker: KeyWindowMakerProtocol {
 
 
     public func makeKey() {
-        self.window.value?.makeKey()
+        switch self.window {
+        case .weakReference(let weak):
+            weak.do { window in
+                window?.makeKey()
+            }
+        case .unownedReference(let unowned):
+            unowned.do { window in
+                window.makeKey()
+            }
+        }
     }
 
 
     public func makeKeyAndVisible() {
-        self.window.value?.makeKeyAndVisible()
+        switch self.window {
+        case .weakReference(let weak):
+            weak.do { window in
+                window?.makeKeyAndVisible()
+            }
+        case .unownedReference(let unowned):
+            unowned.do { window in
+                window.makeKeyAndVisible()
+            }
+        }
     }
 
 
     public func becomeKey() {
-        self.window.value?.becomeKey()
+        switch self.window {
+        case .weakReference(let weak):
+            weak.do { window in
+                window?.becomeKey()
+            }
+        case .unownedReference(let unowned):
+            unowned.do { window in
+                window.becomeKey()
+            }
+        }
     }
 
 
     public func resignKey() {
-        self.window.value?.resignKey()
+        switch self.window {
+        case .weakReference(let weak):
+            weak.do { window in
+                window?.resignKey()
+            }
+        case .unownedReference(let unowned):
+            unowned.do { window in
+                window.resignKey()
+            }
+        }
     }
-}
-
-
-
-public final class NullKeyWindowWriter: KeyWindowMakerProtocol {
-    public func makeKey() {}
-    public func makeKeyAndVisible() {}
-    public func becomeKey() {}
-    public func resignKey() {}
 }

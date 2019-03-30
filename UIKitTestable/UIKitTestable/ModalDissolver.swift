@@ -40,11 +40,29 @@ public final class ModalDissolver: ModalDissolverProtocol {
 
 
     public func dismiss(animated: Bool) {
-        self.viewController.value?.dismiss(animated: animated)
+        switch self.viewController {
+        case .weakReference(let weak):
+            weak.do { viewController in
+                viewController?.dismiss(animated: animated)
+            }
+        case .unownedReference(let unowned):
+            unowned.do { viewController in
+                viewController.dismiss(animated: animated)
+            }
+        }
     }
 
 
     public func dismiss(animated: Bool, completion: (() -> Void)?) {
-        self.viewController.value?.dismiss(animated: animated, completion: completion)
+        switch self.viewController {
+        case .weakReference(let weak):
+            weak.do { viewController in
+                viewController?.dismiss(animated: animated, completion: completion)
+            }
+        case .unownedReference(let unowned):
+            unowned.do { viewController in
+                viewController.dismiss(animated: animated, completion: completion)
+            }
+        }
     }
 }

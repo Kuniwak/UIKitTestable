@@ -21,7 +21,21 @@ public protocol ReverseNavigatorProtocol {
  A type for errors that can be thrown when `UINavigationController#popToViewController(UIVIewController, animated: Bool)`.
  */
 public enum ReverseNavigatorError: Error {
-    case noDestinationViewControllerInNavigationStack
+    case noSuchDestinationViewControllerInNavigationStack(debugInfo: String)
+
+
+    public static func noSuchDestinationViewControllerInNavigationStack(
+        navigationController: UINavigationController,
+        destinationViewController: UIViewController
+    ) -> ReverseNavigatorError {
+        let debugInfo = """
+                        The Navigation stack of \(info(of: navigationController)) is:
+
+                        \(dump(viewControllers: navigationController.viewControllers))
+                        """
+
+        return .noSuchDestinationViewControllerInNavigationStack(debugInfo: debugInfo)
+    }
 }
 
 
@@ -49,11 +63,44 @@ public final class ReverseNavigator: ReverseNavigatorProtocol {
 
 
     public func pop(animated: Bool) throws {
-        guard let navigationController = self.navigationController.value,
-            let destinationViewController = self.destinationViewController.value else { return }
+        switch self.navigationController {
+        case .weakReference(let weakNav):
+            try weakNav.do { navigationController in
+                guard let navigationController = navigationController else { return }
+                try self.pop(on: navigationController, animated: animated)
+            }
 
+        case .unownedReference(let unowned):
+            try unowned.do { navigationController in
+                try self.pop(on: navigationController, animated: animated)
+            }
+        }
+
+    }
+
+
+    private func pop(on navigationController: UINavigationController, animated: Bool) throws {
+        switch self.destinationViewController {
+        case .weakReference(let weak):
+            try weak.do { destinationViewController in
+                guard let destinationViewController = destinationViewController else { return }
+                try self.pop(on: navigationController, to: destinationViewController, animated: animated)
+            }
+
+        case .unownedReference(let unowned):
+            try unowned.do { destinationViewController in
+                try self.pop(on: navigationController, to: destinationViewController, animated: animated)
+            }
+        }
+    }
+
+
+    private func pop(on navigationController: UINavigationController, to destinationViewController: UIViewController, animated: Bool) throws {
         guard navigationController.viewControllers.contains(destinationViewController) else {
-            throw ReverseNavigatorError.noDestinationViewControllerInNavigationStack
+            throw ReverseNavigatorError.noSuchDestinationViewControllerInNavigationStack(
+                navigationController: navigationController,
+                destinationViewController: destinationViewController
+            )
         }
 
         navigationController.popToViewController(

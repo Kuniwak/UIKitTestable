@@ -33,9 +33,22 @@ public final class Navigator: NavigatorProtocol {
 
 
     public func push(viewController: UIViewController, animated: Bool) {
-        self.navigationController.value?.pushViewController(
-            viewController,
-            animated: animated
-        )
+        switch self.navigationController {
+        case .weakReference(let weak):
+            weak.do { navigationController in
+                navigationController?.pushViewController(
+                    viewController,
+                    animated: animated
+                )
+            }
+
+        case .unownedReference(let unowned):
+            unowned.do { navigationController in
+                navigationController.pushViewController(
+                    viewController,
+                    animated: animated
+                )
+            }
+        }
     }
 }

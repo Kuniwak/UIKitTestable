@@ -13,7 +13,13 @@ public final class WindowRootViewControllerReader: RootViewControllerReaderProto
 
 
     public var rootViewController: UIViewController? {
-        return self.window.value?.rootViewController
+        switch self.window {
+        case .weakReference(let weak):
+            return weak.value?.rootViewController
+
+        case .unownedReference(let unowned):
+            return unowned.value.rootViewController
+        }
     }
 
 

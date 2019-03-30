@@ -43,14 +43,30 @@ public final class WindowRootViewControllerWriter: RootViewControllerWriterProto
 
 
     public func alter(to rootViewController: UIViewController, completion: (() -> Void)?) {
-        guard let oldViewController = self.window.value?.rootViewController else {
-            self.window.value?.rootViewController = rootViewController
+        switch self.window {
+        case .weakReference(let weak):
+            weak.do { window in
+                guard let window = window else { return }
+                self.alter(rootViewController: rootViewController, of: window, completion: completion)
+            }
+
+        case .unownedReference(let unowned):
+            unowned.do { window in
+                self.alter(rootViewController: rootViewController, of: window, completion: completion)
+            }
+        }
+    }
+
+
+    private func alter(rootViewController: UIViewController, of window: UIWindow, completion: (() -> Void)?) {
+        guard let oldViewController = window.rootViewController else {
+            window.rootViewController = rootViewController
             completion?()
             return
         }
 
         oldViewController.dismiss(animated: false, completion: {
-            self.window.value?.rootViewController = rootViewController
+            window.rootViewController = rootViewController
             completion?()
         })
     }

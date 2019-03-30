@@ -39,11 +39,29 @@ public final class ModalPresenter: ModalPresenterProtocol {
 
 
     public func present(viewController: UIViewController, animated: Bool) {
-        self.groundViewController.value?.present(viewController, animated: animated)
+        switch self.groundViewController {
+        case .weakReference(let weak):
+            weak.do { groundViewController in
+                groundViewController?.present(viewController, animated: animated)
+            }
+        case .unownedReference(let unowned):
+            unowned.do { groundViewController in
+                groundViewController.present(viewController, animated: animated)
+            }
+        }
     }
 
 
     public func present(viewController: UIViewController, animated: Bool, completion: (() -> Void)?) {
-        self.groundViewController.value?.present(viewController, animated: animated, completion: completion)
+        switch self.groundViewController {
+        case .weakReference(let weak):
+            weak.do { groundViewController in
+                groundViewController?.present(viewController, animated: animated, completion: completion)
+            }
+        case .unownedReference(let unowned):
+            unowned.do { groundViewController in
+                groundViewController.present(viewController, animated: animated, completion: completion)
+            }
+        }
     }
 }
