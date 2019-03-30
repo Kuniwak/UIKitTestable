@@ -10,7 +10,7 @@ class GlobalModalPresenterTests: XCTestCase {
         // because this test target (UIViewController#present) is designed for CPS.
         let expectation = self.expectation(description: "Awaiting a call of viewDidAppear")
 
-        let spyViewController = AwaitingViewController() { (viewController, event) in
+        let spyViewController = awaitingViewController { (viewController, event) in
             guard event == .viewDidLoad else { return }
             expectation.fulfill()
         }
@@ -133,7 +133,7 @@ class GlobalModalPresenterTests: XCTestCase {
 
 
         private var aliveWindowInfo: String {
-            return dump(UIApplication.shared.windows)
+            return dumped(UIApplication.shared.windows)
         }
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2475E3ABFE11CE59B41FCB73 /* AwaitingViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EBD03FBB3976644D7070 /* AwaitingViewControllerTests.swift */; };
 		6239AA4B224F6E2700673D65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239AA4A224F6E2700673D65 /* AppDelegate.swift */; };
 		6239AA4D224F6E2700673D65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239AA4C224F6E2700673D65 /* ViewController.swift */; };
 		6239AA50224F6E2700673D65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6239AA4E224F6E2700673D65 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2475EBD03FBB3976644D7070 /* AwaitingViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwaitingViewControllerTests.swift; sourceTree = "<group>"; };
 		6239AA47224F6E2700673D65 /* UIKitTestableApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitTestableApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6239AA4A224F6E2700673D65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6239AA4C224F6E2700673D65 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				6239AAE2224F708200673D65 /* Dump.swift */,
 				6239AAE0224F708200673D65 /* GlobalModalPresenterTests.swift */,
 				6239AA61224F6E2800673D65 /* Info.plist */,
+				2475EBD03FBB3976644D7070 /* AwaitingViewControllerTests.swift */,
 			);
 			path = UIKitTestableAppTests;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				6239AAE4224F708200673D65 /* AsyncTestHelper.swift in Sources */,
 				6239AAE3224F708200673D65 /* GlobalModalPresenterTests.swift in Sources */,
 				6239AAE5224F708200673D65 /* Dump.swift in Sources */,
+				2475E3ABFE11CE59B41FCB73 /* AwaitingViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

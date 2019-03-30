@@ -31,7 +31,7 @@ public enum ReverseNavigatorError: Error {
         let debugInfo = """
                         The Navigation stack of \(info(of: navigationController)) is:
 
-                        \(dump(viewControllers: navigationController.viewControllers))
+                        \(dumped(viewControllers: navigationController.viewControllers))
                         """
 
         return .noSuchDestinationViewControllerInNavigationStack(debugInfo: debugInfo)

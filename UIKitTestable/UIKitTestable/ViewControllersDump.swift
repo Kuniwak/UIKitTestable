@@ -22,13 +22,13 @@ public func lldbHint<T: AnyObject>(for object: T) -> String {
 
 
 
-public func dump(viewControllers: [UIViewController]) -> String {
-    return dump(viewControllers.map(info(of:)))
+public func dumped(viewControllers: [UIViewController]) -> String {
+    return dumped(viewControllers.map(info(of:)))
 }
 
 
 
-private func dump(_ x: Any) -> String {
+private func dumped(_ x: Any) -> String {
     var result = ""
     Swift.dump(x, to: &result)
     return result
