@@ -129,6 +129,7 @@
 		6239ABC9224F747200673D65 /* RootViewControllerReaderSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewControllerReaderSpy.swift; sourceTree = "<group>"; };
 		6239ABCA224F747200673D65 /* URLOpenerStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLOpenerStub.swift; sourceTree = "<group>"; };
 		6239ABCB224F747200673D65 /* URLOpenerSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLOpenerSpy.swift; sourceTree = "<group>"; };
+		6239ABF1224F9F3000673D65 /* UIKitAssertions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UIKitAssertions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +157,7 @@
 				6239AA26224F6DFF00673D65 /* UIKitTestable */,
 				6239AA31224F6DFF00673D65 /* UIKitTestableTests */,
 				6239AA25224F6DFF00673D65 /* Products */,
+				6239ABF0224F9F3000673D65 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -234,6 +236,14 @@
 				6239AA34224F6DFF00673D65 /* Info.plist */,
 			);
 			path = UIKitTestableTests;
+			sourceTree = "<group>";
+		};
+		6239ABF0224F9F3000673D65 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6239ABF1224F9F3000673D65 /* UIKitAssertions.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

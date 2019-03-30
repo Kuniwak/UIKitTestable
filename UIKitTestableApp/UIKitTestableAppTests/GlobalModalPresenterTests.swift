@@ -133,7 +133,7 @@ class GlobalModalPresenterTests: XCTestCase {
 
 
         private var aliveWindowInfo: String {
-            return dumpString(UIApplication.shared.windows)
+            return dump(UIApplication.shared.windows)
         }
     }
 }

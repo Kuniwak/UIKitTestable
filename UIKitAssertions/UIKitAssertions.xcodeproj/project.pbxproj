@@ -10,6 +10,7 @@
 		6239AB1B224F72C100673D65 /* UIKitAssertions.h in Headers */ = {isa = PBXBuildFile; fileRef = 6239AB19224F72C100673D65 /* UIKitAssertions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6239AB62224F72F000673D65 /* AwaitingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239AB40224F72F000673D65 /* AwaitingViewController.swift */; };
 		6239ABAB224F746300673D65 /* Timeout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABAA224F746300673D65 /* Timeout.swift */; };
+		6239ABF6224F9FB100673D65 /* UIKitTestable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6239ABF5224F9FB100673D65 /* UIKitTestable.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		6239AB40224F72F000673D65 /* AwaitingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwaitingViewController.swift; sourceTree = "<group>"; };
 		6239AB66224F735500673D65 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6239ABAA224F746300673D65 /* Timeout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeout.swift; sourceTree = "<group>"; };
+		6239ABF5224F9FB100673D65 /* UIKitTestable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UIKitTestable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6239ABF6224F9FB100673D65 /* UIKitTestable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +66,7 @@
 		6239AB65224F735500673D65 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6239ABF5224F9FB100673D65 /* UIKitTestable.framework */,
 				6239AB66224F735500673D65 /* XCTest.framework */,
 			);
 			name = Frameworks;
