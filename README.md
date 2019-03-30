@@ -116,9 +116,9 @@ class MyViewControllerTests: XCTestCase {
 Documentations
 --------------
 
-TODO
+- [Full documentations for `master`](https://kuniwak.github.io/UIKitTestable/index.html)
 
-
+You can re-generate the docs by `./tools/generate-docs` on this repository.
 
 
 

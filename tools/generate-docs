@@ -17,4 +17,4 @@ bundle exec -- jazzy \
 	--module-version "${revision}" \
 	--xcodebuild-arguments "-scheme,${target}" \
 	--module "$target" \
-	--output "${root_dir}/docs/${target}"
+	--output "${root_dir}/docs"
