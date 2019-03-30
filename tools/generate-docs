@@ -1,0 +1,20 @@
+#!/bin/bash -eu
+set -o pipefail
+
+script_dir="$(cd "$(dirname "$0")"; pwd)"
+root_dir="$(cd "${script_dir}/.."; pwd)"
+
+revision="$(git name-rev HEAD | cut -f 1 -d' ')"
+target="UIKitTestable"
+
+bundle exec -- jazzy \
+	--clean \
+	--sdk 'iphone' \
+	--author 'Kuniwak' \
+	--author_url 'https://github.com/Kuniwak' \
+	--github_url 'https://github.com/Kuniwak/UIKitTestable' \
+	--github-file-prefix "https://github.com/Kuniwak/UIKitTestable/tree/${revision}" \
+	--module-version "${revision}" \
+	--xcodebuild-arguments "-scheme,${target}" \
+	--module "$target" \
+	--output "${root_dir}/docs/${target}"

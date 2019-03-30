@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ModalPresenterProtocol Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/ModalPresenterProtocol" class="dashAnchor"></a>
+    <a title="ModalPresenterProtocol Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">UIKitTestable Docs</a> (38% documented)</p>
+        <p class="header-right"><a href="https://github.com/Kuniwak/UIKitTestable"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">UIKitTestable Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        ModalPresenterProtocol Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/ApplicationURLOpener.html">ApplicationURLOpener</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CountedViewController.html">CountedViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CountedWindow.html">CountedWindow</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GlobalModalDissolverAsyncStub.html">GlobalModalDissolverAsyncStub</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GlobalModalDissolverNeverStub.html">GlobalModalDissolverNeverStub</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GlobalModalDissolverSpy.html">GlobalModalDissolverSpy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GlobalModalDissolverSpy/CallArgs.html">– CallArgs</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GlobalModalDissolverStub.html">GlobalModalDissolverStub</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GlobalModalDissolverSyncStub.html">GlobalModalDissolverSyncStub</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GlobalModalPresenter.html">GlobalModalPresenter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GlobalModalPresenterAsyncStub.html">GlobalModalPresenterAsyncStub</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GlobalModalPresenterNeverStub.html">GlobalModalPresenterNeverStub</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GlobalModalPresenterSpy.html">GlobalModalPresenterSpy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GlobalModalPresenterSpy/CallArgs.html">– CallArgs</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GlobalModalPresenterStub.html">GlobalModalPresenterStub</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GlobalModalPresenterSyncStub.html">GlobalModalPresenterSyncStub</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/KeyWindowMaker.html">KeyWindowMaker</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/KeyWindowMakerSpy.html">KeyWindowMakerSpy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/KeyWindowMakerSpy/CallArgs.html">– CallArgs</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/KeyWindowMakerStub.html">KeyWindowMakerStub</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ModalDissolver.html">ModalDissolver</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ModalDissolverAsyncStub.html">ModalDissolverAsyncStub</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ModalDissolverNeverStub.html">ModalDissolverNeverStub</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ModalDissolverSpy.html">ModalDissolverSpy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ModalDissolverSpy/CallArgs.html">– CallArgs</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ModalDissolverStub.html">ModalDissolverStub</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ModalDissolverSyncStub.html">ModalDissolverSyncStub</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ModalPresenter.html">ModalPresenter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ModalPresenterAsyncStub.html">ModalPresenterAsyncStub</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ModalPresenterNeverStub.html">ModalPresenterNeverStub</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ModalPresenterSpy.html">ModalPresenterSpy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ModalPresenterSpy/CallArgs.html">– CallArgs</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ModalPresenterStub.html">ModalPresenterStub</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ModalPresenterSyncStub.html">ModalPresenterSyncStub</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Navigator.html">Navigator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NavigatorSpy.html">NavigatorSpy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NavigatorSpy/CallArgs.html">– CallArgs</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NavigatorStub.html">NavigatorStub</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NullKeyWindowWriter.html">NullKeyWindowWriter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PresentingViewControllerReader.html">PresentingViewControllerReader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PresentingViewControllerReaderSpy.html">PresentingViewControllerReaderSpy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PresentingViewControllerReaderSpy/CallArgs.html">– CallArgs</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PresentingViewControllerReaderStub.html">PresentingViewControllerReaderStub</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ReverseNavigator.html">ReverseNavigator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ReverseNavigatorSpy.html">ReverseNavigatorSpy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ReverseNavigatorSpy/CallArgs.html">– CallArgs</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ReverseNavigatorStub.html">ReverseNavigatorStub</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RootViewControllerReadWriterAsyncStub.html">RootViewControllerReadWriterAsyncStub</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RootViewControllerReadWriterNeverStub.html">RootViewControllerReadWriterNeverStub</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RootViewControllerReadWriterSpy.html">RootViewControllerReadWriterSpy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RootViewControllerReadWriterSpy/CallArgs.html">– CallArgs</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RootViewControllerReadWriterStub.html">RootViewControllerReadWriterStub</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RootViewControllerReadWriterSyncStub.html">RootViewControllerReadWriterSyncStub</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RootViewControllerReaderSpy.html">RootViewControllerReaderSpy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RootViewControllerReaderSpy/CallArgs.html">– CallArgs</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RootViewControllerReaderStub.html">RootViewControllerReaderStub</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RootViewControllerWriterAsyncStub.html">RootViewControllerWriterAsyncStub</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RootViewControllerWriterNeverStub.html">RootViewControllerWriterNeverStub</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RootViewControllerWriterSpy.html">RootViewControllerWriterSpy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RootViewControllerWriterSpy/CallArgs.html">– CallArgs</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RootViewControllerWriterStub.html">RootViewControllerWriterStub</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RootViewControllerWriterSyncStub.html">RootViewControllerWriterSyncStub</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SpyViewController.html">SpyViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SpyViewController/CallArgs.html">– CallArgs</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TestNavigator.html">TestNavigator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/URLOpenerAsyncStub.html">URLOpenerAsyncStub</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/URLOpenerNeverStub.html">URLOpenerNeverStub</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/URLOpenerSpy.html">URLOpenerSpy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/URLOpenerSpy/CallArgs.html">– CallArgs</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/URLOpenerStub.html">URLOpenerStub</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/URLOpenerSyncStub.html">URLOpenerSyncStub</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Unowned.html">Unowned</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ViewControllerLifeCycleObserver.html">ViewControllerLifeCycleObserver</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Weak.html">Weak</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WindowRootViewControllerReadWriter.html">WindowRootViewControllerReadWriter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WindowRootViewControllerReader.html">WindowRootViewControllerReader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WindowRootViewControllerWriter.html">WindowRootViewControllerWriter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WindowsReader.html">WindowsReader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WindowsReaderSpy.html">WindowsReaderSpy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WindowsReaderSpy/CallArgs.html">– CallArgs</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WindowsReaderStub.html">WindowsReaderStub</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/IndentedLine.html">IndentedLine</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ReverseNavigatorError.html">ReverseNavigatorError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ViewControllerLifeCycleEvent.html">ViewControllerLifeCycleEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/WeakOrNotReferenceType.html">WeakOrNotReferenceType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/WeakOrUnowned.html">WeakOrUnowned</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:13UIKitTestable15descriptionListySayAA12IndentedLineOGxSTRzSS5label_SS0C0t7ElementRtzlF">descriptionList(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:13UIKitTestable6format_11indentWidthSSx_SitSTRzAA12IndentedLineO7ElementRtzlF">format(_:indentWidth:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:13UIKitTestable6indentySayAA12IndentedLineOGxSTRzAD7ElementRtzlF">indent(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:13UIKitTestable11intersperseySayxGq__xt7ElementQy_RszSlR_r0_lF">intersperse(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:13UIKitTestable5linesySayAA12IndentedLineOGxSTRzSS7ElementRtzlF">lines(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:13UIKitTestable7section4name4bodySayAA12IndentedLineOGSS_xtSlRzAF7ElementRtzlF">section(name:body:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:13UIKitTestable8sectionsySayAA12IndentedLineOGxSTRzSlR_7ElementQzRs_AdFRt_r0_lF">sections(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:13UIKitTestable8sectionsySayAA12IndentedLineOGxSTRzSlR_SS4name_q_4bodyt7ElementRtzAdHRt_r0_lF">sections(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:13UIKitTestable15verticalPaddingySayAA12IndentedLineOGxSTRzAD7ElementRtzlF">verticalPadding(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:13UIKitTestable28GlobalModalDissolverProtocolP">GlobalModalDissolverProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:13UIKitTestable28GlobalModalPresenterProtocolP">GlobalModalPresenterProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/KeyWindowMakerProtocol.html">KeyWindowMakerProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ModalDissolverProtocol.html">ModalDissolverProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ModalPresenterProtocol.html">ModalPresenterProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/NavigatorProtocol.html">NavigatorProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/PresentingViewControllerReaderProtocol.html">PresentingViewControllerReaderProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/PrettyPrintable.html">PrettyPrintable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ReverseNavigatorProtocol.html">ReverseNavigatorProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:13UIKitTestable36RootViewControllerReadWriterProtocolP">RootViewControllerReadWriterProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/RootViewControllerReaderProtocol.html">RootViewControllerReaderProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/RootViewControllerWriterProtocol.html">RootViewControllerWriterProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/URLOpenerProtocol.html">URLOpenerProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/WindowsReaderProtocol.html">WindowsReaderProtocol</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>ModalPresenterProtocol</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ModalPresenterProtocol</span></code></pre>
+
+                </div>
+              </div>
+            <p>A type for encapsulating classes of <code>UIViewController#present(_: UIViewController, animated: Bool)</code>.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13UIKitTestable22ModalPresenterProtocolP7present14viewController8animatedySo06UIViewH0C_SbtF"></a>
+                    <a name="//apple_ref/swift/Method/present(viewController:animated:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13UIKitTestable22ModalPresenterProtocolP7present14viewController8animatedySo06UIViewH0C_SbtF">present(viewController:animated:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Presents a view controller like a modal.
+This method behave like <code>UIViewController#present(UIViewController, animated: Bool)</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">present</span><span class="p">(</span><span class="nv">viewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Kuniwak/UIKitTestable/tree/HEAD/UIKitTestable/UIKitTestable/ModalPresenter.swift#L13">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13UIKitTestable22ModalPresenterProtocolP7present14viewController8animated10completionySo06UIViewH0C_SbyycSgtF"></a>
+                    <a name="//apple_ref/swift/Method/present(viewController:animated:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13UIKitTestable22ModalPresenterProtocolP7present14viewController8animated10completionySo06UIViewH0C_SbyycSgtF">present(viewController:animated:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Presents a view controller like a modal.
+This method behave like <code>UIViewController#present(UIViewController, animated: Bool, completion: (() -&gt; Void)?)</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">present</span><span class="p">(</span><span class="nv">viewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Kuniwak/UIKitTestable/tree/HEAD/UIKitTestable/UIKitTestable/ModalPresenter.swift#L20">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="https://github.com/Kuniwak" target="_blank" rel="external">Kuniwak</a>. All rights reserved. (Last updated: 2019-03-30)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
