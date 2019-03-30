@@ -10,7 +10,7 @@ public protocol NavigatorProtocol {
      Pushes a view controller onto the receiver’s stack and updates the display.
      This method behave like `UINavigationController#pushViewController(UIViewController, animated: Bool)`
      */
-    func navigate(to viewController: UIViewController, animated: Bool)
+    func push(viewController: UIViewController, animated: Bool)
 }
 
 
@@ -32,7 +32,7 @@ public final class Navigator: NavigatorProtocol {
     }
 
 
-    public func navigate(to viewController: UIViewController, animated: Bool) {
+    public func push(viewController: UIViewController, animated: Bool) {
         self.navigationController.value?.pushViewController(
             viewController,
             animated: animated

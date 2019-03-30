@@ -10,5 +10,5 @@ public final class NavigatorStub: NavigatorProtocol {
     public init() {}
 
 
-    public func navigate(to viewController: UIViewController, animated: Bool) {}
+    public func push(viewController: UIViewController, animated: Bool) {}
 }

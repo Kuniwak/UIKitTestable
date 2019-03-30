@@ -16,7 +16,7 @@ public final class TestNavigator: NavigatorProtocol {
     }
 
 
-    public func navigate(to viewController: UIViewController, animated: Bool) {
+    public func push(viewController: UIViewController, animated: Bool) {
         self.presenter.present(
             viewController: UINavigationController(rootViewController: viewController),
             animated: animated,

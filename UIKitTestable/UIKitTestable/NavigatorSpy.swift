@@ -8,7 +8,7 @@ import UIKit
  */
 public final class NavigatorSpy: NavigatorProtocol {
     public enum CallArgs: Equatable {
-        case navigate(viewController: UIViewController, animated: Bool)
+        case push(viewController: UIViewController, animated: Bool)
     }
 
 
@@ -27,9 +27,9 @@ public final class NavigatorSpy: NavigatorProtocol {
     }
 
 
-    public func navigate(to viewController: UIViewController, animated: Bool) {
-        self.callArgs.append(.navigate(viewController: viewController, animated: animated))
+    public func push(viewController: UIViewController, animated: Bool) {
+        self.callArgs.append(.push(viewController: viewController, animated: animated))
 
-        self.delegate.navigate(to: viewController, animated: animated)
+        self.delegate.push(viewController: viewController, animated: animated)
     }
 }
