@@ -10,6 +10,56 @@
 		6239AA2E224F6DFF00673D65 /* UIKitTestable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6239AA24224F6DFF00673D65 /* UIKitTestable.framework */; };
 		6239AA33224F6DFF00673D65 /* UIKitTestableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239AA32224F6DFF00673D65 /* UIKitTestableTests.swift */; };
 		6239AA35224F6DFF00673D65 /* UIKitTestable.h in Headers */ = {isa = PBXBuildFile; fileRef = 6239AA27224F6DFF00673D65 /* UIKitTestable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6239AAFA224F729400673D65 /* GlobalModalBackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239AAE8224F729300673D65 /* GlobalModalBackgroundViewController.swift */; };
+		6239AAFB224F729400673D65 /* ModalDissolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239AAE9224F729300673D65 /* ModalDissolver.swift */; };
+		6239AAFC224F729400673D65 /* WindowsReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239AAEA224F729300673D65 /* WindowsReader.swift */; };
+		6239AAFD224F729400673D65 /* RootViewControllerWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239AAEB224F729300673D65 /* RootViewControllerWriter.swift */; };
+		6239AAFE224F729400673D65 /* RootViewControllerReadWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239AAEC224F729300673D65 /* RootViewControllerReadWriter.swift */; };
+		6239AAFF224F729400673D65 /* WeakOrNotReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239AAED224F729300673D65 /* WeakOrNotReference.swift */; };
+		6239AB00224F729400673D65 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239AAEE224F729300673D65 /* Navigator.swift */; };
+		6239AB01224F729400673D65 /* PresentingViewControllerReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239AAEF224F729300673D65 /* PresentingViewControllerReader.swift */; };
+		6239AB02224F729400673D65 /* WeakOrUnowned.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239AAF0224F729300673D65 /* WeakOrUnowned.swift */; };
+		6239AB03224F729400673D65 /* DebugLoggingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239AAF1224F729300673D65 /* DebugLoggingViewController.swift */; };
+		6239AB04224F729400673D65 /* GlobalModalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239AAF2224F729300673D65 /* GlobalModalPresenter.swift */; };
+		6239AB05224F729400673D65 /* ReverseNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239AAF3224F729300673D65 /* ReverseNavigator.swift */; };
+		6239AB06224F729400673D65 /* ModalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239AAF4224F729300673D65 /* ModalPresenter.swift */; };
+		6239AB07224F729400673D65 /* GlobalModalDissolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239AAF5224F729300673D65 /* GlobalModalDissolver.swift */; };
+		6239AB08224F729400673D65 /* URLOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239AAF6224F729300673D65 /* URLOpener.swift */; };
+		6239AB09224F729400673D65 /* ViewControllerLifeCycleObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239AAF7224F729400673D65 /* ViewControllerLifeCycleObserver.swift */; };
+		6239AB0A224F729400673D65 /* RootViewControllerReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239AAF8224F729400673D65 /* RootViewControllerReader.swift */; };
+		6239AB0B224F729400673D65 /* KeyWindowMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239AAF9224F729400673D65 /* KeyWindowMaker.swift */; };
+		6239ABCC224F747200673D65 /* NavigatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABAC224F746E00673D65 /* NavigatorSpy.swift */; };
+		6239ABCD224F747200673D65 /* CountedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABAD224F746E00673D65 /* CountedViewController.swift */; };
+		6239ABCE224F747200673D65 /* RootViewControllerReadWriterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABAE224F746E00673D65 /* RootViewControllerReadWriterSpy.swift */; };
+		6239ABCF224F747200673D65 /* WindowsReaderStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABAF224F746E00673D65 /* WindowsReaderStub.swift */; };
+		6239ABD0224F747200673D65 /* ReverseNavigatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABB0224F746E00673D65 /* ReverseNavigatorSpy.swift */; };
+		6239ABD1224F747200673D65 /* RootViewControllerWriterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABB1224F746E00673D65 /* RootViewControllerWriterSpy.swift */; };
+		6239ABD2224F747200673D65 /* TestNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABB2224F746F00673D65 /* TestNavigator.swift */; };
+		6239ABD3224F747200673D65 /* RootViewControllerWriterStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABB3224F746F00673D65 /* RootViewControllerWriterStub.swift */; };
+		6239ABD4224F747200673D65 /* GlobalModalPresenterStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABB4224F746F00673D65 /* GlobalModalPresenterStub.swift */; };
+		6239ABD5224F747200673D65 /* PresentingViewControllerReaderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABB5224F746F00673D65 /* PresentingViewControllerReaderSpy.swift */; };
+		6239ABD6224F747200673D65 /* NavigatorStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABB6224F746F00673D65 /* NavigatorStub.swift */; };
+		6239ABD7224F747200673D65 /* Arrays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABB7224F746F00673D65 /* Arrays.swift */; };
+		6239ABD8224F747200673D65 /* GlobalModalDissolverSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABB8224F746F00673D65 /* GlobalModalDissolverSpy.swift */; };
+		6239ABD9224F747200673D65 /* ModalPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABB9224F747000673D65 /* ModalPresenterSpy.swift */; };
+		6239ABDA224F747200673D65 /* SpyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABBA224F747000673D65 /* SpyViewController.swift */; };
+		6239ABDB224F747200673D65 /* RootViewControllerReaderStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABBB224F747000673D65 /* RootViewControllerReaderStub.swift */; };
+		6239ABDC224F747200673D65 /* ModalPresenterStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABBC224F747000673D65 /* ModalPresenterStub.swift */; };
+		6239ABDD224F747200673D65 /* PresentingViewControllerReaderStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABBD224F747000673D65 /* PresentingViewControllerReaderStub.swift */; };
+		6239ABDE224F747200673D65 /* GlobalModalDissolverStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABBE224F747000673D65 /* GlobalModalDissolverStub.swift */; };
+		6239ABDF224F747200673D65 /* PrettyPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABBF224F747000673D65 /* PrettyPrint.swift */; };
+		6239ABE0224F747200673D65 /* ModalDissolverSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABC0224F747100673D65 /* ModalDissolverSpy.swift */; };
+		6239ABE1224F747200673D65 /* KeyWindowMakerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABC1224F747100673D65 /* KeyWindowMakerSpy.swift */; };
+		6239ABE2224F747200673D65 /* RootViewControllerReadWriterStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABC2224F747100673D65 /* RootViewControllerReadWriterStub.swift */; };
+		6239ABE3224F747200673D65 /* ModalDissolverStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABC3224F747100673D65 /* ModalDissolverStub.swift */; };
+		6239ABE4224F747200673D65 /* GlobalModalPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABC4224F747100673D65 /* GlobalModalPresenterSpy.swift */; };
+		6239ABE5224F747200673D65 /* WindowsReaderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABC5224F747100673D65 /* WindowsReaderSpy.swift */; };
+		6239ABE6224F747200673D65 /* KeyWindowMakerStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABC6224F747100673D65 /* KeyWindowMakerStub.swift */; };
+		6239ABE7224F747200673D65 /* CountedWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABC7224F747200673D65 /* CountedWindow.swift */; };
+		6239ABE8224F747200673D65 /* ReverseNavigatorStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABC8224F747200673D65 /* ReverseNavigatorStub.swift */; };
+		6239ABE9224F747200673D65 /* RootViewControllerReaderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABC9224F747200673D65 /* RootViewControllerReaderSpy.swift */; };
+		6239ABEA224F747200673D65 /* URLOpenerStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABCA224F747200673D65 /* URLOpenerStub.swift */; };
+		6239ABEB224F747200673D65 /* URLOpenerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABCB224F747200673D65 /* URLOpenerSpy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +79,56 @@
 		6239AA2D224F6DFF00673D65 /* UIKitTestableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIKitTestableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6239AA32224F6DFF00673D65 /* UIKitTestableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitTestableTests.swift; sourceTree = "<group>"; };
 		6239AA34224F6DFF00673D65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6239AAE8224F729300673D65 /* GlobalModalBackgroundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalModalBackgroundViewController.swift; sourceTree = "<group>"; };
+		6239AAE9224F729300673D65 /* ModalDissolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalDissolver.swift; sourceTree = "<group>"; };
+		6239AAEA224F729300673D65 /* WindowsReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowsReader.swift; sourceTree = "<group>"; };
+		6239AAEB224F729300673D65 /* RootViewControllerWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewControllerWriter.swift; sourceTree = "<group>"; };
+		6239AAEC224F729300673D65 /* RootViewControllerReadWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewControllerReadWriter.swift; sourceTree = "<group>"; };
+		6239AAED224F729300673D65 /* WeakOrNotReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakOrNotReference.swift; sourceTree = "<group>"; };
+		6239AAEE224F729300673D65 /* Navigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		6239AAEF224F729300673D65 /* PresentingViewControllerReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentingViewControllerReader.swift; sourceTree = "<group>"; };
+		6239AAF0224F729300673D65 /* WeakOrUnowned.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakOrUnowned.swift; sourceTree = "<group>"; };
+		6239AAF1224F729300673D65 /* DebugLoggingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugLoggingViewController.swift; sourceTree = "<group>"; };
+		6239AAF2224F729300673D65 /* GlobalModalPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalModalPresenter.swift; sourceTree = "<group>"; };
+		6239AAF3224F729300673D65 /* ReverseNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverseNavigator.swift; sourceTree = "<group>"; };
+		6239AAF4224F729300673D65 /* ModalPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalPresenter.swift; sourceTree = "<group>"; };
+		6239AAF5224F729300673D65 /* GlobalModalDissolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalModalDissolver.swift; sourceTree = "<group>"; };
+		6239AAF6224F729300673D65 /* URLOpener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLOpener.swift; sourceTree = "<group>"; };
+		6239AAF7224F729400673D65 /* ViewControllerLifeCycleObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerLifeCycleObserver.swift; sourceTree = "<group>"; };
+		6239AAF8224F729400673D65 /* RootViewControllerReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewControllerReader.swift; sourceTree = "<group>"; };
+		6239AAF9224F729400673D65 /* KeyWindowMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyWindowMaker.swift; sourceTree = "<group>"; };
+		6239ABAC224F746E00673D65 /* NavigatorSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigatorSpy.swift; sourceTree = "<group>"; };
+		6239ABAD224F746E00673D65 /* CountedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountedViewController.swift; sourceTree = "<group>"; };
+		6239ABAE224F746E00673D65 /* RootViewControllerReadWriterSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewControllerReadWriterSpy.swift; sourceTree = "<group>"; };
+		6239ABAF224F746E00673D65 /* WindowsReaderStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowsReaderStub.swift; sourceTree = "<group>"; };
+		6239ABB0224F746E00673D65 /* ReverseNavigatorSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverseNavigatorSpy.swift; sourceTree = "<group>"; };
+		6239ABB1224F746E00673D65 /* RootViewControllerWriterSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewControllerWriterSpy.swift; sourceTree = "<group>"; };
+		6239ABB2224F746F00673D65 /* TestNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestNavigator.swift; sourceTree = "<group>"; };
+		6239ABB3224F746F00673D65 /* RootViewControllerWriterStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewControllerWriterStub.swift; sourceTree = "<group>"; };
+		6239ABB4224F746F00673D65 /* GlobalModalPresenterStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalModalPresenterStub.swift; sourceTree = "<group>"; };
+		6239ABB5224F746F00673D65 /* PresentingViewControllerReaderSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentingViewControllerReaderSpy.swift; sourceTree = "<group>"; };
+		6239ABB6224F746F00673D65 /* NavigatorStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigatorStub.swift; sourceTree = "<group>"; };
+		6239ABB7224F746F00673D65 /* Arrays.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arrays.swift; sourceTree = "<group>"; };
+		6239ABB8224F746F00673D65 /* GlobalModalDissolverSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalModalDissolverSpy.swift; sourceTree = "<group>"; };
+		6239ABB9224F747000673D65 /* ModalPresenterSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalPresenterSpy.swift; sourceTree = "<group>"; };
+		6239ABBA224F747000673D65 /* SpyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpyViewController.swift; sourceTree = "<group>"; };
+		6239ABBB224F747000673D65 /* RootViewControllerReaderStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewControllerReaderStub.swift; sourceTree = "<group>"; };
+		6239ABBC224F747000673D65 /* ModalPresenterStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalPresenterStub.swift; sourceTree = "<group>"; };
+		6239ABBD224F747000673D65 /* PresentingViewControllerReaderStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentingViewControllerReaderStub.swift; sourceTree = "<group>"; };
+		6239ABBE224F747000673D65 /* GlobalModalDissolverStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalModalDissolverStub.swift; sourceTree = "<group>"; };
+		6239ABBF224F747000673D65 /* PrettyPrint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrettyPrint.swift; sourceTree = "<group>"; };
+		6239ABC0224F747100673D65 /* ModalDissolverSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalDissolverSpy.swift; sourceTree = "<group>"; };
+		6239ABC1224F747100673D65 /* KeyWindowMakerSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyWindowMakerSpy.swift; sourceTree = "<group>"; };
+		6239ABC2224F747100673D65 /* RootViewControllerReadWriterStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewControllerReadWriterStub.swift; sourceTree = "<group>"; };
+		6239ABC3224F747100673D65 /* ModalDissolverStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalDissolverStub.swift; sourceTree = "<group>"; };
+		6239ABC4224F747100673D65 /* GlobalModalPresenterSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalModalPresenterSpy.swift; sourceTree = "<group>"; };
+		6239ABC5224F747100673D65 /* WindowsReaderSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowsReaderSpy.swift; sourceTree = "<group>"; };
+		6239ABC6224F747100673D65 /* KeyWindowMakerStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyWindowMakerStub.swift; sourceTree = "<group>"; };
+		6239ABC7224F747200673D65 /* CountedWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountedWindow.swift; sourceTree = "<group>"; };
+		6239ABC8224F747200673D65 /* ReverseNavigatorStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverseNavigatorStub.swift; sourceTree = "<group>"; };
+		6239ABC9224F747200673D65 /* RootViewControllerReaderSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewControllerReaderSpy.swift; sourceTree = "<group>"; };
+		6239ABCA224F747200673D65 /* URLOpenerStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLOpenerStub.swift; sourceTree = "<group>"; };
+		6239ABCB224F747200673D65 /* URLOpenerSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLOpenerSpy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +171,58 @@
 		6239AA26224F6DFF00673D65 /* UIKitTestable */ = {
 			isa = PBXGroup;
 			children = (
-				6239AA27224F6DFF00673D65 /* UIKitTestable.h */,
+				6239ABB7224F746F00673D65 /* Arrays.swift */,
+				6239ABAD224F746E00673D65 /* CountedViewController.swift */,
+				6239ABC7224F747200673D65 /* CountedWindow.swift */,
+				6239AAF1224F729300673D65 /* DebugLoggingViewController.swift */,
+				6239AAE8224F729300673D65 /* GlobalModalBackgroundViewController.swift */,
+				6239AAF5224F729300673D65 /* GlobalModalDissolver.swift */,
+				6239ABB8224F746F00673D65 /* GlobalModalDissolverSpy.swift */,
+				6239ABBE224F747000673D65 /* GlobalModalDissolverStub.swift */,
+				6239AAF2224F729300673D65 /* GlobalModalPresenter.swift */,
+				6239ABC4224F747100673D65 /* GlobalModalPresenterSpy.swift */,
+				6239ABB4224F746F00673D65 /* GlobalModalPresenterStub.swift */,
 				6239AA28224F6DFF00673D65 /* Info.plist */,
+				6239AAF9224F729400673D65 /* KeyWindowMaker.swift */,
+				6239ABC1224F747100673D65 /* KeyWindowMakerSpy.swift */,
+				6239ABC6224F747100673D65 /* KeyWindowMakerStub.swift */,
+				6239AAE9224F729300673D65 /* ModalDissolver.swift */,
+				6239ABC0224F747100673D65 /* ModalDissolverSpy.swift */,
+				6239ABC3224F747100673D65 /* ModalDissolverStub.swift */,
+				6239AAF4224F729300673D65 /* ModalPresenter.swift */,
+				6239ABB9224F747000673D65 /* ModalPresenterSpy.swift */,
+				6239ABBC224F747000673D65 /* ModalPresenterStub.swift */,
+				6239AAEE224F729300673D65 /* Navigator.swift */,
+				6239ABAC224F746E00673D65 /* NavigatorSpy.swift */,
+				6239ABB6224F746F00673D65 /* NavigatorStub.swift */,
+				6239AAEF224F729300673D65 /* PresentingViewControllerReader.swift */,
+				6239ABB5224F746F00673D65 /* PresentingViewControllerReaderSpy.swift */,
+				6239ABBD224F747000673D65 /* PresentingViewControllerReaderStub.swift */,
+				6239ABBF224F747000673D65 /* PrettyPrint.swift */,
+				6239AAF3224F729300673D65 /* ReverseNavigator.swift */,
+				6239ABB0224F746E00673D65 /* ReverseNavigatorSpy.swift */,
+				6239ABC8224F747200673D65 /* ReverseNavigatorStub.swift */,
+				6239AAF8224F729400673D65 /* RootViewControllerReader.swift */,
+				6239ABC9224F747200673D65 /* RootViewControllerReaderSpy.swift */,
+				6239ABBB224F747000673D65 /* RootViewControllerReaderStub.swift */,
+				6239AAEC224F729300673D65 /* RootViewControllerReadWriter.swift */,
+				6239ABAE224F746E00673D65 /* RootViewControllerReadWriterSpy.swift */,
+				6239ABC2224F747100673D65 /* RootViewControllerReadWriterStub.swift */,
+				6239AAEB224F729300673D65 /* RootViewControllerWriter.swift */,
+				6239ABB1224F746E00673D65 /* RootViewControllerWriterSpy.swift */,
+				6239ABB3224F746F00673D65 /* RootViewControllerWriterStub.swift */,
+				6239ABBA224F747000673D65 /* SpyViewController.swift */,
+				6239ABB2224F746F00673D65 /* TestNavigator.swift */,
+				6239AA27224F6DFF00673D65 /* UIKitTestable.h */,
+				6239AAF6224F729300673D65 /* URLOpener.swift */,
+				6239ABCB224F747200673D65 /* URLOpenerSpy.swift */,
+				6239ABCA224F747200673D65 /* URLOpenerStub.swift */,
+				6239AAF7224F729400673D65 /* ViewControllerLifeCycleObserver.swift */,
+				6239AAED224F729300673D65 /* WeakOrNotReference.swift */,
+				6239AAF0224F729300673D65 /* WeakOrUnowned.swift */,
+				6239AAEA224F729300673D65 /* WindowsReader.swift */,
+				6239ABC5224F747100673D65 /* WindowsReaderSpy.swift */,
+				6239ABAF224F746E00673D65 /* WindowsReaderStub.swift */,
 			);
 			path = UIKitTestable;
 			sourceTree = "<group>";
@@ -148,6 +298,7 @@
 				TargetAttributes = {
 					6239AA23224F6DFF00673D65 = {
 						CreatedOnToolsVersion = 10.2;
+						LastSwiftMigration = 1020;
 					};
 					6239AA2C224F6DFF00673D65 = {
 						CreatedOnToolsVersion = 10.2;
@@ -160,6 +311,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 6239AA1A224F6DFF00673D65;
 			productRefGroup = 6239AA25224F6DFF00673D65 /* Products */;
@@ -194,6 +346,56 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6239AB05224F729400673D65 /* ReverseNavigator.swift in Sources */,
+				6239AB06224F729400673D65 /* ModalPresenter.swift in Sources */,
+				6239AB01224F729400673D65 /* PresentingViewControllerReader.swift in Sources */,
+				6239ABD6224F747200673D65 /* NavigatorStub.swift in Sources */,
+				6239ABE7224F747200673D65 /* CountedWindow.swift in Sources */,
+				6239ABDE224F747200673D65 /* GlobalModalDissolverStub.swift in Sources */,
+				6239ABE3224F747200673D65 /* ModalDissolverStub.swift in Sources */,
+				6239AB00224F729400673D65 /* Navigator.swift in Sources */,
+				6239ABEB224F747200673D65 /* URLOpenerSpy.swift in Sources */,
+				6239ABDD224F747200673D65 /* PresentingViewControllerReaderStub.swift in Sources */,
+				6239ABE1224F747200673D65 /* KeyWindowMakerSpy.swift in Sources */,
+				6239ABE8224F747200673D65 /* ReverseNavigatorStub.swift in Sources */,
+				6239AAFF224F729400673D65 /* WeakOrNotReference.swift in Sources */,
+				6239AB02224F729400673D65 /* WeakOrUnowned.swift in Sources */,
+				6239AAFC224F729400673D65 /* WindowsReader.swift in Sources */,
+				6239ABD9224F747200673D65 /* ModalPresenterSpy.swift in Sources */,
+				6239ABDF224F747200673D65 /* PrettyPrint.swift in Sources */,
+				6239ABE6224F747200673D65 /* KeyWindowMakerStub.swift in Sources */,
+				6239ABD0224F747200673D65 /* ReverseNavigatorSpy.swift in Sources */,
+				6239AB09224F729400673D65 /* ViewControllerLifeCycleObserver.swift in Sources */,
+				6239AB0B224F729400673D65 /* KeyWindowMaker.swift in Sources */,
+				6239AAFE224F729400673D65 /* RootViewControllerReadWriter.swift in Sources */,
+				6239ABD2224F747200673D65 /* TestNavigator.swift in Sources */,
+				6239ABD8224F747200673D65 /* GlobalModalDissolverSpy.swift in Sources */,
+				6239ABD7224F747200673D65 /* Arrays.swift in Sources */,
+				6239ABEA224F747200673D65 /* URLOpenerStub.swift in Sources */,
+				6239ABDB224F747200673D65 /* RootViewControllerReaderStub.swift in Sources */,
+				6239ABE4224F747200673D65 /* GlobalModalPresenterSpy.swift in Sources */,
+				6239ABD1224F747200673D65 /* RootViewControllerWriterSpy.swift in Sources */,
+				6239ABD4224F747200673D65 /* GlobalModalPresenterStub.swift in Sources */,
+				6239ABE0224F747200673D65 /* ModalDissolverSpy.swift in Sources */,
+				6239AB03224F729400673D65 /* DebugLoggingViewController.swift in Sources */,
+				6239ABCD224F747200673D65 /* CountedViewController.swift in Sources */,
+				6239ABCC224F747200673D65 /* NavigatorSpy.swift in Sources */,
+				6239ABCE224F747200673D65 /* RootViewControllerReadWriterSpy.swift in Sources */,
+				6239ABDA224F747200673D65 /* SpyViewController.swift in Sources */,
+				6239AAFD224F729400673D65 /* RootViewControllerWriter.swift in Sources */,
+				6239ABDC224F747200673D65 /* ModalPresenterStub.swift in Sources */,
+				6239ABCF224F747200673D65 /* WindowsReaderStub.swift in Sources */,
+				6239ABE5224F747200673D65 /* WindowsReaderSpy.swift in Sources */,
+				6239AB07224F729400673D65 /* GlobalModalDissolver.swift in Sources */,
+				6239ABD3224F747200673D65 /* RootViewControllerWriterStub.swift in Sources */,
+				6239ABE9224F747200673D65 /* RootViewControllerReaderSpy.swift in Sources */,
+				6239AB0A224F729400673D65 /* RootViewControllerReader.swift in Sources */,
+				6239AAFA224F729400673D65 /* GlobalModalBackgroundViewController.swift in Sources */,
+				6239AB04224F729400673D65 /* GlobalModalPresenter.swift in Sources */,
+				6239AB08224F729400673D65 /* URLOpener.swift in Sources */,
+				6239ABD5224F747200673D65 /* PresentingViewControllerReaderSpy.swift in Sources */,
+				6239AAFB224F729400673D65 /* ModalDissolver.swift in Sources */,
+				6239ABE2224F747200673D65 /* RootViewControllerReadWriterStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +543,7 @@
 		6239AA39224F6DFF00673D65 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -357,6 +560,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kuniwak.UIKitTestable;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +569,7 @@
 		6239AA3A224F6DFF00673D65 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -389,6 +594,7 @@
 		6239AA3C224F6DFF00673D65 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = UIKitTestableTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -406,6 +612,7 @@
 		6239AA3D224F6DFF00673D65 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = UIKitTestableTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

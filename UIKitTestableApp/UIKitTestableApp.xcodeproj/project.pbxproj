@@ -12,8 +12,12 @@
 		6239AA50224F6E2700673D65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6239AA4E224F6E2700673D65 /* Main.storyboard */; };
 		6239AA52224F6E2800673D65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6239AA51224F6E2800673D65 /* Assets.xcassets */; };
 		6239AA55224F6E2800673D65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6239AA53224F6E2800673D65 /* LaunchScreen.storyboard */; };
-		6239AA60224F6E2800673D65 /* UIKitTestableAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239AA5F224F6E2800673D65 /* UIKitTestableAppTests.swift */; };
 		6239AA77224F6E5200673D65 /* UIKitTestable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6239AA76224F6E5200673D65 /* UIKitTestable.framework */; };
+		6239AAE3224F708200673D65 /* GlobalModalPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239AAE0224F708200673D65 /* GlobalModalPresenterTests.swift */; };
+		6239AAE4224F708200673D65 /* AsyncTestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239AAE1224F708200673D65 /* AsyncTestHelper.swift */; };
+		6239AAE5224F708200673D65 /* Dump.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239AAE2224F708200673D65 /* Dump.swift */; };
+		6239AAE7224F709B00673D65 /* UIKitTestable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6239AAE6224F709B00673D65 /* UIKitTestable.framework */; };
+		6239ABED224F99E200673D65 /* UIKitAssertions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6239ABEC224F99E200673D65 /* UIKitAssertions.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +39,14 @@
 		6239AA54224F6E2800673D65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6239AA56224F6E2800673D65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6239AA5B224F6E2800673D65 /* UIKitTestableAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIKitTestableAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6239AA5F224F6E2800673D65 /* UIKitTestableAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitTestableAppTests.swift; sourceTree = "<group>"; };
 		6239AA61224F6E2800673D65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6239AA74224F6E4700673D65 /* UIKitTestable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UIKitTestable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6239AA76224F6E5200673D65 /* UIKitTestable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UIKitTestable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6239AAE0224F708200673D65 /* GlobalModalPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalModalPresenterTests.swift; sourceTree = "<group>"; };
+		6239AAE1224F708200673D65 /* AsyncTestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncTestHelper.swift; sourceTree = "<group>"; };
+		6239AAE2224F708200673D65 /* Dump.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dump.swift; sourceTree = "<group>"; };
+		6239AAE6224F709B00673D65 /* UIKitTestable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UIKitTestable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6239ABEC224F99E200673D65 /* UIKitAssertions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UIKitAssertions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6239ABED224F99E200673D65 /* UIKitAssertions.framework in Frameworks */,
+				6239AAE7224F709B00673D65 /* UIKitTestable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +105,9 @@
 		6239AA5E224F6E2800673D65 /* UIKitTestableAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				6239AA5F224F6E2800673D65 /* UIKitTestableAppTests.swift */,
+				6239AAE1224F708200673D65 /* AsyncTestHelper.swift */,
+				6239AAE2224F708200673D65 /* Dump.swift */,
+				6239AAE0224F708200673D65 /* GlobalModalPresenterTests.swift */,
 				6239AA61224F6E2800673D65 /* Info.plist */,
 			);
 			path = UIKitTestableAppTests;
@@ -104,6 +116,8 @@
 		6239AA73224F6E4700673D65 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6239ABEC224F99E200673D65 /* UIKitAssertions.framework */,
+				6239AAE6224F709B00673D65 /* UIKitTestable.framework */,
 				6239AA76224F6E5200673D65 /* UIKitTestable.framework */,
 				6239AA74224F6E4700673D65 /* UIKitTestable.framework */,
 			);
@@ -220,7 +234,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6239AA60224F6E2800673D65 /* UIKitTestableAppTests.swift in Sources */,
+				6239AAE4224F708200673D65 /* AsyncTestHelper.swift in Sources */,
+				6239AAE3224F708200673D65 /* GlobalModalPresenterTests.swift in Sources */,
+				6239AAE5224F708200673D65 /* Dump.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

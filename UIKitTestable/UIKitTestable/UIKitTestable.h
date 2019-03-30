@@ -1,11 +1,3 @@
-//
-//  UIKitTestable.h
-//  UIKitTestable
-//
-//  Created by Yuki Kokubun on 2019/03/30.
-//  Copyright © 2019 Kuniwak. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
 
 //! Project version number for UIKitTestable.
