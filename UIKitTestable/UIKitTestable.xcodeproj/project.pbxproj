@@ -201,6 +201,7 @@
 				6239AAEE224F729300673D65 /* Navigator.swift */,
 				6239ABAC224F746E00673D65 /* NavigatorSpy.swift */,
 				6239ABB6224F746F00673D65 /* NavigatorStub.swift */,
+				6239AAF7224F729400673D65 /* ObservingViewController.swift */,
 				6239AAEF224F729300673D65 /* PresentingViewControllerReader.swift */,
 				6239ABB5224F746F00673D65 /* PresentingViewControllerReaderSpy.swift */,
 				6239ABBD224F747000673D65 /* PresentingViewControllerReaderStub.swift */,
@@ -223,14 +224,13 @@
 				6239AAF6224F729300673D65 /* URLOpener.swift */,
 				6239ABCB224F747200673D65 /* URLOpenerSpy.swift */,
 				6239ABCA224F747200673D65 /* URLOpenerStub.swift */,
-				6239AAF7224F729400673D65 /* ObservingViewController.swift */,
+				2475E8510766E0322F6C3E77 /* ViewControllerLifeCycleEvent.swift */,
 				2475E33B23944A89D3AE7F93 /* ViewControllersDump.swift */,
 				6239AAED224F729300673D65 /* WeakOrNotReference.swift */,
 				6239AAF0224F729300673D65 /* WeakOrUnowned.swift */,
 				6239AAEA224F729300673D65 /* WindowsReader.swift */,
 				6239ABC5224F747100673D65 /* WindowsReaderSpy.swift */,
 				6239ABAF224F746E00673D65 /* WindowsReaderStub.swift */,
-				2475E8510766E0322F6C3E77 /* ViewControllerLifeCycleEvent.swift */,
 			);
 			path = UIKitTestable;
 			sourceTree = "<group>";

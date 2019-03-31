@@ -56,9 +56,9 @@
 			isa = PBXGroup;
 			children = (
 				6239AB40224F72F000673D65 /* AwaitingViewController.swift */,
+				6239AB1A224F72C100673D65 /* Info.plist */,
 				6239ABAA224F746300673D65 /* Timeout.swift */,
 				6239AB19224F72C100673D65 /* UIKitAssertions.h */,
-				6239AB1A224F72C100673D65 /* Info.plist */,
 			);
 			path = UIKitAssertions;
 			sourceTree = "<group>";

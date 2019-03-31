@@ -107,10 +107,10 @@
 			isa = PBXGroup;
 			children = (
 				6239AAE1224F708200673D65 /* AsyncTestHelper.swift */,
+				2475EBD03FBB3976644D7070 /* AwaitingViewControllerTests.swift */,
 				6239AAE2224F708200673D65 /* Dump.swift */,
 				6239AAE0224F708200673D65 /* GlobalModalPresenterTests.swift */,
 				6239AA61224F6E2800673D65 /* Info.plist */,
-				2475EBD03FBB3976644D7070 /* AwaitingViewControllerTests.swift */,
 			);
 			path = UIKitTestableAppTests;
 			sourceTree = "<group>";
