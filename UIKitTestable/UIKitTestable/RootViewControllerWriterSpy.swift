@@ -18,11 +18,11 @@ public final class RootViewControllerWriterSpy: RootViewControllerWriterProtocol
      */
     public private(set) var callArgs: [CallArgs] = []
 
-    public var delegate: RootViewControllerWriterProtocol
+    public var inherited: RootViewControllerWriterProtocol
 
 
-    public init(delegating delegate: RootViewControllerWriterProtocol = RootViewControllerWriterSyncStub()) {
-        self.delegate = delegate
+    public init(inheriting inherited: RootViewControllerWriterProtocol = RootViewControllerWriterSyncStub()) {
+        self.inherited = inherited
     }
 
 
@@ -33,6 +33,6 @@ public final class RootViewControllerWriterSpy: RootViewControllerWriterProtocol
 
     public func alter(to rootViewController: UIViewController, completion: (() -> Void)?) {
         self.callArgs.append(.alter(rootViewController: rootViewController))
-        self.delegate.alter(to: rootViewController, completion: completion)
+        self.inherited.alter(to: rootViewController, completion: completion)
     }
 }

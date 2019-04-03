@@ -9,13 +9,13 @@ public func awaitViewController(
     on testCase: XCTestCase,
     timeout: TimeInterval? = nil,
     shouldPrintEvents: Bool = false,
-    _ callback: @escaping (UIKitTestable.ObservingViewController, UIKitTestable.ViewControllerLifeCycleEvent) -> Void
+    _ callback: @escaping (UIKitTestable.ObservationViewController, UIKitTestable.ViewControllerLifeCycleEvent) -> Void
 ) {
     let expectation = testCase.expectation(description: "Awaiting \(expectedEvent)")
 
     let window = UIWindow()
     let presenter = GlobalModalPresenter(wherePresentOn: .weak(window))
-    let viewController = UIKitTestable.ObservingViewController(shouldPrintEvents: shouldPrintEvents) { (viewController, actualEvent) in
+    let viewController = UIKitTestable.ObservationViewController(shouldPrintEvents: shouldPrintEvents) { (viewController, actualEvent) in
         guard actualEvent == expectedEvent else { return }
 
         callback(viewController, actualEvent)
@@ -34,7 +34,7 @@ public func awaitViewDidLoad(
     on testCase: XCTestCase,
     timeout: TimeInterval? = nil,
     shouldPrintEvents: Bool = false,
-    _ callback: @escaping (UIKitTestable.ObservingViewController) -> Void
+    _ callback: @escaping (UIKitTestable.ObservationViewController) -> Void
 ) {
     awaitViewController(event: .viewDidLoad, on: testCase, timeout: timeout, shouldPrintEvents: shouldPrintEvents) { (viewController, event) in
         callback(viewController)
@@ -44,7 +44,7 @@ public func awaitViewDidLoad(
 
 
 public func awaitingViewController(
-    willCall callback: @escaping (UIKitTestable.ObservingViewController, UIKitTestable.ViewControllerLifeCycleEvent) -> Void
-) -> UIKitTestable.ObservingViewController {
+    willCall callback: @escaping (UIKitTestable.ObservationViewController, UIKitTestable.ViewControllerLifeCycleEvent) -> Void
+) -> UIKitTestable.ObservationViewController {
     return .init(callback)
 }

@@ -19,24 +19,24 @@ public final class ModalDissolverSpy: ModalDissolverProtocol {
     public private(set) var callArgs: [CallArgs] = []
 
 
-    public var delegate: ModalDissolverProtocol
+    public var inherited: ModalDissolverProtocol
 
 
-    public init(delegating delegate: ModalDissolverProtocol = ModalDissolverStub()) {
-        self.delegate = delegate
+    public init(inheriting inherited: ModalDissolverProtocol = ModalDissolverStub()) {
+        self.inherited = inherited
     }
 
 
     public func dismiss(animated: Bool) {
         self.callArgs.append(.dismiss(animated: animated))
 
-        self.delegate.dismiss(animated: animated)
+        self.inherited.dismiss(animated: animated)
     }
 
 
     public func dismiss(animated: Bool, completion: (() -> Void)?) {
         self.callArgs.append(.dismiss(animated: animated))
 
-        self.delegate.dismiss(animated: animated, completion: completion)
+        self.inherited.dismiss(animated: animated, completion: completion)
     }
 }

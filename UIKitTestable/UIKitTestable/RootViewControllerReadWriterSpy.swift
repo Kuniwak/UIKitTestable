@@ -10,29 +10,31 @@ public final class RootViewControllerReadWriterSpy: RootViewControllerReadWriter
 
 
     public private(set) var callArgs = [CallArgs]()
-    public var delegate: RootViewControllerReadWriterProtocol
+    public var inherited: RootViewControllerReadWriterProtocol
 
 
     public var rootViewController: UIViewController? {
         self.callArgs.append(.rootViewController)
 
-        return self.delegate.rootViewController
+        return self.inherited.rootViewController
     }
 
 
-    public init(delegating delegate: RootViewControllerReadWriterProtocol) {
-        self.delegate = delegate
+    public init(inheriting inherited: RootViewControllerReadWriterProtocol) {
+        self.inherited = inherited
     }
 
 
     public func alter(to rootViewController: UIViewController) {
-        self.delegate.alter(to: rootViewController, completion: nil)
+        self.callArgs.append(.alter(rootViewController: rootViewController))
+
+        self.inherited.alter(to: rootViewController)
     }
 
 
     public func alter(to rootViewController: UIViewController, completion: (() -> Void)?) {
         self.callArgs.append(.alter(rootViewController: rootViewController))
 
-        self.delegate.alter(to: rootViewController)
+        self.inherited.alter(to: rootViewController, completion: completion)
     }
 }

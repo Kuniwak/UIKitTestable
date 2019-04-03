@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2475E160A18170A448D5716A /* ViewControllersDump.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E33B23944A89D3AE7F93 /* ViewControllersDump.swift */; };
+		2475E160A18170A448D5716A /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E33B23944A89D3AE7F93 /* Debug.swift */; };
 		2475E28D4E15852E574ED6DC /* ViewControllerLifeCycleEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E8510766E0322F6C3E77 /* ViewControllerLifeCycleEvent.swift */; };
+		2475E399ACE9C1FB7E98A039 /* Strong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EBFCB1A3171E060FF218 /* Strong.swift */; };
+		2475E58D5E35D8634E4C7369 /* Weak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E467DE8A94CF4FCA9259 /* Weak.swift */; };
+		2475EC998736C99FC244F7C7 /* WeakOrUnownedOrStrong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EF419E24ADF120BD77DC /* WeakOrUnownedOrStrong.swift */; };
+		2475EFFA4E664A98BC92029B /* Unowned.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EFAF90D73017614E1207 /* Unowned.swift */; };
 		6239AA2E224F6DFF00673D65 /* UIKitTestable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6239AA24224F6DFF00673D65 /* UIKitTestable.framework */; };
 		6239AA33224F6DFF00673D65 /* UIKitTestableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239AA32224F6DFF00673D65 /* UIKitTestableTests.swift */; };
 		6239AA35224F6DFF00673D65 /* UIKitTestable.h in Headers */ = {isa = PBXBuildFile; fileRef = 6239AA27224F6DFF00673D65 /* UIKitTestable.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -27,7 +31,7 @@
 		6239AB06224F729400673D65 /* ModalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239AAF4224F729300673D65 /* ModalPresenter.swift */; };
 		6239AB07224F729400673D65 /* GlobalModalDissolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239AAF5224F729300673D65 /* GlobalModalDissolver.swift */; };
 		6239AB08224F729400673D65 /* URLOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239AAF6224F729300673D65 /* URLOpener.swift */; };
-		6239AB09224F729400673D65 /* ObservingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239AAF7224F729400673D65 /* ObservingViewController.swift */; };
+		6239AB09224F729400673D65 /* ObservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239AAF7224F729400673D65 /* ObservationViewController.swift */; };
 		6239AB0A224F729400673D65 /* RootViewControllerReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239AAF8224F729400673D65 /* RootViewControllerReader.swift */; };
 		6239AB0B224F729400673D65 /* KeyWindowMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239AAF9224F729400673D65 /* KeyWindowMaker.swift */; };
 		6239ABCC224F747200673D65 /* NavigatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABAC224F746E00673D65 /* NavigatorSpy.swift */; };
@@ -41,7 +45,6 @@
 		6239ABD4224F747200673D65 /* GlobalModalPresenterStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABB4224F746F00673D65 /* GlobalModalPresenterStub.swift */; };
 		6239ABD5224F747200673D65 /* PresentingViewControllerReaderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABB5224F746F00673D65 /* PresentingViewControllerReaderSpy.swift */; };
 		6239ABD6224F747200673D65 /* NavigatorStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABB6224F746F00673D65 /* NavigatorStub.swift */; };
-		6239ABD7224F747200673D65 /* Arrays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABB7224F746F00673D65 /* Arrays.swift */; };
 		6239ABD8224F747200673D65 /* GlobalModalDissolverSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABB8224F746F00673D65 /* GlobalModalDissolverSpy.swift */; };
 		6239ABD9224F747200673D65 /* ModalPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABB9224F747000673D65 /* ModalPresenterSpy.swift */; };
 		6239ABDA224F747200673D65 /* SpyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABBA224F747000673D65 /* SpyViewController.swift */; };
@@ -49,7 +52,6 @@
 		6239ABDC224F747200673D65 /* ModalPresenterStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABBC224F747000673D65 /* ModalPresenterStub.swift */; };
 		6239ABDD224F747200673D65 /* PresentingViewControllerReaderStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABBD224F747000673D65 /* PresentingViewControllerReaderStub.swift */; };
 		6239ABDE224F747200673D65 /* GlobalModalDissolverStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABBE224F747000673D65 /* GlobalModalDissolverStub.swift */; };
-		6239ABDF224F747200673D65 /* PrettyPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABBF224F747000673D65 /* PrettyPrint.swift */; };
 		6239ABE0224F747200673D65 /* ModalDissolverSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABC0224F747100673D65 /* ModalDissolverSpy.swift */; };
 		6239ABE1224F747200673D65 /* KeyWindowMakerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABC1224F747100673D65 /* KeyWindowMakerSpy.swift */; };
 		6239ABE2224F747200673D65 /* RootViewControllerReadWriterStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABC2224F747100673D65 /* RootViewControllerReadWriterStub.swift */; };
@@ -75,8 +77,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2475E33B23944A89D3AE7F93 /* ViewControllersDump.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllersDump.swift; sourceTree = "<group>"; };
+		2475E33B23944A89D3AE7F93 /* Debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Debug.swift; sourceTree = "<group>"; };
+		2475E467DE8A94CF4FCA9259 /* Weak.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weak.swift; sourceTree = "<group>"; };
 		2475E8510766E0322F6C3E77 /* ViewControllerLifeCycleEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerLifeCycleEvent.swift; sourceTree = "<group>"; };
+		2475EBFCB1A3171E060FF218 /* Strong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strong.swift; sourceTree = "<group>"; };
+		2475EF419E24ADF120BD77DC /* WeakOrUnownedOrStrong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakOrUnownedOrStrong.swift; sourceTree = "<group>"; };
+		2475EFAF90D73017614E1207 /* Unowned.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Unowned.swift; sourceTree = "<group>"; };
 		6239AA24224F6DFF00673D65 /* UIKitTestable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIKitTestable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6239AA27224F6DFF00673D65 /* UIKitTestable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKitTestable.h; sourceTree = "<group>"; };
 		6239AA28224F6DFF00673D65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -98,7 +104,7 @@
 		6239AAF4224F729300673D65 /* ModalPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalPresenter.swift; sourceTree = "<group>"; };
 		6239AAF5224F729300673D65 /* GlobalModalDissolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalModalDissolver.swift; sourceTree = "<group>"; };
 		6239AAF6224F729300673D65 /* URLOpener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLOpener.swift; sourceTree = "<group>"; };
-		6239AAF7224F729400673D65 /* ObservingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservingViewController.swift; sourceTree = "<group>"; };
+		6239AAF7224F729400673D65 /* ObservationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservationViewController.swift; sourceTree = "<group>"; };
 		6239AAF8224F729400673D65 /* RootViewControllerReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewControllerReader.swift; sourceTree = "<group>"; };
 		6239AAF9224F729400673D65 /* KeyWindowMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyWindowMaker.swift; sourceTree = "<group>"; };
 		6239ABAC224F746E00673D65 /* NavigatorSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigatorSpy.swift; sourceTree = "<group>"; };
@@ -112,7 +118,6 @@
 		6239ABB4224F746F00673D65 /* GlobalModalPresenterStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalModalPresenterStub.swift; sourceTree = "<group>"; };
 		6239ABB5224F746F00673D65 /* PresentingViewControllerReaderSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentingViewControllerReaderSpy.swift; sourceTree = "<group>"; };
 		6239ABB6224F746F00673D65 /* NavigatorStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigatorStub.swift; sourceTree = "<group>"; };
-		6239ABB7224F746F00673D65 /* Arrays.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arrays.swift; sourceTree = "<group>"; };
 		6239ABB8224F746F00673D65 /* GlobalModalDissolverSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalModalDissolverSpy.swift; sourceTree = "<group>"; };
 		6239ABB9224F747000673D65 /* ModalPresenterSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalPresenterSpy.swift; sourceTree = "<group>"; };
 		6239ABBA224F747000673D65 /* SpyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpyViewController.swift; sourceTree = "<group>"; };
@@ -120,7 +125,6 @@
 		6239ABBC224F747000673D65 /* ModalPresenterStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalPresenterStub.swift; sourceTree = "<group>"; };
 		6239ABBD224F747000673D65 /* PresentingViewControllerReaderStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentingViewControllerReaderStub.swift; sourceTree = "<group>"; };
 		6239ABBE224F747000673D65 /* GlobalModalDissolverStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalModalDissolverStub.swift; sourceTree = "<group>"; };
-		6239ABBF224F747000673D65 /* PrettyPrint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrettyPrint.swift; sourceTree = "<group>"; };
 		6239ABC0224F747100673D65 /* ModalDissolverSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalDissolverSpy.swift; sourceTree = "<group>"; };
 		6239ABC1224F747100673D65 /* KeyWindowMakerSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyWindowMakerSpy.swift; sourceTree = "<group>"; };
 		6239ABC2224F747100673D65 /* RootViewControllerReadWriterStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewControllerReadWriterStub.swift; sourceTree = "<group>"; };
@@ -158,10 +162,10 @@
 		6239AA1A224F6DFF00673D65 = {
 			isa = PBXGroup;
 			children = (
+				6239ABF0224F9F3000673D65 /* Frameworks */,
+				6239AA25224F6DFF00673D65 /* Products */,
 				6239AA26224F6DFF00673D65 /* UIKitTestable */,
 				6239AA31224F6DFF00673D65 /* UIKitTestableTests */,
-				6239AA25224F6DFF00673D65 /* Products */,
-				6239ABF0224F9F3000673D65 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -177,7 +181,6 @@
 		6239AA26224F6DFF00673D65 /* UIKitTestable */ = {
 			isa = PBXGroup;
 			children = (
-				6239ABB7224F746F00673D65 /* Arrays.swift */,
 				6239ABAD224F746E00673D65 /* CountedViewController.swift */,
 				6239ABC7224F747200673D65 /* CountedWindow.swift */,
 				6239AAF1224F729300673D65 /* DebugLoggingViewController.swift */,
@@ -201,33 +204,36 @@
 				6239AAEE224F729300673D65 /* Navigator.swift */,
 				6239ABAC224F746E00673D65 /* NavigatorSpy.swift */,
 				6239ABB6224F746F00673D65 /* NavigatorStub.swift */,
-				6239AAF7224F729400673D65 /* ObservingViewController.swift */,
+				6239AAF7224F729400673D65 /* ObservationViewController.swift */,
 				6239AAEF224F729300673D65 /* PresentingViewControllerReader.swift */,
 				6239ABB5224F746F00673D65 /* PresentingViewControllerReaderSpy.swift */,
 				6239ABBD224F747000673D65 /* PresentingViewControllerReaderStub.swift */,
-				6239ABBF224F747000673D65 /* PrettyPrint.swift */,
 				6239AAF3224F729300673D65 /* ReverseNavigator.swift */,
 				6239ABB0224F746E00673D65 /* ReverseNavigatorSpy.swift */,
 				6239ABC8224F747200673D65 /* ReverseNavigatorStub.swift */,
-				6239AAF8224F729400673D65 /* RootViewControllerReader.swift */,
-				6239ABC9224F747200673D65 /* RootViewControllerReaderSpy.swift */,
-				6239ABBB224F747000673D65 /* RootViewControllerReaderStub.swift */,
 				6239AAEC224F729300673D65 /* RootViewControllerReadWriter.swift */,
 				6239ABAE224F746E00673D65 /* RootViewControllerReadWriterSpy.swift */,
 				6239ABC2224F747100673D65 /* RootViewControllerReadWriterStub.swift */,
+				6239AAF8224F729400673D65 /* RootViewControllerReader.swift */,
+				6239ABC9224F747200673D65 /* RootViewControllerReaderSpy.swift */,
+				6239ABBB224F747000673D65 /* RootViewControllerReaderStub.swift */,
 				6239AAEB224F729300673D65 /* RootViewControllerWriter.swift */,
 				6239ABB1224F746E00673D65 /* RootViewControllerWriterSpy.swift */,
 				6239ABB3224F746F00673D65 /* RootViewControllerWriterStub.swift */,
 				6239ABBA224F747000673D65 /* SpyViewController.swift */,
+				2475EBFCB1A3171E060FF218 /* Strong.swift */,
 				6239ABB2224F746F00673D65 /* TestNavigator.swift */,
 				6239AA27224F6DFF00673D65 /* UIKitTestable.h */,
 				6239AAF6224F729300673D65 /* URLOpener.swift */,
 				6239ABCB224F747200673D65 /* URLOpenerSpy.swift */,
 				6239ABCA224F747200673D65 /* URLOpenerStub.swift */,
+				2475EFAF90D73017614E1207 /* Unowned.swift */,
 				2475E8510766E0322F6C3E77 /* ViewControllerLifeCycleEvent.swift */,
-				2475E33B23944A89D3AE7F93 /* ViewControllersDump.swift */,
+				2475E33B23944A89D3AE7F93 /* Debug.swift */,
+				2475E467DE8A94CF4FCA9259 /* Weak.swift */,
 				6239AAED224F729300673D65 /* WeakOrNotReference.swift */,
 				6239AAF0224F729300673D65 /* WeakOrUnowned.swift */,
+				2475EF419E24ADF120BD77DC /* WeakOrUnownedOrStrong.swift */,
 				6239AAEA224F729300673D65 /* WindowsReader.swift */,
 				6239ABC5224F747100673D65 /* WindowsReaderSpy.swift */,
 				6239ABAF224F746E00673D65 /* WindowsReaderStub.swift */,
@@ -238,8 +244,8 @@
 		6239AA31224F6DFF00673D65 /* UIKitTestableTests */ = {
 			isa = PBXGroup;
 			children = (
-				6239AA32224F6DFF00673D65 /* UIKitTestableTests.swift */,
 				6239AA34224F6DFF00673D65 /* Info.plist */,
+				6239AA32224F6DFF00673D65 /* UIKitTestableTests.swift */,
 			);
 			path = UIKitTestableTests;
 			sourceTree = "<group>";
@@ -378,15 +384,13 @@
 				6239AB02224F729400673D65 /* WeakOrUnowned.swift in Sources */,
 				6239AAFC224F729400673D65 /* WindowsReader.swift in Sources */,
 				6239ABD9224F747200673D65 /* ModalPresenterSpy.swift in Sources */,
-				6239ABDF224F747200673D65 /* PrettyPrint.swift in Sources */,
 				6239ABE6224F747200673D65 /* KeyWindowMakerStub.swift in Sources */,
 				6239ABD0224F747200673D65 /* ReverseNavigatorSpy.swift in Sources */,
-				6239AB09224F729400673D65 /* ObservingViewController.swift in Sources */,
+				6239AB09224F729400673D65 /* ObservationViewController.swift in Sources */,
 				6239AB0B224F729400673D65 /* KeyWindowMaker.swift in Sources */,
 				6239AAFE224F729400673D65 /* RootViewControllerReadWriter.swift in Sources */,
 				6239ABD2224F747200673D65 /* TestNavigator.swift in Sources */,
 				6239ABD8224F747200673D65 /* GlobalModalDissolverSpy.swift in Sources */,
-				6239ABD7224F747200673D65 /* Arrays.swift in Sources */,
 				6239ABEA224F747200673D65 /* URLOpenerStub.swift in Sources */,
 				6239ABDB224F747200673D65 /* RootViewControllerReaderStub.swift in Sources */,
 				6239ABE4224F747200673D65 /* GlobalModalPresenterSpy.swift in Sources */,
@@ -412,8 +416,12 @@
 				6239ABD5224F747200673D65 /* PresentingViewControllerReaderSpy.swift in Sources */,
 				6239AAFB224F729400673D65 /* ModalDissolver.swift in Sources */,
 				6239ABE2224F747200673D65 /* RootViewControllerReadWriterStub.swift in Sources */,
-				2475E160A18170A448D5716A /* ViewControllersDump.swift in Sources */,
+				2475E160A18170A448D5716A /* Debug.swift in Sources */,
 				2475E28D4E15852E574ED6DC /* ViewControllerLifeCycleEvent.swift in Sources */,
+				2475EC998736C99FC244F7C7 /* WeakOrUnownedOrStrong.swift in Sources */,
+				2475E58D5E35D8634E4C7369 /* Weak.swift in Sources */,
+				2475EFFA4E664A98BC92029B /* Unowned.swift in Sources */,
+				2475E399ACE9C1FB7E98A039 /* Strong.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

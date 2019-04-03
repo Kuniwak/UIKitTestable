@@ -15,6 +15,19 @@ public protocol NavigatorProtocol {
 
 
 
+extension NavigatorProtocol {
+    public static func stub() -> NavigatorStub {
+        return NavigatorStub()
+    }
+
+
+    public static func spy(inheriting inherited: NavigatorProtocol = NavigatorStub()) -> NavigatorSpy {
+        return NavigatorSpy(inheriting: inherited)
+    }
+}
+
+
+
 /**
  A wrapper class to encapsulate a implementation of `UINavigationController#pushViewController(UIViewController, animated: Bool)`.
  You can replace the class to the stub or spy for testing.

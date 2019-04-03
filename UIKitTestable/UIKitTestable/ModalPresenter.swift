@@ -22,6 +22,36 @@ public protocol ModalPresenterProtocol {
 
 
 
+extension ModalPresenterProtocol {
+    public static func stub() -> ModalPresenterStub {
+        return ModalPresenterStub()
+    }
+
+
+    public static func syncStub() -> ModalPresenterSyncStub {
+        return ModalPresenterSyncStub()
+    }
+
+
+    public static func asyncStub() -> ModalPresenterAsyncStub {
+        return ModalPresenterAsyncStub()
+    }
+
+
+    public static func never() -> ModalPresenterNeverStub {
+        return ModalPresenterNeverStub()
+    }
+
+
+    public static func spy(
+        inheriting inherited: ModalPresenterProtocol = ModalPresenterSyncStub()
+    ) -> ModalPresenterSpy {
+        return ModalPresenterSpy(inheriting: inherited)
+    }
+}
+
+
+
 /**
  A wrapper class to encapsulate a implementation of `UIViewController#present(_: UIViewController, animated: Bool)`.
  */

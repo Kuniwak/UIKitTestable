@@ -8,6 +8,19 @@ public protocol WindowsReaderProtocol {
 
 
 
+extension WindowsReaderProtocol {
+    public static func stub(willReturn initialResult: [WeakOrUnownedOrStrong<UIWindow>]) -> WindowsReaderStub {
+        return WindowsReaderStub(willReturn: initialResult)
+    }
+
+
+    public static func spy(inheriting inherited: WindowsReaderProtocol = WindowsReaderStub()) -> WindowsReaderSpy {
+        return WindowsReaderSpy(inheriting: inherited)
+    }
+}
+
+
+
 public final class WindowsReader: WindowsReaderProtocol {
     private unowned var application: UIApplication
 

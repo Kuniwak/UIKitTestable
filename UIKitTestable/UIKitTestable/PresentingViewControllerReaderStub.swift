@@ -6,7 +6,9 @@ public final class PresentingViewControllerReaderStub: PresentingViewControllerR
     public var presentingViewController: WeakOrUnowned<UIViewController>
 
 
-    public init(willReturn presentingViewController: WeakOrUnowned<UIViewController>) {
+    public init(
+        willReturn presentingViewController: WeakOrUnowned<UIViewController> = .empty()
+    ) {
         self.presentingViewController = presentingViewController
     }
 }

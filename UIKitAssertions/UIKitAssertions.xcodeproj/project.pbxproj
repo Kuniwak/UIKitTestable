@@ -38,9 +38,9 @@
 		6239AB0C224F72C100673D65 = {
 			isa = PBXGroup;
 			children = (
-				6239AB18224F72C100673D65 /* UIKitAssertions */,
-				6239AB17224F72C100673D65 /* Products */,
 				6239AB65224F735500673D65 /* Frameworks */,
+				6239AB17224F72C100673D65 /* Products */,
+				6239AB18224F72C100673D65 /* UIKitAssertions */,
 			);
 			sourceTree = "<group>";
 		};

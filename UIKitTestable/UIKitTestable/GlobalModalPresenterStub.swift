@@ -23,7 +23,7 @@ public final class GlobalModalPresenterStub: GlobalModalPresenterProtocol {
 
 
     public func complete() {
-        completion?()
+        self.completion?()
     }
 }
 

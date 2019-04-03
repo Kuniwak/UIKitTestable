@@ -22,6 +22,36 @@ public protocol ModalDissolverProtocol {
 
 
 
+extension ModalDissolverProtocol {
+    public static func stub() -> ModalDissolverStub {
+        return ModalDissolverStub()
+    }
+
+
+    public static func syncStub() -> ModalDissolverSyncStub {
+        return ModalDissolverSyncStub()
+    }
+
+
+    public static func asyncStub() -> ModalDissolverAsyncStub {
+        return ModalDissolverAsyncStub()
+    }
+
+
+    public static func never() -> ModalDissolverNeverStub {
+        return ModalDissolverNeverStub()
+    }
+
+
+    public static func spy(
+        inheriting inherited: ModalDissolverProtocol = ModalDissolverSyncStub()
+    ) -> ModalDissolverSpy {
+        return ModalDissolverSpy(inheriting: inherited)
+    }
+}
+
+
+
 /**
  A wrapper class to encapsulate a implementation of `UIViewController#disiss(animated: Bool)`.
  You can replace the class to the stub or spy for testing.

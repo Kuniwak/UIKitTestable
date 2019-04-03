@@ -20,11 +20,43 @@ public protocol RootViewControllerWriterProtocol: AnyObject {
 
 
 
+extension RootViewControllerWriterProtocol {
+    public static func stub() -> RootViewControllerWriterStub {
+        return RootViewControllerWriterStub()
+    }
+
+
+    public static func syncStub() -> RootViewControllerWriterSyncStub {
+        return RootViewControllerWriterSyncStub()
+    }
+
+
+    public static func asyncStub() -> RootViewControllerWriterAsyncStub {
+        return RootViewControllerWriterAsyncStub()
+    }
+
+
+    public static func neverStub() -> RootViewControllerWriterNeverStub {
+        return RootViewControllerWriterNeverStub()
+    }
+
+
+    public static func spy(
+        inheriting inherited: RootViewControllerWriterProtocol = RootViewControllerWriterSyncStub()
+    ) -> RootViewControllerWriterSpy {
+        return RootViewControllerWriterSpy(inheriting: inherited)
+    }
+}
+
+
+
 /**
  A wrapper class to encapsulate a implementation of assigning `UIWindow.rootViewController`.
  You can replace the class to the stub or spy for testing.
  */
 public final class WindowRootViewControllerWriter: RootViewControllerWriterProtocol {
+    // NOTE: References to UIWindow must be weak or unowned. Because UIWindow have a UIViewController as their
+    //       rootViewController, so memory are leaked if the UIViewController has a instance of the class.
     private let window: WeakOrUnowned<UIWindow>
 
 

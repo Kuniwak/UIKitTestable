@@ -9,16 +9,16 @@ public final class PresentingViewControllerReaderSpy: PresentingViewControllerRe
 
 
     public private(set) var callArgs = [CallArgs]()
-    public var delegate: PresentingViewControllerReaderProtocol
+    public var inherited: PresentingViewControllerReaderProtocol
 
 
-    public init(delegating delegate: PresentingViewControllerReaderProtocol) {
-        self.delegate = delegate
+    public init(inheriting inherited: PresentingViewControllerReaderProtocol) {
+        self.inherited = inherited
     }
 
 
     public var presentingViewController: WeakOrUnowned<UIViewController> {
         self.callArgs.append(.presentingViewController)
-        return self.delegate.presentingViewController
+        return self.inherited.presentingViewController
     }
 }

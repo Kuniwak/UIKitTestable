@@ -19,17 +19,17 @@ public final class NavigatorSpy: NavigatorProtocol {
     public private(set) var callArgs: [CallArgs] = []
 
 
-    public var delegate: NavigatorProtocol
+    public var inherited: NavigatorProtocol
 
 
-    public init(delegating delegate: NavigatorProtocol = NavigatorStub()) {
-        self.delegate = delegate
+    public init(inheriting inherited: NavigatorProtocol = NavigatorStub()) {
+        self.inherited = inherited
     }
 
 
     public func push(viewController: UIViewController, animated: Bool) {
         self.callArgs.append(.push(viewController: viewController, animated: animated))
 
-        self.delegate.push(viewController: viewController, animated: animated)
+        self.inherited.push(viewController: viewController, animated: animated)
     }
 }

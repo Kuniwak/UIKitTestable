@@ -5,6 +5,36 @@ public protocol GlobalModalPresenterProtocol: ModalPresenterProtocol {}
 
 
 
+extension GlobalModalPresenterProtocol {
+    public static func stub() -> GlobalModalPresenterStub {
+        return GlobalModalPresenterStub()
+    }
+
+
+    public static func syncStub() -> GlobalModalPresenterSyncStub {
+        return GlobalModalPresenterSyncStub()
+    }
+
+
+    public static func asyncStub() -> GlobalModalPresenterAsyncStub {
+        return GlobalModalPresenterAsyncStub()
+    }
+
+
+    public static func never() -> GlobalModalPresenterNeverStub {
+        return GlobalModalPresenterNeverStub()
+    }
+
+
+    public static func spy(
+        inheriting inherited: GlobalModalPresenterProtocol = GlobalModalPresenterSyncStub()
+    ) -> GlobalModalPresenterSpy {
+        return GlobalModalPresenterSpy(inheriting: inherited)
+    }
+}
+
+
+
 /**
  A class for specialized ModalPresenters that can present a UIViewController unconditionally.
  You can present a UIViewController if you does not know what UIViewController is visible.

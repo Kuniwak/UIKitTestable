@@ -8,6 +8,23 @@ public protocol RootViewControllerReaderProtocol: AnyObject {
 
 
 
+extension RootViewControllerReaderProtocol {
+    public static func stub(
+        willReturn viewController: WeakOrUnownedOrStrong<UIViewController> = .empty()
+    ) -> RootViewControllerReaderStub {
+        return RootViewControllerReaderStub(willReturn: viewController)
+    }
+
+
+    public static func spy(
+        inheriting inherited: RootViewControllerReaderProtocol = RootViewControllerReaderStub()
+    ) -> RootViewControllerReaderSpy {
+        return RootViewControllerReaderSpy(inheriting: inherited)
+    }
+}
+
+
+
 public final class WindowRootViewControllerReader: RootViewControllerReaderProtocol {
     private let window: WeakOrUnowned<UIWindow>
 

@@ -3,12 +3,24 @@ import UIKit
 
 
 public final class RootViewControllerReadWriterStub: RootViewControllerReadWriterProtocol {
-    public var rootViewController: UIViewController?
+    public var nextResult: WeakOrUnownedOrStrong<UIViewController>
     private var completion: (() -> Void)?
 
 
-    public init(alwaysReturn rootViewController: UIViewController?) {
-        self.rootViewController = rootViewController
+    public var rootViewController: UIViewController? {
+        switch self.nextResult {
+        case .weakReference(let weak):
+            return weak.value
+        case .unownedReference(let unowned):
+            return unowned.value
+        case .strongReference(let strong):
+            return strong.value
+        }
+    }
+
+
+    public init(willReturn initialResult: WeakOrUnownedOrStrong<UIViewController> = .empty()) {
+        self.nextResult = initialResult
     }
 
 
@@ -26,12 +38,24 @@ public final class RootViewControllerReadWriterStub: RootViewControllerReadWrite
 
 
 public final class RootViewControllerReadWriterSyncStub: RootViewControllerReadWriterProtocol {
-    public var rootViewController: UIViewController?
+    public var nextResult: WeakOrUnownedOrStrong<UIViewController>
     private var completion: (() -> Void)?
 
 
-    public init(alwaysReturn rootViewController: UIViewController?) {
-        self.rootViewController = rootViewController
+    public var rootViewController: UIViewController? {
+        switch self.nextResult {
+        case .weakReference(let weak):
+            return weak.value
+        case .unownedReference(let unowned):
+            return unowned.value
+        case .strongReference(let strong):
+            return strong.value
+        }
+    }
+
+
+    public init(willReturn initialResult: WeakOrUnownedOrStrong<UIViewController> = .empty()) {
+        self.nextResult = initialResult
     }
 
 
@@ -44,12 +68,24 @@ public final class RootViewControllerReadWriterSyncStub: RootViewControllerReadW
 
 
 public final class RootViewControllerReadWriterAsyncStub: RootViewControllerReadWriterProtocol {
-    public var rootViewController: UIViewController?
+    public var nextResult: WeakOrUnownedOrStrong<UIViewController>
     private var completion: (() -> Void)?
 
 
-    public init(alwaysReturn rootViewController: UIViewController?) {
-        self.rootViewController = rootViewController
+    public var rootViewController: UIViewController? {
+        switch self.nextResult {
+        case .weakReference(let weak):
+            return weak.value
+        case .unownedReference(let unowned):
+            return unowned.value
+        case .strongReference(let strong):
+            return strong.value
+        }
+    }
+
+
+    public init(willReturn initialResult: WeakOrUnownedOrStrong<UIViewController> = .empty()) {
+        self.nextResult = initialResult
     }
 
 
@@ -64,12 +100,24 @@ public final class RootViewControllerReadWriterAsyncStub: RootViewControllerRead
 
 
 public final class RootViewControllerReadWriterNeverStub: RootViewControllerReadWriterProtocol {
-    public var rootViewController: UIViewController?
+    public var nextResult: WeakOrUnownedOrStrong<UIViewController>
     private var completion: (() -> Void)?
 
 
-    public init(alwaysReturn rootViewController: UIViewController?) {
-        self.rootViewController = rootViewController
+    public var rootViewController: UIViewController? {
+        switch self.nextResult {
+        case .weakReference(let weak):
+            return weak.value
+        case .unownedReference(let unowned):
+            return unowned.value
+        case .strongReference(let strong):
+            return strong.value
+        }
+    }
+
+
+    public init(willReturn initialResult: WeakOrUnownedOrStrong<UIViewController> = .empty()) {
+        self.nextResult = initialResult
     }
 
 

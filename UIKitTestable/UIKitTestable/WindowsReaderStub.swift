@@ -3,10 +3,24 @@ import UIKit
 
 
 public final class WindowsReaderStub: WindowsReaderProtocol {
-    public var windows: [UIWindow]
+    public var nextResult: [WeakOrUnownedOrStrong<UIWindow>]
 
 
-    public init(alwaysReturn windows: [UIWindow]) {
-        self.windows = windows
+    public var windows: [UIWindow] {
+        return self.nextResult.compactMap { (weakOrUnownedOrStrong) -> UIWindow? in
+            switch weakOrUnownedOrStrong {
+            case .weakReference(let weak):
+                return weak.value
+            case .unownedReference(let unowned):
+                return unowned.value
+            case .strongReference(let strong):
+                return strong.value
+            }
+        }
+    }
+
+
+    public init(willReturn initialResult: [WeakOrUnownedOrStrong<UIWindow>] = []) {
+        self.nextResult = initialResult
     }
 }

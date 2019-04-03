@@ -2,16 +2,23 @@ import UIKit
 
 
 
-public final class ObservingViewController: UIViewController {
+/// A UIViewController for observing life cycle events.
+public final class ObservationViewController: UIViewController {
+    /// A event of the ObservingViewController.
     public typealias Event = ViewControllerLifeCycleEvent
+
+    /// History of events happened.
     public private(set) var history: [Event] = []
 
-
     private let shouldPrintEvents: Bool
-    private let observer: ((ObservingViewController, Event) -> Void)?
+    private let observer: ((ObservationViewController, Event) -> Void)?
 
 
-    public init(shouldPrintEvents: Bool = false, _ observer: ((ObservingViewController, Event) -> Void)? = nil) {
+    /**
+     - parameter shouldPrintEvents: Whether events happened should be printed. Default is false.
+     - parameter observer: Callback will called when every life cycle events are happened.
+     */
+    public init(shouldPrintEvents: Bool = false, _ observer: ((ObservationViewController, Event) -> Void)? = nil) {
         self.shouldPrintEvents = shouldPrintEvents
         self.observer = observer
 

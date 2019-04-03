@@ -18,24 +18,24 @@ public final class ModalPresenterSpy: ModalPresenterProtocol {
      */
     public private(set) var callArgs: [CallArgs] = []
 
-    public var delegate: ModalPresenterProtocol
+    public var inherited: ModalPresenterProtocol
 
 
-    public init(delegating delegate: ModalPresenterProtocol = ModalPresenterStub()) {
-        self.delegate = delegate
+    public init(inheriting inherited: ModalPresenterProtocol = ModalPresenterStub()) {
+        self.inherited = inherited
     }
 
 
     public func present(viewController: UIViewController, animated: Bool) {
         self.callArgs.append(.present(viewController: viewController, animated: animated))
 
-        self.delegate.present(viewController: viewController, animated: animated)
+        self.inherited.present(viewController: viewController, animated: animated)
     }
 
 
     public func present(viewController: UIViewController, animated: Bool, completion: (() -> Void)?) {
         self.callArgs.append(.present(viewController: viewController, animated: animated))
 
-        self.delegate.present(viewController: viewController, animated: animated, completion: completion)
+        self.inherited.present(viewController: viewController, animated: animated, completion: completion)
     }
 }

@@ -17,6 +17,21 @@ public protocol ReverseNavigatorProtocol {
 
 
 
+extension ReverseNavigatorProtocol {
+    public static func stub(willThrow error: ReverseNavigatorError? = nil) -> ReverseNavigatorStub {
+        return ReverseNavigatorStub(willThrow: error)
+    }
+
+
+    public static func spy(
+        inheriting inherited: ReverseNavigatorProtocol = ReverseNavigatorStub()
+    ) -> ReverseNavigatorSpy {
+        return ReverseNavigatorSpy(inheriting: inherited)
+    }
+}
+
+
+
 /**
  A type for errors that can be thrown when `UINavigationController#popToViewController(UIVIewController, animated: Bool)`.
  */

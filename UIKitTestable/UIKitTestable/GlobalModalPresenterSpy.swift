@@ -19,11 +19,11 @@ public final class GlobalModalPresenterSpy: GlobalModalPresenterProtocol {
     public private(set) var callArgs: [CallArgs] = []
 
 
-    public var delegate: GlobalModalPresenterProtocol
+    public var inherited: GlobalModalPresenterProtocol
 
 
-    public init(inherit delegate: GlobalModalPresenterProtocol) {
-        self.delegate = delegate
+    public init(inheriting inherited: GlobalModalPresenterProtocol) {
+        self.inherited = inherited
     }
 
 
@@ -49,7 +49,7 @@ public final class GlobalModalPresenterSpy: GlobalModalPresenterProtocol {
             animated: animated
         ))
 
-        self.delegate.present(
+        self.inherited.present(
             viewController: viewController,
             animated: animated,
             completion: completion

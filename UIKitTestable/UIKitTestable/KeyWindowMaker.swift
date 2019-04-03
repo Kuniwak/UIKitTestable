@@ -11,6 +11,21 @@ public protocol KeyWindowMakerProtocol {
 
 
 
+extension KeyWindowMakerProtocol {
+    public static func stub() -> KeyWindowMakerStub {
+        return KeyWindowMakerStub()
+    }
+
+
+    public static func spy(
+        inheriting inherited: KeyWindowMakerProtocol = KeyWindowMakerStub()
+    ) -> KeyWindowMakerSpy {
+        return KeyWindowMakerSpy(inheriting: inherited)
+    }
+}
+
+
+
 public final class KeyWindowMaker: KeyWindowMakerProtocol {
     private let window: WeakOrUnowned<UIWindow>
 

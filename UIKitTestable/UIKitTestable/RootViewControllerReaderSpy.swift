@@ -9,17 +9,17 @@ public final class RootViewControllerReaderSpy: RootViewControllerReaderProtocol
 
 
     public private(set) var callArgs = [CallArgs]()
-    private var delegate: RootViewControllerReaderProtocol
+    private var inherited: RootViewControllerReaderProtocol
 
 
     public var rootViewController: UIViewController? {
         self.callArgs.append(.rootViewController)
 
-        return self.delegate.rootViewController
+        return self.inherited.rootViewController
     }
 
 
-    public init(delegating delegate: RootViewControllerReaderProtocol) {
-        self.delegate = delegate
+    public init(inheriting inherited: RootViewControllerReaderProtocol) {
+        self.inherited = inherited
     }
 }

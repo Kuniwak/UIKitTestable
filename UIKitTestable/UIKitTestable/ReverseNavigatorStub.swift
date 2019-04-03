@@ -10,7 +10,7 @@ public final class ReverseNavigatorStub: ReverseNavigatorProtocol {
     public var error: ReverseNavigatorError?
 
 
-    public init(willThrow error: ReverseNavigatorError?) {
+    public init(willThrow error: ReverseNavigatorError? = nil) {
         self.error = error
     }
 

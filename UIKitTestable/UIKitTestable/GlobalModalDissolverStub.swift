@@ -2,6 +2,8 @@ import UIKit
 
 
 
+/// A stub class for dismissing global modals.
+/// This class is useful for ignoring calls of `UINavigationController#dismiss` for testing.
 public final class GlobalModalDissolverStub: GlobalModalDissolverProtocol {
     private var completion: (() -> Void)?
 
@@ -15,6 +17,7 @@ public final class GlobalModalDissolverStub: GlobalModalDissolverProtocol {
     }
 
 
+    /// Call the latest completion callback.
     public func complete() {
         self.completion?()
     }

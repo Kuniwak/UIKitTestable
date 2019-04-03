@@ -34,31 +34,31 @@ public final class URLOpenerSpy: URLOpenerProtocol {
      You can use the property to test how the method is called.
      */
     public private(set) var callArgs = [CallArgs]()
-    public var delegate: URLOpenerProtocol
+    public var inherited: URLOpenerProtocol
 
 
-    public init(inheriting delegate: URLOpenerProtocol = URLOpenerStub()) {
-        self.delegate = delegate
+    public init(inheriting inherited: URLOpenerProtocol = URLOpenerStub()) {
+        self.inherited = inherited
     }
 
 
     public func open(url: URL) {
         self.callArgs.append(.open(url: url, options: nil))
 
-        self.delegate.open(url: url)
+        self.inherited.open(url: url)
     }
 
 
     public func open(url: URL, completion: @escaping (Bool) -> Void) {
         self.callArgs.append(.open(url: url, options: nil))
 
-        self.delegate.open(url: url, completion: completion)
+        self.inherited.open(url: url, completion: completion)
     }
 
 
     public func open(url: URL, options: [UIApplication.OpenExternalURLOptionsKey: Any], completion: @escaping (Bool) -> Void) {
         self.callArgs.append(.open(url: url, options: options))
 
-        self.delegate.open(url: url, options: options, completion: completion)
+        self.inherited.open(url: url, options: options, completion: completion)
     }
 }

@@ -9,16 +9,16 @@ public final class WindowsReaderSpy: WindowsReaderProtocol {
 
 
     public private(set) var callArgs = [CallArgs]()
-    public var delegate: WindowsReaderProtocol
+    public var inherited: WindowsReaderProtocol
 
 
-    public init(delegating delegate: WindowsReaderProtocol = WindowsReaderStub(alwaysReturn: [])) {
-        self.delegate = delegate
+    public init(inheriting inherited: WindowsReaderProtocol = WindowsReaderStub()) {
+        self.inherited = inherited
     }
 
 
     public var windows: [UIWindow] {
         self.callArgs.append(.windows)
-        return self.delegate.windows
+        return self.inherited.windows
     }
 }

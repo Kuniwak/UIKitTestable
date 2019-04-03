@@ -2,7 +2,9 @@ import UIKit
 
 
 
+/// A UIWindow for detecting resource leaks.
 public final class CountedWindow: UIWindow {
+    /// Number of living CountedWindow.
     public private(set) static var numberOfLiving: UInt = 0
 
 

@@ -10,38 +10,38 @@ public final class KeyWindowMakerSpy: KeyWindowMakerProtocol {
         case resignKey
     }
     public private(set) var callArgs = [CallArgs]()
-    public var delegate: KeyWindowMakerProtocol
+    public var inherited: KeyWindowMakerProtocol
 
 
-    public init(delegating delegate: KeyWindowMakerProtocol = KeyWindowMakerStub()) {
-        self.delegate = delegate
+    public init(inheriting inherited: KeyWindowMakerProtocol = KeyWindowMakerStub()) {
+        self.inherited = inherited
     }
 
 
     public func makeKey() {
         self.callArgs.append(.makeKey)
 
-        self.delegate.makeKey()
+        self.inherited.makeKey()
     }
 
 
     public func makeKeyAndVisible() {
         self.callArgs.append(.makeKeyAndVisible)
 
-        self.delegate.makeKeyAndVisible()
+        self.inherited.makeKeyAndVisible()
     }
 
 
     public func becomeKey() {
         self.callArgs.append(.becomeKey)
 
-        self.delegate.becomeKey()
+        self.inherited.becomeKey()
     }
 
 
     public func resignKey() {
         self.callArgs.append(.resignKey)
 
-        self.delegate.resignKey()
+        self.inherited.resignKey()
     }
 }

@@ -19,17 +19,17 @@ public final class ReverseNavigatorSpy: ReverseNavigatorProtocol {
     public private(set) var callArgs: [CallArgs] = []
 
 
-    public var delegate: ReverseNavigatorProtocol
+    public var inherited: ReverseNavigatorProtocol
 
 
-    public init(delegating delegate: ReverseNavigatorProtocol = ReverseNavigatorStub(willThrow: nil)) {
-        self.delegate = delegate
+    public init(inheriting inherited: ReverseNavigatorProtocol = ReverseNavigatorStub(willThrow: nil)) {
+        self.inherited = inherited
     }
 
 
     public func pop(animated: Bool) throws {
         self.callArgs.append(.back(animated: animated))
 
-        try self.delegate.pop(animated: animated)
+        try self.inherited.pop(animated: animated)
     }
 }
