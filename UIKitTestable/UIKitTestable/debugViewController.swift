@@ -11,10 +11,12 @@ import UIKit
  .didInit
  .viewDidLoad
  .viewWillAppear(animated: true)
+ .viewLayoutMarginsDidChange
+ .viewSafeAreaInsetsDidChange
  .viewWillLayoutSubviews
  .viewDidLayoutSubviews
  .viewDidAppear(animated: true)
- ...
+
  ```
  */
 public func debugViewController() -> ObservationViewController {

@@ -18,6 +18,8 @@ class DebugViewControllerTests: XCTestCase {
                     .didInit
                     .viewDidLoad
                     .viewWillAppear(animated: true)
+                    .viewLayoutMarginsDidChange
+                    .viewSafeAreaInsetsDidChange
                     .viewWillLayoutSubviews
                     .viewDidLayoutSubviews
                     .viewDidAppear(animated: true)
