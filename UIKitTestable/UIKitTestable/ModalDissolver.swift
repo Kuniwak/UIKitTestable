@@ -61,15 +61,15 @@ public final class ModalDissolver: ModalDissolverProtocol {
     private let viewController: WeakOrUnowned<UIViewController>
 
 
-    /**
-     Return newly initialized ModalDissolver of the UIViewController.
-     The specified UIViewController will be dismissed by calling the method `dismiss(animated: Bool)`.
-     */
+    /// - parameters:
+    ///     - viewController: An UIViewController is dismissed when the methods `dismiss` are called.
     public init(willDismiss viewController: WeakOrUnowned<UIViewController>) {
         self.viewController = viewController
     }
 
 
+    /// Dismisses the presented view controller.
+    /// This method behave like `UIViewController#dismiss(animated: Bool)`
     public func dismiss(animated: Bool) {
         switch self.viewController {
         case .weakReference(let weak):
@@ -84,6 +84,8 @@ public final class ModalDissolver: ModalDissolverProtocol {
     }
 
 
+    /// Dismisses the presented view controller.
+    /// This method behave like `UIViewController#dismiss(animated: Bool, completion: (() -> Void)?)`
     public func dismiss(animated: Bool, completion: (() -> Void)?) {
         switch self.viewController {
         case .weakReference(let weak):

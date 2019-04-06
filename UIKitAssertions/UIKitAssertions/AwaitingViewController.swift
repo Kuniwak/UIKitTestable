@@ -5,10 +5,10 @@ import XCTest
 
 
 public func awaitViewController(
-    event expectedEventKey: UIKitTestable.ViewControllerLifeCycleEvent.CodingKeys,
+    event expectedEventKey: UIKitTestable.ViewControllerEvent.CodingKeys,
     on testCase: XCTestCase,
     timeout: TimeInterval? = nil,
-    _ callback: @escaping (UIKitTestable.ObservationViewController, UIKitTestable.ViewControllerLifeCycleEvent) -> Void
+    _ callback: @escaping (UIKitTestable.ObservationViewController, UIKitTestable.ViewControllerEvent) -> Void
 ) {
     let expectation = testCase.expectation(description: "Awaiting \(expectedEventKey.rawValue)")
 
@@ -42,7 +42,7 @@ public func awaitViewDidLoad(
 
 
 public func awaitingViewController(
-    willCall callback: @escaping (UIKitTestable.ObservationViewController, UIKitTestable.ViewControllerLifeCycleEvent) -> Void
+    willCall callback: @escaping (UIKitTestable.ObservationViewController, UIKitTestable.ViewControllerEvent) -> Void
 ) -> UIKitTestable.ObservationViewController {
     return .init(callback)
 }

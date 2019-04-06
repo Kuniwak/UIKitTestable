@@ -2,23 +2,49 @@ import UIKit
 
 
 
-public enum ViewControllerLifeCycleEvent {
+/// An enum for events that can be will be notified on UIViewControllers.
+public enum ViewControllerEvent {
+    /// An event that will be notified after the UIViewController was initialized.
     case didInit
+    /// An event that will be notified after `viewDidLoad`.
+    /// - SeeAlso: [Apple Developer Documentation](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621495-viewdidload)
     case viewDidLoad
+    /// An event that will be notified after `viewWillAppear`.
+    /// - SeeAlso: [Apple Developer Documentation](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621510-viewwillappear)
     case viewWillAppear(animated: Bool)
+    /// An event that will be notified after `viewDidAppear`.
+    /// - SeeAlso: [Apple Developer Documentation](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621423-viewdidappear)
     case viewDidAppear(animated: Bool)
+    /// An event that will be notified after `viewWillDisappear`.
+    /// - SeeAlso: [Apple Developer Documentation](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621485-viewwilldisappear)
     case viewWillDisappear(animated: Bool)
+    /// An event that will be notified after `viewDidDisappear`.
+    /// - SeeAlso: [Apple Developer Documentation](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621477-viewdiddisappear)
     case viewDidDisappear(animated: Bool)
+    /// An event that will be notified after `viewWillLayoutSubviews`.
+    /// - SeeAlso: [Apple Developer Documentation](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621437-viewwilllayoutsubviews)
     case viewWillLayoutSubviews
+    /// An event that will be notified after `viewDidLayoutSubviews`.
+    /// - SeeAlso: [Apple Developer Documentation](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621398-viewdidlayoutsubviews)
     case viewDidLayoutSubviews
+    /// An event that will be notified after `viewLayoutMarginsDidChange`.
+    /// - SeeAlso: [Apple Developer Documentation](https://developer.apple.com/documentation/uikit/uiviewcontroller/2891114-viewlayoutmarginsdidchange)
+    case viewLayoutMarginsDidChange
+    /// An event that will be notified after `didMove`.
+    /// - SeeAlso: [Apple Developer Documentation](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621405-didmove)
     case didMove(parent: UIViewController?)
+    /// An event that will be notified after `willMove`.
+    /// - SeeAlso: [Apple Developer Documentation](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621381-willmove)
     case willMove(parent: UIViewController?)
+    /// An event that will be notified after `didReceiveMemoryWarning`.
+    /// - SeeAlso: [Apple Developer Documentation](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621409-didreceivememorywarning)
     case didReceiveMemoryWarning
-    case viewWillTransition(size: CGSize, coordinator: UIViewControllerTransitionCoordinator)
+    /// An event that will be notified before the UIViewController is released.
     case willDeinit
 
 
-    public var key: CodingKeys {
+    /// Returns the event name.
+    public var name: Name {
         switch self {
         case .didInit:
             return .didInit
@@ -36,14 +62,14 @@ public enum ViewControllerLifeCycleEvent {
             return .viewWillLayoutSubviews
         case .viewDidLayoutSubviews:
             return .viewDidLayoutSubviews
+        case .viewLayoutMarginsDidChange:
+            return .viewLayoutMarginsDidChange
         case .didMove:
             return .didMove
         case .willMove:
             return .willMove
         case .didReceiveMemoryWarning:
             return .didReceiveMemoryWarning
-        case .viewWillTransition:
-            return .viewWillTransition
         case .willDeinit:
             return .willDeinit
         }
@@ -51,7 +77,8 @@ public enum ViewControllerLifeCycleEvent {
 
 
 
-    public enum CodingKeys: String, Equatable, Hashable, CustomStringConvertible {
+    /// A enum for names of `ViewControllerEvent`.
+    public enum Name: String, Equatable, Hashable, CustomStringConvertible {
         case didInit
         case viewDidLoad
         case viewWillAppear
@@ -60,10 +87,10 @@ public enum ViewControllerLifeCycleEvent {
         case viewDidDisappear
         case viewWillLayoutSubviews
         case viewDidLayoutSubviews
+        case viewLayoutMarginsDidChange
         case didMove
         case willMove
         case didReceiveMemoryWarning
-        case viewWillTransition
         case willDeinit
 
 
@@ -75,44 +102,11 @@ public enum ViewControllerLifeCycleEvent {
 
 
 
-extension ViewControllerLifeCycleEvent: Equatable {
-    public static func ==(lhs: ViewControllerLifeCycleEvent, rhs: ViewControllerLifeCycleEvent) -> Bool {
-        switch (lhs, rhs) {
-        case (.didInit, .didInit):
-            return true
-        case (.viewDidLoad, .viewDidLoad):
-            return true
-        case (.viewWillAppear(animated: let l), .viewWillAppear(animated: let r)):
-            return l == r
-        case (.viewDidAppear(animated: let l), .viewDidAppear(animated: let r)):
-            return l == r
-        case (.viewWillDisappear(animated: let l), .viewWillDisappear(animated: let r)):
-            return l == r
-        case (.viewDidDisappear(animated: let l), .viewDidDisappear(animated: let r)):
-            return l == r
-        case (.viewWillLayoutSubviews, .viewWillLayoutSubviews):
-            return true
-        case (.viewDidLayoutSubviews, .viewDidLayoutSubviews):
-            return true
-        case (.didMove(parent: let l), .didMove(parent: let r)):
-            return l == r
-        case (.willMove(parent: let l), .willMove(parent: let r)):
-            return l == r
-        case (.didReceiveMemoryWarning, .didReceiveMemoryWarning):
-            return true
-        case (.viewWillTransition(size: let ls, coordinator: let lc), .viewWillTransition(size: let rs, coordinator: let rc)):
-            return ls == rs && lc.isEqual(rc)
-        case (.willDeinit, .willDeinit):
-            return true
-        default:
-            return false
-        }
-    }
-}
+extension ViewControllerEvent: Equatable {}
 
 
 
-extension ViewControllerLifeCycleEvent: CustomDebugStringConvertible {
+extension ViewControllerEvent: CustomDebugStringConvertible {
     public var debugDescription: String {
         switch self {
         case .didInit:
@@ -131,6 +125,8 @@ extension ViewControllerLifeCycleEvent: CustomDebugStringConvertible {
             return ".viewWillDisappear(animated: \(animated))"
         case .viewDidDisappear(animated: let animated):
             return ".viewDidDisappear(animated: \(animated))"
+        case .viewLayoutMarginsDidChange:
+            return ".viewLayoutMarginsDidChange"
         case .willMove(parent: .some(let parent)):
             return ".willMove(parent: \(type(of: parent)))  (at \(address(of: parent))"
         case .willMove(parent: .none):
@@ -141,8 +137,6 @@ extension ViewControllerLifeCycleEvent: CustomDebugStringConvertible {
             return ".didMove(parent: nil)"
         case .didReceiveMemoryWarning:
             return ".didReceiveMemoryWarning"
-        case .viewWillTransition(size: let size, coordinator: let coordinator):
-            return ".viewWillTransition(size: CGSize(width: \(size.width), height: \(size.height)), coordinator: \(typeName(of: coordinator))  (at \(address(of: coordinator)))"
         case .willDeinit:
             return ".willDeinit"
         }
@@ -151,7 +145,7 @@ extension ViewControllerLifeCycleEvent: CustomDebugStringConvertible {
 
 
 
-extension ViewControllerLifeCycleEvent: CustomReflectable {
+extension ViewControllerEvent: CustomReflectable {
     public var customMirror: Mirror {
         return Mirror(self, children: [])
     }

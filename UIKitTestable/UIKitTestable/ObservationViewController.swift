@@ -5,7 +5,7 @@ import UIKit
 /// A UIViewController for life cycle events observation.
 public final class ObservationViewController: UIViewController {
     /// Events that can be observer by ObservingViewControllers.
-    public typealias Event = ViewControllerLifeCycleEvent
+    public typealias Event = ViewControllerEvent
 
     /// History of events happened.
     public private(set) var history: [Event] = []
@@ -22,7 +22,7 @@ public final class ObservationViewController: UIViewController {
 
         super.init(nibName: nil, bundle: nil)
 
-        self.on(lifeCycleEvent: .didInit)
+        self.on(event: .didInit)
     }
 
 
@@ -32,78 +32,78 @@ public final class ObservationViewController: UIViewController {
 
 
     deinit {
-        self.on(lifeCycleEvent: .willDeinit)
+        self.on(event: .willDeinit)
     }
 
 
-    private func on(lifeCycleEvent: Event) {
-        self.history.append(lifeCycleEvent)
-        self.observer?(self, lifeCycleEvent)
+    private func on(event: Event) {
+        self.history.append(event)
+        self.observer?(self, event)
     }
 
 
     public override func viewDidLoad() {
         super.viewDidLoad()
-        self.on(lifeCycleEvent: .viewDidLoad)
+        self.on(event: .viewDidLoad)
     }
 
 
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.on(lifeCycleEvent: .viewWillAppear(animated: animated))
+        self.on(event: .viewWillAppear(animated: animated))
     }
 
 
     public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.on(lifeCycleEvent: .viewDidAppear(animated: animated))
+        self.on(event: .viewDidAppear(animated: animated))
     }
 
 
     public override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.on(lifeCycleEvent: .viewWillDisappear(animated: animated))
+        self.on(event: .viewWillDisappear(animated: animated))
     }
 
 
     public override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        self.on(lifeCycleEvent: .viewDidDisappear(animated: animated))
+        self.on(event: .viewDidDisappear(animated: animated))
     }
 
 
     public override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        self.on(lifeCycleEvent: .viewWillLayoutSubviews)
+        self.on(event: .viewWillLayoutSubviews)
     }
 
 
     public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        self.on(lifeCycleEvent: .viewDidLayoutSubviews)
+        self.on(event: .viewDidLayoutSubviews)
     }
 
 
     public override func didMove(toParent parent: UIViewController?) {
         super.didMove(toParent: parent)
-        self.on(lifeCycleEvent: .didMove(parent: parent))
+        self.on(event: .didMove(parent: parent))
     }
 
 
     public override func willMove(toParent parent: UIViewController?) {
         super.willMove(toParent: parent)
-        self.on(lifeCycleEvent: .willMove(parent: parent))
+        self.on(event: .willMove(parent: parent))
     }
 
 
     public override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        self.on(lifeCycleEvent: .didReceiveMemoryWarning)
+        self.on(event: .didReceiveMemoryWarning)
     }
 
 
     public override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
-        self.on(lifeCycleEvent: .viewWillTransition(size: size, coordinator: coordinator))
+        self.on(event: .viewWillTransition(size: size, coordinator: coordinator))
     }
 }

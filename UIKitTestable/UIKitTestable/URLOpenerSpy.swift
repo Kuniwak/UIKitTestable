@@ -2,10 +2,8 @@ import UIKit
 
 
 
-/**
- A spy class for UrlOpener.
- This class is useful for capturing calls of `UIApplication#open` for testing.
- */
+/// A spy class for UrlOpener.
+/// This class is useful for capturing calls of `UIApplication#open` for testing.
 public final class URLOpenerSpy: URLOpenerProtocol {
     /// Call arguments of methods of the class.
     public enum CallArgs: Equatable {

@@ -73,6 +73,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2475E3927075C6BA8D9E3F27 /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Examples;
+			sourceTree = "<group>";
+		};
 		6239AA3E224F6E2700673D65 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +121,7 @@
 				6239AAE0224F708200673D65 /* GlobalModalPresenterTests.swift */,
 				6239AA61224F6E2800673D65 /* Info.plist */,
 				2475E0B6D144789BF3D87E50 /* debugViewControllerTests.swift */,
+				2475E3927075C6BA8D9E3F27 /* Examples */,
 			);
 			path = UIKitTestableAppTests;
 			sourceTree = "<group>";

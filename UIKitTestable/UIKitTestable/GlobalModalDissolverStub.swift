@@ -13,19 +13,23 @@ public final class GlobalModalDissolverManualStub: GlobalModalDissolverProtocol 
     public init() {}
 
 
-    /// Do nothing.
+    /// Does nothing.
     public func dismiss(animated: Bool) {}
 
 
-    /// Do nothing and the given completion will be not called but can call it by calling `complete`.
+    /// Does nothing and the given completion will be not called but can call it by calling `complete`.
     public func dismiss(animated: Bool, completion: (() -> Void)?) {
         self.completion = completion
     }
 
 
-    /// Call the latest completion callback.
-    public func complete() {
-        self.completion?()
+    /// Calls the last completion if exists. Otherwise throws a NoSuchCompletions.
+    /// - throws: NoSuchCompletions.
+    public func complete() throws {
+        guard let completion = self.completion else {
+            throw NoSuchCompletions()
+        }
+        completion()
     }
 }
 
@@ -38,11 +42,11 @@ public final class GlobalModalDissolverSyncStub: GlobalModalDissolverProtocol {
     public init() {}
 
 
-    /// Do nothing.
+    /// Does nothing.
     public func dismiss(animated: Bool) {}
 
 
-    /// Do nothing but call the completion immediately.
+    /// Does nothing but the completion will be called immediately.
     public func dismiss(animated: Bool, completion: (() -> Void)?) {
         completion?()
     }
@@ -57,11 +61,11 @@ public final class GlobalModalDissolverAsyncStub: GlobalModalDissolverProtocol {
     public init() {}
 
 
-    /// Do nothing.
+    /// Does nothing.
     public func dismiss(animated: Bool) {}
 
 
-    /// Do nothing but call the completion asynchronously.
+    /// Does nothing but the completion will be call asynchronously.
     public func dismiss(animated: Bool, completion: (() -> Void)?) {
         DispatchQueue.main.async {
             completion?()
@@ -77,10 +81,10 @@ public final class GlobalModalDissolverNeverStub: GlobalModalDissolverProtocol {
     public init() {}
 
 
-    /// Do nothing.
+    /// Does nothing.
     public func dismiss(animated: Bool) {}
 
 
-    /// Do nothing and will never call the completion.
+    /// Does nothing and will never call the completion.
     public func dismiss(animated: Bool, completion: (() -> Void)?) {}
 }

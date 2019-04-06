@@ -2,27 +2,33 @@ import UIKit
 
 
 
-/**
- A stub class for RootViewControllerWriter.
- This class is useful for ignoring assigning `UIWindow.rootViewController` for testing.
-
- The completion of `alter(to:UIViewController, completion:(() -> Void)?)` can be called when `complete()` is called.
- */
+/// A stub class for `RootViewControllerWriter`.
+/// This class is useful to prevent side-effects for testing.
 public final class RootViewControllerWriterManualStub: RootViewControllerWriterProtocol {
-    private var completion: (() -> Void)? = nil
+    /// The last completion.
+    private var completion: (() -> Void)?
 
 
     public init() {}
 
 
+    /// Does nothing.
     public func alter(to rootViewController: UIViewController) {}
+
+
+    /// Does nothing but the completion can be called by `complete`.
     public func alter(to rootViewController: UIViewController, completion: (() -> Void)?) {
         self.completion = completion
     }
 
 
-    public func complete() {
-        self.completion?()
+    /// Calls the last completion if exists. Otherwise throws a NoSuchCompletions.
+    /// - throws: NoSuchCompletions.
+    public func complete() throws {
+        guard let completion = self.completion else {
+            throw NoSuchCompletions()
+        }
+        completion()
     }
 }
 

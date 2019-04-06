@@ -2,62 +2,73 @@ import UIKit
 
 
 
-/**
- A stub class for URLOpener.
- This class is useful for ignoring calls of `UIApplication#open` for testing.
-
- You can call the completion callback of `open` by calling `complete(isSuccess:Book)`.
- */
+/// A stub class for `URLOpener`.
+/// This class is useful to prevent side-effects for testing.
+/// Given completions can be called manually.
 public final class URLOpenerManualStub: URLOpenerProtocol {
+    /// A last completion if exists.
     private var completion: ((Bool) -> Void)?
 
 
     public init() {}
 
 
+    /// Does nothing.
     public func open(url: URL) {}
 
 
+    /// Does nothing.
     public func open(url: URL, completion: @escaping (Bool) -> Void) {
         self.completion = completion
     }
 
 
+    /// Does nothing.
     public func open(url: URL, options: [UIApplication.OpenExternalURLOptionsKey: Any], completion: @escaping (Bool) -> Void) {
         self.completion = completion
     }
 
 
-    public func complete(isSuccess: Bool) {
-        self.completion?(isSuccess)
+    /// Calls the last completion if exists. Otherwise throws a NoSuchCompletions.
+    /// - parameters:
+    ///     - isSuccess: A Boolean indicating whether the URL was opened successfully.
+    /// - throws: NoSuchCompletions.
+    public func complete(_ isSuccess: Bool) throws {
+        guard let completion = self.completion else {
+            throw NoSuchCompletions()
+        }
+        completion(isSuccess)
     }
 }
 
 
 
-/**
- A stub class for URLOpener.
- This class is useful for ignoring calls of `UIApplication#open` for testing.
-
- The completion callback of `open` will be called synchronously.
- */
+/// A stub class for `URLOpener`.
+/// This class is useful to prevent side-effects for testing.
+/// Given completions will be called immediately.
 public final class URLOpenerSyncStub: URLOpenerProtocol {
+    /// A next callback argument.
     public var nextCallbackArgument: Bool
 
 
-    public init(willCallWith firstCallbackArgument: Bool = true) {
+    /// - parameters:
+    ///     - firstCallbackArgument: A next callback argument.
+    public init(willCallWith firstCallbackArgument: Bool = false) {
         self.nextCallbackArgument = firstCallbackArgument
     }
 
 
+    /// Does nothing.
     public func open(url: URL) {}
 
 
+    /// Does nothing but the completion will be called immediately.
     public func open(url: URL, completion: @escaping (Bool) -> Void) {
         completion(self.nextCallbackArgument)
     }
 
 
+    /// Does nothing but the completion will be called immediately.
     public func open(url: URL, options: [UIApplication.OpenExternalURLOptionsKey: Any], completion: @escaping (Bool) -> Void) {
         completion(self.nextCallbackArgument)
     }
@@ -65,24 +76,26 @@ public final class URLOpenerSyncStub: URLOpenerProtocol {
 
 
 
-/**
- A stub class for URLOpener.
- This class is useful for ignoring calls of `UIApplication#open` for testing.
-
- The completion callback of `open` will be called asynchronously.
- */
+/// A stub class for `URLOpener`.
+/// This class is useful to prevent side-effects for testing.
+/// Given completions will be called asynchronously.
 public final class URLOpenerAsyncStub: URLOpenerProtocol {
+    /// A next callback argument.
     public var nextCallbackArgument: Bool
 
 
+    /// - parameters:
+    ///     - firstCallbackArgument: A next callback argument.
     public init(willCallWith firstCallbackArgument: Bool) {
         self.nextCallbackArgument = firstCallbackArgument
     }
 
 
+    /// Does nothing.
     public func open(url: URL) {}
 
 
+    /// Does nothing but the completion will be called asynchronously.
     public func open(url: URL, completion: @escaping (Bool) -> Void) {
         DispatchQueue.main.async {
             completion(self.nextCallbackArgument)
@@ -90,6 +103,7 @@ public final class URLOpenerAsyncStub: URLOpenerProtocol {
     }
 
 
+    /// Does nothing but the completion will be called asynchronously.
     public func open(url: URL, options: [UIApplication.OpenExternalURLOptionsKey: Any], completion: @escaping (Bool) -> Void) {
         DispatchQueue.main.async {
             completion(self.nextCallbackArgument)
@@ -99,17 +113,21 @@ public final class URLOpenerAsyncStub: URLOpenerProtocol {
 
 
 
-/**
- A stub class for URLOpener.
- This class is useful for ignoring calls of `UIApplication#open` for testing.
-
- The completion callback of `open` will be never called.
- */
+/// A stub class for `URLOpener`.
+/// This class is useful to prevent side-effects for testing.
+/// Given completions will be never called.
 public final class URLOpenerNeverStub: URLOpenerProtocol {
     public init() {}
 
 
+    /// Does nothing.
     public func open(url: URL) {}
+
+
+    /// Does nothing but the completion will be never called.
     public func open(url: URL, completion: @escaping (Bool) -> Void) {}
+
+
+    /// Does nothing but the completion will be never called.
     public func open(url: URL, options: [UIApplication.OpenExternalURLOptionsKey: Any], completion: @escaping (Bool) -> Void) {}
 }

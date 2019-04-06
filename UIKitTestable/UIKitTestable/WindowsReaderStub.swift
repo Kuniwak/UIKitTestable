@@ -2,10 +2,14 @@ import UIKit
 
 
 
+/// A stub class for `WindowsReader`.
+/// This class is useful to prevent side-effects for testing.
 public final class WindowsReaderStub: WindowsReaderProtocol {
+    /// UIWindows will be returned.
     public var nextResult: [WeakOrUnownedOrStrong<UIWindow>]
 
 
+    /// UIWindows. You can change the return value by `nextValue`.
     public var windows: [UIWindow] {
         return self.nextResult.compactMap { (weakOrUnownedOrStrong) -> UIWindow? in
             switch weakOrUnownedOrStrong {
@@ -20,6 +24,8 @@ public final class WindowsReaderStub: WindowsReaderProtocol {
     }
 
 
+    /// - parameters:
+    ///     - initialResult: UIWindows will be returned.
     public init(willReturn initialResult: [WeakOrUnownedOrStrong<UIWindow>] = []) {
         self.nextResult = initialResult
     }
