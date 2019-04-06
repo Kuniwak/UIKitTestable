@@ -179,7 +179,7 @@
 			children = (
 				6239ABAD224F746E00673D65 /* CountedViewController.swift */,
 				6239ABC7224F747200673D65 /* CountedWindow.swift */,
-				6239AAF1224F729300673D65 /* debugViewController.swift */,
+				2475E33B23944A89D3AE7F93 /* Debug.swift */,
 				6239AAE8224F729300673D65 /* GlobalModalBackgroundViewController.swift */,
 				6239AAF5224F729300673D65 /* GlobalModalDissolver.swift */,
 				6239ABB8224F746F00673D65 /* GlobalModalDissolverSpy.swift */,
@@ -203,6 +203,7 @@
 				6239AAF7224F729400673D65 /* ObservationViewController.swift */,
 				6239AAEF224F729300673D65 /* PresentingViewControllerReader.swift */,
 				6239ABBD224F747000673D65 /* PresentingViewControllerReaderStub.swift */,
+				2475E6B206515D40988D3023 /* Printer.swift */,
 				6239AAF3224F729300673D65 /* ReverseNavigator.swift */,
 				6239ABB0224F746E00673D65 /* ReverseNavigatorSpy.swift */,
 				6239ABC8224F747200673D65 /* ReverseNavigatorStub.swift */,
@@ -223,14 +224,13 @@
 				6239ABCA224F747200673D65 /* URLOpenerStub.swift */,
 				2475EFAF90D73017614E1207 /* Unowned.swift */,
 				2475E8510766E0322F6C3E77 /* ViewControllerLifeCycleEvent.swift */,
-				2475E33B23944A89D3AE7F93 /* Debug.swift */,
 				2475E467DE8A94CF4FCA9259 /* Weak.swift */,
 				6239AAED224F729300673D65 /* WeakOrNotReference.swift */,
 				6239AAF0224F729300673D65 /* WeakOrUnowned.swift */,
 				2475EF419E24ADF120BD77DC /* WeakOrUnownedOrStrong.swift */,
 				6239AAEA224F729300673D65 /* WindowsReader.swift */,
 				6239ABAF224F746E00673D65 /* WindowsReaderStub.swift */,
-				2475E6B206515D40988D3023 /* Printer.swift */,
+				6239AAF1224F729300673D65 /* debugViewController.swift */,
 			);
 			path = UIKitTestable;
 			sourceTree = "<group>";
