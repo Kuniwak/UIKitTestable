@@ -2,10 +2,10 @@ import UIKit
 
 
 
-/// A spy class for `GlobalModalDissolver`.
+/// A spy class for `GlobalModalDissolver`s.
 /// This class captures calls of methods of the class for testing.
 public final class GlobalModalDissolverSpy: GlobalModalDissolverProtocol {
-    /// Call arguments of methods of the class.
+    /// Call arguments of methods of `GlobalModalDissolverSpy`.
     public enum CallArgs: Equatable {
         case dismiss(animated: Bool)
     }

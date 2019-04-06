@@ -2,10 +2,10 @@ import UIKit
 
 
 
-/// A spy class for RootViewControllerHolders.
+/// A spy class for `RootViewControllerWriter`s.
 /// This class is useful for capturing assigning `UIWindow.rootViewController` for testing.
 public final class RootViewControllerWriterSpy: RootViewControllerWriterProtocol {
-    /// Call arguments of methods of the class.
+    /// Call arguments of methods of `RootViewControllerWriterSpy`.
     public enum CallArgs: Equatable {
         case alter(rootViewController: UIViewController)
     }

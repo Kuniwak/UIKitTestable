@@ -2,10 +2,10 @@ import UIKit
 
 
 
-/// A spy class for `GlobalModalPresenter`.
+/// A spy class for `GlobalModalPresenter`s.
 /// This class captures calls of methods of the class for testing.
 public final class GlobalModalPresenterSpy: GlobalModalPresenterProtocol {
-    /// Call arguments of methods of the class.
+    /// Call arguments of methods of `GlobalModalPresenterSpy`.
     public enum CallArgs: Equatable {
         case present(viewController: UIViewController, animated: Bool)
     }

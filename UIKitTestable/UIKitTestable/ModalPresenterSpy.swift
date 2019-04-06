@@ -2,10 +2,10 @@ import UIKit
 
 
 
-/// A spy class for `ModalPresenters`.
+/// A spy class for `ModalPresenter`s.
 /// This class captures calls of methods of the class for testing.
 public final class ModalPresenterSpy: ModalPresenterProtocol {
-    /// Call arguments of methods of the class.
+    /// Call arguments of methods of `ModalPresenterSpy`.
     public enum CallArgs: Equatable {
         case present(viewController: UIViewController, animated: Bool)
     }

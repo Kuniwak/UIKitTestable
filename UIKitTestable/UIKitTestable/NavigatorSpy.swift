@@ -2,10 +2,10 @@ import UIKit
 
 
 
-/// A spy class for `Navigator`.
+/// A spy class for `Navigator`s.
 /// This class captures calls of methods of the class for testing.
 public final class NavigatorSpy: NavigatorProtocol {
-    /// Call arguments of methods of the class.
+    /// Call arguments of methods of `NavigatorSpy`.
     public enum CallArgs: Equatable {
         case push(viewController: UIViewController, animated: Bool)
     }

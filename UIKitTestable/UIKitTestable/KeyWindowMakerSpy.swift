@@ -2,10 +2,10 @@ import UIKit
 
 
 
-/// A spy class for `KeyWindowMaker`.
+/// A spy class for `KeyWindowMaker`s.
 /// This class captures calls of methods of the class for testing.
 public final class KeyWindowMakerSpy: KeyWindowMakerProtocol {
-    /// Call arguments of methods of the class.
+    /// Call arguments of methods of `KeyWindowMakerSpy`.
     public enum CallArgs: Equatable {
         case makeKey
         case makeKeyAndVisible

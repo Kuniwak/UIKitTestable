@@ -2,10 +2,10 @@ import UIKit
 
 
 
-/// A spy class for `RootViewControllerReadWriter`.
+/// A spy class for `RootViewControllerReadWriter`s.
 /// This class captures calls of methods of the class for testing.
 public final class RootViewControllerReadWriterSpy: RootViewControllerReadWriterProtocol {
-    /// Call arguments of methods of the class.
+    /// Call arguments of methods of `RootViewControllerReadWriterSpy`.
     public enum CallArgs: Equatable {
         case rootViewController
         case alter(rootViewController: UIViewController)

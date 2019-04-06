@@ -2,10 +2,10 @@ import UIKit
 
 
 
-/// A spy class for `ReverseNavigators`.
+/// A spy class for `ReverseNavigator`s.
 /// This class captures calls of methods of the class for testing.
 public final class ReverseNavigatorSpy: ReverseNavigatorProtocol {
-    /// Call arguments of methods of the class.
+    /// Call arguments of methods of `ReverseNavigatorSpy`.
     public enum CallArgs: Equatable {
         case back(animated: Bool)
     }

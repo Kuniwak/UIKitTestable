@@ -2,10 +2,10 @@ import UIKit
 
 
 
-/// A spy class for UrlOpener.
+/// A spy class for `URLOpener`s.
 /// This class is useful for capturing calls of `UIApplication#open` for testing.
 public final class URLOpenerSpy: URLOpenerProtocol {
-    /// Call arguments of methods of the class.
+    /// Call arguments of methods of `URLOpenerSpy`.
     public enum CallArgs: Equatable {
         case open(url: URL, options: [UIApplication.OpenExternalURLOptionsKey: Any]?)
 
