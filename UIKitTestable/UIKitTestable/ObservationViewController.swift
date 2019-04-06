@@ -96,14 +96,20 @@ public final class ObservationViewController: UIViewController {
     }
 
 
-    public override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        self.on(event: .didReceiveMemoryWarning)
+    public override func viewLayoutMarginsDidChange() {
+        super.viewLayoutMarginsDidChange()
+        self.on(event: .viewLayoutMarginsDidChange)
     }
 
 
-    public override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-        self.on(event: .viewWillTransition(size: size, coordinator: coordinator))
+    public override func viewSafeAreaInsetsDidChange() {
+        super.viewSafeAreaInsetsDidChange()
+        self.on(event: .viewSafeAreaInsetsDidChange)
+    }
+
+
+    public override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        self.on(event: .didReceiveMemoryWarning)
     }
 }

@@ -5,17 +5,17 @@ import XCTest
 
 
 public func awaitViewController(
-    event expectedEventKey: UIKitTestable.ViewControllerEvent.CodingKeys,
+    event expectedEventName: UIKitTestable.ViewControllerEvent.Name,
     on testCase: XCTestCase,
     timeout: TimeInterval? = nil,
     _ callback: @escaping (UIKitTestable.ObservationViewController, UIKitTestable.ViewControllerEvent) -> Void
 ) {
-    let expectation = testCase.expectation(description: "Awaiting \(expectedEventKey.rawValue)")
+    let expectation = testCase.expectation(description: "Awaiting \(expectedEventName.rawValue)")
 
     let window = UIWindow()
     let presenter = GlobalModalPresenter(wherePresentOn: .weak(window))
     let viewController = UIKitTestable.ObservationViewController { (viewController, actualEvent) in
-        guard actualEvent.key == expectedEventKey else { return }
+        guard actualEvent.name == expectedEventName else { return }
 
         callback(viewController, actualEvent)
 

@@ -2,7 +2,7 @@ import UIKit
 
 
 
-/// An enum for events that can be will be notified on UIViewControllers.
+/// An enum for events that can be notified by UIViewControllers.
 public enum ViewControllerEvent {
     /// An event that will be notified after the UIViewController was initialized.
     case didInit
@@ -30,6 +30,9 @@ public enum ViewControllerEvent {
     /// An event that will be notified after `viewLayoutMarginsDidChange`.
     /// - SeeAlso: [Apple Developer Documentation](https://developer.apple.com/documentation/uikit/uiviewcontroller/2891114-viewlayoutmarginsdidchange)
     case viewLayoutMarginsDidChange
+    /// An event that will be notified after `viewLayoutMarginsDidChange`.
+    /// - SeeAlso: [Apple Developer Documentation](https://developer.apple.com/documentation/uikit/uiviewcontroller/2891116-viewsafeareainsetsdidchange#)
+    case viewSafeAreaInsetsDidChange
     /// An event that will be notified after `didMove`.
     /// - SeeAlso: [Apple Developer Documentation](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621405-didmove)
     case didMove(parent: UIViewController?)
@@ -64,6 +67,8 @@ public enum ViewControllerEvent {
             return .viewDidLayoutSubviews
         case .viewLayoutMarginsDidChange:
             return .viewLayoutMarginsDidChange
+        case .viewSafeAreaInsetsDidChange:
+            return .viewSafeAreaInsetsDidChange
         case .didMove:
             return .didMove
         case .willMove:
@@ -88,6 +93,7 @@ public enum ViewControllerEvent {
         case viewWillLayoutSubviews
         case viewDidLayoutSubviews
         case viewLayoutMarginsDidChange
+        case viewSafeAreaInsetsDidChange
         case didMove
         case willMove
         case didReceiveMemoryWarning
@@ -127,6 +133,8 @@ extension ViewControllerEvent: CustomDebugStringConvertible {
             return ".viewDidDisappear(animated: \(animated))"
         case .viewLayoutMarginsDidChange:
             return ".viewLayoutMarginsDidChange"
+        case .viewSafeAreaInsetsDidChange:
+            return ".viewSafeAreaInsetsDidChange"
         case .willMove(parent: .some(let parent)):
             return ".willMove(parent: \(type(of: parent)))  (at \(address(of: parent))"
         case .willMove(parent: .none):
