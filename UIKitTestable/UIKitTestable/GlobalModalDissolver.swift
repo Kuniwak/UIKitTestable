@@ -7,28 +7,35 @@ public protocol GlobalModalDissolverProtocol: ModalDissolverProtocol {}
 
 
 extension GlobalModalDissolverProtocol {
-    public static func stub() -> GlobalModalDissolverStub {
-        return GlobalModalDissolverStub()
+    /// Returns a stub that can call a last completion manually.
+    public static func manualStub() -> GlobalModalDissolverManualStub {
+        return GlobalModalDissolverManualStub()
     }
 
 
+    /// Returns a stub that call the given completion immediately.
     public static func syncStub() -> GlobalModalDissolverSyncStub {
         return GlobalModalDissolverSyncStub()
     }
 
 
+    /// Returns a stub that call the given completion asynchronously.
     public static func asyncStub() -> GlobalModalDissolverAsyncStub {
         return GlobalModalDissolverAsyncStub()
     }
 
 
-    public static func never() -> GlobalModalDissolverNeverStub {
+    /// Returns a stub that will never call the given completion.
+    public static func neverStub() -> GlobalModalDissolverNeverStub {
         return GlobalModalDissolverNeverStub()
     }
 
 
+    /// Returns a spy that record how methods were called.
+    /// - parameters:
+    ///     - inherited: A dynamic base class control how call a completion.
     public static func spy(
-        inheriting inherited: GlobalModalDissolverProtocol = GlobalModalDissolverSyncStub()
+        inheriting inherited: GlobalModalDissolverProtocol = GlobalModalDissolverNeverStub()
     ) -> GlobalModalDissolverSpy {
         return GlobalModalDissolverSpy(inheriting: inherited)
     }

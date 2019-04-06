@@ -2,7 +2,7 @@ import UIKit
 
 
 
-public final class RootViewControllerReadWriterStub: RootViewControllerReadWriterProtocol {
+public final class RootViewControllerReadWriterManualStub: RootViewControllerReadWriterProtocol {
     public var nextResult: WeakOrUnownedOrStrong<UIViewController>
     private var completion: (() -> Void)?
 

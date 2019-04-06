@@ -2,27 +2,27 @@ import UIKit
 
 
 
-/**
- A type for wrapper classes of `UINavigationController#(_:UIViewController, animated:Bool)`.
- */
+/// A type for wrapper classes of `UINavigationController#(_:UIViewController, animated:Bool)`.
 public protocol ReverseNavigatorProtocol {
-    /**
-     Pops view controllers until the specified view controller is at the top of the navigation stack.
-     This method behave like `UINavigationController#popToViewController(UIVIewController, animated: Bool)`
+    /// Pops view controllers until the specified view controller is at the top of the navigation stack.
+    /// This method behave like `UINavigationController#popToViewController(UIVIewController, animated: Bool)`
 
-     - throws: ReverseNavigatorError will be thrown when the UIViewController is not in the navigation stack.
-     */
+    /// - throws: Throws when the UIViewController is not in the navigation stack.
     func pop(animated: Bool) throws
 }
 
 
 
 extension ReverseNavigatorProtocol {
+    /// Returns a stub that do nothing.
     public static func stub(willThrow error: ReverseNavigatorError? = nil) -> ReverseNavigatorStub {
         return ReverseNavigatorStub(willThrow: error)
     }
 
 
+    /// Returns a spy that record how methods were called.
+    /// - parameters:
+    ///     - inherited: A dynamic base class control how behave a method is called.
     public static func spy(
         inheriting inherited: ReverseNavigatorProtocol = ReverseNavigatorStub()
     ) -> ReverseNavigatorSpy {
@@ -32,9 +32,7 @@ extension ReverseNavigatorProtocol {
 
 
 
-/**
- A type for errors that can be thrown when `UINavigationController#popToViewController(UIVIewController, animated: Bool)`.
- */
+/// A type for errors that can be thrown when `UINavigationController#popToViewController(UIVIewController, animated: Bool)`.
 public enum ReverseNavigatorError: Error {
     case noSuchDestinationViewControllerInNavigationStack(debugInfo: String)
 

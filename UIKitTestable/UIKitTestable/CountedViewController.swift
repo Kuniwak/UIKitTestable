@@ -2,7 +2,7 @@ import UIKit
 
 
 
-/// A UIViewController for detecting resource leaks.
+/// A class inheriting UIViewController to detect resource leaks.
 public final class CountedViewController: UIViewController {
     /// Number of living CountedViewController.
     public private(set) static var numberOfLiving: UInt = 0

@@ -2,30 +2,32 @@ import UIKit
 
 
 
-/**
- A spy class for ModalPresenters.
- This class is useful for capturing calls of `UIViewController#present` for testing.
- */
+/// A spy class for `ModalPresenters`.
+/// This class captures calls of methods of the class for testing.
 public final class ModalPresenterSpy: ModalPresenterProtocol {
+    /// Call arguments of methods of the class.
     public enum CallArgs: Equatable {
         case present(viewController: UIViewController, animated: Bool)
     }
 
 
-    /**
-     Call arguments list for the method `present`.
-     You can use the property to test how the method is called.
-     */
+    /// Captured call arguments list for methods.
+    /// You can use the property to verify how methods were called.
     public private(set) var callArgs: [CallArgs] = []
 
+
+    /// A dynamic base class that can control how the last completion is called.
     public var inherited: ModalPresenterProtocol
 
 
-    public init(inheriting inherited: ModalPresenterProtocol = ModalPresenterStub()) {
+    /// - parameters:
+    ///     - inherited: A dynamic base class that can control how the last completion is called.
+    public init(inheriting inherited: ModalPresenterProtocol = ModalPresenterNeverStub()) {
         self.inherited = inherited
     }
 
 
+    /// Records the call arguments and calls the dynamic base class.
     public func present(viewController: UIViewController, animated: Bool) {
         self.callArgs.append(.present(viewController: viewController, animated: animated))
 
@@ -33,6 +35,7 @@ public final class ModalPresenterSpy: ModalPresenterProtocol {
     }
 
 
+    /// Records the call arguments and calls the dynamic base class.
     public func present(viewController: UIViewController, animated: Bool, completion: (() -> Void)?) {
         self.callArgs.append(.present(viewController: viewController, animated: animated))
 

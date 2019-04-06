@@ -14,13 +14,6 @@ extension RootViewControllerReaderProtocol {
     ) -> RootViewControllerReaderStub {
         return RootViewControllerReaderStub(willReturn: viewController)
     }
-
-
-    public static func spy(
-        inheriting inherited: RootViewControllerReaderProtocol = RootViewControllerReaderStub()
-    ) -> RootViewControllerReaderSpy {
-        return RootViewControllerReaderSpy(inheriting: inherited)
-    }
 }
 
 

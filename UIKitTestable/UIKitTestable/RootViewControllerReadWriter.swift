@@ -9,8 +9,8 @@ public protocol RootViewControllerReadWriterProtocol: RootViewControllerReaderPr
 extension RootViewControllerReadWriterProtocol {
     public static func stub(
         willReturn initialResult: WeakOrUnownedOrStrong<UIViewController> = .empty()
-    ) -> RootViewControllerReadWriterStub {
-        return RootViewControllerReadWriterStub(willReturn: initialResult)
+    ) -> RootViewControllerReadWriterManualStub {
+        return RootViewControllerReadWriterManualStub(willReturn: initialResult)
     }
 
 
@@ -36,7 +36,7 @@ extension RootViewControllerReadWriterProtocol {
 
 
     public static func spy(
-        inheriting inherited: RootViewControllerReadWriterProtocol = RootViewControllerReadWriterSyncStub()
+        inheriting inherited: RootViewControllerReadWriterProtocol = RootViewControllerReadWriterNeverStub()
     ) -> RootViewControllerReadWriterSpy {
         return RootViewControllerReadWriterSpy(inheriting: inherited)
     }

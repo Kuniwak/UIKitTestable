@@ -12,11 +12,15 @@ public protocol KeyWindowMakerProtocol {
 
 
 extension KeyWindowMakerProtocol {
+    /// Returns a stub that do nothing.
     public static func stub() -> KeyWindowMakerStub {
         return KeyWindowMakerStub()
     }
 
 
+    /// Returns a spy that record how methods were called.
+    /// - parameters:
+    ///     - inherited: A dynamic base class control how call a completion.
     public static func spy(
         inheriting inherited: KeyWindowMakerProtocol = KeyWindowMakerStub()
     ) -> KeyWindowMakerSpy {

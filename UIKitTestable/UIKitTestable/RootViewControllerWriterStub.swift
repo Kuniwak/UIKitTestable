@@ -8,7 +8,7 @@ import UIKit
 
  The completion of `alter(to:UIViewController, completion:(() -> Void)?)` can be called when `complete()` is called.
  */
-public final class RootViewControllerWriterStub: RootViewControllerWriterProtocol {
+public final class RootViewControllerWriterManualStub: RootViewControllerWriterProtocol {
     private var completion: (() -> Void)? = nil
 
 

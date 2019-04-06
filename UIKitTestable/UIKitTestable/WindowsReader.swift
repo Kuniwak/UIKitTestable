@@ -9,13 +9,9 @@ public protocol WindowsReaderProtocol {
 
 
 extension WindowsReaderProtocol {
+    /// Returns a stub that do nothing.
     public static func stub(willReturn initialResult: [WeakOrUnownedOrStrong<UIWindow>]) -> WindowsReaderStub {
         return WindowsReaderStub(willReturn: initialResult)
-    }
-
-
-    public static func spy(inheriting inherited: WindowsReaderProtocol = WindowsReaderStub()) -> WindowsReaderSpy {
-        return WindowsReaderSpy(inheriting: inherited)
     }
 }
 

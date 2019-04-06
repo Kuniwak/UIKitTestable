@@ -2,10 +2,13 @@ import UIKit
 
 
 
+/// A class for background UIViewControllers of GlobalModalPresenters.
 public final class GlobalModalBackgroundViewController: UIViewController {
     private var firstViewDidAppearCallback: ((UIViewController) -> Void)?
 
 
+    /// - parameters:
+    ///   - firstViewDidAppearCallback: A callback called when viewDidAppear fired. That take the UIViewController as the argument.
     public init(_ firstViewDidAppearCallback: @escaping (UIViewController) -> Void) {
         self.firstViewDidAppearCallback = firstViewDidAppearCallback
 

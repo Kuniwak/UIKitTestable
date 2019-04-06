@@ -2,49 +2,50 @@ import UIKit
 
 
 
-/**
- A type for wrapper classes of `UIViewController#dismiss(animated: Bool)`.
- */
+/// A type for wrapper classes of `UIViewController#dismiss(animated: Bool)`.
 public protocol ModalDissolverProtocol {
-    /**
-     Dismisses the view controller that was presented as a modal by the view controller.
-     This method behave like `UIViewController#dismiss(animated: Bool)`
-     */
+    /// Dismisses the presented view controller.
+    /// This method behave like `UIViewController#dismiss(animated: Bool)`
     func dismiss(animated: Bool)
 
 
-    /**
-     Dismisses the view controller that was presented as a modal by the view controller.
-     This method behave like `UIViewController#dismiss(animated: Bool, completion: (() -> Void)?)`
-     */
+    /// Dismisses the presented view controller.
+    /// This method behave like `UIViewController#dismiss(animated: Bool, completion: (() -> Void)?)`
     func dismiss(animated: Bool, completion: (() -> Void)?)
 }
 
 
 
 extension ModalDissolverProtocol {
-    public static func stub() -> ModalDissolverStub {
-        return ModalDissolverStub()
+    /// Returns a stub that can call a last completion manually.
+    public static func manualStub() -> ModalDissolverManualStub {
+        return ModalDissolverManualStub()
     }
 
 
+    /// Returns a stub that call the given completion immediately.
     public static func syncStub() -> ModalDissolverSyncStub {
         return ModalDissolverSyncStub()
     }
 
 
+    /// Returns a stub that call the given completion asynchronously.
     public static func asyncStub() -> ModalDissolverAsyncStub {
         return ModalDissolverAsyncStub()
     }
 
 
-    public static func never() -> ModalDissolverNeverStub {
+    /// Returns a stub that will never call the given completion.
+    public static func neverStub() -> ModalDissolverNeverStub {
         return ModalDissolverNeverStub()
     }
 
 
+    /// Returns a spy that record how methods were called.
+    /// - parameters:
+    ///     - inherited: A dynamic base class control how call a completion.
     public static func spy(
-        inheriting inherited: ModalDissolverProtocol = ModalDissolverSyncStub()
+        inheriting inherited: ModalDissolverProtocol = ModalDissolverNeverStub()
     ) -> ModalDissolverSpy {
         return ModalDissolverSpy(inheriting: inherited)
     }

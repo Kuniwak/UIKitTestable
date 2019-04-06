@@ -16,6 +16,61 @@ public enum ViewControllerLifeCycleEvent {
     case didReceiveMemoryWarning
     case viewWillTransition(size: CGSize, coordinator: UIViewControllerTransitionCoordinator)
     case willDeinit
+
+
+    public var key: CodingKeys {
+        switch self {
+        case .didInit:
+            return .didInit
+        case .viewDidLoad:
+            return .viewDidLoad
+        case .viewWillAppear:
+            return .viewWillAppear
+        case .viewDidAppear:
+            return .viewDidAppear
+        case .viewWillDisappear:
+            return .viewWillDisappear
+        case .viewDidDisappear:
+            return .viewDidDisappear
+        case .viewWillLayoutSubviews:
+            return .viewWillLayoutSubviews
+        case .viewDidLayoutSubviews:
+            return .viewDidLayoutSubviews
+        case .didMove:
+            return .didMove
+        case .willMove:
+            return .willMove
+        case .didReceiveMemoryWarning:
+            return .didReceiveMemoryWarning
+        case .viewWillTransition:
+            return .viewWillTransition
+        case .willDeinit:
+            return .willDeinit
+        }
+    }
+
+
+
+    public enum CodingKeys: String, Equatable, Hashable, CustomStringConvertible {
+        case didInit
+        case viewDidLoad
+        case viewWillAppear
+        case viewDidAppear
+        case viewWillDisappear
+        case viewDidDisappear
+        case viewWillLayoutSubviews
+        case viewDidLayoutSubviews
+        case didMove
+        case willMove
+        case didReceiveMemoryWarning
+        case viewWillTransition
+        case willDeinit
+
+
+        public var description: String {
+            return self.rawValue
+        }
+    }
 }
 
 

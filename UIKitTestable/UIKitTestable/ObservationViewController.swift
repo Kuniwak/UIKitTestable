@@ -2,24 +2,22 @@ import UIKit
 
 
 
-/// A UIViewController for observing life cycle events.
+/// A UIViewController for life cycle events observation.
 public final class ObservationViewController: UIViewController {
-    /// A event of the ObservingViewController.
+    /// Events that can be observer by ObservingViewControllers.
     public typealias Event = ViewControllerLifeCycleEvent
 
     /// History of events happened.
     public private(set) var history: [Event] = []
 
-    private let shouldPrintEvents: Bool
     private let observer: ((ObservationViewController, Event) -> Void)?
 
 
-    /**
-     - parameter shouldPrintEvents: Whether events happened should be printed. Default is false.
-     - parameter observer: Callback will called when every life cycle events are happened.
-     */
-    public init(shouldPrintEvents: Bool = false, _ observer: ((ObservationViewController, Event) -> Void)? = nil) {
-        self.shouldPrintEvents = shouldPrintEvents
+    /// - parameters:
+    ///   - observer: Callback will called when every life cycle events are happened.
+    public init(
+        _ observer: ((ObservationViewController, Event) -> Void)? = nil
+    ) {
         self.observer = observer
 
         super.init(nibName: nil, bundle: nil)
@@ -39,9 +37,6 @@ public final class ObservationViewController: UIViewController {
 
 
     private func on(lifeCycleEvent: Event) {
-        if self.shouldPrintEvents {
-            print(lifeCycleEvent)
-        }
         self.history.append(lifeCycleEvent)
         self.observer?(self, lifeCycleEvent)
     }

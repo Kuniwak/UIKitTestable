@@ -28,8 +28,8 @@ public func dumped(viewControllers: [UIViewController]) -> String {
 
 
 
-private func dumped(_ x: Any) -> String {
+public func dumped(_ x: Any) -> String {
     var result = ""
-    Swift.dump(x, to: &result)
+    dump(x, to: &result)
     return result
 }

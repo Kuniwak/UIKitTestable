@@ -1,241 +1,185 @@
 {
   "warnings": [
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Arrays.swift",
-      "line": 1,
-      "symbol": "intersperse(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.free",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/CountedViewController.swift",
-      "line": 5,
-      "symbol": "CountedViewController",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/CountedViewController.swift",
-      "line": 6,
-      "symbol": "CountedViewController.numberOfLiving",
-      "symbol_kind": "source.lang.swift.decl.var.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/CountedViewController.swift",
-      "line": 9,
+      "line": 11,
       "symbol": "CountedViewController.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/CountedViewController.swift",
-      "line": 15,
+      "line": 17,
       "symbol": "CountedViewController.init(coder:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/CountedViewController.swift",
-      "line": 20,
+      "line": 22,
       "symbol": "CountedViewController.deinit",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/CountedWindow.swift",
-      "line": 5,
-      "symbol": "CountedWindow",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/CountedWindow.swift",
-      "line": 6,
-      "symbol": "CountedWindow.numberOfLiving",
-      "symbol_kind": "source.lang.swift.decl.var.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/CountedWindow.swift",
-      "line": 9,
+      "line": 11,
       "symbol": "CountedWindow.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/CountedWindow.swift",
-      "line": 15,
+      "line": 17,
       "symbol": "CountedWindow.init(coder:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/CountedWindow.swift",
-      "line": 20,
+      "line": 22,
       "symbol": "CountedWindow.deinit",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/GlobalModalDissolver.swift",
-      "line": 4,
-      "symbol": "GlobalModalDissolverProtocol",
-      "symbol_kind": "source.lang.swift.decl.protocol",
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Debug.swift",
+      "line": 1,
+      "symbol": "info(of:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Debug.swift",
+      "line": 7,
+      "symbol": "typeName(of:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Debug.swift",
+      "line": 13,
+      "symbol": "address(of:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Debug.swift",
+      "line": 19,
+      "symbol": "lldbHint(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Debug.swift",
+      "line": 25,
+      "symbol": "dumped(viewControllers:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Debug.swift",
+      "line": 31,
+      "symbol": "dumped(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/GlobalModalBackgroundViewController.swift",
+      "line": 19,
+      "symbol": "GlobalModalBackgroundViewController.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/GlobalModalBackgroundViewController.swift",
+      "line": 24,
+      "symbol": "GlobalModalBackgroundViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/GlobalModalBackgroundViewController.swift",
+      "line": 30,
+      "symbol": "GlobalModalBackgroundViewController.viewDidAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/GlobalModalDissolverSpy.swift",
-      "line": 5,
-      "symbol": "GlobalModalDissolverSpy",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/GlobalModalDissolverSpy.swift",
-      "line": 6,
+      "line": 8,
       "symbol": "GlobalModalDissolverSpy.CallArgs",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/GlobalModalDissolverSpy.swift",
-      "line": 7,
+      "line": 9,
       "symbol": "GlobalModalDissolverSpy.CallArgs.dismiss(animated:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/GlobalModalDissolverSpy.swift",
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/GlobalModalDissolverStub.swift",
       "line": 11,
-      "symbol": "GlobalModalDissolverSpy.callArgs",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/GlobalModalDissolverSpy.swift",
-      "line": 12,
-      "symbol": "GlobalModalDissolverSpy.delegate",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/GlobalModalDissolverSpy.swift",
-      "line": 15,
-      "symbol": "GlobalModalDissolverSpy.init(delegated:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/GlobalModalDissolverStub.swift",
-      "line": 5,
-      "symbol": "GlobalModalDissolverStub",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/GlobalModalDissolverStub.swift",
-      "line": 9,
       "symbol": "GlobalModalDissolverStub.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/GlobalModalDissolverStub.swift",
-      "line": 18,
-      "symbol": "GlobalModalDissolverStub.complete()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/GlobalModalDissolverStub.swift",
-      "line": 25,
+      "line": 28,
       "symbol": "GlobalModalDissolverSyncStub",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/GlobalModalDissolverStub.swift",
-      "line": 26,
+      "line": 29,
       "symbol": "GlobalModalDissolverSyncStub.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/GlobalModalDissolverStub.swift",
-      "line": 37,
+      "line": 40,
       "symbol": "GlobalModalDissolverAsyncStub",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/GlobalModalDissolverStub.swift",
-      "line": 38,
+      "line": 41,
       "symbol": "GlobalModalDissolverAsyncStub.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/GlobalModalDissolverStub.swift",
-      "line": 51,
+      "line": 54,
       "symbol": "GlobalModalDissolverNeverStub",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/GlobalModalDissolverStub.swift",
-      "line": 52,
+      "line": 55,
       "symbol": "GlobalModalDissolverNeverStub.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/GlobalModalPresenter.swift",
-      "line": 4,
-      "symbol": "GlobalModalPresenterProtocol",
-      "symbol_kind": "source.lang.swift.decl.protocol",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/GlobalModalPresenter.swift",
-      "line": 17,
-      "symbol": "GlobalModalPresenter.init(wherePresentOn:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/GlobalModalPresenter.swift",
-      "line": 25,
-      "symbol": "GlobalModalPresenter.init(alteringRootViewControllerBy:makingKeyWindowBy:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/GlobalModalPresenterSpy.swift",
-      "line": 10,
+      "line": 8,
       "symbol": "GlobalModalPresenterSpy.CallArgs",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/GlobalModalPresenterSpy.swift",
-      "line": 11,
+      "line": 9,
       "symbol": "GlobalModalPresenterSpy.CallArgs.present(viewController:animated:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/GlobalModalPresenterSpy.swift",
-      "line": 22,
-      "symbol": "GlobalModalPresenterSpy.delegate",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/GlobalModalPresenterSpy.swift",
-      "line": 25,
-      "symbol": "GlobalModalPresenterSpy.init(inherit:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
@@ -275,6 +219,13 @@
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/KeyWindowMaker.swift",
+      "line": null,
+      "symbol": "KeyWindowMakerProtocol",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/KeyWindowMaker.swift",
       "line": 5,
       "symbol": "KeyWindowMakerProtocol",
       "symbol_kind": "source.lang.swift.decl.protocol",
@@ -310,168 +261,112 @@
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/KeyWindowMaker.swift",
-      "line": 14,
+      "line": 33,
       "symbol": "KeyWindowMaker",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/KeyWindowMaker.swift",
-      "line": 18,
+      "line": 37,
       "symbol": "KeyWindowMaker.init(modifying:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/KeyWindowMaker.swift",
-      "line": 23,
+      "line": 42,
       "symbol": "KeyWindowMaker.makeKey()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/KeyWindowMaker.swift",
-      "line": 28,
+      "line": 56,
       "symbol": "KeyWindowMaker.makeKeyAndVisible()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/KeyWindowMaker.swift",
-      "line": 33,
+      "line": 70,
       "symbol": "KeyWindowMaker.becomeKey()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/KeyWindowMaker.swift",
-      "line": 38,
+      "line": 84,
       "symbol": "KeyWindowMaker.resignKey()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/KeyWindowMaker.swift",
-      "line": 45,
-      "symbol": "NullKeyWindowWriter",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/KeyWindowMaker.swift",
-      "line": 46,
-      "symbol": "NullKeyWindowWriter.makeKey()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/KeyWindowMaker.swift",
-      "line": 47,
-      "symbol": "NullKeyWindowWriter.makeKeyAndVisible()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/KeyWindowMaker.swift",
-      "line": 48,
-      "symbol": "NullKeyWindowWriter.becomeKey()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/KeyWindowMaker.swift",
-      "line": 49,
-      "symbol": "NullKeyWindowWriter.resignKey()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/KeyWindowMakerSpy.swift",
-      "line": 5,
-      "symbol": "KeyWindowMakerSpy",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/KeyWindowMakerSpy.swift",
-      "line": 6,
+      "line": 8,
       "symbol": "KeyWindowMakerSpy.CallArgs",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/KeyWindowMakerSpy.swift",
-      "line": 7,
+      "line": 9,
       "symbol": "KeyWindowMakerSpy.CallArgs.makeKey",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/KeyWindowMakerSpy.swift",
-      "line": 8,
+      "line": 10,
       "symbol": "KeyWindowMakerSpy.CallArgs.makeKeyAndVisible",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/KeyWindowMakerSpy.swift",
-      "line": 9,
+      "line": 11,
       "symbol": "KeyWindowMakerSpy.CallArgs.becomeKey",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/KeyWindowMakerSpy.swift",
-      "line": 10,
+      "line": 12,
       "symbol": "KeyWindowMakerSpy.CallArgs.resignKey",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/KeyWindowMakerSpy.swift",
-      "line": 12,
-      "symbol": "KeyWindowMakerSpy.callArgs",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/KeyWindowMakerSpy.swift",
-      "line": 13,
-      "symbol": "KeyWindowMakerSpy.delegate",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/KeyWindowMakerSpy.swift",
-      "line": 16,
-      "symbol": "KeyWindowMakerSpy.init(delegating:)",
+      "line": 25,
+      "symbol": "KeyWindowMakerSpy.init(inheriting:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/KeyWindowMakerSpy.swift",
-      "line": 21,
+      "line": 30,
       "symbol": "KeyWindowMakerSpy.makeKey()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/KeyWindowMakerSpy.swift",
-      "line": 28,
+      "line": 37,
       "symbol": "KeyWindowMakerSpy.makeKeyAndVisible()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/KeyWindowMakerSpy.swift",
-      "line": 35,
+      "line": 44,
       "symbol": "KeyWindowMakerSpy.becomeKey()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/KeyWindowMakerSpy.swift",
-      "line": 42,
+      "line": 51,
       "symbol": "KeyWindowMakerSpy.resignKey()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -520,14 +415,14 @@
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ModalDissolverSpy.swift",
-      "line": 10,
+      "line": 8,
       "symbol": "ModalDissolverSpy.CallArgs",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ModalDissolverSpy.swift",
-      "line": 11,
+      "line": 9,
       "symbol": "ModalDissolverSpy.CallArgs.dismiss(animated:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
@@ -535,85 +430,50 @@
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ModalDissolverSpy.swift",
       "line": 22,
-      "symbol": "ModalDissolverSpy.delegate",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ModalDissolverSpy.swift",
-      "line": 25,
-      "symbol": "ModalDissolverSpy.init(delegating:)",
+      "symbol": "ModalDissolverSpy.init(inheriting:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ModalDissolverStub.swift",
-      "line": 12,
-      "symbol": "ModalDissolverStub.completion",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ModalDissolverStub.swift",
-      "line": 15,
+      "line": 14,
       "symbol": "ModalDissolverStub.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ModalDissolverStub.swift",
-      "line": 24,
-      "symbol": "ModalDissolverStub.complete()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ModalDissolverStub.swift",
-      "line": 38,
+      "line": 36,
       "symbol": "ModalDissolverSyncStub.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ModalDissolverStub.swift",
-      "line": 57,
+      "line": 52,
       "symbol": "ModalDissolverAsyncStub.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ModalDissolverStub.swift",
-      "line": 78,
+      "line": 70,
       "symbol": "ModalDissolverNeverStub.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ModalPresenterSpy.swift",
-      "line": 10,
+      "line": 8,
       "symbol": "ModalPresenterSpy.CallArgs",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ModalPresenterSpy.swift",
-      "line": 11,
+      "line": 9,
       "symbol": "ModalPresenterSpy.CallArgs.present(viewController:animated:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ModalPresenterSpy.swift",
-      "line": 21,
-      "symbol": "ModalPresenterSpy.delegate",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ModalPresenterSpy.swift",
-      "line": 24,
-      "symbol": "ModalPresenterSpy.init(delegating:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
@@ -653,30 +513,16 @@
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/NavigatorSpy.swift",
-      "line": 10,
+      "line": 8,
       "symbol": "NavigatorSpy.CallArgs",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/NavigatorSpy.swift",
-      "line": 11,
+      "line": 9,
       "symbol": "NavigatorSpy.CallArgs.push(viewController:animated:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/NavigatorSpy.swift",
-      "line": 22,
-      "symbol": "NavigatorSpy.delegate",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/NavigatorSpy.swift",
-      "line": 25,
-      "symbol": "NavigatorSpy.init(delegating:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
@@ -684,6 +530,104 @@
       "line": 10,
       "symbol": "NavigatorStub.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ObservationViewController.swift",
+      "line": 29,
+      "symbol": "ObservationViewController.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ObservationViewController.swift",
+      "line": 34,
+      "symbol": "ObservationViewController.deinit",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ObservationViewController.swift",
+      "line": 45,
+      "symbol": "ObservationViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ObservationViewController.swift",
+      "line": 51,
+      "symbol": "ObservationViewController.viewWillAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ObservationViewController.swift",
+      "line": 57,
+      "symbol": "ObservationViewController.viewDidAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ObservationViewController.swift",
+      "line": 63,
+      "symbol": "ObservationViewController.viewWillDisappear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ObservationViewController.swift",
+      "line": 69,
+      "symbol": "ObservationViewController.viewDidDisappear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ObservationViewController.swift",
+      "line": 75,
+      "symbol": "ObservationViewController.viewWillLayoutSubviews()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ObservationViewController.swift",
+      "line": 81,
+      "symbol": "ObservationViewController.viewDidLayoutSubviews()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ObservationViewController.swift",
+      "line": 87,
+      "symbol": "ObservationViewController.didMove(toParent:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ObservationViewController.swift",
+      "line": 93,
+      "symbol": "ObservationViewController.willMove(toParent:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ObservationViewController.swift",
+      "line": 99,
+      "symbol": "ObservationViewController.didReceiveMemoryWarning()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ObservationViewController.swift",
+      "line": 105,
+      "symbol": "ObservationViewController.viewWillTransition(to:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/PresentingViewControllerReader.swift",
+      "line": null,
+      "symbol": "PresentingViewControllerReaderProtocol",
+      "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
@@ -702,71 +646,22 @@
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/PresentingViewControllerReader.swift",
-      "line": 11,
+      "line": 22,
       "symbol": "PresentingViewControllerReader",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/PresentingViewControllerReader.swift",
-      "line": 15,
+      "line": 26,
       "symbol": "PresentingViewControllerReader.init(presentedBy:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/PresentingViewControllerReader.swift",
-      "line": 20,
+      "line": 31,
       "symbol": "PresentingViewControllerReader.presentingViewController",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/PresentingViewControllerReaderSpy.swift",
-      "line": 5,
-      "symbol": "PresentingViewControllerReaderSpy",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/PresentingViewControllerReaderSpy.swift",
-      "line": 6,
-      "symbol": "PresentingViewControllerReaderSpy.CallArgs",
-      "symbol_kind": "source.lang.swift.decl.enum",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/PresentingViewControllerReaderSpy.swift",
-      "line": 7,
-      "symbol": "PresentingViewControllerReaderSpy.CallArgs.presentingViewController",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/PresentingViewControllerReaderSpy.swift",
-      "line": 11,
-      "symbol": "PresentingViewControllerReaderSpy.callArgs",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/PresentingViewControllerReaderSpy.swift",
-      "line": 12,
-      "symbol": "PresentingViewControllerReaderSpy.delegate",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/PresentingViewControllerReaderSpy.swift",
-      "line": 15,
-      "symbol": "PresentingViewControllerReaderSpy.init(delegating:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/PresentingViewControllerReaderSpy.swift",
-      "line": 20,
-      "symbol": "PresentingViewControllerReaderSpy.presentingViewController",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
@@ -792,136 +687,150 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/PrettyPrint.swift",
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Printer.swift",
+      "line": null,
+      "symbol": "PrinterProtocol",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Printer.swift",
       "line": 1,
-      "symbol": "PrettyPrintable",
+      "symbol": "PrinterProtocol",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/PrettyPrint.swift",
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Printer.swift",
       "line": 2,
-      "symbol": "PrettyPrintable.descriptionLines",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/PrettyPrint.swift",
-      "line": 15,
-      "symbol": "IndentedLine",
-      "symbol_kind": "source.lang.swift.decl.enum",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/PrettyPrint.swift",
-      "line": 16,
-      "symbol": "IndentedLine.indent(_:)",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/PrettyPrint.swift",
-      "line": 17,
-      "symbol": "IndentedLine.content(_:)",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/PrettyPrint.swift",
-      "line": 20,
-      "symbol": "IndentedLine.format(indentWidth:)",
+      "symbol": "PrinterProtocol.print(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/PrettyPrint.swift",
-      "line": 33,
-      "symbol": "format(_:indentWidth:)",
-      "symbol_kind": "source.lang.swift.decl.function.free",
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Printer.swift",
+      "line": 8,
+      "symbol": "PrinterProtocol.stub()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/PrettyPrint.swift",
-      "line": 44,
-      "symbol": "indent(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.free",
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Printer.swift",
+      "line": 13,
+      "symbol": "PrinterProtocol.spy()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/PrettyPrint.swift",
-      "line": 52,
-      "symbol": "lines(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.free",
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Printer.swift",
+      "line": 20,
+      "symbol": "StdoutPrinter",
+      "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/PrettyPrint.swift",
-      "line": 60,
-      "symbol": "verticalPadding(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.free",
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Printer.swift",
+      "line": 21,
+      "symbol": "StdoutPrinter.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/PrettyPrint.swift",
-      "line": 71,
-      "symbol": "section(name:body:)",
-      "symbol_kind": "source.lang.swift.decl.function.free",
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Printer.swift",
+      "line": 24,
+      "symbol": "StdoutPrinter.print(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/PrettyPrint.swift",
-      "line": 89,
-      "symbol": "sections(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.free",
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Printer.swift",
+      "line": 31,
+      "symbol": "PrinterStub",
+      "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/PrettyPrint.swift",
-      "line": 103,
-      "symbol": "sections(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.free",
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Printer.swift",
+      "line": 32,
+      "symbol": "PrinterStub.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/PrettyPrint.swift",
-      "line": 113,
-      "symbol": "descriptionList(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.free",
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Printer.swift",
+      "line": 35,
+      "symbol": "PrinterStub.print(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Printer.swift",
+      "line": 40,
+      "symbol": "PrinterSpy",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Printer.swift",
+      "line": 41,
+      "symbol": "PrinterSpy.inherited",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Printer.swift",
+      "line": 42,
+      "symbol": "PrinterSpy.lines",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Printer.swift",
+      "line": 45,
+      "symbol": "PrinterSpy.printed",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Printer.swift",
+      "line": 50,
+      "symbol": "PrinterSpy.init(inherit:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Printer.swift",
+      "line": 55,
+      "symbol": "PrinterSpy.print(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ReverseNavigator.swift",
-      "line": 24,
-      "symbol": "ReverseNavigatorError.noDestinationViewControllerInNavigationStack",
+      "line": 37,
+      "symbol": "ReverseNavigatorError.noSuchDestinationViewControllerInNavigationStack(debugInfo:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ReverseNavigator.swift",
+      "line": 40,
+      "symbol": "ReverseNavigatorError.noSuchDestinationViewControllerInNavigationStack(navigationController:destinationViewController:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ReverseNavigatorSpy.swift",
-      "line": 10,
+      "line": 8,
       "symbol": "ReverseNavigatorSpy.CallArgs",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ReverseNavigatorSpy.swift",
-      "line": 11,
+      "line": 9,
       "symbol": "ReverseNavigatorSpy.CallArgs.back(animated:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ReverseNavigatorSpy.swift",
-      "line": 22,
-      "symbol": "ReverseNavigatorSpy.delegate",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ReverseNavigatorSpy.swift",
-      "line": 25,
-      "symbol": "ReverseNavigatorSpy.init(delegating:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
@@ -940,6 +849,13 @@
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReadWriter.swift",
+      "line": null,
+      "symbol": "RootViewControllerReadWriterProtocol",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReadWriter.swift",
       "line": 5,
       "symbol": "RootViewControllerReadWriterProtocol",
       "symbol_kind": "source.lang.swift.decl.protocol",
@@ -947,86 +863,93 @@
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReadWriter.swift",
-      "line": 9,
+      "line": 10,
+      "symbol": "RootViewControllerReadWriterProtocol.stub(willReturn:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReadWriter.swift",
+      "line": 17,
+      "symbol": "RootViewControllerReadWriterProtocol.syncStub(willReturn:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReadWriter.swift",
+      "line": 24,
+      "symbol": "RootViewControllerReadWriterProtocol.asyncStub(willReturn:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReadWriter.swift",
+      "line": 31,
+      "symbol": "RootViewControllerReadWriterProtocol.neverStub(willReturn:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReadWriter.swift",
+      "line": 38,
+      "symbol": "RootViewControllerReadWriterProtocol.spy(inheriting:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReadWriter.swift",
+      "line": 47,
       "symbol": "WindowRootViewControllerReadWriter",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReadWriter.swift",
-      "line": 14,
+      "line": 52,
       "symbol": "WindowRootViewControllerReadWriter.rootViewController",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReadWriter.swift",
-      "line": 19,
+      "line": 57,
       "symbol": "WindowRootViewControllerReadWriter.init(readingBy:writingBy:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReadWriter.swift",
-      "line": 25,
+      "line": 63,
       "symbol": "WindowRootViewControllerReadWriter.init(readingAndWriting:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReadWriterSpy.swift",
-      "line": 5,
-      "symbol": "RootViewControllerReadWriterSpy",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReadWriterSpy.swift",
-      "line": 6,
+      "line": 8,
       "symbol": "RootViewControllerReadWriterSpy.CallArgs",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReadWriterSpy.swift",
-      "line": 7,
+      "line": 9,
       "symbol": "RootViewControllerReadWriterSpy.CallArgs.rootViewController",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReadWriterSpy.swift",
-      "line": 8,
+      "line": 10,
       "symbol": "RootViewControllerReadWriterSpy.CallArgs.alter(rootViewController:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReadWriterSpy.swift",
-      "line": 12,
-      "symbol": "RootViewControllerReadWriterSpy.callArgs",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReadWriterSpy.swift",
-      "line": 13,
-      "symbol": "RootViewControllerReadWriterSpy.delegate",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReadWriterSpy.swift",
-      "line": 16,
+      "line": 23,
       "symbol": "RootViewControllerReadWriterSpy.rootViewController",
       "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReadWriterSpy.swift",
-      "line": 23,
-      "symbol": "RootViewControllerReadWriterSpy.init(delegating:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
@@ -1039,85 +962,120 @@
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReadWriterStub.swift",
       "line": 6,
-      "symbol": "RootViewControllerReadWriterStub.rootViewController",
+      "symbol": "RootViewControllerReadWriterStub.nextResult",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReadWriterStub.swift",
       "line": 10,
-      "symbol": "RootViewControllerReadWriterStub.init(alwaysReturn:)",
+      "symbol": "RootViewControllerReadWriterStub.rootViewController",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReadWriterStub.swift",
+      "line": 22,
+      "symbol": "RootViewControllerReadWriterStub.init(willReturn:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReadWriterStub.swift",
-      "line": 21,
+      "line": 33,
       "symbol": "RootViewControllerReadWriterStub.complete()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReadWriterStub.swift",
-      "line": 28,
+      "line": 40,
       "symbol": "RootViewControllerReadWriterSyncStub",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReadWriterStub.swift",
-      "line": 29,
+      "line": 41,
+      "symbol": "RootViewControllerReadWriterSyncStub.nextResult",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReadWriterStub.swift",
+      "line": 45,
       "symbol": "RootViewControllerReadWriterSyncStub.rootViewController",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReadWriterStub.swift",
-      "line": 33,
-      "symbol": "RootViewControllerReadWriterSyncStub.init(alwaysReturn:)",
+      "line": 57,
+      "symbol": "RootViewControllerReadWriterSyncStub.init(willReturn:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReadWriterStub.swift",
-      "line": 46,
+      "line": 70,
       "symbol": "RootViewControllerReadWriterAsyncStub",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReadWriterStub.swift",
-      "line": 47,
+      "line": 71,
+      "symbol": "RootViewControllerReadWriterAsyncStub.nextResult",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReadWriterStub.swift",
+      "line": 75,
       "symbol": "RootViewControllerReadWriterAsyncStub.rootViewController",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReadWriterStub.swift",
-      "line": 51,
-      "symbol": "RootViewControllerReadWriterAsyncStub.init(alwaysReturn:)",
+      "line": 87,
+      "symbol": "RootViewControllerReadWriterAsyncStub.init(willReturn:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReadWriterStub.swift",
-      "line": 66,
+      "line": 102,
       "symbol": "RootViewControllerReadWriterNeverStub",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReadWriterStub.swift",
-      "line": 67,
+      "line": 103,
+      "symbol": "RootViewControllerReadWriterNeverStub.nextResult",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReadWriterStub.swift",
+      "line": 107,
       "symbol": "RootViewControllerReadWriterNeverStub.rootViewController",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReadWriterStub.swift",
-      "line": 71,
-      "symbol": "RootViewControllerReadWriterNeverStub.init(alwaysReturn:)",
+      "line": 119,
+      "symbol": "RootViewControllerReadWriterNeverStub.init(willReturn:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReader.swift",
+      "line": null,
+      "symbol": "RootViewControllerReaderProtocol",
+      "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
@@ -1136,64 +1094,29 @@
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReader.swift",
-      "line": 11,
+      "line": 12,
+      "symbol": "RootViewControllerReaderProtocol.stub(willReturn:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReader.swift",
+      "line": 21,
       "symbol": "WindowRootViewControllerReader",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReader.swift",
-      "line": 15,
+      "line": 25,
       "symbol": "WindowRootViewControllerReader.rootViewController",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReader.swift",
-      "line": 20,
+      "line": 36,
       "symbol": "WindowRootViewControllerReader.init(whoHaveRootViewController:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReaderSpy.swift",
-      "line": 5,
-      "symbol": "RootViewControllerReaderSpy",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReaderSpy.swift",
-      "line": 6,
-      "symbol": "RootViewControllerReaderSpy.CallArgs",
-      "symbol_kind": "source.lang.swift.decl.enum",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReaderSpy.swift",
-      "line": 7,
-      "symbol": "RootViewControllerReaderSpy.CallArgs.rootViewController",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReaderSpy.swift",
-      "line": 11,
-      "symbol": "RootViewControllerReaderSpy.callArgs",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReaderSpy.swift",
-      "line": 15,
-      "symbol": "RootViewControllerReaderSpy.rootViewController",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReaderSpy.swift",
-      "line": 22,
-      "symbol": "RootViewControllerReaderSpy.init(delegating:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -1206,44 +1129,72 @@
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReaderStub.swift",
-      "line": 8,
+      "line": 6,
+      "symbol": "RootViewControllerReaderStub.nextResult",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReaderStub.swift",
+      "line": 9,
       "symbol": "RootViewControllerReaderStub.rootViewController",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerReaderStub.swift",
-      "line": 11,
-      "symbol": "RootViewControllerReaderStub.init(alwaysReturn:)",
+      "line": 21,
+      "symbol": "RootViewControllerReaderStub.init(willReturn:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerWriter.swift",
+      "line": 24,
+      "symbol": "RootViewControllerWriterProtocol.stub()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerWriter.swift",
+      "line": 29,
+      "symbol": "RootViewControllerWriterProtocol.syncStub()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerWriter.swift",
+      "line": 34,
+      "symbol": "RootViewControllerWriterProtocol.asyncStub()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerWriter.swift",
+      "line": 39,
+      "symbol": "RootViewControllerWriterProtocol.neverStub()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerWriter.swift",
+      "line": 44,
+      "symbol": "RootViewControllerWriterProtocol.spy(inheriting:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerWriterSpy.swift",
-      "line": 10,
+      "line": 8,
       "symbol": "RootViewControllerWriterSpy.CallArgs",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerWriterSpy.swift",
-      "line": 11,
+      "line": 9,
       "symbol": "RootViewControllerWriterSpy.CallArgs.alter(rootViewController:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerWriterSpy.swift",
-      "line": 21,
-      "symbol": "RootViewControllerWriterSpy.delegate",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerWriterSpy.swift",
-      "line": 24,
-      "symbol": "RootViewControllerWriterSpy.init(delegating:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
@@ -1282,37 +1233,51 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/SpyViewController.swift",
-      "line": 10,
-      "symbol": "SpyViewController.CallArgs",
-      "symbol_kind": "source.lang.swift.decl.enum",
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Strong.swift",
+      "line": 1,
+      "symbol": "Strong",
+      "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/SpyViewController.swift",
-      "line": 11,
-      "symbol": "SpyViewController.CallArgs.viewDidDisappear(animated:)",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Strong.swift",
+      "line": 2,
+      "symbol": "Strong.value",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/SpyViewController.swift",
-      "line": 12,
-      "symbol": "SpyViewController.CallArgs.viewDidAppear(animated:)",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/SpyViewController.swift",
-      "line": 23,
-      "symbol": "SpyViewController.viewDidAppear(_:)",
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Strong.swift",
+      "line": 5,
+      "symbol": "Strong.init(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/SpyViewController.swift",
-      "line": 29,
-      "symbol": "SpyViewController.viewDidDisappear(_:)",
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Strong.swift",
+      "line": 10,
+      "symbol": "Strong.do(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Strong.swift",
+      "line": 15,
+      "symbol": "Strong.strong(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Strong.swift",
+      "line": 20,
+      "symbol": "Strong.asWeak()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Strong.swift",
+      "line": 25,
+      "symbol": "Strong.asUnowned()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -1342,20 +1307,6 @@
       "line": 11,
       "symbol": "URLOpenerSpy.CallArgs.open(url:options:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/URLOpenerSpy.swift",
-      "line": 37,
-      "symbol": "URLOpenerSpy.delegate",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/URLOpenerSpy.swift",
-      "line": 40,
-      "symbol": "URLOpenerSpy.init(inheriting:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
@@ -1408,212 +1359,338 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleObserver.swift",
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Unowned.swift",
+      "line": 1,
+      "symbol": "Unowned",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Unowned.swift",
+      "line": 2,
+      "symbol": "Unowned.value",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Unowned.swift",
+      "line": 5,
+      "symbol": "Unowned.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Unowned.swift",
+      "line": 10,
+      "symbol": "Unowned.do(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Unowned.swift",
+      "line": 15,
+      "symbol": "Unowned.unowned(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Unowned.swift",
+      "line": 20,
+      "symbol": "Unowned.asWeak()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Unowned.swift",
+      "line": 25,
+      "symbol": "Unowned.asStrong()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleEvent.swift",
+      "line": null,
+      "symbol": "ViewControllerLifeCycleEvent",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleEvent.swift",
+      "line": null,
+      "symbol": "ViewControllerLifeCycleEvent",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleEvent.swift",
+      "line": null,
+      "symbol": "ViewControllerLifeCycleEvent",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleEvent.swift",
       "line": 5,
       "symbol": "ViewControllerLifeCycleEvent",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleObserver.swift",
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleEvent.swift",
       "line": 6,
-      "symbol": "ViewControllerLifeCycleEvent.initialized",
+      "symbol": "ViewControllerLifeCycleEvent.didInit",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleObserver.swift",
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleEvent.swift",
       "line": 7,
       "symbol": "ViewControllerLifeCycleEvent.viewDidLoad",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleObserver.swift",
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleEvent.swift",
       "line": 8,
       "symbol": "ViewControllerLifeCycleEvent.viewWillAppear(animated:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleObserver.swift",
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleEvent.swift",
       "line": 9,
       "symbol": "ViewControllerLifeCycleEvent.viewDidAppear(animated:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleObserver.swift",
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleEvent.swift",
       "line": 10,
       "symbol": "ViewControllerLifeCycleEvent.viewWillDisappear(animated:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleObserver.swift",
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleEvent.swift",
       "line": 11,
       "symbol": "ViewControllerLifeCycleEvent.viewDidDisappear(animated:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleObserver.swift",
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleEvent.swift",
       "line": 12,
       "symbol": "ViewControllerLifeCycleEvent.viewWillLayoutSubviews",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleObserver.swift",
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleEvent.swift",
       "line": 13,
       "symbol": "ViewControllerLifeCycleEvent.viewDidLayoutSubviews",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleObserver.swift",
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleEvent.swift",
       "line": 14,
       "symbol": "ViewControllerLifeCycleEvent.didMove(parent:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleObserver.swift",
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleEvent.swift",
       "line": 15,
       "symbol": "ViewControllerLifeCycleEvent.willMove(parent:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleObserver.swift",
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleEvent.swift",
       "line": 16,
       "symbol": "ViewControllerLifeCycleEvent.didReceiveMemoryWarning",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleObserver.swift",
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleEvent.swift",
       "line": 17,
       "symbol": "ViewControllerLifeCycleEvent.viewWillTransition(size:coordinator:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleObserver.swift",
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleEvent.swift",
       "line": 18,
-      "symbol": "ViewControllerLifeCycleEvent.deinitialized",
+      "symbol": "ViewControllerLifeCycleEvent.willDeinit",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleObserver.swift",
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleEvent.swift",
+      "line": 21,
+      "symbol": "ViewControllerLifeCycleEvent.key",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleEvent.swift",
+      "line": 54,
+      "symbol": "ViewControllerLifeCycleEvent.CodingKeys",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleEvent.swift",
+      "line": 55,
+      "symbol": "ViewControllerLifeCycleEvent.CodingKeys.didInit",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleEvent.swift",
+      "line": 56,
+      "symbol": "ViewControllerLifeCycleEvent.CodingKeys.viewDidLoad",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleEvent.swift",
       "line": 57,
-      "symbol": "ViewControllerLifeCycleObserver",
+      "symbol": "ViewControllerLifeCycleEvent.CodingKeys.viewWillAppear",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleEvent.swift",
+      "line": 58,
+      "symbol": "ViewControllerLifeCycleEvent.CodingKeys.viewDidAppear",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleEvent.swift",
+      "line": 59,
+      "symbol": "ViewControllerLifeCycleEvent.CodingKeys.viewWillDisappear",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleEvent.swift",
+      "line": 60,
+      "symbol": "ViewControllerLifeCycleEvent.CodingKeys.viewDidDisappear",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleEvent.swift",
+      "line": 61,
+      "symbol": "ViewControllerLifeCycleEvent.CodingKeys.viewWillLayoutSubviews",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleEvent.swift",
+      "line": 62,
+      "symbol": "ViewControllerLifeCycleEvent.CodingKeys.viewDidLayoutSubviews",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleEvent.swift",
+      "line": 63,
+      "symbol": "ViewControllerLifeCycleEvent.CodingKeys.didMove",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleEvent.swift",
+      "line": 64,
+      "symbol": "ViewControllerLifeCycleEvent.CodingKeys.willMove",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleEvent.swift",
+      "line": 65,
+      "symbol": "ViewControllerLifeCycleEvent.CodingKeys.didReceiveMemoryWarning",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleEvent.swift",
+      "line": 66,
+      "symbol": "ViewControllerLifeCycleEvent.CodingKeys.viewWillTransition",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleEvent.swift",
+      "line": 67,
+      "symbol": "ViewControllerLifeCycleEvent.CodingKeys.willDeinit",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Weak.swift",
+      "line": 1,
+      "symbol": "Weak",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleObserver.swift",
-      "line": 58,
-      "symbol": "ViewControllerLifeCycleObserver.init()",
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Weak.swift",
+      "line": 2,
+      "symbol": "Weak.value",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Weak.swift",
+      "line": 5,
+      "symbol": "Weak.isReleased",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Weak.swift",
+      "line": 10,
+      "symbol": "Weak.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleObserver.swift",
-      "line": 65,
-      "symbol": "ViewControllerLifeCycleObserver.init(coder:)",
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Weak.swift",
+      "line": 15,
+      "symbol": "Weak.init(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleObserver.swift",
-      "line": 70,
-      "symbol": "ViewControllerLifeCycleObserver.deinit",
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Weak.swift",
+      "line": 20,
+      "symbol": "Weak.do(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleObserver.swift",
-      "line": 75,
-      "symbol": "ViewControllerLifeCycleObserver.handle(lifeCycleEvent:)",
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Weak.swift",
+      "line": 25,
+      "symbol": "Weak.weak(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Weak.swift",
+      "line": 30,
+      "symbol": "Weak.asUnowned()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleObserver.swift",
-      "line": 80,
-      "symbol": "ViewControllerLifeCycleObserver.viewDidLoad()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleObserver.swift",
-      "line": 86,
-      "symbol": "ViewControllerLifeCycleObserver.viewWillAppear(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleObserver.swift",
-      "line": 92,
-      "symbol": "ViewControllerLifeCycleObserver.viewDidAppear(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleObserver.swift",
-      "line": 98,
-      "symbol": "ViewControllerLifeCycleObserver.viewWillDisappear(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleObserver.swift",
-      "line": 104,
-      "symbol": "ViewControllerLifeCycleObserver.viewDidDisappear(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleObserver.swift",
-      "line": 110,
-      "symbol": "ViewControllerLifeCycleObserver.viewWillLayoutSubviews()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleObserver.swift",
-      "line": 116,
-      "symbol": "ViewControllerLifeCycleObserver.viewDidLayoutSubviews()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleObserver.swift",
-      "line": 122,
-      "symbol": "ViewControllerLifeCycleObserver.didMove(toParent:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleObserver.swift",
-      "line": 128,
-      "symbol": "ViewControllerLifeCycleObserver.willMove(toParent:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleObserver.swift",
-      "line": 134,
-      "symbol": "ViewControllerLifeCycleObserver.didReceiveMemoryWarning()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/ViewControllerLifeCycleObserver.swift",
-      "line": 140,
-      "symbol": "ViewControllerLifeCycleObserver.viewWillTransition(to:with:)",
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/Weak.swift",
+      "line": 35,
+      "symbol": "Weak.asStrong()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -1690,127 +1767,106 @@
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/WeakOrUnowned.swift",
       "line": 26,
-      "symbol": "WeakOrUnowned.value",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/WeakOrUnowned.swift",
-      "line": 36,
-      "symbol": "WeakOrUnowned.do(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/WeakOrUnowned.swift",
-      "line": 46,
       "symbol": "WeakOrUnowned.weak(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/WeakOrUnowned.swift",
-      "line": 51,
+      "line": 31,
       "symbol": "WeakOrUnowned.unowned(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/WeakOrUnowned.swift",
-      "line": 56,
+      "line": 36,
       "symbol": "WeakOrUnowned.empty()",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/WeakOrUnowned.swift",
-      "line": 63,
-      "symbol": "Weak",
-      "symbol_kind": "source.lang.swift.decl.class",
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/WeakOrUnownedOrStrong.swift",
+      "line": 1,
+      "symbol": "WeakOrUnownedOrStrong",
+      "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/WeakOrUnowned.swift",
-      "line": 64,
-      "symbol": "Weak.value",
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/WeakOrUnownedOrStrong.swift",
+      "line": 2,
+      "symbol": "WeakOrUnownedOrStrong.weakReference(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/WeakOrUnownedOrStrong.swift",
+      "line": 3,
+      "symbol": "WeakOrUnownedOrStrong.unownedReference(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/WeakOrUnownedOrStrong.swift",
+      "line": 4,
+      "symbol": "WeakOrUnownedOrStrong.strongReference(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/WeakOrUnownedOrStrong.swift",
+      "line": 7,
+      "symbol": "WeakOrUnownedOrStrong.weak",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/WeakOrUnowned.swift",
-      "line": 67,
-      "symbol": "Weak.isReleased",
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/WeakOrUnownedOrStrong.swift",
+      "line": 17,
+      "symbol": "WeakOrUnownedOrStrong.unowned",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/WeakOrUnowned.swift",
-      "line": 72,
-      "symbol": "Weak.init()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/WeakOrUnownedOrStrong.swift",
+      "line": 27,
+      "symbol": "WeakOrUnownedOrStrong.strong",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/WeakOrUnowned.swift",
-      "line": 77,
-      "symbol": "Weak.init(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/WeakOrUnowned.swift",
-      "line": 82,
-      "symbol": "Weak.do(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/WeakOrUnowned.swift",
-      "line": 87,
-      "symbol": "Weak.weak(_:)",
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/WeakOrUnownedOrStrong.swift",
+      "line": 37,
+      "symbol": "WeakOrUnownedOrStrong.weak(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/WeakOrUnowned.swift",
-      "line": 94,
-      "symbol": "Unowned",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/WeakOrUnowned.swift",
-      "line": 95,
-      "symbol": "Unowned.value",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/WeakOrUnowned.swift",
-      "line": 98,
-      "symbol": "Unowned.init(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/WeakOrUnowned.swift",
-      "line": 103,
-      "symbol": "Unowned.do(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/WeakOrUnowned.swift",
-      "line": 108,
-      "symbol": "Unowned.do(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/WeakOrUnowned.swift",
-      "line": 113,
-      "symbol": "Unowned.unowned(_:)",
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/WeakOrUnownedOrStrong.swift",
+      "line": 42,
+      "symbol": "WeakOrUnownedOrStrong.unowned(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/WeakOrUnownedOrStrong.swift",
+      "line": 47,
+      "symbol": "WeakOrUnownedOrStrong.strong(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/WeakOrUnownedOrStrong.swift",
+      "line": 52,
+      "symbol": "WeakOrUnownedOrStrong.empty()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/WindowsReader.swift",
+      "line": null,
+      "symbol": "WindowsReaderProtocol",
+      "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
@@ -1829,72 +1885,23 @@
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/WindowsReader.swift",
-      "line": 11,
+      "line": 20,
       "symbol": "WindowsReader",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/WindowsReader.swift",
-      "line": 15,
+      "line": 24,
       "symbol": "WindowsReader.windows",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/WindowsReader.swift",
-      "line": 20,
+      "line": 29,
       "symbol": "WindowsReader.init(whoHaveWindows:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/WindowsReaderSpy.swift",
-      "line": 5,
-      "symbol": "WindowsReaderSpy",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/WindowsReaderSpy.swift",
-      "line": 6,
-      "symbol": "WindowsReaderSpy.CallArgs",
-      "symbol_kind": "source.lang.swift.decl.enum",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/WindowsReaderSpy.swift",
-      "line": 7,
-      "symbol": "WindowsReaderSpy.CallArgs.windows",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/WindowsReaderSpy.swift",
-      "line": 11,
-      "symbol": "WindowsReaderSpy.callArgs",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/WindowsReaderSpy.swift",
-      "line": 12,
-      "symbol": "WindowsReaderSpy.delegate",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/WindowsReaderSpy.swift",
-      "line": 15,
-      "symbol": "WindowsReaderSpy.init(delegating:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/WindowsReaderSpy.swift",
-      "line": 20,
-      "symbol": "WindowsReaderSpy.windows",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
@@ -1907,14 +1914,21 @@
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/WindowsReaderStub.swift",
       "line": 6,
-      "symbol": "WindowsReaderStub.windows",
+      "symbol": "WindowsReaderStub.nextResult",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/WindowsReaderStub.swift",
       "line": 9,
-      "symbol": "WindowsReaderStub.init(alwaysReturn:)",
+      "symbol": "WindowsReaderStub.windows",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/WindowsReaderStub.swift",
+      "line": 23,
+      "symbol": "WindowsReaderStub.init(willReturn:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     }

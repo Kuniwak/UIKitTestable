@@ -9,17 +9,11 @@ public protocol PresentingViewControllerReaderProtocol {
 
 
 extension PresentingViewControllerReaderProtocol {
+    /// Returns a stub that do nothing.
     public static func stub(
         willReturn presentingViewController: WeakOrUnowned<UIViewController> = .empty()
     ) -> PresentingViewControllerReaderStub {
         return PresentingViewControllerReaderStub(willReturn: presentingViewController)
-    }
-
-
-    public static func spy(
-        inheriting inherited: PresentingViewControllerReaderProtocol = PresentingViewControllerReaderStub()
-    ) -> PresentingViewControllerReaderSpy {
-        return PresentingViewControllerReaderSpy(inheriting: inherited)
     }
 }
 

@@ -2,38 +2,64 @@ import UIKit
 
 
 
-/**
- A type for wrapper classes that encapsulate an implementation of `UIApplication#open`.
- */
+/// A type for wrapper classes that encapsulate an implementation of `UIApplication#open`.
 public protocol URLOpenerProtocol {
-    /**
-     Attempts to open the resource at the specified URL.
-     This method behave like `UIApplication#openURL`.
-     */
+    /// Attempts to open the resource at the specified URL.
+    /// This method behave like `UIApplication#openURL`.
     func open(url: URL)
 
 
-    /**
-     Attempts to open the resource at the specified URL.
-     This method behave like `UIApplication#open`.
-     */
+    /// Attempts to open the resource at the specified URL.
+    /// This method behave like `UIApplication#open`.
     @available(iOS 10.0, *)
     func open(url: URL, completion: @escaping (Bool) -> Void)
 
 
-    /**
-     Attempts to open the resource at the specified URL.
-     This method behave like `UIApplication#open`.
-     */
+    /// Attempts to open the resource at the specified URL.
+    /// This method behave like `UIApplication#open`.
     @available(iOS 10.0, *)
     func open(url: URL, options: [UIApplication.OpenExternalURLOptionsKey: Any], completion: @escaping (Bool) -> Void)
 }
 
 
-/**
- A wrapper class to encapsulate a implementation of `UIApplication#open`.
- You can replace the class to the stub or spy for testing.
- */
+
+extension URLOpenerProtocol {
+    /// Returns a stub that can call a last completion manually.
+    public static func manualStub() -> URLOpenerManualStub {
+        return URLOpenerManualStub()
+    }
+
+
+    /// Returns a stub that call the given completion immediately.
+    public static func syncStub(willCallWith firstCallbackArgument: Bool = true) -> URLOpenerSyncStub {
+        return URLOpenerSyncStub(willCallWith: firstCallbackArgument)
+    }
+
+
+    /// Returns a stub that call the given completion asynchronously.
+    public static func asyncStub(willCallWith firstCallbackArgument: Bool = true) -> URLOpenerAsyncStub {
+        return URLOpenerAsyncStub(willCallWith: firstCallbackArgument)
+    }
+
+
+    /// Returns a stub that will never call the given completion.
+    public static func neverStub() -> URLOpenerNeverStub {
+        return URLOpenerNeverStub()
+    }
+
+
+    /// Returns a spy that record how methods were called.
+    /// - parameters:
+    ///     - inherited: A dynamic base class control how call a completion.
+    public static func spy(inheriting inherited: URLOpenerProtocol = URLOpenerNeverStub()) -> URLOpenerSpy {
+        return URLOpenerSpy(inheriting: inherited)
+    }
+}
+
+
+
+/// A wrapper class to encapsulate a implementation of `UIApplication#open`.
+/// You can replace the class to the stub or spy for testing.
 public final class ApplicationURLOpener: URLOpenerProtocol {
     public func open(url: URL) {
         if #available(iOS 10.0, *) {

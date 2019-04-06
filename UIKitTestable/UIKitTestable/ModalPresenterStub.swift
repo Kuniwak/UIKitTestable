@@ -9,7 +9,7 @@ import UIKit
  The completion of `present(viewController: UIViewController, animated:Bool, completion: (() -> Void)?` will be called when
  `complete()` was called.
  */
-public final class ModalPresenterStub: ModalPresenterProtocol {
+public final class ModalPresenterManualStub: ModalPresenterProtocol {
     private var completion: (() -> Void)?
 
 

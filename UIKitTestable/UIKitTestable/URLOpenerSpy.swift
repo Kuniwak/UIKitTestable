@@ -7,6 +7,7 @@ import UIKit
  This class is useful for capturing calls of `UIApplication#open` for testing.
  */
 public final class URLOpenerSpy: URLOpenerProtocol {
+    /// Call arguments of methods of the class.
     public enum CallArgs: Equatable {
         case open(url: URL, options: [UIApplication.OpenExternalURLOptionsKey: Any]?)
 
@@ -18,8 +19,8 @@ public final class URLOpenerSpy: URLOpenerProtocol {
 
             case (.open(url: let lu, options: .some(let lo)), .open(url: let ru, options: .some(let ro))):
                 // XXX: Any is not an Equatable, but we can roughly compare by the debugDescription.
-                let loEquatable = lo.mapValues { (value: Any) -> String in "\(value)" }
-                let roEquatable = ro.mapValues { (value: Any) -> String in "\(value)" }
+                let loEquatable = lo.mapValues { "\($0)" }
+                let roEquatable = ro.mapValues { "\($0)" }
                 return lu == ru && loEquatable == roEquatable
 
             default:
@@ -29,19 +30,23 @@ public final class URLOpenerSpy: URLOpenerProtocol {
     }
 
 
-    /**
-     Call arguments list for the method `#open(url: URL)`.
-     You can use the property to test how the method is called.
-     */
+    /// Captured call arguments list for methods.
+    /// You can use the property to verify how methods were called.
     public private(set) var callArgs = [CallArgs]()
+
+
+    /// A dynamic base class that can control how the last completion is called.
     public var inherited: URLOpenerProtocol
 
 
-    public init(inheriting inherited: URLOpenerProtocol = URLOpenerStub()) {
+    /// - parameters:
+    ///     - inherited: A dynamic base class that can control how the last completion is called. Default is never called.
+    public init(inheriting inherited: URLOpenerProtocol = URLOpenerNeverStub()) {
         self.inherited = inherited
     }
 
 
+    /// Records the call arguments and calls the dynamic base class.
     public func open(url: URL) {
         self.callArgs.append(.open(url: url, options: nil))
 
@@ -49,6 +54,7 @@ public final class URLOpenerSpy: URLOpenerProtocol {
     }
 
 
+    /// Records the call arguments and calls the dynamic base class.
     public func open(url: URL, completion: @escaping (Bool) -> Void) {
         self.callArgs.append(.open(url: url, options: nil))
 
@@ -56,6 +62,7 @@ public final class URLOpenerSpy: URLOpenerProtocol {
     }
 
 
+    /// Records the call arguments and calls the dynamic base class.
     public func open(url: URL, options: [UIApplication.OpenExternalURLOptionsKey: Any], completion: @escaping (Bool) -> Void) {
         self.callArgs.append(.open(url: url, options: options))
 

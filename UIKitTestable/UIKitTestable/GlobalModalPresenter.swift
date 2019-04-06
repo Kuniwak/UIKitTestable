@@ -1,33 +1,41 @@
 import UIKit
 
 
+/// A protocol for specialized ModalPresenters that can present a UIViewController on a top of view hierarchy unconditionally.
 public protocol GlobalModalPresenterProtocol: ModalPresenterProtocol {}
 
 
 
 extension GlobalModalPresenterProtocol {
-    public static func stub() -> GlobalModalPresenterStub {
-        return GlobalModalPresenterStub()
+    /// Returns a stub that can call a last completion manually.
+    public static func manualStub() -> GlobalModalPresenterManualStub {
+        return GlobalModalPresenterManualStub()
     }
 
 
+    /// Returns a stub that call the given completion immediately.
     public static func syncStub() -> GlobalModalPresenterSyncStub {
         return GlobalModalPresenterSyncStub()
     }
 
 
+    /// Returns a stub that call the given completion asynchronously.
     public static func asyncStub() -> GlobalModalPresenterAsyncStub {
         return GlobalModalPresenterAsyncStub()
     }
 
 
-    public static func never() -> GlobalModalPresenterNeverStub {
+    /// Returns a stub that will never call the given completion.
+    public static func neverStub() -> GlobalModalPresenterNeverStub {
         return GlobalModalPresenterNeverStub()
     }
 
 
+    /// Returns a spy that record how methods were called.
+    /// - parameters:
+    ///     - inherited: A dynamic base class control how call a completion.
     public static func spy(
-        inheriting inherited: GlobalModalPresenterProtocol = GlobalModalPresenterSyncStub()
+        inheriting inherited: GlobalModalPresenterProtocol = GlobalModalPresenterNeverStub()
     ) -> GlobalModalPresenterSpy {
         return GlobalModalPresenterSpy(inheriting: inherited)
     }
@@ -35,15 +43,15 @@ extension GlobalModalPresenterProtocol {
 
 
 
-/**
- A class for specialized ModalPresenters that can present a UIViewController unconditionally.
- You can present a UIViewController if you does not know what UIViewController is visible.
- */
+/// A class for specialized ModalPresenters that can present a UIViewController on a top of view hierarchy unconditionally.
+/// You can present a UIViewController if you does not know what UIViewController is visible.
 public final class GlobalModalPresenter {
     private let rootViewControllerReadWriter: RootViewControllerReadWriterProtocol
     private let keyWindowWriter: KeyWindowMakerProtocol
 
 
+    /// - parameters:
+    ///     - window: The UIWindow where given UIViewControllers present on.
     public convenience init(wherePresentOn window: WeakOrUnowned<UIWindow>) {
         self.init(
             alteringRootViewControllerBy: WindowRootViewControllerReadWriter(readingAndWriting: window),
@@ -52,6 +60,9 @@ public final class GlobalModalPresenter {
     }
 
 
+    /// - parameters:
+    ///     - rootViewControllerReadWriter: An object has a rootViewController.
+    ///     - kwyWindowWriter: An object that can make a UIWindow to the key.
     public init(
         alteringRootViewControllerBy rootViewControllerReadWriter: RootViewControllerReadWriterProtocol,
         makingKeyWindowBy keyWindowWriter: KeyWindowMakerProtocol

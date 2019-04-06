@@ -21,8 +21,8 @@ public protocol RootViewControllerWriterProtocol: AnyObject {
 
 
 extension RootViewControllerWriterProtocol {
-    public static func stub() -> RootViewControllerWriterStub {
-        return RootViewControllerWriterStub()
+    public static func manualStub() -> RootViewControllerWriterManualStub {
+        return RootViewControllerWriterManualStub()
     }
 
 
@@ -42,7 +42,7 @@ extension RootViewControllerWriterProtocol {
 
 
     public static func spy(
-        inheriting inherited: RootViewControllerWriterProtocol = RootViewControllerWriterSyncStub()
+        inheriting inherited: RootViewControllerWriterProtocol = RootViewControllerWriterNeverStub()
     ) -> RootViewControllerWriterSpy {
         return RootViewControllerWriterSpy(inheriting: inherited)
     }

@@ -8,7 +8,7 @@ import UIKit
 
  You can call the completion callback of `open` by calling `complete(isSuccess:Book)`.
  */
-public final class URLOpenerStub: URLOpenerProtocol {
+public final class URLOpenerManualStub: URLOpenerProtocol {
     private var completion: ((Bool) -> Void)?
 
 
@@ -45,7 +45,7 @@ public final class URLOpenerSyncStub: URLOpenerProtocol {
     public var nextCallbackArgument: Bool
 
 
-    public init(willCallWith firstCallbackArgument: Bool) {
+    public init(willCallWith firstCallbackArgument: Bool = true) {
         self.nextCallbackArgument = firstCallbackArgument
     }
 
