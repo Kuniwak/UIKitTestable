@@ -4,7 +4,7 @@ import UIKit
 
 /// A spy class for `ModalPresenter`s.
 /// This class captures calls of methods of the class for testing.
-/// - SeeAlso: `ModalPresenterUsages`.
+/// - SeeAlso: [`ModalPresenterUsages`](https://kuniwak.github.io/UIKitTestable/UIKitTestableAppTests/Classes/ModalPresenterUsages.html).
 public final class ModalPresenterSpy: ModalPresenterProtocol {
     /// Call arguments of methods of `ModalPresenterSpy`.
     public enum CallArgs: Equatable {

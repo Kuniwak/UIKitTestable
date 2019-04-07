@@ -61,6 +61,8 @@ class MyViewControllerTests: XCTestCase {
 }
 ```
 
+See [other usages](https://kuniwak.github.io/UIKitTestable/UIKitTestableAppTests/Classes/NavigatorUsages.html).
+
 
 
 ### Testing with `UIViewController.present(_:animated:completion:)`
@@ -111,12 +113,14 @@ class MyViewControllerTests: XCTestCase {
 }
 ```
 
+See [other usages](https://kuniwak.github.io/UIKitTestable/UIKitTestable/Classes/ModalPresenter.html).
+
 
 
 Documentations
 --------------
 
-- [Full documentations for `master`](https://kuniwak.github.io/UIKitTestable/index.html)
+- [Full documentations for `master`](https://kuniwak.github.io/UIKitTestable/UIKitTestable/index.html)
 
 You can re-generate the docs by `./tools/generate-docs` on this repository.
 
@@ -138,3 +142,9 @@ github "Kuniwak/UIKitTestable"
 
 Not supported yet. If you want to support CocoaPods, please send the patch.
 
+
+
+License
+-------
+
+MIT.

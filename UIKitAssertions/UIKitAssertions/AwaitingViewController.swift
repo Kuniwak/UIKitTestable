@@ -54,7 +54,7 @@ public func awaitAnyViewDidAppear(
 ///     - testCase: A XCTestCase instance where the function was called.
 ///     - callback: A callback that takes the generated view controller.
 /// - Remark: Do not forget to call [`XCTestCase.waitForExpectations`](https://developer.apple.com/documentation/xctest/xctestcase/1500748-waitforexpectations#).
-/// - SeeAlso: The actual usage is in `SpyViewControllerUsages`.
+/// - SeeAlso: The actual usage is in [`SpyViewControllerUsages`](https://kuniwak.github.io/UIKitTestable/UIKitTestableAppTests/Classes/SpyViewControllerUsages.html).
 public func awaitViewDidAppear<ViewController: UIViewController>(
     _ viewController: ViewController,
     on testCase: XCTestCase,

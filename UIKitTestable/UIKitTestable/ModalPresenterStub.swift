@@ -5,7 +5,7 @@ import UIKit
 /// A stub class for `ModalPresenter`.
 /// This class does nothing so it is useful to prevent side-effects for testing.
 /// Given completions can be called manually.
-/// - SeeAlso: `ModalPresenterUsages`.
+/// - SeeAlso: [`ModalPresenterUsages`](https://kuniwak.github.io/UIKitTestable/UIKitTestableAppTests/Classes/ModalPresenterUsages.html).
 public final class ModalPresenterManualStub: ModalPresenterProtocol {
     /// The last completion if exists.
     private var completion: (() -> Void)!

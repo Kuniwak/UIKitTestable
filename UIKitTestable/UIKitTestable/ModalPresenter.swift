@@ -4,7 +4,7 @@ import UIKit
 
 /// A protocol for wrapper classes that encapsulate `UIViewController#present(_: UIViewController, animated: Bool)`.
 /// You can use some stubs or spies instead of actual classes.
-/// - SeeAlso: `ModalPresenterUsages`.
+/// - SeeAlso: [`ModalPresenterUsages`](https://kuniwak.github.io/UIKitTestable/UIKitTestableAppTests/Classes/ModalPresenterUsages.html).
 public protocol ModalPresenterProtocol {
     /// Presents a view controller modally.
     /// This method behave like `UIViewController#present(UIViewController, animated: Bool)`
@@ -39,6 +39,7 @@ public func neverStub() -> ModalPresenterNeverStub {
 
 /// A wrapper class to encapsulate a implementation of `UIViewController#present(_: UIViewController, animated: Bool)`.
 /// You can replace the class with the stub or spy for testing.
+/// - SeeAlso: [`ModalPresenterUsages`](https://kuniwak.github.io/UIKitTestable/UIKitTestableAppTests/Classes/ModalPresenterUsages.html).
 public final class ModalPresenter<ViewController: UIViewController>: ModalPresenterProtocol {
     private let groundViewController: WeakOrUnowned<ViewController>
 

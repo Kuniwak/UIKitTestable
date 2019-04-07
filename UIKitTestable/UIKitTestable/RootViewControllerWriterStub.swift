@@ -5,7 +5,6 @@ import UIKit
 /// A stub class for `RootViewControllerWriter`.
 /// This class does nothing so it is useful to prevent side-effects for testing.
 /// Given completions can be called manually.
-/// - SeeAlso: `RootViewControllerWriterUsages`.
 public final class RootViewControllerWriterManualStub: RootViewControllerWriterProtocol {
     /// The last completion.
     private var completion: (() -> Void)?
@@ -40,7 +39,6 @@ public final class RootViewControllerWriterManualStub: RootViewControllerWriterP
 /// A stub class for `RootViewControllerWriter`.
 /// This class does nothing so it is useful to prevent side-effects for testing.
 /// Given completions will be called immediately.
-/// - SeeAlso: `RootViewControllerWriterUsages`.
 public final class RootViewControllerWriterSyncStub: RootViewControllerWriterProtocol {
     /// Returns a newly initialized stub.`
     public init() {}
@@ -61,7 +59,6 @@ public final class RootViewControllerWriterSyncStub: RootViewControllerWriterPro
 /// A stub class for `RootViewControllerWriter`.
 /// This class does nothing so it is useful to prevent side-effects for testing.
 /// Given completions will be called asynchronously.
-/// - SeeAlso: `RootViewControllerWriterUsages`.
 public final class RootViewControllerWriterAsyncStub: RootViewControllerWriterProtocol {
     /// Returns a newly initialized stub.`
     public init() {}
@@ -84,7 +81,6 @@ public final class RootViewControllerWriterAsyncStub: RootViewControllerWriterPr
 /// A stub class for `RootViewControllerWriter`.
 /// This class does nothing so it is useful to prevent side-effects for testing.
 /// Given completions will be never called.
-/// - SeeAlso: `RootViewControllerWriterUsages`.
 public final class RootViewControllerWriterNeverStub: RootViewControllerWriterProtocol {
     /// Returns a newly initialized stub.`
     public init() {}

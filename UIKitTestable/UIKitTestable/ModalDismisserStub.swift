@@ -5,7 +5,7 @@ import UIKit
 /// A stub class for `ModalDismisser`.
 /// This class does nothing so it is useful to prevent side-effects for testing.
 /// Given completions can be called manually.
-/// - SeeAlso: `ModalDismisserUsages`.
+/// - SeeAlso: [`ModalDismisserUsages`](https://kuniwak.github.io/UIKitTestable/UIKitTestableAppTests/Classes/ModalDismisserUsages.html).
 public final class ModalDismisserManualStub: ModalDismisserProtocol {
     /// The last completion if exists.
     public var completion: (() -> Void)!
@@ -40,7 +40,7 @@ public final class ModalDismisserManualStub: ModalDismisserProtocol {
 /// A stub class for `ModalDismisser`.
 /// This class does nothing so it is useful to prevent side-effects for testing.
 /// Given completions will be called immediately.
-/// - SeeAlso: `ModalDismisserUsages`.
+/// - SeeAlso: [`ModalDismisserUsages`](https://kuniwak.github.io/UIKitTestable/UIKitTestableAppTests/Classes/ModalDismisserUsages.html).
 public final class ModalDismisserSyncStub: ModalDismisserProtocol {
     /// Returns a newly initialized stub.`
     public init() {}
@@ -61,7 +61,7 @@ public final class ModalDismisserSyncStub: ModalDismisserProtocol {
 /// A stub class for `ModalDismisser`.
 /// This class does nothing so it is useful to prevent side-effects for testing.
 /// Given completions will be called asynchronously.
-/// - SeeAlso: `ModalDismisserUsages`.
+/// - SeeAlso: [`ModalDismisserUsages`](https://kuniwak.github.io/UIKitTestable/UIKitTestableAppTests/Classes/ModalDismisserUsages.html).
 public final class ModalDismisserAsyncStub: ModalDismisserProtocol {
     /// Returns a newly initialized stub.`
     public init() {}
@@ -84,7 +84,7 @@ public final class ModalDismisserAsyncStub: ModalDismisserProtocol {
 /// A stub class for `ModalDismisser`.
 /// This class does nothing so it is useful to prevent side-effects for testing.
 /// Given completions will be never called.
-/// - SeeAlso: `ModalDismisserUsages`.
+/// - SeeAlso: [`ModalDismisserUsages`](https://kuniwak.github.io/UIKitTestable/UIKitTestableAppTests/Classes/ModalDismisserUsages.html).
 public final class ModalDismisserNeverStub: ModalDismisserProtocol {
     /// Returns a newly initialized stub.`
     public init() {}

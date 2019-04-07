@@ -4,7 +4,7 @@ import UIKit
 
 /// A spy class for `ModalDismisser`s.
 /// This class captures calls of methods of the class for testing.
-/// - SeeAlso: `ModalDismisserUsages`.
+/// - SeeAlso: [`ModalDismisserUsages`](https://kuniwak.github.io/UIKitTestable/UIKitTestableAppTests/Classes/ModalDismisserUsages.html).
 public final class ModalDismisserSpy: ModalDismisserProtocol {
     /// Call arguments of methods of `ModalDismisserSpy`.
     public enum CallArgs: Equatable {

@@ -4,7 +4,7 @@ import UIKit
 
 /// A protocol for wrapper classes that encapsulate `UIViewController#dismiss(animated: Bool)`.
 /// You can use some stubs or spies instead of actual classes for testing.
-/// - SeeAlso: `ModalDismisserUsages`.
+/// - SeeAlso: [`ModalDismisserUsages`](https://kuniwak.github.io/UIKitTestable/UIKitTestableAppTests/Classes/ModalDismisserUsages.html).
 public protocol ModalDismisserProtocol {
     /// Dismisses the presented view controller.
     /// This method behave like `UIViewController#dismiss(animated: Bool)`
@@ -38,6 +38,7 @@ public func neverStub() -> ModalDismisserNeverStub {
 
 /// A wrapper class to encapsulate a implementation of `UIViewController#disiss(animated: Bool)`.
 /// You can replace the class with the stub or spy for testing.
+/// - SeeAlso: [`ModalDismisserUsages`](https://kuniwak.github.io/UIKitTestable/UIKitTestableAppTests/Classes/ModalDismisserUsages.html).
 public final class ModalDismisser: ModalDismisserProtocol {
     private let viewController: WeakOrUnowned<UIViewController>
 

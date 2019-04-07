@@ -3,7 +3,7 @@ import UIKit
 
 /// A protocol for specialized `ModalDismisser`s presented by `GlobalModalPresenter`s.
 /// You can use some stubs or spies instead of actual classes for testing.
-/// - SeeAlso: `GlobalModalDismisserUsages`.
+/// - SeeAlso: [`GlobalModalDismisserUsages`](https://kuniwak.github.io/UIKitTestable/UIKitTestableAppTests/Classes/GlobalModalDismisserUsages.html).
 public protocol GlobalModalDismisserProtocol {
     /// Dismisses the presented view controller.
     /// This method behave like `UIViewController#dismiss(animated: Bool)`

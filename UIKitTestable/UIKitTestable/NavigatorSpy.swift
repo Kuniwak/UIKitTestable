@@ -4,7 +4,7 @@ import UIKit
 
 /// A spy class for `Navigator`s.
 /// This class captures calls of methods of the class for testing.
-/// - SeeAlso: `NavigatorUsages`.
+/// - SeeAlso: [`NavigatorUsages`](https://kuniwak.github.io/UIKitTestable/UIKitTestableAppTests/Classes/NavigatorUsages.html).
 public final class NavigatorSpy: NavigatorProtocol {
     /// Call arguments of methods of `NavigatorSpy`.
     public enum CallArgs: Equatable {

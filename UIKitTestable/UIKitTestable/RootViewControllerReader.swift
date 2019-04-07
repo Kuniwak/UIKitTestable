@@ -4,7 +4,6 @@ import UIKit
 
 /// A protocol for wrapper classes that encapsulate a getter of rootViewController.
 /// You can use some stubs or spies instead of actual classes for testing.
-/// - SeeAlso: `RootViewControllerReaderUsages`.
 public protocol RootViewControllerReaderProtocol: AnyObject {
     /// The root view controller.
     var rootViewController: UIViewController? { get }
@@ -23,7 +22,6 @@ public func stub(
 
 /// A protocol for wrapper classes that encapsulate a getter of rootViewController.
 /// You can use some stubs or spies instead of actual classes for testing.
-/// - SeeAlso: `RootViewControllerReaderUsages`.
 public final class WindowRootViewControllerReader: RootViewControllerReaderProtocol {
     private let window: WeakOrUnowned<UIWindow>
 

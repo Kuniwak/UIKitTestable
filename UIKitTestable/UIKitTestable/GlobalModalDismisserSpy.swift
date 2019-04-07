@@ -4,7 +4,7 @@ import UIKit
 
 /// A spy class for `GlobalModalDismisser`s.
 /// This class captures calls of methods of the class for testing.
-/// - SeeAlso: `GlobalModalDismisserUsages`.
+/// - SeeAlso: [`GlobalModalDismisserUsages`](https://kuniwak.github.io/UIKitTestable/UIKitTestableAppTests/Classes/GlobalModalDismisserUsages.html).
 public final class GlobalModalDismisserSpy: GlobalModalDismisserProtocol {
     /// Call arguments of methods of `GlobalModalDismisserSpy`.
     public enum CallArgs: Equatable {

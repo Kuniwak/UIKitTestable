@@ -4,7 +4,7 @@ import UIKit
 
 /// A spy class for `ReverseNavigator`s.
 /// This class captures calls of methods of the class for testing.
-/// - SeeAlso: `ReverseNavigatorUsages`.
+/// - SeeAlso: [`ReverseNavigatorUsages`](https://kuniwak.github.io/UIKitTestable/UIKitTestableAppTests/Classes/ReverseNavigatorUsages.html).
 public final class ReverseNavigatorSpy: ReverseNavigatorProtocol {
     /// Call arguments of methods of `ReverseNavigatorSpy`.
     public enum CallArgs: Equatable {

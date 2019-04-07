@@ -4,7 +4,7 @@ import UIKit
 
 /// A type for wrapper classes of `UINavigationController#(_:UIViewController, animated:Bool)`.
 /// You can use some stubs or spies instead of actual classes for testing.
-/// - SeeAlso: `ReverseNavigatorUsages`.
+/// - SeeAlso: [`ReverseNavigatorUsages`](https://kuniwak.github.io/UIKitTestable/UIKitTestableAppTests/Classes/ReverseNavigatorUsages.html).
 public protocol ReverseNavigatorProtocol {
     /// Pops all the view controllers on the stack except the root view controller and updates the display.
     /// - Throws: Throws when the UIViewController is not in the navigation stack.
@@ -23,7 +23,7 @@ public func stub(willThrow error: NoSuchDestinationViewControllerInNavigationSta
 
 /// A wrapper class to encapsulate a implementation of `UINavigationController.popToViewController`.
 /// You can replace the class with a stub or spy for testing.
-/// - SeeAlso: `ReverseNavigatorUsages`.
+/// - SeeAlso: [`ReverseNavigatorUsages`](https://kuniwak.github.io/UIKitTestable/UIKitTestableAppTests/Classes/ReverseNavigatorUsages.html).
 public final class ReverseNavigator: ReverseNavigatorProtocol {
     private let navigationController: WeakOrUnowned<UINavigationController>
     private let destinationViewController: WeakOrUnowned<UIViewController>

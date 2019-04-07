@@ -5,7 +5,6 @@ import UIKit
 /// A wrapper class that encapsulate a getter and setter of rootViewController.
 /// This class does not have variations for any stubs or spies because these variations
 /// can be created using stubs and spies for each reader and writer.
-/// - SeeAlso: `RootViewControllerReadWriterUsages`.
 public final class RootViewControllerReadWriter {
     private var reader: RootViewControllerReaderProtocol
     private var writer: RootViewControllerWriterProtocol

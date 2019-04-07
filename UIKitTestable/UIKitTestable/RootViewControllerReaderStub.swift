@@ -4,7 +4,6 @@ import UIKit
 
 /// A stub class for `RootViewControllerReader`.
 /// This class does nothing so it is useful to prevent side-effects for testing.
-/// - SeeAlso: `RootViewControllerReaderUsages`.
 public final class RootViewControllerReaderStub: RootViewControllerReaderProtocol {
     /// An UIViewController that will be returned as the rootViewController.
     public var nextResult: WeakOrUnownedOrStrong<UIViewController>

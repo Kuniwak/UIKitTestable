@@ -4,7 +4,7 @@ import UIKit
 
 /// A protocol for wrapper classes that encapsulate `UINavigationController#pushViewController(_:UIViewController, animated:Bool)`.
 /// You can use some stubs or spies instead of actual classes for testing.
-/// - SeeAlso: `NavigatorUsages`.
+/// - SeeAlso: [`NavigatorUsages`](https://kuniwak.github.io/UIKitTestable/UIKitTestableAppTests/Classes/NavigatorUsages.html).
 public protocol NavigatorProtocol {
     /// Pushes a view controller onto the receiver’s stack and updates the display.
     /// This method behave like `UINavigationController#pushViewController(UIViewController, animated: Bool)`
@@ -22,7 +22,7 @@ public func stub() -> NavigatorStub {
 
 /// A wrapper class to encapsulate a implementation of `UINavigationController#pushViewController(UIViewController, animated: Bool)`.
 /// You can replace the class with the stub or spy for testing.
-/// - SeeAlso: `NavigatorUsages`.
+/// - SeeAlso: [`NavigatorUsages`](https://kuniwak.github.io/UIKitTestable/UIKitTestableAppTests/Classes/NavigatorUsages.html).
 public final class Navigator: NavigatorProtocol {
     private let navigationController: WeakOrUnowned<UINavigationController>
 

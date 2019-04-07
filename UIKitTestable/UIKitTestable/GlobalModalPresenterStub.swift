@@ -5,7 +5,7 @@ import UIKit
 /// A stub class for `GlobalModalPresenter`.
 /// This class does nothing so it is useful to prevent side-effects for testing.
 /// Given completions can be called manually.
-/// - SeeAlso: `GlobalModalPresenterUsages`.
+/// - SeeAlso: [`GlobalModalPresenterUsages`](https://kuniwak.github.io/UIKitTestable/UIKitTestableAppTests/Classes/GlobalModalPresenterUsages.html).
 public final class GlobalModalPresenterManualStub: GlobalModalPresenterProtocol {
     /// The last completion if exists.
     private var completion: (() -> Void)?
@@ -40,7 +40,7 @@ public final class GlobalModalPresenterManualStub: GlobalModalPresenterProtocol 
 /// A stub class for `GlobalModalPresenter`.
 /// This class does nothing so it is useful to prevent side-effects for testing.
 /// Given completions will be called immediately.
-/// - SeeAlso: `GlobalModalPresenterUsages`.
+/// - SeeAlso: [`GlobalModalPresenterUsages`](https://kuniwak.github.io/UIKitTestable/UIKitTestableAppTests/Classes/GlobalModalPresenterUsages.html).
 public final class GlobalModalPresenterSyncStub: GlobalModalPresenterProtocol {
     /// Returns a newly initialized stub.`
     public init() {}
@@ -61,7 +61,7 @@ public final class GlobalModalPresenterSyncStub: GlobalModalPresenterProtocol {
 /// A stub class for `GlobalModalPresenter`.
 /// This class does nothing so it is useful to prevent side-effects for testing.
 /// Given completions will be called asynchronously.
-/// - SeeAlso: `GlobalModalPresenterUsages`.
+/// - SeeAlso: [`GlobalModalPresenterUsages`](https://kuniwak.github.io/UIKitTestable/UIKitTestableAppTests/Classes/GlobalModalPresenterUsages.html).
 public final class GlobalModalPresenterAsyncStub: GlobalModalPresenterProtocol {
     /// Returns a newly initialized stub.`
     public init() {}
@@ -84,7 +84,7 @@ public final class GlobalModalPresenterAsyncStub: GlobalModalPresenterProtocol {
 /// A stub class for `GlobalModalPresenter`.
 /// This class does nothing so it is useful to prevent side-effects for testing.
 /// Given completions will be never called.
-/// - SeeAlso: `GlobalModalPresenterUsages`.
+/// - SeeAlso: [`GlobalModalPresenterUsages`](https://kuniwak.github.io/UIKitTestable/UIKitTestableAppTests/Classes/GlobalModalPresenterUsages.html).
 public final class GlobalModalPresenterNeverStub: GlobalModalPresenterProtocol {
     /// Returns a newly initialized stub.`
     public init() {}

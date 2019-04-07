@@ -4,7 +4,7 @@ import UIKit
 
 /// A spy class for `GlobalModalPresenter`s.
 /// This class captures calls of methods of the class for testing.
-/// - SeeAlso: `GlobalModalPresenterUsages`.
+/// - SeeAlso: [`GlobalModalPresenterUsages`](https://kuniwak.github.io/UIKitTestable/UIKitTestableAppTests/Classes/GlobalModalPresenterUsages.html).
 public final class GlobalModalPresenterSpy: GlobalModalPresenterProtocol {
     /// Call arguments of methods of `GlobalModalPresenterSpy`.
     public enum CallArgs: Equatable {

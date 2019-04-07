@@ -4,7 +4,6 @@ import UIKit
 
 /// A protocol for wrapper class that encapsulate a setter for `UIWindow.rootViewController`.
 /// You can use some stubs or spies instead of actual classes for testing.
-/// - SeeAlso: `RootViewControllerWriterUsages`.
 public protocol RootViewControllerWriterProtocol: AnyObject {
     /// Replace the rootViewController to the specified one.
     /// - SeeAlso: [Apple Developer Documentation](https://developer.apple.com/documentation/uikit/uiwindow/1621581-rootviewcontroller#)
@@ -47,7 +46,6 @@ public func neverStub() -> RootViewControllerWriterNeverStub {
 
 /// A wrapper class that encapsulate a setter for `UIWindow.rootViewController`.
 /// You can replace the class to the stub or spy for testing.
-/// - SeeAlso: `RootViewControllerWriterUsages`.
 public final class WindowRootViewControllerWriter: RootViewControllerWriterProtocol {
     // NOTE: References to UIWindow must be weak or unowned. Because UIWindow have a UIViewController as their
     //       rootViewController, so memory are leaked if the UIViewController has a instance of the class.

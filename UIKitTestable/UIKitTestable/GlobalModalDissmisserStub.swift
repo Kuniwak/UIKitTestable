@@ -5,7 +5,7 @@ import UIKit
 /// A stub class for `GlobalModalDismisser`.
 /// This class does nothing so it is useful to prevent side-effects for testing.
 /// Given completions can be called manually.
-/// - SeeAlso: `GlobalModalDismisserUsages`.
+/// - SeeAlso: [`GlobalModalDismisserUsages`](https://kuniwak.github.io/UIKitTestable/UIKitTestableAppTests/Classes/GlobalModalDismisserUsages.html).
 public final class GlobalModalDismisserManualStub: GlobalModalDismisserProtocol {
     /// The last completion if exists.
     private var completion: (() -> Void)?
@@ -40,7 +40,7 @@ public final class GlobalModalDismisserManualStub: GlobalModalDismisserProtocol 
 /// A stub class for `GlobalModalDismisser`.
 /// This class does nothing so it is useful to prevent side-effects for testing.
 /// Given completions will be called immediately.
-/// - SeeAlso: `GlobalModalDismisserUsages`.
+/// - SeeAlso: [`GlobalModalDismisserUsages`](https://kuniwak.github.io/UIKitTestable/UIKitTestableAppTests/Classes/GlobalModalDismisserUsages.html).
 public final class GlobalModalDismisserSyncStub: GlobalModalDismisserProtocol {
     /// Returns a newly initialized stub.`
     public init() {}
@@ -61,7 +61,7 @@ public final class GlobalModalDismisserSyncStub: GlobalModalDismisserProtocol {
 /// A stub class for `GlobalModalDismisser`.
 /// This class does nothing so it is useful to prevent side-effects for testing.
 /// Given completions will be called asynchronously.
-/// - SeeAlso: `GlobalModalDismisserUsages`.
+/// - SeeAlso: [`GlobalModalDismisserUsages`](https://kuniwak.github.io/UIKitTestable/UIKitTestableAppTests/Classes/GlobalModalDismisserUsages.html).
 public final class GlobalModalDismisserAsyncStub: GlobalModalDismisserProtocol {
     /// Returns a newly initialized stub.`
     public init() {}
@@ -83,7 +83,7 @@ public final class GlobalModalDismisserAsyncStub: GlobalModalDismisserProtocol {
 /// A stub class for `GlobalModalDismisser`.
 /// This class does nothing so it is useful to prevent side-effects for testing.
 /// Given completions will be never called.
-/// - SeeAlso: `GlobalModalDismisserUsages`.
+/// - SeeAlso: [`GlobalModalDismisserUsages`](https://kuniwak.github.io/UIKitTestable/UIKitTestableAppTests/Classes/GlobalModalDismisserUsages.html).
 public final class GlobalModalDismisserNeverStub: GlobalModalDismisserProtocol {
     /// Returns a newly initialized stub.`
     public init() {}
