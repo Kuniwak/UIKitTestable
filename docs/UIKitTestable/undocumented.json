@@ -338,7 +338,7 @@
     },
     {
       "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestable/UIKitTestable/RootViewControllerWriterSpy.swift",
-      "line": 11,
+      "line": 10,
       "symbol": "RootViewControllerWriterSpy.CallArgs.alter(rootViewController:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
