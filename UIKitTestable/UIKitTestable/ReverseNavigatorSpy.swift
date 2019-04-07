@@ -4,6 +4,7 @@ import UIKit
 
 /// A spy class for `ReverseNavigator`s.
 /// This class captures calls of methods of the class for testing.
+/// - SeeAlso: `ReverseNavigatorUsages`.
 public final class ReverseNavigatorSpy: ReverseNavigatorProtocol {
     /// Call arguments of methods of `ReverseNavigatorSpy`.
     public enum CallArgs: Equatable {
@@ -20,7 +21,8 @@ public final class ReverseNavigatorSpy: ReverseNavigatorProtocol {
     public var inherited: ReverseNavigatorProtocol
 
 
-    /// - parameters:
+    /// Returns a newly initialized spy.`
+    /// - Parameters:
     ///     - inherited: A dynamic base class that can control how behave. Default is doing nothing.
     public init(inheriting inherited: ReverseNavigatorProtocol = ReverseNavigatorStub()) {
         self.inherited = inherited

@@ -6,7 +6,7 @@ public final class Strong<T: AnyObject> {
 
 
     /// Initializes a strong container with the value.
-    /// - parameters:
+    /// - Parameters:
     ///     - value: The value held strongly.
     public init(_ value: T) {
         self.value = value
@@ -14,7 +14,7 @@ public final class Strong<T: AnyObject> {
 
 
     /// Does something with the value.
-    /// - parameters:
+    /// - Parameters:
     ///     - block: A function that take the value.
     public func `do`(_ block: (T) throws -> Void) rethrows {
         try block(self.value)
@@ -22,23 +22,23 @@ public final class Strong<T: AnyObject> {
 
 
     /// Returns the value as a strong reference.
-    /// - parameters:
+    /// - Parameters:
     ///     - value: The value held strongly.
-    /// - returns: A new strong reference.
+    /// - Returns: A new strong reference.
     public static func strong(_ value: T) -> Strong<T> {
         return Strong(value)
     }
 
 
     /// Returns the value as a weak reference.
-    /// - returns: A new weak reference.
+    /// - Returns: A new weak reference.
     public func asWeak() -> Weak<T> {
         return Weak(self.value)
     }
 
 
     /// Returns the value as an unowned reference.
-    /// - returns: A new unowned reference.
+    /// - Returns: A new unowned reference.
     public func asUnowned() -> Unowned<T> {
         return Unowned(self.value)
     }

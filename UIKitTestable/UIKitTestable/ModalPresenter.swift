@@ -2,7 +2,9 @@ import UIKit
 
 
 
-/// A type for encapsulating classes of `UIViewController#present(_: UIViewController, animated: Bool)`.
+/// A protocol for wrapper classes that encapsulate `UIViewController#present(_: UIViewController, animated: Bool)`.
+/// You can use some stubs or spies instead of actual classes.
+/// - SeeAlso: `ModalPresenterUsages`.
 public protocol ModalPresenterProtocol {
     /// Presents a view controller modally.
     /// This method behave like `UIViewController#present(UIViewController, animated: Bool)`
@@ -16,44 +18,27 @@ public protocol ModalPresenterProtocol {
 
 
 
-extension ModalPresenterProtocol {
-    /// Returns a stub that can call a last completion manually.
-    public static func manualStub() -> ModalPresenterManualStub {
-        return ModalPresenterManualStub()
-    }
+/// Returns a stub that call the given completion immediately.
+public func syncStub() -> ModalPresenterSyncStub {
+    return ModalPresenterSyncStub()
+}
 
 
-    /// Returns a stub that call the given completion immediately.
-    public static func syncStub() -> ModalPresenterSyncStub {
-        return ModalPresenterSyncStub()
-    }
+/// Returns a stub that call the given completion asynchronously.
+public func asyncStub() -> ModalPresenterAsyncStub {
+    return ModalPresenterAsyncStub()
+}
 
 
-    /// Returns a stub that call the given completion asynchronously.
-    public static func asyncStub() -> ModalPresenterAsyncStub {
-        return ModalPresenterAsyncStub()
-    }
-
-
-    /// Returns a stub that will never call the given completion.
-    public static func neverStub() -> ModalPresenterNeverStub {
-        return ModalPresenterNeverStub()
-    }
-
-
-    /// Returns a spy that record how methods were called.
-    /// - parameters:
-    ///     - inherited: A dynamic base class control how call a completion.
-    public static func spy(
-        inheriting inherited: ModalPresenterProtocol = ModalPresenterNeverStub()
-    ) -> ModalPresenterSpy {
-        return ModalPresenterSpy(inheriting: inherited)
-    }
+/// Returns a stub that will never call the given completion.
+public func neverStub() -> ModalPresenterNeverStub {
+    return ModalPresenterNeverStub()
 }
 
 
 
 /// A wrapper class to encapsulate a implementation of `UIViewController#present(_: UIViewController, animated: Bool)`.
+/// You can replace the class with the stub or spy for testing.
 public final class ModalPresenter<ViewController: UIViewController>: ModalPresenterProtocol {
     private let groundViewController: WeakOrUnowned<ViewController>
 
@@ -65,6 +50,8 @@ public final class ModalPresenter<ViewController: UIViewController>: ModalPresen
     }
 
 
+    /// Presents a view controller modally.
+    /// This method behave like `UIViewController#present(UIViewController, animated: Bool)`
     public func present(viewController: UIViewController, animated: Bool) {
         switch self.groundViewController {
         case .weakReference(let weak):
@@ -79,6 +66,8 @@ public final class ModalPresenter<ViewController: UIViewController>: ModalPresen
     }
 
 
+    /// Presents a view controller modally.
+    /// This method behave like `UIViewController#present(UIViewController, animated: Bool, completion: (() -> Void)?)`
     public func present(viewController: UIViewController, animated: Bool, completion: (() -> Void)?) {
         switch self.groundViewController {
         case .weakReference(let weak):

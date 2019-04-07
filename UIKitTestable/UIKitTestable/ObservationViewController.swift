@@ -3,6 +3,7 @@ import UIKit
 
 
 /// A UIViewController for life cycle events observation.
+/// - SeeAlso: `SpyViewControllerUsages`
 public final class ObservationViewController: UIViewController {
     /// Events that can be observer by ObservingViewControllers.
     public typealias Event = ViewControllerEvent
@@ -13,7 +14,7 @@ public final class ObservationViewController: UIViewController {
     private let observer: ((ObservationViewController, Event) -> Void)?
 
 
-    /// - parameters:
+    /// - Parameters:
     ///   - observer: Callback will called when every life cycle events are happened.
     public init(
         _ observer: ((ObservationViewController, Event) -> Void)? = nil

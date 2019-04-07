@@ -1,0 +1,117 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestableApp/UIKitTestableAppTests/AsyncTestHelper.swift",
+      "line": 1,
+      "symbol": "repeatSequentially(count:repeating:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestableApp/UIKitTestableAppTests/AwaitingViewControllerTests.swift",
+      "line": 8,
+      "symbol": "AwaitingViewControllerTests",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestableApp/UIKitTestableAppTests/AwaitingViewControllerTests.swift",
+      "line": 9,
+      "symbol": "AwaitingViewControllerTests.testAwaitAnyViewController()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestableApp/UIKitTestableAppTests/AwaitingViewControllerTests.swift",
+      "line": 21,
+      "symbol": "AwaitingViewControllerTests.testAwaitViewDidAppear()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestableApp/UIKitTestableAppTests/AwaitingViewControllerTests.swift",
+      "line": 34,
+      "symbol": "AwaitingViewControllerTests.testAwaitAnyViewDidDisappear()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestableApp/UIKitTestableAppTests/Dump.swift",
+      "line": 1,
+      "symbol": "dumped(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestableApp/UIKitTestableAppTests/GlobalModalPresentDismisserTests.swift",
+      "line": 8,
+      "symbol": "GlobalModalPresentDismisserTests",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestableApp/UIKitTestableAppTests/GlobalModalPresentDismisserTests.swift",
+      "line": 9,
+      "symbol": "GlobalModalPresentDismisserTests.testPresent()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestableApp/UIKitTestableAppTests/GlobalModalPresentDismisserTests.swift",
+      "line": 26,
+      "symbol": "GlobalModalPresentDismisserTests.testDismiss()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestableApp/UIKitTestableAppTests/GlobalModalPresentDismisserTests.swift",
+      "line": 56,
+      "symbol": "GlobalModalPresentDismisserTests.testNoMemoryLeaks()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestableApp/UIKitTestableAppTests/SpyViewControllerTests.swift",
+      "line": 6,
+      "symbol": "SpyViewControllerTests",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestableApp/UIKitTestableAppTests/SpyViewControllerTests.swift",
+      "line": 7,
+      "symbol": "SpyViewControllerTests.testHistory()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestableApp/UIKitTestableAppTests/Usages/SpyViewControllerUsages.swift",
+      "line": 6,
+      "symbol": "SpyViewControllerUsages",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestableApp/UIKitTestableAppTests/Usages/SpyViewControllerUsages.swift",
+      "line": 7,
+      "symbol": "SpyViewControllerUsages.testUsage()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestableApp/UIKitTestableAppTests/debugViewControllerTests.swift",
+      "line": 7,
+      "symbol": "DebugViewControllerTests",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitTestableApp/UIKitTestableAppTests/debugViewControllerTests.swift",
+      "line": 8,
+      "symbol": "DebugViewControllerTests.testPrint()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/yuki.kokubun/Development/UIKitTestable"
+}

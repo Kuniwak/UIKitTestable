@@ -3,13 +3,15 @@ import UIKit
 
 
 /// A stub class for `ModalPresenter`.
-/// This class is useful to prevent side-effects for testing.
+/// This class does nothing so it is useful to prevent side-effects for testing.
 /// Given completions can be called manually.
+/// - SeeAlso: `ModalPresenterUsages`.
 public final class ModalPresenterManualStub: ModalPresenterProtocol {
     /// The last completion if exists.
     private var completion: (() -> Void)!
 
 
+    /// Returns a newly initialized stub.`
     public init() {}
 
 
@@ -36,9 +38,11 @@ public final class ModalPresenterManualStub: ModalPresenterProtocol {
 
 
 /// A stub class for `ModalPresenter`.
-/// This class is useful to prevent side-effects for testing.
+/// This class does nothing so it is useful to prevent side-effects for testing.
 /// Given completions will be called immediately.
+/// - SeeAlso: `ModalPresenterUsages`.
 public final class ModalPresenterSyncStub: ModalPresenterProtocol {
+    /// Returns a newly initialized stub.`
     public init() {}
 
 
@@ -55,9 +59,11 @@ public final class ModalPresenterSyncStub: ModalPresenterProtocol {
 
 
 /// A stub class for `ModalPresenter`.
-/// This class is useful to prevent side-effects for testing.
+/// This class does nothing so it is useful to prevent side-effects for testing.
 /// Given completions will be called asynchronously.
+/// - SeeAlso: `ModalPresenterUsages`.
 public final class ModalPresenterAsyncStub: ModalPresenterProtocol {
+    /// Returns a newly initialized stub.`
     public init() {}
 
 
@@ -76,9 +82,11 @@ public final class ModalPresenterAsyncStub: ModalPresenterProtocol {
 
 
 /// A stub class for `ModalPresenter`.
-/// This class is useful to prevent side-effects for testing.
+/// This class does nothing so it is useful to prevent side-effects for testing.
 /// Given completions will be never called.
+/// - SeeAlso: `ModalPresenterUsages`.
 public final class ModalPresenterNeverStub: ModalPresenterProtocol {
+    /// Returns a newly initialized stub.`
     public init() {}
 
 

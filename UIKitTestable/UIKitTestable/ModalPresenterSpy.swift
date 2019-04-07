@@ -4,6 +4,7 @@ import UIKit
 
 /// A spy class for `ModalPresenter`s.
 /// This class captures calls of methods of the class for testing.
+/// - SeeAlso: `ModalPresenterUsages`.
 public final class ModalPresenterSpy: ModalPresenterProtocol {
     /// Call arguments of methods of `ModalPresenterSpy`.
     public enum CallArgs: Equatable {
@@ -20,7 +21,8 @@ public final class ModalPresenterSpy: ModalPresenterProtocol {
     public var inherited: ModalPresenterProtocol
 
 
-    /// - parameters:
+    /// Returns a newly initialized spy.`
+    /// - Parameters:
     ///     - inherited: A dynamic base class that can control how the last completion is called.
     public init(inheriting inherited: ModalPresenterProtocol = ModalPresenterNeverStub()) {
         self.inherited = inherited

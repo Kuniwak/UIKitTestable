@@ -3,69 +3,37 @@ import UIKit
 
 
 /// A type for wrapper classes of `UINavigationController#(_:UIViewController, animated:Bool)`.
+/// You can use some stubs or spies instead of actual classes for testing.
+/// - SeeAlso: `ReverseNavigatorUsages`.
 public protocol ReverseNavigatorProtocol {
-    /// Pops view controllers until the specified view controller is at the top of the navigation stack.
-    /// This method behave like `UINavigationController#popToViewController(UIVIewController, animated: Bool)`
-
-    /// - throws: Throws when the UIViewController is not in the navigation stack.
+    /// Pops all the view controllers on the stack except the root view controller and updates the display.
+    /// - Throws: Throws when the UIViewController is not in the navigation stack.
+    /// - SeeAlso: [Apple Developer Documentation](https://developer.apple.com/documentation/uikit/uinavigationcontroller/1621855-poptorootviewcontroller)
     func pop(animated: Bool) throws
 }
 
 
 
-extension ReverseNavigatorProtocol {
-    /// Returns a stub that do nothing.
-    public static func stub(willThrow error: ReverseNavigatorError? = nil) -> ReverseNavigatorStub {
-        return ReverseNavigatorStub(willThrow: error)
-    }
-
-
-    /// Returns a spy that record how methods were called.
-    /// - parameters:
-    ///     - inherited: A dynamic base class control how behave a method is called.
-    public static func spy(
-        inheriting inherited: ReverseNavigatorProtocol = ReverseNavigatorStub()
-    ) -> ReverseNavigatorSpy {
-        return ReverseNavigatorSpy(inheriting: inherited)
-    }
+/// Returns a stub that do nothing.
+public func stub(willThrow error: NoSuchDestinationViewControllerInNavigationStack? = nil) -> ReverseNavigatorStub {
+    return ReverseNavigatorStub(willThrow: error)
 }
 
 
 
-/// A type for errors that can be thrown when `UINavigationController#popToViewController(UIVIewController, animated: Bool)`.
-public enum ReverseNavigatorError: Error {
-    case noSuchDestinationViewControllerInNavigationStack(debugInfo: String)
-
-
-    public static func noSuchDestinationViewControllerInNavigationStack(
-        navigationController: UINavigationController,
-        destinationViewController: UIViewController
-    ) -> ReverseNavigatorError {
-        let debugInfo = """
-                        The Navigation stack of \(info(of: navigationController)) is:
-
-                        \(dumped(viewControllers: navigationController.viewControllers))
-                        """
-
-        return .noSuchDestinationViewControllerInNavigationStack(debugInfo: debugInfo)
-    }
-}
-
-
-
-/**
- A wrapper class to encapsulate a implementation of `UINavigationController#popToViewController(UIViewController, animated: Bool)`.
- You can replace the class to the stub or spy for testing.
- */
+/// A wrapper class to encapsulate a implementation of `UINavigationController.popToViewController`.
+/// You can replace the class with a stub or spy for testing.
+/// - SeeAlso: `ReverseNavigatorUsages`.
 public final class ReverseNavigator: ReverseNavigatorProtocol {
     private let navigationController: WeakOrUnowned<UINavigationController>
     private let destinationViewController: WeakOrUnowned<UIViewController>
 
 
-    /**
-     Return newly initialized Navigator for the specified UINavigationController.
-     You can pop to the UIViewController by calling the method `#back`.
-     */
+    /// Return newly initialized Navigator for the specified UINavigationController.
+    /// You can pop to the UIViewController by calling `pop()`.
+    /// - Parameters:
+    ///     - destinationViewController: A view controller where pop to.
+    ///     - navigationController: A navigation controller that managed.
     public init(
         willPopTo destinationViewController: WeakOrUnowned<UIViewController>,
         on navigationController: WeakOrUnowned<UINavigationController>
@@ -75,6 +43,9 @@ public final class ReverseNavigator: ReverseNavigatorProtocol {
     }
 
 
+    /// Pops all the view controllers on the stack except the root view controller and updates the display.
+    /// - Throws: Throws when the UIViewController is not in the navigation stack.
+    /// - SeeAlso: [Apple Developer Documentation](https://developer.apple.com/documentation/uikit/uinavigationcontroller/1621855-poptorootviewcontroller)
     public func pop(animated: Bool) throws {
         switch self.navigationController {
         case .weakReference(let weakNav):
@@ -110,7 +81,7 @@ public final class ReverseNavigator: ReverseNavigatorProtocol {
 
     private func pop(on navigationController: UINavigationController, to destinationViewController: UIViewController, animated: Bool) throws {
         guard navigationController.viewControllers.contains(destinationViewController) else {
-            throw ReverseNavigatorError.noSuchDestinationViewControllerInNavigationStack(
+            throw NoSuchDestinationViewControllerInNavigationStack(
                 navigationController: navigationController,
                 destinationViewController: destinationViewController
             )

@@ -10,7 +10,7 @@ public enum WeakOrUnownedOrStrong<T: AnyObject> {
 
 
     /// Returns a weak reference if this is a weak reference. Otherwise nil.
-    /// - returns: A weak reference if this is a weak reference. Otherwise nil.
+    /// - Returns: A weak reference if this is a weak reference. Otherwise nil.
     public var weak: Weak<T>? {
         switch self {
         case .weakReference(let container):
@@ -22,7 +22,7 @@ public enum WeakOrUnownedOrStrong<T: AnyObject> {
 
 
     /// Returns an unowned reference if this is an unowned reference. Otherwise nil.
-    /// - returns: An unowned reference if this is an unowned reference. Otherwise nil.
+    /// - Returns: An unowned reference if this is an unowned reference. Otherwise nil.
     public var unowned: Unowned<T>? {
         switch self {
         case .weakReference, .strongReference:
@@ -34,7 +34,7 @@ public enum WeakOrUnownedOrStrong<T: AnyObject> {
 
 
     /// Returns a strong reference if this is a strong reference. Otherwise nil.
-    /// - returns: A strong reference if this is a strong reference. Otherwise nil.
+    /// - Returns: A strong reference if this is a strong reference. Otherwise nil.
     public var strong: Strong<T>? {
         switch self {
         case .weakReference, .unownedReference:

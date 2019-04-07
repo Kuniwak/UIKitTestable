@@ -8,11 +8,6 @@ extension PrinterProtocol {
     public static func stub() -> PrinterStub {
         return PrinterStub()
     }
-
-
-    public static func spy() -> PrinterSpy {
-        return PrinterSpy()
-    }
 }
 
 

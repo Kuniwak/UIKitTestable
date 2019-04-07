@@ -3,12 +3,15 @@ import UIKit
 
 
 /// A stub class for `RootViewControllerWriter`.
-/// This class is useful to prevent side-effects for testing.
+/// This class does nothing so it is useful to prevent side-effects for testing.
+/// Given completions can be called manually.
+/// - SeeAlso: `RootViewControllerWriterUsages`.
 public final class RootViewControllerWriterManualStub: RootViewControllerWriterProtocol {
     /// The last completion.
     private var completion: (() -> Void)?
 
 
+    /// Returns a newly initialized stub.`
     public init() {}
 
 
@@ -34,17 +37,20 @@ public final class RootViewControllerWriterManualStub: RootViewControllerWriterP
 
 
 
-/**
- A stub class for RootViewControllerWriter.
- This class is useful for ignoring assigning `UIWindow.rootViewController` for testing.
-
- The completion of `alter(to:UIViewController, completion:(() -> Void)?)` will be called synchronously.
- */
+/// A stub class for `RootViewControllerWriter`.
+/// This class does nothing so it is useful to prevent side-effects for testing.
+/// Given completions will be called immediately.
+/// - SeeAlso: `RootViewControllerWriterUsages`.
 public final class RootViewControllerWriterSyncStub: RootViewControllerWriterProtocol {
+    /// Returns a newly initialized stub.`
     public init() {}
 
 
+    /// Does nothing.
     public func alter(to rootViewController: UIViewController) {}
+
+
+    /// Does nothing but the completion will be called immediately.
     public func alter(to rootViewController: UIViewController, completion: (() -> Void)?) {
         completion?()
     }
@@ -52,17 +58,20 @@ public final class RootViewControllerWriterSyncStub: RootViewControllerWriterPro
 
 
 
-/**
- A stub class for RootViewControllerWriter.
- This class is useful for ignoring assigning `UIWindow.rootViewController` for testing.
-
- The completion of `alter(to:UIViewController, completion:(() -> Void)?)` will be called asynchronously.
- */
+/// A stub class for `RootViewControllerWriter`.
+/// This class does nothing so it is useful to prevent side-effects for testing.
+/// Given completions will be called asynchronously.
+/// - SeeAlso: `RootViewControllerWriterUsages`.
 public final class RootViewControllerWriterAsyncStub: RootViewControllerWriterProtocol {
+    /// Returns a newly initialized stub.`
     public init() {}
 
 
+    /// Does nothing.
     public func alter(to rootViewController: UIViewController) {}
+
+
+    /// Does nothing but the completion will be called asynchronously.
     public func alter(to rootViewController: UIViewController, completion: (() -> Void)?) {
         DispatchQueue.main.async {
             completion?()
@@ -72,16 +81,19 @@ public final class RootViewControllerWriterAsyncStub: RootViewControllerWriterPr
 
 
 
-/**
- A stub class for RootViewControllerWriter.
- This class is useful for ignoring assigning `UIWindow.rootViewController` for testing.
-
- The completion of `alter(to:UIViewController, completion:(() -> Void)?)` will be never called.
- */
+/// A stub class for `RootViewControllerWriter`.
+/// This class does nothing so it is useful to prevent side-effects for testing.
+/// Given completions will be never called.
+/// - SeeAlso: `RootViewControllerWriterUsages`.
 public final class RootViewControllerWriterNeverStub: RootViewControllerWriterProtocol {
+    /// Returns a newly initialized stub.`
     public init() {}
 
 
+    /// Does nothing.
     public func alter(to rootViewController: UIViewController) {}
+
+
+    /// Does nothing but the completion will be never called.
     public func alter(to rootViewController: UIViewController, completion: (() -> Void)?) {}
 }

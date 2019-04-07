@@ -19,7 +19,7 @@ public class Weak<T: AnyObject> {
 
 
     /// Returns a new weak reference with the value.
-    /// - parameters:
+    /// - Parameters:
     ///     - value: The value held weakly.
     public init(_ value: T) {
         self.value = value
@@ -27,7 +27,7 @@ public class Weak<T: AnyObject> {
 
 
     /// Does something with the value.
-    /// - parameters:
+    /// - Parameters:
     ///     - block: A function that take the value if the value is not released. Otherwise take a nil.
     public func `do`(_ block: (T?) throws -> Void) rethrows {
         try block(self.value)
@@ -35,16 +35,16 @@ public class Weak<T: AnyObject> {
 
 
     /// Returns the value as a weak reference.
-    /// - parameters:
+    /// - Parameters:
     ///     - value: The value held weakly.
-    /// - returns: A new weak reference.
+    /// - Returns: A new weak reference.
     public static func weak(_ value: T) -> Weak<T> {
         return Weak(value)
     }
 
 
     /// Returns the value as an unowned reference.
-    /// - returns: An unowned reference.
+    /// - Returns: An unowned reference.
     /// - throws: `InvalidAccessToReleasedWeakValue` if the weak value was released.
     public func asUnowned() throws -> Unowned<T> {
         guard let value = self.value else {
@@ -55,7 +55,7 @@ public class Weak<T: AnyObject> {
 
 
     /// Returns the value as a strong reference.
-    /// - returns: An unowned reference.
+    /// - Returns: An unowned reference.
     /// - throws: `InvalidAccessToReleasedWeakValue` if the weak value was released.
     public func asStrong() throws -> Strong<T> {
         guard let value = self.value else {

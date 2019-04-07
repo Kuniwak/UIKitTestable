@@ -3,13 +3,15 @@ import UIKit
 
 
 /// A stub class for `URLOpener`.
-/// This class is useful to prevent side-effects for testing.
+/// This class does nothing so it is useful to prevent side-effects for testing.
 /// Given completions can be called manually.
+/// - SeeAlso: `URLOpenerUsages`
 public final class URLOpenerManualStub: URLOpenerProtocol {
     /// A last completion if exists.
     private var completion: ((Bool) -> Void)?
 
 
+    /// Returns a newly initialized stub.`
     public init() {}
 
 
@@ -30,7 +32,7 @@ public final class URLOpenerManualStub: URLOpenerProtocol {
 
 
     /// Calls the last completion if exists. Otherwise throws a NoSuchCompletions.
-    /// - parameters:
+    /// - Parameters:
     ///     - isSuccess: A Boolean indicating whether the URL was opened successfully.
     /// - throws: NoSuchCompletions.
     public func complete(_ isSuccess: Bool) throws {
@@ -44,14 +46,16 @@ public final class URLOpenerManualStub: URLOpenerProtocol {
 
 
 /// A stub class for `URLOpener`.
-/// This class is useful to prevent side-effects for testing.
+/// This class does nothing so it is useful to prevent side-effects for testing.
 /// Given completions will be called immediately.
+/// - SeeAlso: `URLOpenerUsages`
 public final class URLOpenerSyncStub: URLOpenerProtocol {
     /// A next callback argument.
     public var nextCallbackArgument: Bool
 
 
-    /// - parameters:
+    /// Returns a newly initialized stub.`
+    /// - Parameters:
     ///     - firstCallbackArgument: A next callback argument.
     public init(willCallWith firstCallbackArgument: Bool = false) {
         self.nextCallbackArgument = firstCallbackArgument
@@ -77,14 +81,16 @@ public final class URLOpenerSyncStub: URLOpenerProtocol {
 
 
 /// A stub class for `URLOpener`.
-/// This class is useful to prevent side-effects for testing.
+/// This class does nothing so it is useful to prevent side-effects for testing.
 /// Given completions will be called asynchronously.
+/// - SeeAlso: `URLOpenerUsages`
 public final class URLOpenerAsyncStub: URLOpenerProtocol {
     /// A next callback argument.
     public var nextCallbackArgument: Bool
 
 
-    /// - parameters:
+    /// Returns a newly initialized stub.`
+    /// - Parameters:
     ///     - firstCallbackArgument: A next callback argument.
     public init(willCallWith firstCallbackArgument: Bool) {
         self.nextCallbackArgument = firstCallbackArgument
@@ -114,9 +120,11 @@ public final class URLOpenerAsyncStub: URLOpenerProtocol {
 
 
 /// A stub class for `URLOpener`.
-/// This class is useful to prevent side-effects for testing.
+/// This class does nothing so it is useful to prevent side-effects for testing.
 /// Given completions will be never called.
+/// - SeeAlso: `URLOpenerUsages`
 public final class URLOpenerNeverStub: URLOpenerProtocol {
+    /// Returns a newly initialized stub.`
     public init() {}
 
 

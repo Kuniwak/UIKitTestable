@@ -47,6 +47,7 @@ public enum ViewControllerEvent {
 
 
     /// Returns the event name.
+    /// Returns: The event name.
     public var name: Name {
         switch self {
         case .didInit:

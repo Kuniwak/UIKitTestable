@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2475E3E8F5E0829D5C611CBE /* CountedWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E03CE60C3533622D06C5 /* CountedWindow.swift */; };
+		2475E8E5C6A9C9F58ED8B723 /* CountedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EC32D153B1D2C4B5D83E /* CountedViewController.swift */; };
 		6239AB1B224F72C100673D65 /* UIKitAssertions.h in Headers */ = {isa = PBXBuildFile; fileRef = 6239AB19224F72C100673D65 /* UIKitAssertions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6239AB62224F72F000673D65 /* AwaitingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239AB40224F72F000673D65 /* AwaitingViewController.swift */; };
 		6239ABAB224F746300673D65 /* Timeout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6239ABAA224F746300673D65 /* Timeout.swift */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2475E03CE60C3533622D06C5 /* CountedWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountedWindow.swift; sourceTree = "<group>"; };
+		2475EC32D153B1D2C4B5D83E /* CountedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountedViewController.swift; sourceTree = "<group>"; };
 		6239AB16224F72C100673D65 /* UIKitAssertions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIKitAssertions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6239AB19224F72C100673D65 /* UIKitAssertions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKitAssertions.h; sourceTree = "<group>"; };
 		6239AB1A224F72C100673D65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,6 +60,8 @@
 			isa = PBXGroup;
 			children = (
 				6239AB40224F72F000673D65 /* AwaitingViewController.swift */,
+				2475EC32D153B1D2C4B5D83E /* CountedViewController.swift */,
+				2475E03CE60C3533622D06C5 /* CountedWindow.swift */,
 				6239AB1A224F72C100673D65 /* Info.plist */,
 				6239ABAA224F746300673D65 /* Timeout.swift */,
 				6239AB19224F72C100673D65 /* UIKitAssertions.h */,
@@ -153,6 +159,8 @@
 			files = (
 				6239AB62224F72F000673D65 /* AwaitingViewController.swift in Sources */,
 				6239ABAB224F746300673D65 /* Timeout.swift in Sources */,
+				2475E3E8F5E0829D5C611CBE /* CountedWindow.swift in Sources */,
+				2475E8E5C6A9C9F58ED8B723 /* CountedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

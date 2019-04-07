@@ -4,6 +4,7 @@ import UIKit
 
 /// A spy class for `GlobalModalPresenter`s.
 /// This class captures calls of methods of the class for testing.
+/// - SeeAlso: `GlobalModalPresenterUsages`.
 public final class GlobalModalPresenterSpy: GlobalModalPresenterProtocol {
     /// Call arguments of methods of `GlobalModalPresenterSpy`.
     public enum CallArgs: Equatable {
@@ -20,7 +21,8 @@ public final class GlobalModalPresenterSpy: GlobalModalPresenterProtocol {
     public var inherited: GlobalModalPresenterProtocol
 
 
-    /// - parameters:
+    /// Returns a newly initialized spy.`
+    /// - Parameters:
     ///     - inherited: A base class that can control when the last completion is called.
     public init(inheriting inherited: GlobalModalPresenterProtocol = GlobalModalPresenterNeverStub()) {
         self.inherited = inherited

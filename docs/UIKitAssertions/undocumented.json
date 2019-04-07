@@ -1,0 +1,61 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitAssertions/UIKitAssertions/CountedViewController.swift",
+      "line": 11,
+      "symbol": "CountedViewController.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitAssertions/UIKitAssertions/CountedViewController.swift",
+      "line": 17,
+      "symbol": "CountedViewController.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitAssertions/UIKitAssertions/CountedViewController.swift",
+      "line": 22,
+      "symbol": "CountedViewController.deinit",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitAssertions/UIKitAssertions/CountedWindow.swift",
+      "line": 11,
+      "symbol": "CountedWindow.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitAssertions/UIKitAssertions/CountedWindow.swift",
+      "line": 17,
+      "symbol": "CountedWindow.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitAssertions/UIKitAssertions/CountedWindow.swift",
+      "line": 22,
+      "symbol": "CountedWindow.deinit",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitAssertions/UIKitAssertions/Timeout.swift",
+      "line": 4,
+      "symbol": "defaultTimeout",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/yuki.kokubun/Development/UIKitTestable/UIKitAssertions/UIKitAssertions/Timeout.swift",
+      "line": 5,
+      "symbol": "awaitingDefaultTimeout",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/yuki.kokubun/Development/UIKitTestable"
+}

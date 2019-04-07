@@ -3,15 +3,17 @@ import UIKit
 
 
 /// A stub class for `ReverseNavigator`.
-/// This class is useful to prevent side-effects for testing.
+/// This class does nothing so it is useful to prevent side-effects for testing.
+/// - SeeAlso: `ReverseNavigatorUsages`.
 public final class ReverseNavigatorStub: ReverseNavigatorProtocol {
     /// An error will be thrown if not nil.
-    public var error: ReverseNavigatorError?
+    public var error: NoSuchDestinationViewControllerInNavigationStack?
 
 
-    /// - parameters:
+    /// Returns a newly initialized stub.`
+    /// - Parameters:
     ///     - error: An error will be thrown if not nil.
-    public init(willThrow error: ReverseNavigatorError? = nil) {
+    public init(willThrow error: NoSuchDestinationViewControllerInNavigationStack? = nil) {
         self.error = error
     }
 

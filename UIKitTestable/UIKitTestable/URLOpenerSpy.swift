@@ -4,6 +4,7 @@ import UIKit
 
 /// A spy class for `URLOpener`s.
 /// This class is useful for capturing calls of `UIApplication#open` for testing.
+/// - SeeAlso: `URLOpenerUsages`
 public final class URLOpenerSpy: URLOpenerProtocol {
     /// Call arguments of methods of `URLOpenerSpy`.
     public enum CallArgs: Equatable {
@@ -37,7 +38,8 @@ public final class URLOpenerSpy: URLOpenerProtocol {
     public var inherited: URLOpenerProtocol
 
 
-    /// - parameters:
+    /// Returns a newly initialized spy.`
+    /// - Parameters:
     ///     - inherited: A dynamic base class that can control how the last completion is called. Default is never called.
     public init(inheriting inherited: URLOpenerProtocol = URLOpenerNeverStub()) {
         self.inherited = inherited

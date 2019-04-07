@@ -2,64 +2,35 @@ import UIKit
 
 
 
-public protocol RootViewControllerReadWriterProtocol: RootViewControllerReaderProtocol, RootViewControllerWriterProtocol {}
+/// A wrapper class that encapsulate a getter and setter of rootViewController.
+/// This class does not have variations for any stubs or spies because these variations
+/// can be created using stubs and spies for each reader and writer.
+/// - SeeAlso: `RootViewControllerReadWriterUsages`.
+public final class RootViewControllerReadWriter {
+    private var reader: RootViewControllerReaderProtocol
+    private var writer: RootViewControllerWriterProtocol
 
 
-
-extension RootViewControllerReadWriterProtocol {
-    public static func stub(
-        willReturn initialResult: WeakOrUnownedOrStrong<UIViewController> = .empty()
-    ) -> RootViewControllerReadWriterManualStub {
-        return RootViewControllerReadWriterManualStub(willReturn: initialResult)
-    }
-
-
-    public static func syncStub(
-        willReturn initialResult: WeakOrUnownedOrStrong<UIViewController> = .empty()
-    ) -> RootViewControllerReadWriterSyncStub {
-        return RootViewControllerReadWriterSyncStub(willReturn: initialResult)
-    }
-
-
-    public static func asyncStub(
-        willReturn initialResult: WeakOrUnownedOrStrong<UIViewController> = .empty()
-    ) -> RootViewControllerReadWriterAsyncStub {
-        return RootViewControllerReadWriterAsyncStub(willReturn: initialResult)
-    }
-
-
-    public static func neverStub(
-        willReturn initialResult: WeakOrUnownedOrStrong<UIViewController> = .empty()
-    ) -> RootViewControllerReadWriterNeverStub {
-        return RootViewControllerReadWriterNeverStub(willReturn: initialResult)
-    }
-
-
-    public static func spy(
-        inheriting inherited: RootViewControllerReadWriterProtocol = RootViewControllerReadWriterNeverStub()
-    ) -> RootViewControllerReadWriterSpy {
-        return RootViewControllerReadWriterSpy(inheriting: inherited)
-    }
-}
-
-
-
-public final class WindowRootViewControllerReadWriter: RootViewControllerReadWriterProtocol {
-    private let reader: RootViewControllerReaderProtocol
-    private let writer: RootViewControllerWriterProtocol
-
-
+    /// Delegates to the `reader` and returns the result.
     public var rootViewController: UIViewController? {
         return self.reader.rootViewController
     }
 
 
+    /// Returns a newly initialized `RootViewControllerReadWriter` with the specified reader and writer.
+    /// - Parameters:
+    ///     - reader: A delegated reader.
+    ///     - writer: A delegated writer.
     public init(readingBy reader: RootViewControllerReaderProtocol, writingBy writer: RootViewControllerWriterProtocol) {
         self.reader = reader
         self.writer = writer
     }
 
 
+    /// Returns a newly initialized `RootViewControllerReadWriter` with the `UIWindow`.
+    /// Using `WindowRootViewControllerReader` and `WindowRootViewControllerWriter` as the internal reader and writer.
+    /// - Parameters:
+    ///     - window: An UIWindow.
     public convenience init(readingAndWriting window: WeakOrUnowned<UIWindow>) {
         self.init(
             readingBy: WindowRootViewControllerReader(whoHaveRootViewController: window),
@@ -68,11 +39,13 @@ public final class WindowRootViewControllerReadWriter: RootViewControllerReadWri
     }
 
 
+    /// Delegates to the `writer`.
     public func alter(to rootViewController: UIViewController) {
         self.alter(to: rootViewController, completion: nil)
     }
 
 
+    /// Delegates to the `writer`.
     public func alter(to rootViewController: UIViewController, completion: (() -> Void)?) {
         self.writer.alter(to: rootViewController, completion: completion)
     }

@@ -7,7 +7,7 @@ public final class GlobalModalBackgroundViewController: UIViewController {
     private var firstViewDidAppearCallback: ((UIViewController) -> Void)?
 
 
-    /// - parameters:
+    /// - Parameters:
     ///   - firstViewDidAppearCallback: A callback called when viewDidAppear fired. That take the UIViewController as the argument.
     public init(_ firstViewDidAppearCallback: @escaping (UIViewController) -> Void) {
         self.firstViewDidAppearCallback = firstViewDidAppearCallback

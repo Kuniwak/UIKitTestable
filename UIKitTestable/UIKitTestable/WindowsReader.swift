@@ -3,6 +3,8 @@ import UIKit
 
 
 /// A protocol for wrapper classes that encapsulate the implementation of `UIApplication#windows`.
+/// You can use some stubs or spies instead of actual classes for testing.
+/// - SeeAlso: `WindowsReaderUsages`
 public protocol WindowsReaderProtocol {
     /// UIWindows of the given UIApplication.
     var windows: [UIWindow] { get }
@@ -10,16 +12,16 @@ public protocol WindowsReaderProtocol {
 
 
 
-extension WindowsReaderProtocol {
-    /// Returns a stub that do nothing.
-    public static func stub(willReturn initialResult: [WeakOrUnownedOrStrong<UIWindow>]) -> WindowsReaderStub {
-        return WindowsReaderStub(willReturn: initialResult)
-    }
+/// Returns a stub that do nothing.
+public func stub(willReturn initialResult: [WeakOrUnownedOrStrong<UIWindow>]) -> WindowsReaderStub {
+    return WindowsReaderStub(willReturn: initialResult)
 }
 
 
 
 /// A class that encapsulate the implementation of `UIApplication#open`.
+/// You can replace the class with the stub or spy for testing.
+/// - SeeAlso: `WindowsReaderUsages`
 public final class WindowsReader: WindowsReaderProtocol {
     // NOTE: This should be unowned or weak, because the UIApplication can have UIWindows and the UIWindow can have
     //       an UIViewController as the rootViewController.
@@ -32,7 +34,7 @@ public final class WindowsReader: WindowsReaderProtocol {
     }
 
 
-    /// - parameters:
+    /// - Parameters:
     ///     - application: The UIApplication has UIWindows.
     public init(whoHaveWindows application: UIApplication) {
         self.application = application

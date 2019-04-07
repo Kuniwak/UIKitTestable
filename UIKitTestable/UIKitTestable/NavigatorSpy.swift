@@ -4,6 +4,7 @@ import UIKit
 
 /// A spy class for `Navigator`s.
 /// This class captures calls of methods of the class for testing.
+/// - SeeAlso: `NavigatorUsages`.
 public final class NavigatorSpy: NavigatorProtocol {
     /// Call arguments of methods of `NavigatorSpy`.
     public enum CallArgs: Equatable {
@@ -20,7 +21,8 @@ public final class NavigatorSpy: NavigatorProtocol {
     public var inherited: NavigatorProtocol
 
 
-    /// - parameters:
+    /// Returns a newly initialized spy.`
+    /// - Parameters:
     ///     - inherited: A dynamic base class that can control how behave. Default is doing nothing.
     public init(inheriting inherited: NavigatorProtocol = NavigatorStub()) {
         self.inherited = inherited

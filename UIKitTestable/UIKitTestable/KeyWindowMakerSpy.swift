@@ -4,6 +4,7 @@ import UIKit
 
 /// A spy class for `KeyWindowMaker`s.
 /// This class captures calls of methods of the class for testing.
+/// - SeeAlso: `KeyWindowMakerUsages`.
 public final class KeyWindowMakerSpy: KeyWindowMakerProtocol {
     /// Call arguments of methods of `KeyWindowMakerSpy`.
     public enum CallArgs: Equatable {
@@ -41,21 +42,5 @@ public final class KeyWindowMakerSpy: KeyWindowMakerProtocol {
         self.callArgs.append(.makeKeyAndVisible)
 
         self.inherited.makeKeyAndVisible()
-    }
-
-
-    /// Records the call arguments and calls the base class.
-    public func becomeKey() {
-        self.callArgs.append(.becomeKey)
-
-        self.inherited.becomeKey()
-    }
-
-
-    /// Records the call arguments and calls the base class.
-    public func resignKey() {
-        self.callArgs.append(.resignKey)
-
-        self.inherited.resignKey()
     }
 }
