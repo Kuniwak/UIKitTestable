@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  xcodebuild:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Select an iOS simulator
+        run: |
+          udid="$(xcrun simctl list devices available --json \
+            | jq -r '[.devices | to_entries[] | select(.key | test("iOS")) | .value[] | select(.name | startswith("iPhone"))][0].udid')"
+          echo "DESTINATION=id=${udid}" >> "$GITHUB_ENV"
+      - name: Test
+        run: |
+          for scheme in UIKitTestableTests UIKitTestableAppTests; do
+            xcodebuild test \
+              -workspace UIKitTestable.xcworkspace \
+              -scheme "$scheme" \
+              -destination "$DESTINATION" \
+              CODE_SIGNING_ALLOWED=NO
+          done
+      - name: Build UIKitAssertions
+        run: |
+          xcodebuild build \
+            -workspace UIKitTestable.xcworkspace \
+            -scheme UIKitAssertions \
+            -destination "$DESTINATION" \
+            CODE_SIGNING_ALLOWED=NO
+
+  tools:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '4.0'
+          bundler-cache: true
+      - name: Check the Xcode projects are sorted
+        run: |
+          ./tools/sort-xcodeproj
+          git diff --exit-code
+      - name: Check jazzy can run
+        run: bundle exec jazzy --version
